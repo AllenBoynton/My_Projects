@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FgA-gV-qDd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Old printing press.ttf">
+            <string>Old-printing-press_FREE-version</string>
+        </array>
+        <array key="OldNewspaperTypes.ttf">
+            <string>OldNewspaperTypes</string>
+        </array>
+        <array key="TTWPGOTT.ttf">
+            <string>TruetypewriterPolyglOTT</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Famous Fires-->
+        <scene sceneID="MfY-RP-OfU">
+            <objects>
+                <viewController id="CxO-s6-2q7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5iT-x2-pDg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zu0-Ft-gEY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Boston" id="86A-2Y-rP1" userLabel="Boston">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Great Fire At Boston" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZV-AB-0II">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Boston’s fire was arguably the most expensive in terms of property damage of any American fire." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idm-ot-owg">
+                                <rect key="frame" x="36" y="290" width="303" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boston2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9yG-AP-z03">
+                                <rect key="frame" x="36" y="372" width="303" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chT-KF-n6z">
+                                <rect key="frame" x="36" y="541" width="303" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Most of the damage was confined to the cities’ downtown areas and financial districts, resulting in thousands of Bostonians losing their jobs and hundreds of businesses being destroyed.</string>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boston.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LJO-Tz-iM0">
+                                <rect key="frame" x="36" y="121" width="303" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-l2-hIn">
+                                <rect key="frame" x="311" y="73" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="17"/>
+                                <state key="normal" title="Map It">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JdH-So-Z2Z" kind="show" id="PPr-pe-3Ss"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Famous Fires" id="qtB-TE-f5r" colorLabel="IBBuiltInLabel-Orange">
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="qrl-mU-DSM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="u1F-hE-Qvi" kind="show" id="KQQ-mE-2mv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsF-iu-gkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="-356"/>
+        </scene>
+        <!--Famous Fires 2-->
+        <scene sceneID="W4k-yV-jcj">
+            <objects>
+                <viewController title="Famous Fires 2" id="u1F-hE-Qvi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7G-HC-YZV"/>
+                        <viewControllerLayoutGuide type="bottom" id="4XC-nC-2ao"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bRR-3p-Hjt" userLabel="San Francisco">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Great San Francisco                                                   Earthquake" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZO-qE-hUx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKX-1R-ifg">
+                                <rect key="frame" x="311" y="72" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="17"/>
+                                <state key="normal" title="Map It">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JdH-So-Z2Z" kind="show" id="EsH-gK-2CN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="San_Francisco.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="10u-Qh-JVB">
+                                <rect key="frame" x="36" y="123" width="303" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The fire that burned 25,000 buildings over 490 city blocks and left some 3,000 dead." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-Uj-l9o">
+                                <rect key="frame" x="36" y="292" width="303" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="San-Francisco2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-Pe-GHq">
+                                <rect key="frame" x="36" y="377" width="303" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The fire was a by-product of a massive earthquake that hit the city in the predawn hours of April 18, 1906." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JZ-h4-JMW">
+                                <rect key="frame" x="36" y="546" width="303" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Famous Fires" id="82x-rV-LWb" colorLabel="IBBuiltInLabel-Orange">
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="utH-nH-tpR">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="knc-xZ-rLK" kind="show" id="prR-cN-9Uy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbo-Al-35k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370" y="-357"/>
+        </scene>
+        <!--Famous Fires-->
+        <scene sceneID="WmG-67-EKt">
+            <objects>
+                <viewController id="knc-xZ-rLK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YR0-av-QxB"/>
+                        <viewControllerLayoutGuide type="bottom" id="QMI-Pq-JJ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ydj-fp-2Ga" userLabel="Chicago">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Great Chicago Fire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bme-Mh-9jT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-af-Ilc">
+                                <rect key="frame" x="312" y="73" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="17"/>
+                                <state key="normal" title="Map It">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JdH-So-Z2Z" kind="show" id="Nza-7N-hF6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCO-fo-TRr">
+                                <rect key="frame" x="36" y="297" width="303" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Probably few infernos have been as famous as the one that ravaged much of Chicago in October, 1871, leaving more that 17,000 structures burned and 90,000 people homeless.</string>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chicago2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-dC-sVz">
+                                <rect key="frame" x="36" y="377" width="303" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKc-pE-QjF">
+                                <rect key="frame" x="36" y="548" width="303" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">The fire paved the way for a new and improved Chicago to rise from the ashes that would within a few short decades make it the great metropolis it is today.</string>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chicago1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="stX-5T-PwV">
+                                <rect key="frame" x="36" y="123" width="303" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Famous Fires" id="pw2-VJ-wrP" colorLabel="IBBuiltInLabel-Orange"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NX3-3D-gyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="-356"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sZe-6z-Pne">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FgA-gV-qDd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="zSF-2y-cLb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uIG-jC-HQ8" kind="relationship" relationship="viewControllers" id="XRm-0x-USB"/>
+                        <segue destination="Dpi-e5-GuQ" kind="relationship" relationship="viewControllers" id="AEP-me-e0C"/>
+                        <segue destination="ZOG-0c-tzX" kind="relationship" relationship="viewControllers" id="G5t-jJ-aWd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGB-yW-BD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="313"/>
+        </scene>
+        <!--Articles-->
+        <scene sceneID="cd8-K7-uAg">
+            <objects>
+                <viewController id="Dpi-e5-GuQ" userLabel="Articles" customClass="ViewController" customModule="boynton_allen_project2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ea6-bp-mfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="vI4-bl-I50"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGB-I0-oDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fire Articles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qn-f8-qcG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="123" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9As-n7-bFL">
+                                <rect key="frame" x="0.0" y="69" width="375" height="549"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="123" id="qCq-74-0EM" customClass="ObjectViewCell" customModule="boynton_allen_project2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="123"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCq-74-0EM" id="gKZ-0T-vZt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz0-83-fzk" userLabel="fireArticle">
+                                                    <rect key="frame" x="168" y="8" width="199" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="rDa-B3-Fz8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efr-Kp-XDN" userLabel="fireSource">
+                                                    <rect key="frame" x="228.5" y="78" width="44.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHn-fr-7NU" userLabel="fireImage">
+                                                    <rect key="frame" x="8" y="8" width="152" height="106.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="152" id="nx7-Ho-Nkq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4x-hn-v4u">
+                                                    <rect key="frame" x="168" y="76" width="56.5" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="71H-Uu-M4q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q4x-hn-v4u" firstAttribute="top" secondItem="vz0-83-fzk" secondAttribute="bottom" constant="8" id="0XB-1p-9uf"/>
+                                                <constraint firstItem="MHn-fr-7NU" firstAttribute="top" secondItem="gKZ-0T-vZt" secondAttribute="top" constant="8" id="33w-K5-e17"/>
+                                                <constraint firstItem="MHn-fr-7NU" firstAttribute="leading" secondItem="gKZ-0T-vZt" secondAttribute="leading" constant="8" id="JK4-Pb-qWL"/>
+                                                <constraint firstItem="q4x-hn-v4u" firstAttribute="top" secondItem="vz0-83-fzk" secondAttribute="bottom" constant="8" id="Kv0-sE-WdP"/>
+                                                <constraint firstItem="efr-Kp-XDN" firstAttribute="leading" secondItem="q4x-hn-v4u" secondAttribute="trailing" constant="4" id="MOY-8a-NNX"/>
+                                                <constraint firstItem="vz0-83-fzk" firstAttribute="leading" secondItem="MHn-fr-7NU" secondAttribute="trailing" constant="8" id="Nxp-Eb-n4S"/>
+                                                <constraint firstItem="q4x-hn-v4u" firstAttribute="centerY" secondItem="efr-Kp-XDN" secondAttribute="centerY" id="PiM-c4-u1s"/>
+                                                <constraint firstAttribute="trailing" secondItem="vz0-83-fzk" secondAttribute="trailing" constant="8" id="b3j-hR-hWH"/>
+                                                <constraint firstItem="q4x-hn-v4u" firstAttribute="leading" secondItem="MHn-fr-7NU" secondAttribute="trailing" constant="8" id="by3-db-10u"/>
+                                                <constraint firstItem="vz0-83-fzk" firstAttribute="top" secondItem="gKZ-0T-vZt" secondAttribute="top" constant="8" id="l9x-Pe-wtW"/>
+                                                <constraint firstAttribute="bottom" secondItem="MHn-fr-7NU" secondAttribute="bottom" constant="8" id="oRd-d2-66g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93158167150000004" green="0.87688154034468802" blue="0.71981653609405227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="fireArticle" destination="vz0-83-fzk" id="NfK-uq-Xcc"/>
+                                            <outlet property="fireImage" destination="MHn-fr-7NU" id="30S-sY-drI"/>
+                                            <outlet property="fireSource" destination="efr-Kp-XDN" id="kaX-7W-YPu"/>
+                                            <segue destination="iTr-06-JNo" kind="presentation" id="mc3-cS-kTa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dpi-e5-GuQ" id="5hV-T6-afm"/>
+                                    <outlet property="delegate" destination="Dpi-e5-GuQ" id="iaF-4M-IMt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99064213040000004" green="0.41627809300000002" blue="0.060680292740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" badgeValue="Articles" systemItem="featured" id="H51-PM-I9p"/>
+                    <connections>
+                        <outlet property="fireTableView" destination="9As-n7-bFL" id="dU3-Zp-oiq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEk-4z-uZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="312.59370314842579"/>
+        </scene>
+        <!--Fire Videos-->
+        <scene sceneID="Osq-0z-R3b">
+            <objects>
+                <viewController title="Fire Videos" id="ZOG-0c-tzX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="muY-jt-dfN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyi-9q-APj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dcE-wz-n3R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fire.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ahy-bV-tH0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wildfire Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFG-l3-nZR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wildfire.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eki-s1-ihc">
+                                <rect key="frame" x="20" y="205" width="335" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colorado Wildfire Destroys 1 Million Acres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-yM-r0d">
+                                <rect key="frame" x="20" y="145" width="335" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-a6-gft">
+                                <rect key="frame" x="122" y="411" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="15"/>
+                                <state key="normal" title="Watch Video">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Uv-mc-TiG" kind="show" id="e7i-rp-o96"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" badgeValue="Video" systemItem="mostViewed" id="P6J-x8-saJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jao-KS-ggD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="1019"/>
+        </scene>
+        <!--Video Web View-->
+        <scene sceneID="DJO-fO-d7H">
+            <objects>
+                <viewController title="Video Web View" id="2Uv-mc-TiG" customClass="VideoViewController" customModule="boynton_allen_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iyf-f0-B3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="6wh-9e-xlJ"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="RdB-Od-6NF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjL-Ap-vMk">
+                                <rect key="frame" x="-1" y="623" width="376" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="15"/>
+                                <state key="normal" title="Back to Video Home">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PUT-Eu-18c" kind="unwind" unwindAction="backButton:" id="Etf-G5-hyT"/>
+                                </connections>
+                            </button>
+                            <navigationBar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOH-L5-3HV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="ZKI-zM-qoO">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="&lt;" id="L9G-Dc-8nO">
+                                                <connections>
+                                                    <action selector="back:" destination="2Uv-mc-TiG" id="Bu5-nt-Ctp"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="&gt;" id="30g-nd-Soy">
+                                                <connections>
+                                                    <action selector="forward:" destination="2Uv-mc-TiG" id="DhD-c2-MeN"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="refresh" id="laF-bB-o20">
+                                                <connections>
+                                                    <action selector="refresh:" destination="2Uv-mc-TiG" id="0J2-93-rHT"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="stop" id="iux-bE-TDO">
+                                                <connections>
+                                                    <action selector="stop:" destination="2Uv-mc-TiG" id="XP1-Fd-Fpk"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAf-UM-srY">
+                                <rect key="frame" x="0.0" y="72" width="375" height="551"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2Uv-mc-TiG" id="UeO-BR-fZJ"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Wildfire Video" id="iLC-QF-bEM">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="HFB-hs-7OQ">
+                            <connections>
+                                <segue destination="PUT-Eu-18c" kind="unwind" unwindAction="backButton3:" id="2Xu-sg-1bY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="L9G-Dc-8nO" id="ukE-oh-gTQ"/>
+                        <outlet property="myWebView" destination="rAf-UM-srY" id="y64-ay-Iwc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCC-Ka-4NI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PUT-Eu-18c" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="1019"/>
+        </scene>
+        <!--Article Details-->
+        <scene sceneID="Qhu-nF-alA">
+            <objects>
+                <viewController title="Article Details" id="iTr-06-JNo" customClass="DetailViewController" customModule="boynton_allen_project2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fwK-pf-g3y"/>
+                        <viewControllerLayoutGuide type="bottom" id="BqK-VW-cTs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQ4-Wu-c2W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohz-6p-mtB">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Firefighter.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fyx-P6-ymf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoH-ga-mTX">
+                                <rect key="frame" x="46" y="272" width="283" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXV-In-gij">
+                                <rect key="frame" x="26" y="435" width="323" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRf-wg-z7k">
+                                <rect key="frame" x="20" y="578" width="335" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtV-CL-znr">
+                                <rect key="frame" x="0.0" y="629" width="375" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="15"/>
+                                <state key="normal" title="Back to Main Menu">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vs7-xn-eqW" kind="unwind" unwindAction="backButton:" id="skM-P3-TbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC8-Ax-OV8">
+                                <rect key="frame" x="343" y="37" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bNz-1y-AaB" kind="presentation" id="Q1b-4U-Bvs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99064213040000004" green="0.41627809300000002" blue="0.060680292740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="fireImage" destination="eoH-ga-mTX" id="gaI-Me-aaG"/>
+                        <outlet property="myDetails" destination="NXV-In-gij" id="gqH-x5-uAT"/>
+                        <outlet property="myTitle" destination="Ohz-6p-mtB" id="UAJ-fn-kMV"/>
+                        <outlet property="webAddress" destination="jRf-wg-z7k" id="uVy-iH-KbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogR-RY-BTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vs7-xn-eqW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="313"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="aFt-hB-bdF">
+            <objects>
+                <viewController storyboardIdentifier="References" id="bNz-1y-AaB" customClass="DetailViewController" customModule="boynton_allen_project2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qSs-1x-wOp"/>
+                        <viewControllerLayoutGuide type="bottom" id="frx-FM-Ug7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gmn-xL-jMe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firemans-helmet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LuU-uI-MZ9">
+                                <rect key="frame" x="0.0" y="42" width="375" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="References" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-fc-vtD">
+                                <rect key="frame" x="0.0" y="28" width="375" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPl-ag-Xjz">
+                                <rect key="frame" x="46" y="274" width="283" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avo-0b-dHq">
+                                <rect key="frame" x="20" y="485" width="335" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93158167150000004" green="0.87688154029999998" blue="0.71981653609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVO-09-ega">
+                                <rect key="frame" x="0.0" y="629" width="375" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OldNewspaperTypes" family="OldNewspaperTypes" pointSize="15"/>
+                                <state key="normal" title="Back to Main Menu">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lFp-1G-lLr" kind="unwind" unwindAction="backButton2:" id="P71-eT-T3L"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="References: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPu-Se-TE5">
+                                <rect key="frame" x="26" y="486" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dp-SL-tVy">
+                                <rect key="frame" x="0.0" y="437" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Old-printing-press_FREE-version" family="Old printing press_FREE-version" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This App Created By Al Boynton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwa-i6-9VT">
+                                <rect key="frame" x="20" y="585" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99064213040000004" green="0.41627809300000002" blue="0.060680292740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="fireImage" destination="aPl-ag-Xjz" id="rFG-kg-dcw"/>
+                        <outlet property="myTitle" destination="7Dp-SL-tVy" id="aGn-2G-QGk"/>
+                        <outlet property="refLabel" destination="avo-0b-dHq" id="vnQ-Jl-HWA"/>
+                    </connections>
+                </viewController>
+                <exit id="lFp-1G-lLr" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUo-24-136" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369" y="313"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Rb0-SD-zKI">
+            <objects>
+                <viewController storyboardIdentifier="Fire Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JdH-So-Z2Z" customClass="MapViewController" customModule="boynton_allen_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="swq-wD-LAI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dec-eQ-LlC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TDh-YD-Avs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-Ho-GHa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMap" destination="Fhj-Ho-GHa" id="nIa-ee-GAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvt-77-CZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3761" y="-356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WYQ-cv-1Lx">
+            <objects>
+                <navigationController storyboardIdentifier="Famous Fire Gallery" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uIG-jC-HQ8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" badgeValue="Gallery" systemItem="mostViewed" id="m1y-0Y-2JD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k78-VM-zjY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CxO-s6-2q7" kind="relationship" relationship="rootViewController" id="fqW-Yd-Jzs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zt-YW-MnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="-355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Boston.jpg" width="450" height="332"/>
+        <image name="Boston2.jpg" width="1800" height="1234"/>
+        <image name="Chicago1.jpg" width="640" height="360"/>
+        <image name="Chicago2.jpg" width="580" height="250"/>
+        <image name="Fire.jpg" width="640" height="960"/>
+        <image name="Firefighter.jpg" width="300" height="168"/>
+        <image name="San-Francisco2.jpg" width="1280" height="761"/>
+        <image name="San_Francisco.jpg" width="707" height="482"/>
+        <image name="Wildfire.png" width="1516" height="792"/>
+        <image name="firemans-helmet.jpg" width="987" height="702"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EsH-gK-2CN"/>
+    </inferredMetricsTieBreakers>
+</document>
