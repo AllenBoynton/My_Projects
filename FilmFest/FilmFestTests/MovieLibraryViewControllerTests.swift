@@ -25,7 +25,7 @@ class MovieLibraryViewControllerTests: XCTestCase {
     }
     
     func testMovieLibraryVC_TableViewShouldNotBeNil() {
-        XCTAssertNotEqual(sut.movieTableView)
+        XCTAssertNotEqual(sut.tableView)
     }
     
 }

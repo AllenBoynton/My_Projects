@@ -6,7 +6,7 @@
 //  Copyright © 2017 ABtech Applications. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 struct Movie: Equatable {
@@ -20,7 +20,7 @@ struct Movie: Equatable {
     
 }
 
-func==(lhs: Movie, rhs: Movie) -> Bool {
+func == (lhs: Movie, rhs: Movie) -> Bool {
     
     if lhs.title != rhs.title {
         return false

@@ -25,17 +25,64 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-Vp-iKq" customClass="DropShadowView" customModule="FilmFest" customModuleProvider="target">
                                 <rect key="frame" x="36" y="95" width="303" height="552"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EDS-VY-Mbg">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EDS-VY-Mbg">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="552"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="baW-s8-mmv">
-                                                <rect key="frame" x="0.0" y="28" width="303" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="68" id="baW-s8-mmv" customClass="MovieViewCell" customModule="FilmFest" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="303" height="68"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="baW-s8-mmv" id="7Jd-nv-2j1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="303" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="303" height="67.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="v3W-ar-c23">
+                                                            <rect key="frame" x="8" y="8" width="287" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="php-HA-16R"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VD0-gt-2VT">
+                                                            <rect key="frame" x="8" y="33" width="287" height="25"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ubz-Pr-HT5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="143.5" height="25"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="CKE-Go-6Ff"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 1, 1988" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Bb-9P-D2l">
+                                                                    <rect key="frame" x="143.5" y="0.0" width="143.5" height="25"/>
+                                                                    <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="0KC-TZ-n7s"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="VD0-gt-2VT" firstAttribute="leading" secondItem="7Jd-nv-2j1" secondAttribute="leading" constant="8" id="16u-Zq-Sni"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VD0-gt-2VT" secondAttribute="trailing" constant="8" id="7a2-NS-gwU"/>
+                                                        <constraint firstItem="VD0-gt-2VT" firstAttribute="top" secondItem="v3W-ar-c23" secondAttribute="bottom" id="Knk-7u-ceZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="v3W-ar-c23" secondAttribute="trailing" constant="8" id="SBP-mP-wq0"/>
+                                                        <constraint firstItem="v3W-ar-c23" firstAttribute="top" secondItem="7Jd-nv-2j1" secondAttribute="top" constant="8" id="gln-fu-fkn"/>
+                                                        <constraint firstItem="v3W-ar-c23" firstAttribute="leading" secondItem="7Jd-nv-2j1" secondAttribute="leading" constant="8" id="tQu-b5-uBW"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="filmLabel" destination="v3W-ar-c23" id="dzW-qc-SIm"/>
+                                                    <outlet property="releaseLabel" destination="9Bb-9P-D2l" id="Cjp-4z-58G"/>
+                                                    <segue destination="O3j-Kh-WVr" kind="show" identifier="FilmDetailsVC" id="QbB-1i-i4G"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -81,10 +128,101 @@
                             <constraint firstItem="hhT-Vp-iKq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="x3m-rT-vNo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EDS-VY-Mbg" id="iNp-SC-9uu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="-330.39999999999998" y="71.514242878560722"/>
+        </scene>
+        <!--Film DetailsVC-->
+        <scene sceneID="R3a-9T-neX">
+            <objects>
+                <viewController id="O3j-Kh-WVr" customClass="FilmDetailsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkF-w8-zZ3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xhc-yb-Wiq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Akh-py-Ssq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Fest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tx-CD-FS7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="qPN-8a-AQU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzK-p8-uRm">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="O3j-Kh-WVr" eventType="touchUpInside" id="uSp-B2-il8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-WW-7UB">
+                                <rect key="frame" x="16" y="113" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SJ5-il-tKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OA3-WY-tEN">
+                                <rect key="frame" x="16" y="168" width="343" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-fh-nJ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="IlI-Sk-OYo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 1, 1988" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IZm-jx-Pe6">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Mfp-aH-z51"/>
+                                    <constraint firstAttribute="height" constant="25" id="liW-Rj-WFn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fbk-WW-7UB" firstAttribute="leading" secondItem="Akh-py-Ssq" secondAttribute="leadingMargin" id="EuP-uD-Q2q"/>
+                            <constraint firstItem="OA3-WY-tEN" firstAttribute="top" secondItem="fbk-WW-7UB" secondAttribute="bottom" constant="25" id="IjF-ZA-Xx9"/>
+                            <constraint firstItem="fbk-WW-7UB" firstAttribute="top" secondItem="7tx-CD-FS7" secondAttribute="bottom" constant="40" id="UX4-02-MpG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fbk-WW-7UB" secondAttribute="trailing" id="Ui1-e5-ihw"/>
+                            <constraint firstItem="7tx-CD-FS7" firstAttribute="leading" secondItem="Akh-py-Ssq" secondAttribute="leading" id="alK-Es-y2x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OA3-WY-tEN" secondAttribute="trailing" id="ghT-xJ-8zj"/>
+                            <constraint firstAttribute="trailing" secondItem="7tx-CD-FS7" secondAttribute="trailing" id="k4V-7e-g6f"/>
+                            <constraint firstItem="7tx-CD-FS7" firstAttribute="top" secondItem="qkF-w8-zZ3" secondAttribute="bottom" constant="8" id="nvE-xq-rCC"/>
+                            <constraint firstItem="OA3-WY-tEN" firstAttribute="leading" secondItem="Akh-py-Ssq" secondAttribute="leadingMargin" id="ryn-z0-2sV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieReleaseDate" destination="IZm-jx-Pe6" id="0Dd-iO-7Iw"/>
+                        <outlet property="movieTitle" destination="fbk-WW-7UB" id="SLE-pR-vrd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zn3-FM-39t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="72"/>
         </scene>
     </scenes>
 </document>
