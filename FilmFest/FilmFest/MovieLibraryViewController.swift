@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MovieLibraryViewController.swift
 //  FilmFest
 //
 //  Created by Allen Boynton on 5/8/17.
@@ -9,7 +9,7 @@
 import UIKit
 import ChameleonFramework
 
-class MainViewController: UIViewController {
+class MovieLibraryViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

@@ -31,4 +31,25 @@ class MovieStructTests: XCTestCase {
         let movie = Movie(title: "Romantic Comedy", releaseDate: "02/10/1987")
         XCTAssertEqual(movie.releaseDate, "02/10/1987")
     }
+    
+    func testMoviesAreEqual_ShouldReturnTrue() {
+        let movie1 = Movie(title: "Action")
+        let movie2 = Movie(title: "Action")
+        
+        XCTAssertEqual(movie1, movie2)
+    }
+    
+    func testIfMovieTitlesAreDifferent_ShouldReturnNotEqual() {
+        let movie1 = Movie(title: "Action")
+        let movie2 = Movie(title: "Suspense")
+        
+        XCTAssertNotEqual(movie1, movie2)
+    }
+    
+    func testIfMovieReleaseDatesAreDifferent_ShouldReturnNotEqual() {
+        let movie1 = Movie(title: "Sci-fi", releaseDate: "02/23/1987")
+        let movie2 = Movie(title: "Sci-fi", releaseDate: "03/24/1999")
+        
+        XCTAssertNotEqual(movie1, movie2)
+    }
 }

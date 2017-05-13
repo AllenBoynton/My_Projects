@@ -9,6 +9,7 @@
 import XCTest
 
 @testable import FilmFest
+
 class MovieManagerTests: XCTestCase {
     
     var sut: MovieManager!
@@ -44,4 +45,48 @@ class MovieManagerTests: XCTestCase {
         let returnedMovieAtIndex = sut.movieAtIndex(index: 0)
         XCTAssertEqual(movie.title, returnedMovieAtIndex.title)
     }
+    
+    func testFavoriteMovies_UpdatesMoviesSeenAndMoviesToSeeCounts() {
+        sut.addMovieToLibrary(movie: Movie(title: "Action Adventure"))
+        sut.favoriteMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(sut.moviesToSeeCount, 0)
+        XCTAssertEqual(sut.moviesSeenCount, 1)
+    }
+    
+    func testFavoriteMovie_ShouldRemoveMovieFromMoviesToSeeArray() {
+        let movie1 = Movie(title: "Action Adventure")
+        let movie2 = Movie(title: "Biography")
+        
+        sut.addMovieToLibrary(movie: movie1)
+        sut.addMovieToLibrary(movie: movie2)
+        sut.favoriteMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(sut.movieAtIndex(index: 0).title, movie2.title)
+    }
+    
+    func testFavoriteMovieAtIndex_ShouldReturnFavoritedMovie() {
+        let movie = Movie(title: "Thriller")
+        sut.addMovieToLibrary(movie: movie)
+        sut.favoriteMovieAtIndex(index: 0)
+        let returnedMovie = sut.favoritedMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(movie.title, returnedMovie.title)
+    }
+    
+    func testClearAllArrayItems_ShouldReturnArrayCountsOfZero() {
+        sut.addMovieToLibrary(movie: Movie(title: "Thriller"))
+        sut.addMovieToLibrary(movie: Movie(title: "Action"))
+        sut.favoriteMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(sut.moviesToSeeCount, 1)
+        XCTAssertEqual(sut.moviesSeenCount, 1)
+        
+        sut.clearArrays()
+        
+        XCTAssertEqual(sut.moviesToSeeCount, 0)
+        XCTAssertEqual(sut.moviesSeenCount, 0)
+    }
+    
+    
 }

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Movie Library View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FilmFest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieLibraryVC" id="BYZ-38-t0r" customClass="MovieLibraryViewController" customModule="FilmFest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,33 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-Vp-iKq" customClass="DropShadowView" customModule="FilmFest" customModuleProvider="target">
                                 <rect key="frame" x="36" y="95" width="303" height="552"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EDS-VY-Mbg">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="552"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="baW-s8-mmv">
+                                                <rect key="frame" x="0.0" y="28" width="303" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="baW-s8-mmv" id="7Jd-nv-2j1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="303" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Ph7-sZ-Tq4"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="fUd-kJ-Ars"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.28627450980000002" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EDS-VY-Mbg" secondAttribute="trailing" id="F3a-Ch-fI6"/>
+                                    <constraint firstItem="EDS-VY-Mbg" firstAttribute="top" secondItem="hhT-Vp-iKq" secondAttribute="top" id="ZLA-U2-l4c"/>
+                                    <constraint firstItem="EDS-VY-Mbg" firstAttribute="leading" secondItem="hhT-Vp-iKq" secondAttribute="leading" id="Znn-gF-9Sd"/>
+                                    <constraint firstAttribute="bottom" secondItem="EDS-VY-Mbg" secondAttribute="bottom" id="yug-gf-L4B"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                         <size key="value" width="5" height="5"/>
