@@ -155,31 +155,37 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     // Sound files
     func prepareAudios() {
         
-        let audioPath1 = Bundle.main.path(forResource: "Pat", ofType: "mp3")
-        let error1: NSError? = nil
+        let audioPath1 = Bundle.main.path(forResource: "Pat", ofType: "mp3")!
+        
         do {
-            tapSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath1!))
-        }
-        catch {
-            print("Something bad happened \(error1). Try catching specific errors to narrow things down")
+            tapSound = try AVAudioPlayer(contentsOf: URL(string: audioPath1)!)
+            tapSound.prepareToPlay()
+            
+        } catch let err as NSError {
+            
+            print(err.debugDescription)
         }
         
-        let audioPath2 = Bundle.main.path(forResource: "shorttone", ofType: "mp3")
-        let error2: NSError? = nil
+        let audioPath2 = Bundle.main.path(forResource: "shorttone", ofType: "mp3")!
+
         do {
-            beepSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath2!))
-        }
-        catch {
-            print("Something bad happened \(error2). Try catching specific errors to narrow things down")
+            beepSound = try AVAudioPlayer(contentsOf: URL(string: audioPath2)!)
+            beepSound.prepareToPlay()
+            
+        } catch let err as NSError {
+            
+            print(err.debugDescription)
         }
         
-        let audioPath3 = Bundle.main.path(forResource: "select", ofType: "mp3")
-        let error3: NSError? = nil
+        let audioPath3 = Bundle.main.path(forResource: "select", ofType: "mp3")!
+
         do {
-            selectSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath3!))
-        }
-        catch {
-            print("Something bad happened \(error3). Try catching specific errors to narrow things down")
+            selectSound = try AVAudioPlayer(contentsOf: URL(string: audioPath3)!)
+            selectSound.prepareToPlay()
+            
+        } catch let err as NSError {
+            
+            print(err.debugDescription)
         }
     }
     
