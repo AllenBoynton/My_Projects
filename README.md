@@ -1,2 +1,2 @@
-# MDF2-1606
-Mobile Development Frameworks 2
+# Current Personal Projects
+Personal projects for either learning or App Store Development
