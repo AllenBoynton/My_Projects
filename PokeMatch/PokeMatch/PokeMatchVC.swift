@@ -15,6 +15,7 @@ class PokeMatchVC: UIViewController {
     
     
     // Local variables
+    var pokemon: Pokemon!
     var pokeTiles = [Pokemon]()
     var audioPlayer: AVAudioPlayer!
     
