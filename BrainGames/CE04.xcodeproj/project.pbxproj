@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0907CDD71ED39CA900350677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDD61ED39CA900350677 /* AppDelegate.swift */; };
 		0991C0DD1D0154EC007A6644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991C0DC1D0154EC007A6644 /* ViewController.swift */; };
 		0991C0E01D0154EC007A6644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0991C0DE1D0154EC007A6644 /* Main.storyboard */; };
 		0991C0E51D0154EC007A6644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0991C0E41D0154EC007A6644 /* Assets.xcassets */; };
 		0991C0E81D0154EC007A6644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0991C0E61D0154EC007A6644 /* LaunchScreen.storyboard */; };
-		0991C0F51D027DD8007A6644 /* TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991C0F41D027DD8007A6644 /* TimeIntervals.swift */; };
-		0991C0F81D03CF51007A6644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991C0F71D03CF51007A6644 /* AppDelegate.swift */; };
 		09E0A4DD1D1613F600E6CE6D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E0A4DC1D1613F600E6CE6D /* AVFoundation.framework */; };
 		09E0A4E21D1614D400E6CE6D /* Cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09E0A4DE1D1614D400E6CE6D /* Cheering.mp3 */; };
 		09E0A4E31D1614D400E6CE6D /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09E0A4DF1D1614D400E6CE6D /* chime.mp3 */; };
@@ -21,14 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0907CDD61ED39CA900350677 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0991C0D71D0154EC007A6644 /* CE04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CE04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0991C0DC1D0154EC007A6644 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0991C0DF1D0154EC007A6644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0991C0E41D0154EC007A6644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0991C0E71D0154EC007A6644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0991C0E91D0154EC007A6644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0991C0F41D027DD8007A6644 /* TimeIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeIntervals.swift; path = "../../../../1605 MDF2/Repository/MDF2_1605/AdaptiveLayoutProject/AdaptiveLayoutProject/TimeIntervals.swift"; sourceTree = "<group>"; };
-		0991C0F71D03CF51007A6644 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../1605 MDF2/Repository/MDF2_1605/AdaptiveLayoutProject/AdaptiveLayoutProject/AppDelegate.swift"; sourceTree = "<group>"; };
 		09E0A4DC1D1613F600E6CE6D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		09E0A4DE1D1614D400E6CE6D /* Cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cheering.mp3; sourceTree = "<group>"; };
 		09E0A4DF1D1614D400E6CE6D /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
@@ -68,9 +66,8 @@
 		0991C0D91D0154EC007A6644 /* CE04 */ = {
 			isa = PBXGroup;
 			children = (
-				0991C0F01D015529007A6644 /* AppDataCore */,
+				0907CDD61ED39CA900350677 /* AppDelegate.swift */,
 				0991C0F31D0155A2007A6644 /* Resources */,
-				0991C0F61D027DEF007A6644 /* Protocols */,
 				0991C0F21D015577007A6644 /* Storyboards */,
 				0991C0F11D01555B007A6644 /* ViewControllers */,
 			);
@@ -83,14 +80,6 @@
 				09E0A4DC1D1613F600E6CE6D /* AVFoundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0991C0F01D015529007A6644 /* AppDataCore */ = {
-			isa = PBXGroup;
-			children = (
-				0991C0F71D03CF51007A6644 /* AppDelegate.swift */,
-			);
-			name = AppDataCore;
 			sourceTree = "<group>";
 		};
 		0991C0F11D01555B007A6644 /* ViewControllers */ = {
@@ -121,14 +110,6 @@
 				0991C0E41D0154EC007A6644 /* Assets.xcassets */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		0991C0F61D027DEF007A6644 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				0991C0F41D027DD8007A6644 /* TimeIntervals.swift */,
-			);
-			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +145,7 @@
 					0991C0D61D0154EC007A6644 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 979TTQWNS8;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -207,8 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0991C0F81D03CF51007A6644 /* AppDelegate.swift in Sources */,
-				0991C0F51D027DD8007A6644 /* TimeIntervals.swift in Sources */,
+				0907CDD71ED39CA900350677 /* AppDelegate.swift in Sources */,
 				0991C0DD1D0154EC007A6644 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +306,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CE04/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fullsail.CE04;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -336,9 +319,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CE04/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fullsail.CE04;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
