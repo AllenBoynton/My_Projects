@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0907CD361ED37BDD00350677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CD351ED37BDD00350677 /* AppDelegate.swift */; };
-		0907CD381ED37BDD00350677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CD371ED37BDD00350677 /* ViewController.swift */; };
+		0907CD381ED37BDD00350677 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CD371ED37BDD00350677 /* MainVC.swift */; };
 		0907CD3B1ED37BDD00350677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0907CD391ED37BDD00350677 /* Main.storyboard */; };
 		0907CD3E1ED37BDD00350677 /* RPS_HandsOn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0907CD3C1ED37BDD00350677 /* RPS_HandsOn.xcdatamodeld */; };
 		0907CD401ED37BDD00350677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0907CD3F1ED37BDD00350677 /* Assets.xcassets */; };
@@ -20,6 +20,9 @@
 		0907CD731ED37D3A00350677 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CD721ED37D3A00350677 /* GameKit.framework */; };
 		0907CD751ED37D6200350677 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CD741ED37D6200350677 /* CoreLocation.framework */; };
 		0907CD771ED37E8B00350677 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CD761ED37E8B00350677 /* Messages.framework */; };
+		0907CDC91ED38CDB00350677 /* pat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDC61ED38CDB00350677 /* pat.mp3 */; };
+		0907CDCA1ED38CDC00350677 /* select.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDC71ED38CDB00350677 /* select.mp3 */; };
+		0907CDCB1ED38CDC00350677 /* shorttone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDC81ED38CDB00350677 /* shorttone.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,7 @@
 /* Begin PBXFileReference section */
 		0907CD321ED37BDD00350677 /* RPS_HandsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS_HandsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0907CD351ED37BDD00350677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0907CD371ED37BDD00350677 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0907CD371ED37BDD00350677 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0907CD3A1ED37BDD00350677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0907CD3D1ED37BDD00350677 /* RPS_HandsOn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RPS_HandsOn.xcdatamodel; sourceTree = "<group>"; };
 		0907CD3F1ED37BDD00350677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		0907CD721ED37D3A00350677 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0907CD741ED37D6200350677 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0907CD761ED37E8B00350677 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		0907CDC61ED38CDB00350677 /* pat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pat.mp3; sourceTree = "<group>"; };
+		0907CDC71ED38CDB00350677 /* select.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = select.mp3; sourceTree = "<group>"; };
+		0907CDC81ED38CDB00350677 /* shorttone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shorttone.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,20 +121,14 @@
 		0907CD341ED37BDD00350677 /* RPS_HandsOn */ = {
 			isa = PBXGroup;
 			children = (
-				0907CD6C1ED37C5D00350677 /* AppDelegate */,
 				0907CD6B1ED37C4900350677 /* Model */,
 				0907CD6A1ED37C3D00350677 /* View */,
 				0907CD691ED37C3200350677 /* Controller */,
 				0907CD681ED37C2100350677 /* Storyboard */,
 				0907CD671ED37C0E00350677 /* Utilities */,
 				0907CD661ED37BFC00350677 /* Resources */,
-				0907CD351ED37BDD00350677 /* AppDelegate.swift */,
-				0907CD371ED37BDD00350677 /* ViewController.swift */,
-				0907CD391ED37BDD00350677 /* Main.storyboard */,
-				0907CD3F1ED37BDD00350677 /* Assets.xcassets */,
-				0907CD411ED37BDD00350677 /* LaunchScreen.storyboard */,
-				0907CD441ED37BDD00350677 /* Info.plist */,
-				0907CD3C1ED37BDD00350677 /* RPS_HandsOn.xcdatamodeld */,
+				0907CD6C1ED37C5D00350677 /* AppDelegate */,
+				0907CDCE1ED38D2B00350677 /* Core Data */,
 			);
 			path = RPS_HandsOn;
 			sourceTree = "<group>";
@@ -154,6 +154,9 @@
 		0907CD661ED37BFC00350677 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0907CD3F1ED37BDD00350677 /* Assets.xcassets */,
+				0907CDCC1ED38CF000350677 /* Audio */,
+				0907CDCD1ED38D0500350677 /* Font */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 		0907CD671ED37C0E00350677 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0907CD441ED37BDD00350677 /* Info.plist */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -168,6 +172,8 @@
 		0907CD681ED37C2100350677 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0907CD391ED37BDD00350677 /* Main.storyboard */,
+				0907CD411ED37BDD00350677 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 		0907CD691ED37C3200350677 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0907CD371ED37BDD00350677 /* MainVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 		0907CD6C1ED37C5D00350677 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				0907CD351ED37BDD00350677 /* AppDelegate.swift */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -210,6 +218,31 @@
 				0907CD6E1ED37C9300350677 /* MultipeerConnectivity.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0907CDCC1ED38CF000350677 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				0907CDC61ED38CDB00350677 /* pat.mp3 */,
+				0907CDC71ED38CDB00350677 /* select.mp3 */,
+				0907CDC81ED38CDB00350677 /* shorttone.mp3 */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		0907CDCD1ED38D0500350677 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		0907CDCE1ED38D2B00350677 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0907CD3C1ED37BDD00350677 /* RPS_HandsOn.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,8 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0907CD431ED37BDD00350677 /* LaunchScreen.storyboard in Resources */,
+				0907CDCB1ED38CDC00350677 /* shorttone.mp3 in Resources */,
 				0907CD401ED37BDD00350677 /* Assets.xcassets in Resources */,
+				0907CDC91ED38CDB00350677 /* pat.mp3 in Resources */,
 				0907CD3B1ED37BDD00350677 /* Main.storyboard in Resources */,
+				0907CDCA1ED38CDC00350677 /* select.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0907CD3E1ED37BDD00350677 /* RPS_HandsOn.xcdatamodeld in Sources */,
-				0907CD381ED37BDD00350677 /* ViewController.swift in Sources */,
+				0907CD381ED37BDD00350677 /* MainVC.swift in Sources */,
 				0907CD361ED37BDD00350677 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
