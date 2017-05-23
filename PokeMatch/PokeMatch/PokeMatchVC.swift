@@ -9,10 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PokeMatchVC: UIViewController {
-
-    @IBOutlet weak var pokeTitle: UILabel!
-    
+class PokeMatchVC: UIViewController {    
     
     // Local variables
     var pokemon: Pokemon!
