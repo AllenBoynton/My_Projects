@@ -29,6 +29,8 @@
 		0907CDF71ED41ADE00350677 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF31ED41ADE00350677 /* chime.mp3 */; };
 		0907CDF81ED41ADE00350677 /* Pat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF41ED41ADE00350677 /* Pat.mp3 */; };
 		0907CDF91ED41ADE00350677 /* taDa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF51ED41ADE00350677 /* taDa.mp3 */; };
+		094AEF141ED469CF007FDFC9 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF131ED469CF007FDFC9 /* RoundedImageView.swift */; };
+		094AEF161ED47721007FDFC9 /* RadiusButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF151ED47721007FDFC9 /* RadiusButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		0907CDF31ED41ADE00350677 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		0907CDF41ED41ADE00350677 /* Pat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pat.mp3; sourceTree = "<group>"; };
 		0907CDF51ED41ADE00350677 /* taDa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taDa.mp3; sourceTree = "<group>"; };
+		094AEF131ED469CF007FDFC9 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		094AEF151ED47721007FDFC9 /* RadiusButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 				0907CDE61ED4126900350677 /* ShadowTextField.swift */,
 				0907CDE81ED4127500350677 /* StrokedLabel.swift */,
 				0907CDF01ED4160E00350677 /* MaterialView.swift */,
+				094AEF131ED469CF007FDFC9 /* RoundedImageView.swift */,
+				094AEF151ED47721007FDFC9 /* RadiusButtons.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -405,8 +411,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094AEF141ED469CF007FDFC9 /* RoundedImageView.swift in Sources */,
 				0907CDE91ED4127500350677 /* StrokedLabel.swift in Sources */,
 				0907CDE51ED4125900350677 /* Pokemon.swift in Sources */,
+				094AEF161ED47721007FDFC9 /* RadiusButtons.swift in Sources */,
 				0907CD8D1ED3832D00350677 /* PokeMatch.xcdatamodeld in Sources */,
 				0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */,
 				0907CDE71ED4126900350677 /* ShadowTextField.swift in Sources */,
