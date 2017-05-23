@@ -26,7 +26,7 @@ extension UIView {
             if materialKey {
                 
                 self.layer.masksToBounds = false
-                self.layer.borderColor = UIColor.lightGray.cgColor
+                self.layer.borderColor = UIColor.blue.cgColor
                 self.layer.cornerRadius = 3
                 self.layer.shadowOpacity = 0.8
                 self.layer.shadowRadius = 3
