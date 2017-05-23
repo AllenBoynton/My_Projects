@@ -9,7 +9,9 @@
 import UIKit
 import AVFoundation
 
-class PokeMatchVC: UIViewController {    
+class PokeMatchVC: UIViewController {
+    
+    var gameCounter = GameCounter()
     
     // Local variables
     var pokemon: Pokemon!

@@ -13,8 +13,8 @@ class RoundedImageView: UIImageView {
     // Creates rounded image views for tiles
     override func awakeFromNib() {
         self.layer.cornerRadius = 5.0
-        self.layer.borderColor = UIColor.white.cgColor //(red: 26/255, green: 59/255, blue: 148/255, alpha: 0.8).cgColor
-        self.layer.borderWidth = 1.5
+        self.layer.borderColor = UIColor(red: 255/255, green: 255/255, blue: 0/255, alpha: 0.8).cgColor
+        self.layer.borderWidth = 2.0
         self.clipsToBounds = true
     }
 }

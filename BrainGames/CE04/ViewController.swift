@@ -215,7 +215,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Time counter
     
-    
     // Starts time when play button is pressed.
     func startGameTime() {
         
