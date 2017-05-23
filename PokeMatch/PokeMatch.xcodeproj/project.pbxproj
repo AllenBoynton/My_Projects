@@ -24,6 +24,11 @@
 		0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDEA1ED4128500350677 /* PokeMatchVC.swift */; };
 		0907CDED1ED4129700350677 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEC1ED4129700350677 /* pokemon.ttf */; };
 		0907CDEF1ED412A700350677 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEE1ED412A700350677 /* music.mp3 */; };
+		0907CDF11ED4160E00350677 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDF01ED4160E00350677 /* MaterialView.swift */; };
+		0907CDF61ED41ADE00350677 /* Cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF21ED41ADE00350677 /* Cheering.mp3 */; };
+		0907CDF71ED41ADE00350677 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF31ED41ADE00350677 /* chime.mp3 */; };
+		0907CDF81ED41ADE00350677 /* Pat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF41ED41ADE00350677 /* Pat.mp3 */; };
+		0907CDF91ED41ADE00350677 /* taDa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF51ED41ADE00350677 /* taDa.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		0907CDEA1ED4128500350677 /* PokeMatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeMatchVC.swift; sourceTree = "<group>"; };
 		0907CDEC1ED4129700350677 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 		0907CDEE1ED412A700350677 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		0907CDF01ED4160E00350677 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		0907CDF21ED41ADE00350677 /* Cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cheering.mp3; sourceTree = "<group>"; };
+		0907CDF31ED41ADE00350677 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
+		0907CDF41ED41ADE00350677 /* Pat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pat.mp3; sourceTree = "<group>"; };
+		0907CDF51ED41ADE00350677 /* taDa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taDa.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +218,7 @@
 			children = (
 				0907CDE61ED4126900350677 /* ShadowTextField.swift */,
 				0907CDE81ED4127500350677 /* StrokedLabel.swift */,
+				0907CDF01ED4160E00350677 /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -234,6 +245,10 @@
 		0907CDD01ED390DB00350677 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				0907CDF21ED41ADE00350677 /* Cheering.mp3 */,
+				0907CDF31ED41ADE00350677 /* chime.mp3 */,
+				0907CDF41ED41ADE00350677 /* Pat.mp3 */,
+				0907CDF51ED41ADE00350677 /* taDa.mp3 */,
 				0907CDEE1ED412A700350677 /* music.mp3 */,
 			);
 			name = Audio;
@@ -358,9 +373,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0907CD921ED3832D00350677 /* LaunchScreen.storyboard in Resources */,
+				0907CDF61ED41ADE00350677 /* Cheering.mp3 in Resources */,
+				0907CDF91ED41ADE00350677 /* taDa.mp3 in Resources */,
+				0907CDF81ED41ADE00350677 /* Pat.mp3 in Resources */,
 				0907CD8F1ED3832D00350677 /* Assets.xcassets in Resources */,
 				0907CDED1ED4129700350677 /* pokemon.ttf in Resources */,
 				0907CDEF1ED412A700350677 /* music.mp3 in Resources */,
+				0907CDF71ED41ADE00350677 /* chime.mp3 in Resources */,
 				0907CD8A1ED3832D00350677 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +410,7 @@
 				0907CD8D1ED3832D00350677 /* PokeMatch.xcdatamodeld in Sources */,
 				0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */,
 				0907CDE71ED4126900350677 /* ShadowTextField.swift in Sources */,
+				0907CDF11ED4160E00350677 /* MaterialView.swift in Sources */,
 				0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

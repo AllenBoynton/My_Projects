@@ -31,14 +31,14 @@ class StrokedLabel: UILabel {
     }
 }
 
-let text = "PokéMatch"
+//let text = "PokéMatch"
 
 // UILabel subclass initialization
-let label = StrokedLabel(frame: CGRect(x: 0, y: 20, width: 375, height: 45))
+//let label = StrokedLabel(frame: CGRect(x: 0, y: 20, width: 375, height: 45))
 
 // simple assign String to 'strokedText' property to see the results
-label.strokedText = text
+//label.strokedText = text
 
-label.backgroundColor = UIColor.white
+//label.backgroundColor = UIColor.white
 
-label
+//label
