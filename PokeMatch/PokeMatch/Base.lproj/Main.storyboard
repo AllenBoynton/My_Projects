@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,14 +24,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVt-VA-AL2" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokéMatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-0n-mQ9">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="45"/>
+                                        <rect key="frame" x="0.0" y="20" width="1024" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="32"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,14 +40,14 @@
                                         <size key="shadowOffset" width="-3" height="-1"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQv-IQ-7TK">
-                                        <rect key="frame" x="337" y="27" width="30" height="30"/>
+                                        <rect key="frame" x="986" y="27" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SSE-Q8-181"/>
                                             <constraint firstAttribute="width" constant="30" id="ilf-n3-7Do"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="music"/>
                                         <connections>
-                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBg-xT-X04"/>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Feo-om-XQV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -63,200 +63,368 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="N3E-Nq-v74">
-                                <rect key="frame" x="0.0" y="65" width="375" height="527"/>
+                                <rect key="frame" x="0.0" y="65" width="1024" height="1301"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mG-li-2TF" userLabel="Middle View">
-                                <rect key="frame" x="20" y="133" width="335" height="444"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UD9-oZ-ell">
+                                <rect key="frame" x="412" y="516.5" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="L8w-m9-JQ5"/>
+                                    <constraint firstAttribute="width" constant="200" id="l62-0s-sSq"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="-3" height="-1"/>
+                                <state key="normal" title="Start" image="start">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zz1-2o-7ff"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mG-li-2TF" userLabel="Middle View">
+                                <rect key="frame" x="20" y="183.5" width="984" height="1003.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Sd-hW-LMl">
-                                        <rect key="frame" x="12" y="12" width="312" height="420"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Sd-hW-LMl" userLabel="Main Stack View">
+                                        <rect key="frame" x="10" y="10" width="964" height="983.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qZM-Ro-vff">
-                                                <rect key="frame" x="0.0" y="0.0" width="312" height="75"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-LV-vDu" userLabel="Stack View 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="964" height="189"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="yMd-Qi-xCu" userLabel="Tile1" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeD-PL-Lxm" userLabel="View1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="yMd-Qi-xCu" userLabel="Tile1" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="189"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="WmV-DF-B83"/>
-                                                            <constraint firstAttribute="height" constant="75" id="mZO-1D-f1q"/>
+                                                            <constraint firstItem="yMd-Qi-xCu" firstAttribute="height" secondItem="LeD-PL-Lxm" secondAttribute="height" id="0AG-wo-fk7"/>
+                                                            <constraint firstItem="yMd-Qi-xCu" firstAttribute="width" secondItem="LeD-PL-Lxm" secondAttribute="width" id="2rY-UI-fag"/>
+                                                            <constraint firstItem="yMd-Qi-xCu" firstAttribute="centerX" secondItem="LeD-PL-Lxm" secondAttribute="centerX" id="YRf-pP-0cl"/>
+                                                            <constraint firstItem="yMd-Qi-xCu" firstAttribute="centerY" secondItem="LeD-PL-Lxm" secondAttribute="centerY" id="gfd-lS-f0Q"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ugz-AZ-9Z7" userLabel="Tile2" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="75" height="75"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqE-Hs-NDp" userLabel="View2">
+                                                        <rect key="frame" x="242" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="hRe-GH-Akq" userLabel="Tile2" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="jox-YS-YZ2"/>
-                                                            <constraint firstAttribute="height" constant="75" id="vVS-KD-rW8"/>
+                                                            <constraint firstItem="hRe-GH-Akq" firstAttribute="centerX" secondItem="PqE-Hs-NDp" secondAttribute="centerX" id="6qX-7K-46B"/>
+                                                            <constraint firstItem="hRe-GH-Akq" firstAttribute="centerY" secondItem="PqE-Hs-NDp" secondAttribute="centerY" id="TP4-ho-tT0"/>
+                                                            <constraint firstItem="hRe-GH-Akq" firstAttribute="height" secondItem="PqE-Hs-NDp" secondAttribute="height" id="Vrs-Hk-GsM"/>
+                                                            <constraint firstItem="hRe-GH-Akq" firstAttribute="width" secondItem="PqE-Hs-NDp" secondAttribute="width" id="rkT-m6-kjM"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ls1-EG-lyp" userLabel="Tile3" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="75" height="75"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-qT-Z3l" userLabel="View3">
+                                                        <rect key="frame" x="484" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="CHP-Fr-Htr" userLabel="Tile3" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="238.5" height="189"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="1Ok-9i-6Dm"/>
-                                                            <constraint firstAttribute="width" constant="75" id="EhF-Lf-dTd"/>
+                                                            <constraint firstItem="CHP-Fr-Htr" firstAttribute="centerY" secondItem="9PQ-qT-Z3l" secondAttribute="centerY" id="1ir-np-Qb1"/>
+                                                            <constraint firstItem="CHP-Fr-Htr" firstAttribute="width" secondItem="9PQ-qT-Z3l" secondAttribute="width" id="6KE-HL-uS4"/>
+                                                            <constraint firstItem="CHP-Fr-Htr" firstAttribute="centerX" secondItem="9PQ-qT-Z3l" secondAttribute="centerX" id="AkS-LG-Yf7"/>
+                                                            <constraint firstItem="CHP-Fr-Htr" firstAttribute="height" secondItem="9PQ-qT-Z3l" secondAttribute="height" id="YKj-rh-QO7"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-rb-YcM" userLabel="Tile4" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="75" height="75"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLb-fh-89y" userLabel="View4">
+                                                        <rect key="frame" x="726" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="mvS-74-p3U" userLabel="Tile4" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="189"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="E3y-ze-G5Y"/>
-                                                            <constraint firstAttribute="height" constant="75" id="eyh-tf-CM4"/>
+                                                            <constraint firstItem="mvS-74-p3U" firstAttribute="centerX" secondItem="zLb-fh-89y" secondAttribute="centerX" id="36F-kM-YKo"/>
+                                                            <constraint firstItem="mvS-74-p3U" firstAttribute="centerY" secondItem="zLb-fh-89y" secondAttribute="centerY" id="7k2-Cy-Oz7"/>
+                                                            <constraint firstItem="mvS-74-p3U" firstAttribute="width" secondItem="zLb-fh-89y" secondAttribute="width" id="qp7-ma-rBb"/>
+                                                            <constraint firstItem="mvS-74-p3U" firstAttribute="height" secondItem="zLb-fh-89y" secondAttribute="height" id="v13-hj-qGN"/>
                                                         </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="BNb-dC-APJ"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-YE-Ic6">
-                                                <rect key="frame" x="0.0" y="86.5" width="312" height="75"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jzz-sZ-MIu" userLabel="Tile5" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="pGt-97-Doe"/>
-                                                            <constraint firstAttribute="height" constant="75" id="vyz-m8-VjK"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="QcQ-nI-SXL" userLabel="Tile6" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="ENK-lf-a7h"/>
-                                                            <constraint firstAttribute="width" constant="75" id="bA9-bT-uXY"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="JIU-bJ-D6s" userLabel="Tile7" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="4b2-ad-6ej"/>
-                                                            <constraint firstAttribute="height" constant="75" id="93J-Ee-gEP"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="S56-vH-39N" userLabel="Tile8" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.10359176248311996" green="0.23175284266471863" blue="0.58173000812530518" alpha="0.79991610738255037" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="GRj-1T-48G"/>
-                                                            <constraint firstAttribute="width" constant="75" id="IAo-et-q06"/>
-                                                        </constraints>
-                                                    </imageView>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ecl-Zv-pQ1">
-                                                <rect key="frame" x="0.0" y="172.5" width="312" height="75"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-0q-c3b" userLabel="Stack View 2">
+                                                <rect key="frame" x="0.0" y="199" width="964" height="188.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-BO-Bza" userLabel="Tile9" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tf-Tx-o4q" userLabel="View5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jzz-sZ-MIu" userLabel="Tile5" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="Yba-2X-614"/>
-                                                            <constraint firstAttribute="height" constant="75" id="nlb-jZ-hcv"/>
+                                                            <constraint firstAttribute="width" secondItem="jzz-sZ-MIu" secondAttribute="width" id="bf9-T0-cne"/>
+                                                            <constraint firstAttribute="height" secondItem="jzz-sZ-MIu" secondAttribute="height" id="mV2-d3-G6d"/>
+                                                            <constraint firstItem="jzz-sZ-MIu" firstAttribute="centerY" secondItem="1tf-Tx-o4q" secondAttribute="centerY" id="tDz-rw-OsX"/>
+                                                            <constraint firstItem="jzz-sZ-MIu" firstAttribute="centerX" secondItem="1tf-Tx-o4q" secondAttribute="centerX" id="vE7-8i-vlb"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tig-gZ-oWP" userLabel="Tile10" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVb-zw-xyJ" userLabel="View6">
+                                                        <rect key="frame" x="242" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="3jx-mr-RsZ" userLabel="Tile6" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="M4k-Nm-eZ7"/>
-                                                            <constraint firstAttribute="width" constant="75" id="Sir-hh-Eb9"/>
+                                                            <constraint firstItem="3jx-mr-RsZ" firstAttribute="centerX" secondItem="hVb-zw-xyJ" secondAttribute="centerX" id="f2q-md-tWj"/>
+                                                            <constraint firstItem="3jx-mr-RsZ" firstAttribute="centerY" secondItem="hVb-zw-xyJ" secondAttribute="centerY" id="nzV-UG-Suj"/>
+                                                            <constraint firstAttribute="width" secondItem="3jx-mr-RsZ" secondAttribute="width" id="uSv-fW-aqb"/>
+                                                            <constraint firstAttribute="height" secondItem="3jx-mr-RsZ" secondAttribute="height" id="yMY-Rd-cyH"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="fpn-yk-8Du" userLabel="Tile11" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgy-mS-7l8" userLabel="View7">
+                                                        <rect key="frame" x="484" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="fhV-g2-bEt" userLabel="Tile7" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="0Et-HP-W1u"/>
-                                                            <constraint firstAttribute="width" constant="75" id="I1A-Qt-EMw"/>
+                                                            <constraint firstAttribute="height" secondItem="fhV-g2-bEt" secondAttribute="height" id="QDi-X2-Fcj"/>
+                                                            <constraint firstAttribute="width" secondItem="fhV-g2-bEt" secondAttribute="width" id="n8d-6h-VV4"/>
+                                                            <constraint firstItem="fhV-g2-bEt" firstAttribute="centerX" secondItem="zgy-mS-7l8" secondAttribute="centerX" id="nGH-LJ-Rzx"/>
+                                                            <constraint firstItem="fhV-g2-bEt" firstAttribute="centerY" secondItem="zgy-mS-7l8" secondAttribute="centerY" id="wvg-y9-Icv"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="QiR-hm-lSp" userLabel="Tile12" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STe-we-mv4" userLabel="View8">
+                                                        <rect key="frame" x="726" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="TZV-zW-hCk" userLabel="Tile8" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="4kW-fT-qJi"/>
-                                                            <constraint firstAttribute="width" constant="75" id="Gtg-Yf-o2k"/>
+                                                            <constraint firstItem="TZV-zW-hCk" firstAttribute="centerX" secondItem="STe-we-mv4" secondAttribute="centerX" id="68N-wZ-9Nd"/>
+                                                            <constraint firstAttribute="width" secondItem="TZV-zW-hCk" secondAttribute="width" id="NYD-23-mYK"/>
+                                                            <constraint firstItem="TZV-zW-hCk" firstAttribute="centerY" secondItem="STe-we-mv4" secondAttribute="centerY" id="Xmy-Zv-9GC"/>
+                                                            <constraint firstAttribute="height" secondItem="TZV-zW-hCk" secondAttribute="height" id="bzI-z4-GDd"/>
                                                         </constraints>
-                                                    </imageView>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tzG-Dc-qJd">
-                                                <rect key="frame" x="0.0" y="259" width="312" height="75"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Z7f-0Q-F1e" userLabel="Stack View 3">
+                                                <rect key="frame" x="0.0" y="397.5" width="964" height="188.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-9t-IP4" userLabel="Tile13" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vly-aF-hzY" userLabel="View9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-BO-Bza" userLabel="Tile9" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="87z-kI-CaE"/>
-                                                            <constraint firstAttribute="width" constant="75" id="q8f-gq-2fo"/>
+                                                            <constraint firstItem="5xD-BO-Bza" firstAttribute="centerX" secondItem="vly-aF-hzY" secondAttribute="centerX" id="1bp-yU-LxO"/>
+                                                            <constraint firstAttribute="width" secondItem="5xD-BO-Bza" secondAttribute="width" id="9co-c3-qWe"/>
+                                                            <constraint firstItem="5xD-BO-Bza" firstAttribute="centerY" secondItem="vly-aF-hzY" secondAttribute="centerY" id="Xeo-Lw-kWo"/>
+                                                            <constraint firstAttribute="height" secondItem="5xD-BO-Bza" secondAttribute="height" id="ocY-wa-xlW"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cuv-Xt-CuY" userLabel="Tile14" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aaq-mh-uJ9" userLabel="View10">
+                                                        <rect key="frame" x="242" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ziv-xo-Qji" userLabel="Tile10" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="gAQ-nX-HSv"/>
-                                                            <constraint firstAttribute="width" constant="75" id="kQC-tP-fYc"/>
+                                                            <constraint firstAttribute="width" secondItem="ziv-xo-Qji" secondAttribute="width" id="JR7-vq-qIY"/>
+                                                            <constraint firstItem="ziv-xo-Qji" firstAttribute="centerY" secondItem="Aaq-mh-uJ9" secondAttribute="centerY" id="OJ1-XA-el3"/>
+                                                            <constraint firstAttribute="height" secondItem="ziv-xo-Qji" secondAttribute="height" id="o0Z-Jb-mKz"/>
+                                                            <constraint firstItem="ziv-xo-Qji" firstAttribute="centerX" secondItem="Aaq-mh-uJ9" secondAttribute="centerX" id="oGW-H1-bSo"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="0gq-Of-ILc" userLabel="Tile15" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWl-Jp-O3b" userLabel="View11">
+                                                        <rect key="frame" x="484" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="LvY-Kx-7UD" userLabel="Tile11" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="3Tl-8B-zem"/>
-                                                            <constraint firstAttribute="width" constant="75" id="u7t-RM-29G"/>
+                                                            <constraint firstAttribute="width" secondItem="LvY-Kx-7UD" secondAttribute="width" id="6P8-YK-QWX"/>
+                                                            <constraint firstItem="LvY-Kx-7UD" firstAttribute="centerY" secondItem="GWl-Jp-O3b" secondAttribute="centerY" id="Skg-nH-Bbo"/>
+                                                            <constraint firstItem="LvY-Kx-7UD" firstAttribute="centerX" secondItem="GWl-Jp-O3b" secondAttribute="centerX" id="gVQ-xt-1HM"/>
+                                                            <constraint firstAttribute="height" secondItem="LvY-Kx-7UD" secondAttribute="height" id="tMl-Ti-ktw"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-Y0-BrR" userLabel="Tile16" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TG-BQ-W93" userLabel="View12">
+                                                        <rect key="frame" x="726" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hxq-Mw-giJ" userLabel="Tile12" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="mk2-6h-5zL"/>
-                                                            <constraint firstAttribute="height" constant="75" id="zQA-PB-oxB"/>
+                                                            <constraint firstAttribute="height" secondItem="Hxq-Mw-giJ" secondAttribute="height" id="85O-O6-3KM"/>
+                                                            <constraint firstItem="Hxq-Mw-giJ" firstAttribute="centerX" secondItem="3TG-BQ-W93" secondAttribute="centerX" id="Udc-mu-QRG"/>
+                                                            <constraint firstAttribute="width" secondItem="Hxq-Mw-giJ" secondAttribute="width" id="Ui4-VP-vuT"/>
+                                                            <constraint firstItem="Hxq-Mw-giJ" firstAttribute="centerY" secondItem="3TG-BQ-W93" secondAttribute="centerY" id="t4b-55-tnm"/>
                                                         </constraints>
-                                                    </imageView>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-Pu-jad">
-                                                <rect key="frame" x="0.0" y="345" width="312" height="75"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pHF-8o-yX6" userLabel="Stack View 4">
+                                                <rect key="frame" x="0.0" y="596" width="964" height="189"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="7mQ-7D-13u" userLabel="Tile17" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSG-5i-Q0d" userLabel="View13">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-9t-IP4" userLabel="Tile13" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="189"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="6E4-Cl-0tJ"/>
-                                                            <constraint firstAttribute="width" constant="75" id="mIB-4s-Cqb"/>
+                                                            <constraint firstItem="7dF-9t-IP4" firstAttribute="height" secondItem="uSG-5i-Q0d" secondAttribute="height" id="Gcf-dv-vdI"/>
+                                                            <constraint firstItem="7dF-9t-IP4" firstAttribute="centerY" secondItem="uSG-5i-Q0d" secondAttribute="centerY" id="ZtI-h1-yd4"/>
+                                                            <constraint firstItem="7dF-9t-IP4" firstAttribute="centerX" secondItem="uSG-5i-Q0d" secondAttribute="centerX" id="lP3-Ue-4fT"/>
+                                                            <constraint firstItem="7dF-9t-IP4" firstAttribute="width" secondItem="uSG-5i-Q0d" secondAttribute="width" id="xSl-yU-IFR"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="PKf-aZ-56J" userLabel="Tile18" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4O-DH-sN8" userLabel="View14">
+                                                        <rect key="frame" x="242" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="fjq-iR-Q8r" userLabel="Tile14" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="189"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="4A9-Cy-9cZ"/>
-                                                            <constraint firstAttribute="height" constant="75" id="wVJ-C1-MOZ"/>
+                                                            <constraint firstItem="fjq-iR-Q8r" firstAttribute="height" secondItem="M4O-DH-sN8" secondAttribute="height" id="EIG-jW-vhw"/>
+                                                            <constraint firstItem="fjq-iR-Q8r" firstAttribute="centerY" secondItem="M4O-DH-sN8" secondAttribute="centerY" id="FP7-tR-1CK"/>
+                                                            <constraint firstItem="fjq-iR-Q8r" firstAttribute="centerX" secondItem="M4O-DH-sN8" secondAttribute="centerX" id="I3k-gl-Twb"/>
+                                                            <constraint firstItem="fjq-iR-Q8r" firstAttribute="width" secondItem="M4O-DH-sN8" secondAttribute="width" id="w1W-RF-Q03"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Wh-R8-zLZ" userLabel="Tile19" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-R3-FzE" userLabel="View15">
+                                                        <rect key="frame" x="484" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-pY-umg" userLabel="Tile15" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="189"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="4C1-fz-8fM"/>
-                                                            <constraint firstAttribute="height" constant="75" id="Fju-Ly-GIi"/>
+                                                            <constraint firstItem="YE2-pY-umg" firstAttribute="centerY" secondItem="TXm-R3-FzE" secondAttribute="centerY" id="1OQ-Tv-uCf"/>
+                                                            <constraint firstItem="YE2-pY-umg" firstAttribute="height" secondItem="TXm-R3-FzE" secondAttribute="height" id="RDQ-hy-zow"/>
+                                                            <constraint firstItem="YE2-pY-umg" firstAttribute="centerX" secondItem="TXm-R3-FzE" secondAttribute="centerX" id="iGb-lH-t3H"/>
+                                                            <constraint firstItem="YE2-pY-umg" firstAttribute="width" secondItem="TXm-R3-FzE" secondAttribute="width" id="qze-PE-7tn"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-gi-N8w" userLabel="Tile20" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="75" height="75"/>
-                                                        <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRR-aL-mYZ" userLabel="View16">
+                                                        <rect key="frame" x="726" y="0.0" width="238" height="189"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="fxC-cG-sIe" userLabel="Tile16" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="238" height="189"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="X7J-aC-n5b"/>
-                                                            <constraint firstAttribute="height" constant="75" id="lQ9-KS-r8i"/>
+                                                            <constraint firstItem="fxC-cG-sIe" firstAttribute="centerY" secondItem="aRR-aL-mYZ" secondAttribute="centerY" id="2cE-K1-R6c"/>
+                                                            <constraint firstItem="fxC-cG-sIe" firstAttribute="height" secondItem="aRR-aL-mYZ" secondAttribute="height" id="MMa-a9-ku2"/>
+                                                            <constraint firstItem="fxC-cG-sIe" firstAttribute="width" secondItem="aRR-aL-mYZ" secondAttribute="width" id="OsK-yI-hTM"/>
+                                                            <constraint firstItem="fxC-cG-sIe" firstAttribute="centerX" secondItem="aRR-aL-mYZ" secondAttribute="centerX" id="r93-Xq-Puy"/>
                                                         </constraints>
-                                                    </imageView>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-oP-IKy" userLabel="Stack View 5">
+                                                <rect key="frame" x="0.0" y="795" width="964" height="188.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOA-Pi-84p" userLabel="View17">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="7mQ-7D-13u" userLabel="Tile17" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="7mQ-7D-13u" firstAttribute="centerY" secondItem="hOA-Pi-84p" secondAttribute="centerY" id="0Lq-p0-RZa"/>
+                                                            <constraint firstItem="7mQ-7D-13u" firstAttribute="width" secondItem="hOA-Pi-84p" secondAttribute="width" id="2Pk-0h-C3s"/>
+                                                            <constraint firstItem="7mQ-7D-13u" firstAttribute="centerX" secondItem="hOA-Pi-84p" secondAttribute="centerX" id="4ZV-ve-Hmt"/>
+                                                            <constraint firstItem="7mQ-7D-13u" firstAttribute="height" secondItem="hOA-Pi-84p" secondAttribute="height" id="qsi-aL-J4q"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83F-TW-NTb" userLabel="View18">
+                                                        <rect key="frame" x="242" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="hWu-YE-Wtg" userLabel="Tile18" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="hWu-YE-Wtg" firstAttribute="centerX" secondItem="83F-TW-NTb" secondAttribute="centerX" id="94S-47-2V0"/>
+                                                            <constraint firstItem="hWu-YE-Wtg" firstAttribute="centerY" secondItem="83F-TW-NTb" secondAttribute="centerY" id="I5J-yg-Huw"/>
+                                                            <constraint firstItem="hWu-YE-Wtg" firstAttribute="width" secondItem="83F-TW-NTb" secondAttribute="width" id="X6k-1S-Dut"/>
+                                                            <constraint firstItem="hWu-YE-Wtg" firstAttribute="height" secondItem="83F-TW-NTb" secondAttribute="height" id="u2g-9M-ejV"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAq-zr-XhH" userLabel="View19">
+                                                        <rect key="frame" x="484" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="xcr-sG-2Pr" userLabel="Tile19" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238.5" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="xcr-sG-2Pr" firstAttribute="centerY" secondItem="UAq-zr-XhH" secondAttribute="centerY" id="7dV-Q1-mhK"/>
+                                                            <constraint firstItem="xcr-sG-2Pr" firstAttribute="centerX" secondItem="UAq-zr-XhH" secondAttribute="centerX" id="OAa-Dh-h1D"/>
+                                                            <constraint firstItem="xcr-sG-2Pr" firstAttribute="width" secondItem="UAq-zr-XhH" secondAttribute="width" id="TOD-oU-ZYj"/>
+                                                            <constraint firstItem="xcr-sG-2Pr" firstAttribute="height" secondItem="UAq-zr-XhH" secondAttribute="height" id="Vss-XQ-fnM"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-gm-8Mn" userLabel="View20">
+                                                        <rect key="frame" x="726" y="0.0" width="238" height="188.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cze-zu-QOf" userLabel="Tile20" customClass="RoundedImageView" customModule="PokeMatch" customModuleProvider="target">
+                                                                <rect key="frame" x="-0.5" y="0.0" width="238" height="188.5"/>
+                                                                <color key="backgroundColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="0.79991610739999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Cze-zu-QOf" firstAttribute="height" secondItem="fZb-gm-8Mn" secondAttribute="height" id="A0d-UM-5Ax"/>
+                                                            <constraint firstItem="Cze-zu-QOf" firstAttribute="width" secondItem="fZb-gm-8Mn" secondAttribute="width" id="E80-U9-RHV"/>
+                                                            <constraint firstItem="Cze-zu-QOf" firstAttribute="centerX" secondItem="fZb-gm-8Mn" secondAttribute="centerX" id="LJL-KL-ewq"/>
+                                                            <constraint firstItem="Cze-zu-QOf" firstAttribute="centerY" secondItem="fZb-gm-8Mn" secondAttribute="centerY" id="TYa-Ek-f7h"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -264,19 +432,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="6Sd-hW-LMl" secondAttribute="bottom" constant="12" id="Tal-E0-8ez"/>
-                                    <constraint firstItem="6Sd-hW-LMl" firstAttribute="top" secondItem="6mG-li-2TF" secondAttribute="top" constant="12" id="Vcj-VC-L0L"/>
-                                    <constraint firstItem="6Sd-hW-LMl" firstAttribute="centerX" secondItem="6mG-li-2TF" secondAttribute="centerX" id="X0H-oA-Eb7"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Sd-hW-LMl" secondAttribute="bottom" constant="10" id="2zk-fg-DQS"/>
+                                    <constraint firstItem="6Sd-hW-LMl" firstAttribute="leading" secondItem="6mG-li-2TF" secondAttribute="leading" constant="10" id="5D7-fz-aXG"/>
+                                    <constraint firstItem="6Sd-hW-LMl" firstAttribute="top" secondItem="6mG-li-2TF" secondAttribute="top" constant="10" id="e3h-Uh-h29"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Sd-hW-LMl" secondAttribute="trailing" constant="10" id="nSn-Fn-zmv"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-Sr-PBK" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="1202" width="1024" height="164"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S59-9s-3CG">
-                                        <rect key="frame" x="0.0" y="5" width="375" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="S59-9s-3CG">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="74"/>
                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="22"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -284,13 +453,10 @@
                                         <color key="shadowColor" red="0.127836436" green="0.2871302664" blue="0.72907185549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="-2" height="-1"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-Mw-z0P" userLabel="Timer Display" customClass="RoundedLabels" customModule="PokeMatch" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="35" width="188" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-Mw-z0P" userLabel="Timer Display" customClass="RoundedLabels" customModule="PokeMatch" customModuleProvider="target">
+                                        <rect key="frame" x="256" y="74" width="512" height="82"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="0.54024223993288589" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="FGB-At-qDM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -300,12 +466,12 @@
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="fYS-Mw-z0P" firstAttribute="top" secondItem="S59-9s-3CG" secondAttribute="bottom" id="IjP-Uu-dga"/>
-                                    <constraint firstItem="S59-9s-3CG" firstAttribute="top" secondItem="PmH-Sr-PBK" secondAttribute="top" constant="5" id="L1d-tZ-27x"/>
+                                    <constraint firstItem="S59-9s-3CG" firstAttribute="top" secondItem="PmH-Sr-PBK" secondAttribute="top" id="L1d-tZ-27x"/>
                                     <constraint firstAttribute="trailing" secondItem="S59-9s-3CG" secondAttribute="trailing" id="RdL-B1-rwy"/>
-                                    <constraint firstAttribute="height" constant="75" id="bpN-tk-VWb"/>
                                     <constraint firstItem="S59-9s-3CG" firstAttribute="leading" secondItem="PmH-Sr-PBK" secondAttribute="leading" id="fBS-hN-jhQ"/>
                                     <constraint firstItem="fYS-Mw-z0P" firstAttribute="centerY" secondItem="PmH-Sr-PBK" secondAttribute="centerY" multiplier="1.4" id="gOJ-ie-tfV"/>
                                     <constraint firstItem="fYS-Mw-z0P" firstAttribute="width" secondItem="PmH-Sr-PBK" secondAttribute="width" multiplier="0.5" id="l1e-Lb-nuv"/>
+                                    <constraint firstItem="fYS-Mw-z0P" firstAttribute="height" secondItem="PmH-Sr-PBK" secondAttribute="height" multiplier="0.5" id="wp1-x7-Pcx"/>
                                     <constraint firstItem="fYS-Mw-z0P" firstAttribute="centerX" secondItem="PmH-Sr-PBK" secondAttribute="centerX" id="xUu-Kq-AjL"/>
                                 </constraints>
                                 <variation key="heightClass=compact">
@@ -315,22 +481,19 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-Io-njp">
-                                <rect key="frame" x="0.0" y="73" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="73" width="1024" height="95.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matching Points: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0v-lK-iQs">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matching Points: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="A0v-lK-iQs">
+                                        <rect key="frame" x="0.0" y="0.0" width="512" height="95.5"/>
                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="hWc-0o-F0f"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="shadowColor" red="0.127836436" green="0.2871302664" blue="0.72907185549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="-2" height="-1"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-qJ-2V4">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-qJ-2V4">
+                                        <rect key="frame" x="512" y="0.0" width="512" height="95.5"/>
                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="32"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,23 +504,26 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vf2-qJ-2V4" firstAttribute="height" secondItem="A0v-lK-iQs" secondAttribute="height" id="Aqh-Mv-XKv"/>
-                                    <constraint firstAttribute="height" constant="45" id="wNE-ks-fSm"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N3E-Nq-v74" secondAttribute="bottom" id="2vU-zH-drc"/>
                             <constraint firstAttribute="trailing" secondItem="KcG-Io-njp" secondAttribute="trailing" id="3CX-zU-y81"/>
                             <constraint firstItem="N3E-Nq-v74" firstAttribute="top" secondItem="xVt-VA-AL2" secondAttribute="bottom" id="3UJ-ab-RdK"/>
-                            <constraint firstItem="PmH-Sr-PBK" firstAttribute="top" secondItem="N3E-Nq-v74" secondAttribute="bottom" id="76t-RM-QH1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PmH-Sr-PBK" secondAttribute="bottom" id="9ca-5b-EnM"/>
+                            <constraint firstItem="UD9-oZ-ell" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="BCi-1G-ivl"/>
                             <constraint firstAttribute="trailing" secondItem="PmH-Sr-PBK" secondAttribute="trailing" id="GSb-CC-eTb"/>
                             <constraint firstItem="KcG-Io-njp" firstAttribute="top" secondItem="xVt-VA-AL2" secondAttribute="bottom" constant="8" id="Ire-gC-CsU"/>
+                            <constraint firstItem="PmH-Sr-PBK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="KGM-v8-h2f"/>
                             <constraint firstItem="PmH-Sr-PBK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ldt-cs-Mq8"/>
                             <constraint firstItem="N3E-Nq-v74" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P3Z-xF-lot"/>
+                            <constraint firstItem="UD9-oZ-ell" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rsq-ow-dTM"/>
                             <constraint firstAttribute="trailing" secondItem="xVt-VA-AL2" secondAttribute="trailing" id="SsI-sh-tJc"/>
                             <constraint firstAttribute="trailing" secondItem="6mG-li-2TF" secondAttribute="trailing" constant="20" id="TjB-6T-LOv"/>
                             <constraint firstItem="6mG-li-2TF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Tqx-MU-wcQ"/>
+                            <constraint firstItem="A0v-lK-iQs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="fdH-9p-MUK"/>
                             <constraint firstItem="xVt-VA-AL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jbE-gb-zbd"/>
                             <constraint firstItem="PmH-Sr-PBK" firstAttribute="top" secondItem="6mG-li-2TF" secondAttribute="bottom" constant="15" id="jpv-qi-ek0"/>
                             <constraint firstItem="6mG-li-2TF" firstAttribute="top" secondItem="KcG-Io-njp" secondAttribute="bottom" constant="15" id="m4d-Ua-Anp"/>
@@ -366,6 +532,55 @@
                             <constraint firstItem="KcG-Io-njp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v55-aW-WDw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomView" destination="PmH-Sr-PBK" id="1iU-hJ-s9B"/>
+                        <outlet property="middleView" destination="6mG-li-2TF" id="lit-eA-A8Y"/>
+                        <outlet property="pointsDisplay" destination="vf2-qJ-2V4" id="A0d-86-0i1"/>
+                        <outlet property="pointsLabel" destination="A0v-lK-iQs" id="5Mq-e0-k0S"/>
+                        <outlet property="startButton" destination="UD9-oZ-ell" id="7td-UO-vJW"/>
+                        <outlet property="timerDisplay" destination="fYS-Mw-z0P" id="GlL-Jf-3h1"/>
+                        <outletCollection property="tileViewArray" destination="LeD-PL-Lxm" collectionClass="NSMutableArray" id="xxL-BI-Jn3"/>
+                        <outletCollection property="pokeImageArray" destination="yMd-Qi-xCu" collectionClass="NSMutableArray" id="kOD-vw-gJq"/>
+                        <outletCollection property="pokeImageArray" destination="hRe-GH-Akq" collectionClass="NSMutableArray" id="GbN-W0-j8P"/>
+                        <outletCollection property="tileViewArray" destination="PqE-Hs-NDp" collectionClass="NSMutableArray" id="bhE-yh-RT7"/>
+                        <outletCollection property="pokeImageArray" destination="CHP-Fr-Htr" collectionClass="NSMutableArray" id="2Cs-a9-Zuz"/>
+                        <outletCollection property="tileViewArray" destination="9PQ-qT-Z3l" collectionClass="NSMutableArray" id="jmp-VK-yL1"/>
+                        <outletCollection property="pokeImageArray" destination="mvS-74-p3U" collectionClass="NSMutableArray" id="5O8-f8-Wwq"/>
+                        <outletCollection property="tileViewArray" destination="zLb-fh-89y" collectionClass="NSMutableArray" id="MIm-KC-l8A"/>
+                        <outletCollection property="tileViewArray" destination="1tf-Tx-o4q" collectionClass="NSMutableArray" id="Pu4-dH-IdY"/>
+                        <outletCollection property="pokeImageArray" destination="jzz-sZ-MIu" collectionClass="NSMutableArray" id="tdz-MP-o9U"/>
+                        <outletCollection property="tileViewArray" destination="hVb-zw-xyJ" collectionClass="NSMutableArray" id="ZE5-Zc-aRY"/>
+                        <outletCollection property="pokeImageArray" destination="3jx-mr-RsZ" collectionClass="NSMutableArray" id="oay-QQ-Y5j"/>
+                        <outletCollection property="pokeImageArray" destination="fhV-g2-bEt" collectionClass="NSMutableArray" id="1u1-p3-3Qa"/>
+                        <outletCollection property="tileViewArray" destination="zgy-mS-7l8" collectionClass="NSMutableArray" id="SXd-98-TeF"/>
+                        <outletCollection property="tileViewArray" destination="STe-we-mv4" collectionClass="NSMutableArray" id="wg2-Mm-4kl"/>
+                        <outletCollection property="pokeImageArray" destination="TZV-zW-hCk" collectionClass="NSMutableArray" id="BR5-aP-JJ4"/>
+                        <outletCollection property="pokeImageArray" destination="5xD-BO-Bza" collectionClass="NSMutableArray" id="uaH-5a-aWv"/>
+                        <outletCollection property="tileViewArray" destination="vly-aF-hzY" collectionClass="NSMutableArray" id="5tX-rK-HyX"/>
+                        <outletCollection property="tileViewArray" destination="Aaq-mh-uJ9" collectionClass="NSMutableArray" id="fZf-Zp-7ie"/>
+                        <outletCollection property="pokeImageArray" destination="ziv-xo-Qji" collectionClass="NSMutableArray" id="l6H-Ew-36H"/>
+                        <outletCollection property="tileViewArray" destination="GWl-Jp-O3b" collectionClass="NSMutableArray" id="wXj-Dn-bW5"/>
+                        <outletCollection property="pokeImageArray" destination="LvY-Kx-7UD" collectionClass="NSMutableArray" id="9uI-nw-3z5"/>
+                        <outletCollection property="pokeImageArray" destination="Hxq-Mw-giJ" collectionClass="NSMutableArray" id="1la-lI-xr7"/>
+                        <outletCollection property="tileViewArray" destination="3TG-BQ-W93" collectionClass="NSMutableArray" id="2SO-io-V3n"/>
+                        <outletCollection property="tileViewArray" destination="uSG-5i-Q0d" collectionClass="NSMutableArray" id="HOS-LQ-Qwn"/>
+                        <outletCollection property="pokeImageArray" destination="7dF-9t-IP4" collectionClass="NSMutableArray" id="15v-3j-PKR"/>
+                        <outletCollection property="pokeImageArray" destination="fjq-iR-Q8r" collectionClass="NSMutableArray" id="KTD-aC-k4N"/>
+                        <outletCollection property="tileViewArray" destination="M4O-DH-sN8" collectionClass="NSMutableArray" id="4Hl-fV-DcM"/>
+                        <outletCollection property="tileViewArray" destination="TXm-R3-FzE" collectionClass="NSMutableArray" id="iRK-hA-QKF"/>
+                        <outletCollection property="pokeImageArray" destination="YE2-pY-umg" collectionClass="NSMutableArray" id="FA4-B4-fdQ"/>
+                        <outletCollection property="pokeImageArray" destination="fxC-cG-sIe" collectionClass="NSMutableArray" id="E79-dj-cAG"/>
+                        <outletCollection property="tileViewArray" destination="aRR-aL-mYZ" collectionClass="NSMutableArray" id="hMk-cj-RXK"/>
+                        <outletCollection property="pokeImageArray" destination="7mQ-7D-13u" collectionClass="NSMutableArray" id="KNa-vO-N8w"/>
+                        <outletCollection property="tileViewArray" destination="hOA-Pi-84p" collectionClass="NSMutableArray" id="85q-df-Lpv"/>
+                        <outletCollection property="pokeImageArray" destination="hWu-YE-Wtg" collectionClass="NSMutableArray" id="0Ct-qR-ogr"/>
+                        <outletCollection property="tileViewArray" destination="83F-TW-NTb" collectionClass="NSMutableArray" id="pNw-jB-jeZ"/>
+                        <outletCollection property="pokeImageArray" destination="hWu-YE-Wtg" collectionClass="NSMutableArray" id="rLf-K8-YkQ"/>
+                        <outletCollection property="tileViewArray" destination="UAq-zr-XhH" collectionClass="NSMutableArray" id="CEb-yr-X6s"/>
+                        <outletCollection property="pokeImageArray" destination="xcr-sG-2Pr" collectionClass="NSMutableArray" id="cCf-0d-xRV"/>
+                        <outletCollection property="pokeImageArray" destination="Cze-zu-QOf" collectionClass="NSMutableArray" id="Q6g-Bb-00k"/>
+                        <outletCollection property="tileViewArray" destination="fZb-gm-8Mn" collectionClass="NSMutableArray" id="WKP-DV-jUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,5 +591,6 @@
         <image name="1" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
+        <image name="start" width="545" height="176"/>
     </resources>
 </document>

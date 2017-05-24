@@ -1,5 +1,5 @@
 ////
-////  GameCounter.swift
+////  AudioPlayer.swift
 ////  PokeMatch
 ////
 ////  Created by Allen Boynton on 5/23/17.
@@ -7,16 +7,13 @@
 ////
 //
 //import UIKit
+//import AVFoundation
 //
-//class GameCounter {
+//class AudioPlayer {
 //    
-//    // MARK: - Game counter
-//    
-//    // NSTimers for game counter
+//    var player: AVAudioPlayer!
 //    
 //    
 //    
 //    
-//
-//
 //}
