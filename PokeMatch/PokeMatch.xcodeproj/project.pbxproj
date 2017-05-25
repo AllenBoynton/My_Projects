@@ -18,7 +18,6 @@
 		0907CDC11ED385E500350677 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CDC01ED385E500350677 /* CoreData.framework */; };
 		0907CDC31ED385F200350677 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CDC21ED385F200350677 /* CoreLocation.framework */; };
 		0907CDC51ED385FD00350677 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CDC41ED385FD00350677 /* GameKit.framework */; };
-		0907CDE51ED4125900350677 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDE41ED4125900350677 /* Pokemon.swift */; };
 		0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDEA1ED4128500350677 /* PokeMatchVC.swift */; };
 		0907CDED1ED4129700350677 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEC1ED4129700350677 /* pokemon.ttf */; };
 		0907CDEF1ED412A700350677 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEE1ED412A700350677 /* music.mp3 */; };
@@ -28,10 +27,10 @@
 		0907CDF81ED41ADE00350677 /* Pat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF41ED41ADE00350677 /* Pat.mp3 */; };
 		0907CDF91ED41ADE00350677 /* taDa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF51ED41ADE00350677 /* taDa.mp3 */; };
 		094AEF141ED469CF007FDFC9 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF131ED469CF007FDFC9 /* RoundedImageView.swift */; };
-		094AEF161ED47721007FDFC9 /* RadiusButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF151ED47721007FDFC9 /* RadiusButtons.swift */; };
+		094AEF161ED47721007FDFC9 /* MatchedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF151ED47721007FDFC9 /* MatchedViews.swift */; };
 		094AEF181ED4FB5B007FDFC9 /* RoundedLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */; };
-		094AEF1A1ED501ED007FDFC9 /* GameCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF191ED501ED007FDFC9 /* GameCounter.swift */; };
-		094AEF1C1ED503CD007FDFC9 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF1B1ED503CD007FDFC9 /* AudioPlayer.swift */; };
+		094AEF1E1ED64CA1007FDFC9 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */; };
+		094AEF201ED65732007FDFC9 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF1F1ED65732007FDFC9 /* RoundedButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 		0907CDC01ED385E500350677 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0907CDC21ED385F200350677 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0907CDC41ED385FD00350677 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		0907CDE41ED4125900350677 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		0907CDEA1ED4128500350677 /* PokeMatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeMatchVC.swift; sourceTree = "<group>"; };
 		0907CDEC1ED4129700350677 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 		0907CDEE1ED412A700350677 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
@@ -79,10 +77,10 @@
 		0907CDF41ED41ADE00350677 /* Pat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pat.mp3; sourceTree = "<group>"; };
 		0907CDF51ED41ADE00350677 /* taDa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taDa.mp3; sourceTree = "<group>"; };
 		094AEF131ED469CF007FDFC9 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
-		094AEF151ED47721007FDFC9 /* RadiusButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusButtons.swift; sourceTree = "<group>"; };
+		094AEF151ED47721007FDFC9 /* MatchedViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedViews.swift; sourceTree = "<group>"; };
 		094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabels.swift; sourceTree = "<group>"; };
-		094AEF191ED501ED007FDFC9 /* GameCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCounter.swift; sourceTree = "<group>"; };
-		094AEF1B1ED503CD007FDFC9 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
+		094AEF1F1ED65732007FDFC9 /* RoundedButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,14 +136,14 @@
 		0907CD831ED3832D00350677 /* PokeMatch */ = {
 			isa = PBXGroup;
 			children = (
+				0907CDB61ED384EF00350677 /* AppDelegate */,
+				0907CDB51ED384D600350677 /* Core Data */,
+				0907CDB81ED3850D00350677 /* Resources */,
+				0907CDB71ED384FE00350677 /* Utilities */,
+				0907CDB91ED3851F00350677 /* Storyboard */,
 				0907CDBC1ED3853C00350677 /* Model */,
 				0907CDBB1ED3853400350677 /* View */,
 				0907CDBA1ED3852B00350677 /* Controller */,
-				0907CDB91ED3851F00350677 /* Storyboard */,
-				0907CDB81ED3850D00350677 /* Resources */,
-				0907CDB71ED384FE00350677 /* Utilities */,
-				0907CDB61ED384EF00350677 /* AppDelegate */,
-				0907CDB51ED384D600350677 /* Core Data */,
 			);
 			path = PokeMatch;
 			sourceTree = "<group>";
@@ -214,6 +212,7 @@
 		0907CDBA1ED3852B00350677 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */,
 				0907CDEA1ED4128500350677 /* PokeMatchVC.swift */,
 			);
 			name = Controller;
@@ -224,8 +223,9 @@
 			children = (
 				0907CDF01ED4160E00350677 /* MaterialView.swift */,
 				094AEF131ED469CF007FDFC9 /* RoundedImageView.swift */,
-				094AEF151ED47721007FDFC9 /* RadiusButtons.swift */,
+				094AEF151ED47721007FDFC9 /* MatchedViews.swift */,
 				094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */,
+				094AEF1F1ED65732007FDFC9 /* RoundedButtons.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -233,9 +233,6 @@
 		0907CDBC1ED3853C00350677 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0907CDE41ED4125900350677 /* Pokemon.swift */,
-				094AEF191ED501ED007FDFC9 /* GameCounter.swift */,
-				094AEF1B1ED503CD007FDFC9 /* AudioPlayer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -418,14 +415,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				094AEF141ED469CF007FDFC9 /* RoundedImageView.swift in Sources */,
-				0907CDE51ED4125900350677 /* Pokemon.swift in Sources */,
+				094AEF201ED65732007FDFC9 /* RoundedButtons.swift in Sources */,
 				094AEF181ED4FB5B007FDFC9 /* RoundedLabels.swift in Sources */,
-				094AEF161ED47721007FDFC9 /* RadiusButtons.swift in Sources */,
+				094AEF161ED47721007FDFC9 /* MatchedViews.swift in Sources */,
 				0907CD8D1ED3832D00350677 /* PokeMatch.xcdatamodeld in Sources */,
 				0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */,
-				094AEF1A1ED501ED007FDFC9 /* GameCounter.swift in Sources */,
-				094AEF1C1ED503CD007FDFC9 /* AudioPlayer.swift in Sources */,
 				0907CDF11ED4160E00350677 /* MaterialView.swift in Sources */,
+				094AEF1E1ED64CA1007FDFC9 /* MainMenuVC.swift in Sources */,
 				0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

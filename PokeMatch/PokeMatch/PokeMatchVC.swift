@@ -4,6 +4,7 @@
 //
 //  Created by Allen Boynton on 5/22/17.
 //  Copyright © 2017 Allen Boynton. All rights reserved.
+//  Image Source: © Pokémon
 //
 
 import UIKit
@@ -11,12 +12,12 @@ import AVFoundation
 
 class PokeMatchVC: UIViewController {
     
-    var pokemon: Pokemon!
     var musicPlayer: AVAudioPlayer!
     
     // Outlet for game points
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var pointsDisplay: UILabel!
+    @IBOutlet weak var pointsView: UIView!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var bottomView: UIView!
     
@@ -79,21 +80,24 @@ class PokeMatchVC: UIViewController {
         // Check to see how many buttons are on the screen to determine iPhone or iPad.
         if UIDevice.current.userInterfaceIdiom == .phone {
             
+            
+            
             // iPhone array for 20 buttons
-//            for i in 1...719 {
-                pokeImages = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!, UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!
+//            for i in 10...701 {
+                pokeImages = [(UIImage(named: "\(1)"))!
+                    , UIImage(named: "\(2)")!, UIImage(named: "\(3)")!, UIImage(named: "\(4)")!, UIImage(named: "\(5)")!, UIImage(named: "\(6)")!, UIImage(named: "\(7)")!, UIImage(named: "\(8)")!, UIImage(named: "\(9)")!, UIImage(named: "\(10)")!, UIImage(named: "\(1)")!, UIImage(named: "\(2)")!, UIImage(named: "\(3)")!, UIImage(named: "\(4)")!, UIImage(named: "\(5)")!, UIImage(named: "\(6)")!, UIImage(named: "\(7)")!, UIImage(named: "\(8)")!, UIImage(named: "\(9)")!, UIImage(named: "\(10)")!
                 ]
-//            }
+//
             // Call function to populate images
             randomImageLoop()
-            
-        } else if UIDevice.current.userInterfaceIdiom == .pad {
-            
-            // iPad array for 30 buttons
-            pokeImages = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!, UIImage(named: "11")!, UIImage(named: "12")!, UIImage(named: "13")!, UIImage(named: "14")!, UIImage(named: "15")!, UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!, UIImage(named: "10")!, UIImage(named: "11")!, UIImage(named: "12")!, UIImage(named: "13")!, UIImage(named: "14")!, UIImage(named: "15")!
-            ]
-            randomImageLoop()
         }
+//        } else if UIDevice.current.userInterfaceIdiom == .pad {
+//            
+//            // iPad array for 30 buttons
+//            pokeImages = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!, UIImage(named: "11")!, UIImage(named: "12")!, UIImage(named: "13")!, UIImage(named: "14")!, UIImage(named: "15")!, UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!, UIImage(named: "10")!, UIImage(named: "11")!, UIImage(named: "12")!, UIImage(named: "13")!, UIImage(named: "14")!, UIImage(named: "15")!
+//            ]
+//            randomImageLoop()
+//        }
         
         // Verify value of array indices
         print(pokeImageArray.indices)
@@ -108,9 +112,6 @@ class PokeMatchVC: UIViewController {
                 tileCounter += 1
                 let random = arc4random_uniform(UInt32(pokeImages.count))
                 index.image = UIImage(named: "\(pokeImages.remove(at: Int(random)))")
-                index.layer.borderWidth = 5.0
-                index.layer.borderColor = UIColor.black.cgColor
-                index.layer.masksToBounds = true
                 index.isHidden = true
                 print("Images populating & Images Hidden")
             }
@@ -271,11 +272,8 @@ class PokeMatchVC: UIViewController {
         prepareAudios()
         patSound.play()
         
-        for card in selectedTiles {
-            card.layer.borderWidth = 2
-            card.layer.borderColor = UIColor.yellow.cgColor
-            card.backgroundColor = UIColor.black
-            (card.subviews[0] as! UIImageView).isHidden = true
+        for tiles in selectedTiles {
+            (tiles.subviews[0] as! UIImageView).isHidden = true
         }
         
         // Lose points if tiles are not a match
@@ -296,8 +294,8 @@ class PokeMatchVC: UIViewController {
         prepareAudios()
         chime.play()
         
-        for card in selectedTiles {
-            card.isHidden = true
+        for tiles in selectedTiles {
+            tiles.isHidden = true
         }
         
         // Removes the count of 1 card per selection so we know how many cards are left.
@@ -354,11 +352,11 @@ class PokeMatchVC: UIViewController {
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         
-        // Button sound
+        // Prepare for sound
         prepareAudios()
         patSound.play()
         
-        // Calls functions
+        // Calls game music function
         startGameTime()
         
         // Ensures user can not tap buttons while showing 5 second preview.
@@ -367,13 +365,16 @@ class PokeMatchVC: UIViewController {
         // Delay images to be shown for 5 seconds.
         self.timer1 = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(seeInitialView(_:)), userInfo: nil, repeats: false)
         
+        // Shows button at beginning of game
         startButton.isHidden = true
+        
+        // Unhides views after start button is pressed
+        pointsView.isHidden = false
         middleView.isHidden = false
+        bottomView.isHidden = false
         
         // Displays Views and Images for the 5 second preview.
         for views in tileViewArray {
-            views.layer.borderWidth = 2
-            views.layer.borderColor = UIColor.black.cgColor
             views.isHidden = false
             print(" 1. View NOT Hidden - startButton - Preview")
         }
@@ -399,5 +400,13 @@ class PokeMatchVC: UIViewController {
             sender.alpha = 1.0
         }
     }
+    
+    // Back button to bring to main menu
+    @IBAction func backButtonPressed(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        timer?.invalidate()
+    }
+    
 }
 

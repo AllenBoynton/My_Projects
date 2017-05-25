@@ -1,5 +1,5 @@
 //
-//  RoundedImageView.swift
+//  MatchedViews.swift
 //  PokeMatch
 //
 //  Created by Allen Boynton on 5/23/17.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class RoundedImageView: UIImageView {
+class MatchedViews: UIView {
     
-    // Creates rounded image views for tiles
+    // Creates radius corner views
     override func awakeFromNib() {
         self.layer.cornerRadius = 5.0
         self.layer.borderWidth = 2.0
         self.layer.borderColor = UIColor(red: 255/255, green: 255/255, blue: 0/255, alpha: 0.8).cgColor
         self.clipsToBounds = true
     }
+    
 }
