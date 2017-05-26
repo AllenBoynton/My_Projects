@@ -35,7 +35,7 @@ class PokeMatchVC: UIViewController {
     // Local variables - all values change thoughout the game
     
     // Image array
-    var pokeImages: [UIImage] = []
+    var pokeImages: [String] = []
     
     // View array of Images selected
     var selectedTiles: [UIView] = []
@@ -83,11 +83,21 @@ class PokeMatchVC: UIViewController {
             
             
             // iPhone array for 20 buttons
-//            for i in 10...701 {
-                pokeImages = [(UIImage(named: "\(1)"))!
-                    , UIImage(named: "\(2)")!, UIImage(named: "\(3)")!, UIImage(named: "\(4)")!, UIImage(named: "\(5)")!, UIImage(named: "\(6)")!, UIImage(named: "\(7)")!, UIImage(named: "\(8)")!, UIImage(named: "\(9)")!, UIImage(named: "\(10)")!, UIImage(named: "\(1)")!, UIImage(named: "\(2)")!, UIImage(named: "\(3)")!, UIImage(named: "\(4)")!, UIImage(named: "\(5)")!, UIImage(named: "\(6)")!, UIImage(named: "\(7)")!, UIImage(named: "\(8)")!, UIImage(named: "\(9)")!, UIImage(named: "\(10)")!
-                ]
-//
+            for i in 1...718 {
+            
+            pokeImages =
+//                ["military chainsaw.png", "tools rope.png", "tools saw.png",
+//                          "tools screwdriver.png", "tools shovel.png", "tools swiss knife.png",
+//                          "tools torch.png", "tools wrench.png", "weapons gaunlets.png",
+//                          "weapons katana.png", "military chainsaw.png", "tools rope.png", "tools saw.png",
+//                          "tools screwdriver.png", "tools shovel.png", "tools swiss knife.png",
+//                          "tools torch.png", "tools wrench.png", "weapons gaunlets.png",
+//                          "weapons katana.png"
+                    ["\(i)"]
+//                print("Names of images: \(i)")
+//                    , "\(2)", UIImage(named: "\(3)")!, UIImage(named: "\(4)")!, UIImage(named: "\(5)")!, UIImage(named: "\(6)")!, UIImage(named: "\(7)")!, UIImage(named: "\(8)")!, UIImage(named: "\(9)")!, UIImage(named: "\(10)")!, UIImage(named: "\(1)")!, UIImage(named: "\(2)")!, UIImage(named: "\(3)")!, UIImage(named: "\(4)")!, UIImage(named: "\(5)")!, UIImage(named: "\(6)")!, UIImage(named: "\(7)")!, UIImage(named: "\(8)")!, UIImage(named: "\(9)")!, UIImage(named: "\(10)")!
+//            ]
+            }
             // Call function to populate images
             randomImageLoop()
         }
@@ -99,9 +109,6 @@ class PokeMatchVC: UIViewController {
 //            randomImageLoop()
 //        }
         
-        // Verify value of array indices
-        print(pokeImageArray.indices)
-        
         startGameMusic()
     }
     
@@ -109,9 +116,13 @@ class PokeMatchVC: UIViewController {
     func randomImageLoop() {
         for index in pokeImageArray {
             if pokeImages.count > 0 {
+                print("# of Images: \(pokeImages.count)")
                 tileCounter += 1
                 let random = arc4random_uniform(UInt32(pokeImages.count))
-                index.image = UIImage(named: "\(pokeImages.remove(at: Int(random)))")
+                let image = UIImage(named: "\(pokeImages.remove(at: Int(random))))")
+                index.image = image
+                index.layer.borderWidth = 2.0
+                index.layer.borderColor = UIColor(red: 255/255, green: 255/255, blue: 0/255, alpha: 0.8).cgColor
                 index.isHidden = true
                 print("Images populating & Images Hidden")
             }
@@ -191,7 +202,7 @@ class PokeMatchVC: UIViewController {
     }
     
     // Updates game time on displays
-    @objc func updateCounter () -> String {
+    @objc func updateCounter() -> String {
         
         // Calculate total time since timer started in seconds
         time = Date().timeIntervalSinceReferenceDate - startTime
@@ -221,8 +232,8 @@ class PokeMatchVC: UIViewController {
     }
     
     // Function assigns views with tap gestures
-    func tapGesture (_ sender: UITapGestureRecognizer) {
-        
+    func tapGesture(_ sender: UITapGestureRecognizer) {
+    
         // Checks if the user has selected more than 0 cards.
         if selectedTiles.count > 0 {
             
@@ -266,19 +277,18 @@ class PokeMatchVC: UIViewController {
     }
     
     // Function used to re-hide images when the user does not get a match.
-    func keepTiles () {
+    func keepTiles() {
         
         // Not a match sound
         prepareAudios()
         patSound.play()
         
-        for tiles in selectedTiles {
-            (tiles.subviews[0] as! UIImageView).isHidden = true
+        for card in selectedTiles {
+            card.layer.borderWidth = 2.0
+            card.layer.borderColor = UIColor.yellow.cgColor
+            card.backgroundColor = UIColor.black
+            (card.subviews[0] as! UIImageView).isHidden = true
         }
-        
-        // Lose points if tiles are not a match
-        gamePoints -= 20
-        pointsDisplay.text = "\(gamePoints)"
         
         // Removes the selected boxes from the selected boxes array, allowing the user to start selecting more boxes.
         selectedTiles.removeAll(keepingCapacity: false)
@@ -288,25 +298,20 @@ class PokeMatchVC: UIViewController {
     }
     
     // Function used to hide boxes when the user gets a match.
-    func removeTiles () {
+    func removeTiles() {
         
         // Correct match sound
         prepareAudios()
         chime.play()
         
-        for tiles in selectedTiles {
-            tiles.isHidden = true
+        for card in selectedTiles {
+            card.isHidden = true
         }
         
         // Removes the count of 1 card per selection so we know how many cards are left.
         tileCounter -= 1
         tileCounter -= 1
         
-        // Recieve points for matching tiles
-        gamePoints += 100
-        pointsDisplay.text = "\(gamePoints)"
-        
-        // Remove selected tiles
         selectedTiles.removeAll(keepingCapacity: false)
         
         // Checks if the number of cards has reached 0.
@@ -323,15 +328,15 @@ class PokeMatchVC: UIViewController {
             // Reveals the winner's screen.
 //            gameView.isHidden = true
 //            winnersView.isHidden = false
-            
-            // Adds the winning text phrase to the winner's screen label.
+//            
+//            // Adds the winning text phrase to the winner's screen label.
 //            winningTimeText.text! = "You finished in \(display) seconds!"
         }
         
         // Enables the user's interaction once two boxes are matched.
         view.isUserInteractionEnabled = true
     }
-
+    
     // Function hides images for after the first 5 seconds game preview.
     func seeInitialView(_ sender: UIButton) {
         
@@ -350,13 +355,13 @@ class PokeMatchVC: UIViewController {
         }
     }
     
-    @IBAction func startButtonPressed(_ sender: UIButton) {
+    @IBAction func startButton(_ sender: UIButton) {
         
-        // Prepare for sound
+        // Button sound
         prepareAudios()
         patSound.play()
         
-        // Calls game music function
+        // Calls functions
         startGameTime()
         
         // Ensures user can not tap buttons while showing 5 second preview.
@@ -375,6 +380,8 @@ class PokeMatchVC: UIViewController {
         
         // Displays Views and Images for the 5 second preview.
         for views in tileViewArray {
+            views.layer.borderWidth = 2.0
+            views.layer.borderColor = UIColor.yellow.cgColor
             views.isHidden = false
             print(" 1. View NOT Hidden - startButton - Preview")
         }
@@ -384,6 +391,171 @@ class PokeMatchVC: UIViewController {
             print(" 2. Image NOT Hidden - startButton - Preview")
         }
     }
+
+    // Function assigns views with tap gestures
+//    func tapGesture (_ sender: UITapGestureRecognizer) {
+//        
+//        // Checks if the user has selected more than 0 cards.
+//        if selectedTiles.count > 0 {
+//            
+//            // if/else statement to deselect a card if the user retaps the same one.
+//            if sender.view?.description != selectedTiles[0].description {
+//                selectedTiles.append(sender.view!)
+//                (sender.view?.subviews[0] as! UIImageView).isHidden = false
+//            } else {
+//                // If 2 cards are selected and have different descriptions, the images are hidden.
+//                keepTiles()
+//            }
+//            print("Tapped - No Match")
+//            
+//            // If there isn't more than one box in the the array, we have to remove the description check or else that array index will be nil and will cause a crash. We still add the selected box to the array.
+//        } else {
+//            selectedTiles.append(sender.view!)
+//            (sender.view?.subviews[0] as! UIImageView).isHidden = false
+//            print("Tapped - Image Added to Array")
+//        }
+//        
+//        // If statement to check if 2 cards have been selected.
+//        if selectedTiles.count == 2 {
+//            
+//            // If statement checks subviews to see if they match.
+//            if (selectedTiles[0].subviews[0] as! UIImageView).image == (selectedTiles[1].subviews[0] as! UIImageView).image {
+//                (sender.view?.subviews[0] as! UIImageView).isHidden = false
+//                // Disable user interaction so that they cannot tap any other cards.
+//                view.isUserInteractionEnabled = false
+//                
+//                // Start a timer for .5 second so user can see the match. Calls removeCards function
+//                timer2 = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(removeTiles), userInfo: nil, repeats: false)
+//                print("Tapped if 2 cards")
+//            } else {
+//                (sender.view?.subviews[0] as! UIImageView).isHidden = false
+//                view.isUserInteractionEnabled = false
+//                // Start timer for .5 second so user can see images were NOT a match. Calls hideCards function
+//                timer3 = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(keepTiles), userInfo: nil, repeats: false)
+//                print("Tapped if 2 cards -else")
+//            }
+//        }
+//    }
+//    
+//    // Function used to re-hide images when the user does not get a match.
+//    func keepTiles () {
+//        
+//        // Not a match sound
+//        prepareAudios()
+//        patSound.play()
+//        
+//        for tiles in selectedTiles {
+//            (tiles.subviews[0] as! UIImageView).isHidden = true
+//        }
+//        
+//        // Lose points if tiles are not a match
+//        gamePoints -= 20
+//        pointsDisplay.text = "\(gamePoints)"
+//        
+//        // Removes the selected boxes from the selected boxes array, allowing the user to start selecting more boxes.
+//        selectedTiles.removeAll(keepingCapacity: false)
+//        
+//        // Renables user interaction.
+//        view.isUserInteractionEnabled = true
+//    }
+//    
+//    // Function used to hide boxes when the user gets a match.
+//    func removeTiles () {
+//        
+//        // Correct match sound
+//        prepareAudios()
+//        chime.play()
+//        
+//        for tiles in selectedTiles {
+//            tiles.isHidden = true
+//        }
+//        
+//        // Removes the count of 1 card per selection so we know how many cards are left.
+//        tileCounter -= 1
+//        tileCounter -= 1
+//        
+//        // Recieve points for matching tiles
+//        gamePoints += 100
+//        pointsDisplay.text = "\(gamePoints)"
+//        
+//        // Remove selected tiles
+//        selectedTiles.removeAll(keepingCapacity: false)
+//        
+//        // Checks if the number of cards has reached 0.
+//        if tileCounter == 0 {
+//            
+//            // Winning cheers
+//            prepareAudios()
+//            tadaSound.play()
+//            cheering.play()
+//            
+//            // Stops the game counter once game is completed.
+//            timer?.invalidate()
+//            
+//            // Reveals the winner's screen.
+////            gameView.isHidden = true
+////            winnersView.isHidden = false
+//            
+//            // Adds the winning text phrase to the winner's screen label.
+////            winningTimeText.text! = "You finished in \(display) seconds!"
+//        }
+//        
+//        // Enables the user's interaction once two boxes are matched.
+//        view.isUserInteractionEnabled = true
+//    }
+//
+//    // Function hides images for after the first 5 seconds game preview.
+//    func seeInitialView(_ sender: UIButton) {
+//        
+//        // Enable user interaction to select views
+//        view.isUserInteractionEnabled = true
+//        
+//        // Hides card Image and displays View to now select
+//        for images in pokeImageArray {
+//            images.isHidden = true
+//            print(" 3. Image Hidden - seeInitialView - After Preview")
+//        }
+//        
+//        for view in tileViewArray {
+//            view.isHidden = false
+//            print("4. View NOT Hidden - seeInitialView - After Preview")
+//        }
+//    }
+//
+//    @IBAction func startButtonPressed(_ sender: UIButton) {
+//        
+//        // Prepare for sound
+//        prepareAudios()
+//        patSound.play()
+//        
+//        // Calls game music function
+//        startGameTime()
+//        
+//        // Ensures user can not tap buttons while showing 5 second preview.
+//        view.isUserInteractionEnabled = false
+//        
+//        // Delay images to be shown for 5 seconds.
+//        self.timer1 = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(seeInitialView(_:)), userInfo: nil, repeats: false)
+//        
+//        // Shows button at beginning of game
+//        startButton.isHidden = true
+//        
+//        // Unhides views after start button is pressed
+//        pointsView.isHidden = false
+//        middleView.isHidden = false
+//        bottomView.isHidden = false
+//
+//        // Displays Views and Images for the 5 second preview.
+//        for views in tileViewArray {
+//            views.isHidden = false
+//            print(" 1. View NOT Hidden - startButton - Preview")
+//        }
+//        
+//        for images in pokeImageArray {
+//            images.isHidden = false
+//            print(" 2. Image NOT Hidden - startButton - Preview")
+//        }
+//    }
 
 
     // Audio button mutes/unmutes music
