@@ -1,0 +1,538 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "OptionsVC"
+provides-nominal:
+- "C9PokeMatch9OptionsVC"
+provides-member:
+- ["C9PokeMatch9OptionsVC", ""]
+provides-dynamic-lookup:
+- "backToMain"
+- "gameCenterVC"
+- "mainMenuVC"
+- "musicOptionSwitch"
+- "musicSwitch"
+- "pokeMatchVC"
+- "pushedButtonOne"
+- "radioButtonOne"
+- "viewDidLoad"
+depends-top-level:
+- !private "=="
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "GameCenterVC"
+- "MainMenuVC"
+- "OptionsVC"
+- "PokeMatchVC"
+- !private "StringLiteralType"
+- "UIButton"
+- !private "UIControlState"
+- !private "UIImage"
+- "UISwitch"
+- "UIViewController"
+depends-member:
+- !private ["CSo13AVAudioPlayer", "pause"]
+- !private ["CSo13AVAudioPlayer", "play"]
+- ["Ps9AnyObject", "GameCenterVC"]
+- ["Ps9AnyObject", "MainMenuVC"]
+- ["Ps9AnyObject", "PokeMatchVC"]
+- !private ["Ps9AnyObject", "UIControlState"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "dismiss"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isOn"]
+- !private ["Ps9AnyObject", "mainMenuVC"]
+- !private ["Ps9AnyObject", "musicPlayer"]
+- !private ["Ps9AnyObject", "musicSwitch"]
+- !private ["Ps9AnyObject", "pause"]
+- !private ["Ps9AnyObject", "play"]
+- !private ["Ps9AnyObject", "radioButtonOne"]
+- !private ["Ps9AnyObject", "setImage"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo15CALayerDelegate", "isOn"]
+- !private ["PSo15CALayerDelegate", "setImage"]
+- ["Ps7CVarArg", "GameCenterVC"]
+- ["Ps7CVarArg", "MainMenuVC"]
+- ["Ps7CVarArg", "PokeMatchVC"]
+- !private ["Ps7CVarArg", "UIControlState"]
+- !private ["Ps7CVarArg", "UIImage"]
+- !private ["Ps7CVarArg", "dismiss"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isOn"]
+- !private ["Ps7CVarArg", "mainMenuVC"]
+- !private ["Ps7CVarArg", "musicPlayer"]
+- !private ["Ps7CVarArg", "musicSwitch"]
+- !private ["Ps7CVarArg", "pause"]
+- !private ["Ps7CVarArg", "play"]
+- !private ["Ps7CVarArg", "radioButtonOne"]
+- !private ["Ps7CVarArg", "setImage"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "GameCenterVC"]
+- ["Ps28CustomDebugStringConvertible", "MainMenuVC"]
+- ["Ps28CustomDebugStringConvertible", "PokeMatchVC"]
+- !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
+- !private ["Ps28CustomDebugStringConvertible", "dismiss"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isOn"]
+- !private ["Ps28CustomDebugStringConvertible", "mainMenuVC"]
+- !private ["Ps28CustomDebugStringConvertible", "musicPlayer"]
+- !private ["Ps28CustomDebugStringConvertible", "musicSwitch"]
+- !private ["Ps28CustomDebugStringConvertible", "pause"]
+- !private ["Ps28CustomDebugStringConvertible", "play"]
+- !private ["Ps28CustomDebugStringConvertible", "radioButtonOne"]
+- !private ["Ps28CustomDebugStringConvertible", "setImage"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "GameCenterVC"]
+- ["Ps23CustomStringConvertible", "MainMenuVC"]
+- ["Ps23CustomStringConvertible", "PokeMatchVC"]
+- !private ["Ps23CustomStringConvertible", "UIControlState"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "dismiss"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isOn"]
+- !private ["Ps23CustomStringConvertible", "mainMenuVC"]
+- !private ["Ps23CustomStringConvertible", "musicPlayer"]
+- !private ["Ps23CustomStringConvertible", "musicSwitch"]
+- !private ["Ps23CustomStringConvertible", "pause"]
+- !private ["Ps23CustomStringConvertible", "play"]
+- !private ["Ps23CustomStringConvertible", "radioButtonOne"]
+- !private ["Ps23CustomStringConvertible", "setImage"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "GameCenterVC"]
+- ["Ps9Equatable", "MainMenuVC"]
+- ["Ps9Equatable", "PokeMatchVC"]
+- !private ["Ps9Equatable", "UIControlState"]
+- !private ["Ps9Equatable", "UIImage"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "dismiss"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isOn"]
+- !private ["Ps9Equatable", "mainMenuVC"]
+- !private ["Ps9Equatable", "musicPlayer"]
+- !private ["Ps9Equatable", "musicSwitch"]
+- !private ["Ps9Equatable", "normal"]
+- !private ["Ps9Equatable", "pause"]
+- !private ["Ps9Equatable", "play"]
+- !private ["Ps9Equatable", "radioButtonOne"]
+- !private ["Ps9Equatable", "setImage"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "normal"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["PSo30GKGameCenterControllerDelegate", "init"]
+- !private ["PSo30GKGameCenterControllerDelegate", "musicPlayer"]
+- ["C9PokeMatch12GameCenterVC", "init"]
+- ["Ps8Hashable", "GameCenterVC"]
+- ["Ps8Hashable", "MainMenuVC"]
+- ["Ps8Hashable", "PokeMatchVC"]
+- !private ["Ps8Hashable", "UIControlState"]
+- !private ["Ps8Hashable", "UIImage"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "dismiss"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isOn"]
+- !private ["Ps8Hashable", "mainMenuVC"]
+- !private ["Ps8Hashable", "musicPlayer"]
+- !private ["Ps8Hashable", "musicSwitch"]
+- !private ["Ps8Hashable", "pause"]
+- !private ["Ps8Hashable", "play"]
+- !private ["Ps8Hashable", "radioButtonOne"]
+- !private ["Ps8Hashable", "setImage"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- ["C9PokeMatch10MainMenuVC", "init"]
+- !private ["C9PokeMatch10MainMenuVC", "musicPlayer"]
+- !private ["Ps10MirrorPath", "init"]
+- ["PSo8NSCoding", "GameCenterVC"]
+- ["PSo8NSCoding", "MainMenuVC"]
+- ["PSo8NSCoding", "PokeMatchVC"]
+- !private ["PSo8NSCoding", "UIControlState"]
+- !private ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "dismiss"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isOn"]
+- !private ["PSo8NSCoding", "mainMenuVC"]
+- !private ["PSo8NSCoding", "musicPlayer"]
+- !private ["PSo8NSCoding", "musicSwitch"]
+- !private ["PSo8NSCoding", "radioButtonOne"]
+- !private ["PSo8NSCoding", "setImage"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- ["PSo26NSExtensionRequestHandling", "GameCenterVC"]
+- ["PSo26NSExtensionRequestHandling", "MainMenuVC"]
+- ["PSo26NSExtensionRequestHandling", "PokeMatchVC"]
+- !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- !private ["PSo26NSExtensionRequestHandling", "dismiss"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "mainMenuVC"]
+- !private ["PSo26NSExtensionRequestHandling", "musicPlayer"]
+- !private ["PSo26NSExtensionRequestHandling", "musicSwitch"]
+- !private ["PSo26NSExtensionRequestHandling", "radioButtonOne"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "GameCenterVC"]
+- ["CSo8NSObject", "MainMenuVC"]
+- ["CSo8NSObject", "PokeMatchVC"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UIControlState"]
+- !private ["CSo8NSObject", "UIImage"]
+- ["CSo8NSObject", "UISwitch"]
+- ["CSo8NSObject", "backToMain"]
+- !private ["CSo8NSObject", "dismiss"]
+- ["CSo8NSObject", "gameCenterVC"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isOn"]
+- ["CSo8NSObject", "mainMenuVC"]
+- ["CSo8NSObject", "musicOptionSwitch"]
+- !private ["CSo8NSObject", "musicPlayer"]
+- ["CSo8NSObject", "musicSwitch"]
+- !private ["CSo8NSObject", "pause"]
+- !private ["CSo8NSObject", "play"]
+- ["CSo8NSObject", "pokeMatchVC"]
+- ["CSo8NSObject", "pushedButtonOne"]
+- ["CSo8NSObject", "radioButtonOne"]
+- !private ["CSo8NSObject", "setImage"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "GameCenterVC"]
+- ["PSo16NSObjectProtocol", "MainMenuVC"]
+- ["PSo16NSObjectProtocol", "PokeMatchVC"]
+- !private ["PSo16NSObjectProtocol", "UIControlState"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "dismiss"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isOn"]
+- !private ["PSo16NSObjectProtocol", "mainMenuVC"]
+- !private ["PSo16NSObjectProtocol", "musicPlayer"]
+- !private ["PSo16NSObjectProtocol", "musicSwitch"]
+- !private ["PSo16NSObjectProtocol", "pause"]
+- !private ["PSo16NSObjectProtocol", "play"]
+- !private ["PSo16NSObjectProtocol", "radioButtonOne"]
+- !private ["PSo16NSObjectProtocol", "setImage"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Ps9OptionSet", "normal"]
+- ["C9PokeMatch9OptionsVC", "GameCenterVC"]
+- ["C9PokeMatch9OptionsVC", "MainMenuVC"]
+- ["C9PokeMatch9OptionsVC", "PokeMatchVC"]
+- ["C9PokeMatch9OptionsVC", "UIButton"]
+- !private ["C9PokeMatch9OptionsVC", "UIControlState"]
+- !private ["C9PokeMatch9OptionsVC", "UIImage"]
+- ["C9PokeMatch9OptionsVC", "UISwitch"]
+- ["C9PokeMatch9OptionsVC", "backToMain"]
+- ["C9PokeMatch9OptionsVC", "deinit"]
+- !private ["C9PokeMatch9OptionsVC", "dismiss"]
+- ["C9PokeMatch9OptionsVC", "gameCenterVC"]
+- ["C9PokeMatch9OptionsVC", "init"]
+- ["C9PokeMatch9OptionsVC", "mainMenuVC"]
+- ["C9PokeMatch9OptionsVC", "musicOptionSwitch"]
+- ["C9PokeMatch9OptionsVC", "musicSwitch"]
+- ["C9PokeMatch9OptionsVC", "pokeMatchVC"]
+- ["C9PokeMatch9OptionsVC", "pushedButtonOne"]
+- ["C9PokeMatch9OptionsVC", "radioButtonOne"]
+- ["C9PokeMatch9OptionsVC", "viewDidLoad"]
+- ["C9PokeMatch11PokeMatchVC", "init"]
+- !private ["Ps16RawRepresentable", "normal"]
+- !private ["Ps10SetAlgebra", "normal"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isOn"]
+- !private ["PSo29UIAccessibilityIdentification", "setImage"]
+- !private ["PSo12UIAppearance", "isOn"]
+- !private ["PSo12UIAppearance", "setImage"]
+- ["PSo21UIAppearanceContainer", "GameCenterVC"]
+- ["PSo21UIAppearanceContainer", "MainMenuVC"]
+- ["PSo21UIAppearanceContainer", "PokeMatchVC"]
+- !private ["PSo21UIAppearanceContainer", "UIControlState"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "dismiss"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isOn"]
+- !private ["PSo21UIAppearanceContainer", "mainMenuVC"]
+- !private ["PSo21UIAppearanceContainer", "musicPlayer"]
+- !private ["PSo21UIAppearanceContainer", "musicSwitch"]
+- !private ["PSo21UIAppearanceContainer", "radioButtonOne"]
+- !private ["PSo21UIAppearanceContainer", "setImage"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "setImage"]
+- ["PSo18UIContentContainer", "GameCenterVC"]
+- ["PSo18UIContentContainer", "MainMenuVC"]
+- ["PSo18UIContentContainer", "PokeMatchVC"]
+- !private ["PSo18UIContentContainer", "UIControlState"]
+- !private ["PSo18UIContentContainer", "UIImage"]
+- !private ["PSo18UIContentContainer", "dismiss"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "mainMenuVC"]
+- !private ["PSo18UIContentContainer", "musicPlayer"]
+- !private ["PSo18UIContentContainer", "musicSwitch"]
+- !private ["PSo18UIContentContainer", "radioButtonOne"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "isOn"]
+- !private ["CSo9UIControl", "setImage"]
+- !private ["VSC14UIControlState", "normal"]
+- !private ["PSo17UICoordinateSpace", "isOn"]
+- !private ["PSo17UICoordinateSpace", "setImage"]
+- !private ["PSo13UIDynamicItem", "isOn"]
+- !private ["PSo13UIDynamicItem", "setImage"]
+- ["PSo18UIFocusEnvironment", "GameCenterVC"]
+- ["PSo18UIFocusEnvironment", "MainMenuVC"]
+- ["PSo18UIFocusEnvironment", "PokeMatchVC"]
+- !private ["PSo18UIFocusEnvironment", "UIControlState"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "dismiss"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isOn"]
+- !private ["PSo18UIFocusEnvironment", "mainMenuVC"]
+- !private ["PSo18UIFocusEnvironment", "musicPlayer"]
+- !private ["PSo18UIFocusEnvironment", "musicSwitch"]
+- !private ["PSo18UIFocusEnvironment", "radioButtonOne"]
+- !private ["PSo18UIFocusEnvironment", "setImage"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "isOn"]
+- !private ["PSo11UIFocusItem", "setImage"]
+- !private ["CSo7UIImage", "init"]
+- ["CSo11UIResponder", "GameCenterVC"]
+- ["CSo11UIResponder", "MainMenuVC"]
+- ["CSo11UIResponder", "PokeMatchVC"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UIControlState"]
+- !private ["CSo11UIResponder", "UIImage"]
+- ["CSo11UIResponder", "UISwitch"]
+- ["CSo11UIResponder", "backToMain"]
+- !private ["CSo11UIResponder", "dismiss"]
+- ["CSo11UIResponder", "gameCenterVC"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isOn"]
+- ["CSo11UIResponder", "mainMenuVC"]
+- ["CSo11UIResponder", "musicOptionSwitch"]
+- !private ["CSo11UIResponder", "musicPlayer"]
+- ["CSo11UIResponder", "musicSwitch"]
+- ["CSo11UIResponder", "pokeMatchVC"]
+- ["CSo11UIResponder", "pushedButtonOne"]
+- ["CSo11UIResponder", "radioButtonOne"]
+- !private ["CSo11UIResponder", "setImage"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "GameCenterVC"]
+- ["PSo30UIResponderStandardEditActions", "MainMenuVC"]
+- ["PSo30UIResponderStandardEditActions", "PokeMatchVC"]
+- !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
+- !private ["PSo30UIResponderStandardEditActions", "UIImage"]
+- !private ["PSo30UIResponderStandardEditActions", "dismiss"]
+- ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isOn"]
+- !private ["PSo30UIResponderStandardEditActions", "mainMenuVC"]
+- !private ["PSo30UIResponderStandardEditActions", "musicPlayer"]
+- !private ["PSo30UIResponderStandardEditActions", "musicSwitch"]
+- !private ["PSo30UIResponderStandardEditActions", "radioButtonOne"]
+- !private ["PSo30UIResponderStandardEditActions", "setImage"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo16UIStateRestoring", "GameCenterVC"]
+- ["PSo16UIStateRestoring", "MainMenuVC"]
+- ["PSo16UIStateRestoring", "PokeMatchVC"]
+- !private ["PSo16UIStateRestoring", "UIControlState"]
+- !private ["PSo16UIStateRestoring", "UIImage"]
+- !private ["PSo16UIStateRestoring", "dismiss"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "mainMenuVC"]
+- !private ["PSo16UIStateRestoring", "musicPlayer"]
+- !private ["PSo16UIStateRestoring", "musicSwitch"]
+- !private ["PSo16UIStateRestoring", "radioButtonOne"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo8UISwitch", "isOn"]
+- ["PSo18UITraitEnvironment", "GameCenterVC"]
+- ["PSo18UITraitEnvironment", "MainMenuVC"]
+- ["PSo18UITraitEnvironment", "PokeMatchVC"]
+- !private ["PSo18UITraitEnvironment", "UIControlState"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "dismiss"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isOn"]
+- !private ["PSo18UITraitEnvironment", "mainMenuVC"]
+- !private ["PSo18UITraitEnvironment", "musicPlayer"]
+- !private ["PSo18UITraitEnvironment", "musicSwitch"]
+- !private ["PSo18UITraitEnvironment", "radioButtonOne"]
+- !private ["PSo18UITraitEnvironment", "setImage"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "isOn"]
+- !private ["CSo6UIView", "setImage"]
+- ["CSo16UIViewController", "GameCenterVC"]
+- ["CSo16UIViewController", "MainMenuVC"]
+- ["CSo16UIViewController", "PokeMatchVC"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UIControlState"]
+- !private ["CSo16UIViewController", "UIImage"]
+- ["CSo16UIViewController", "UISwitch"]
+- ["CSo16UIViewController", "backToMain"]
+- !private ["CSo16UIViewController", "dismiss"]
+- ["CSo16UIViewController", "gameCenterVC"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "mainMenuVC"]
+- ["CSo16UIViewController", "musicOptionSwitch"]
+- !private ["CSo16UIViewController", "musicPlayer"]
+- ["CSo16UIViewController", "musicSwitch"]
+- ["CSo16UIViewController", "pokeMatchVC"]
+- ["CSo16UIViewController", "pushedButtonOne"]
+- ["CSo16UIViewController", "radioButtonOne"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isOn"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setImage"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "GameCenterVC"]
+- ["Ps9_Hashable", "MainMenuVC"]
+- ["Ps9_Hashable", "PokeMatchVC"]
+- !private ["Ps9_Hashable", "UIControlState"]
+- !private ["Ps9_Hashable", "UIImage"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "dismiss"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isOn"]
+- !private ["Ps9_Hashable", "mainMenuVC"]
+- !private ["Ps9_Hashable", "musicPlayer"]
+- !private ["Ps9_Hashable", "musicSwitch"]
+- !private ["Ps9_Hashable", "pause"]
+- !private ["Ps9_Hashable", "play"]
+- !private ["Ps9_Hashable", "radioButtonOne"]
+- !private ["Ps9_Hashable", "setImage"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- !private "CSo13AVAudioPlayer"
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "PSo30GKGameCenterControllerDelegate"
+- "C9PokeMatch12GameCenterVC"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- "C9PokeMatch10MainMenuVC"
+- !private "Ps10MirrorPath"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Ps9OptionSet"
+- "C9PokeMatch9OptionsVC"
+- "C9PokeMatch11PokeMatchVC"
+- !private "Ps16RawRepresentable"
+- !private "Ps10SetAlgebra"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "VSC14UIControlState"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "CSo7UIImage"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- !private "CSo8UISwitch"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AudioToolbox.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "494fd4db5d121576ab78cd427d5a0e77"

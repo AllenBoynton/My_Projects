@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "a537752adf4d2c393b5e49854092b223"
+build_time: [549161093, 766140000]
+inputs:
+  "/Users/aboynton/School/My_Projects/BrainGames/CE04/AppDelegate.swift": [548836701, 0]
+  "/Users/aboynton/School/My_Projects/BrainGames/CE04/ViewController.swift": [548899022, 0]

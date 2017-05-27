@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "fdaa0a72034000fffb723c29e12262d9"
+build_time: [549215861, 534173000]
+inputs:
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/PokemonDetailVC.swift": [549062969, 0]
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/Pokemon.swift": [549064507, 0]
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/csv.swift": [546873834, 0]
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/PokemonVC.swift": [547068238, 0]
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/Constants.swift": [548976491, 0]
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/AppDelegate.swift": [546873834, 0]
+  "/Users/aboynton/School/Udemy.com/Devslopes/iOS10_Xcode8_Swift_Obj-C/Projects/UdemySwift3/PokeDex/PokeDex/PokeCell.swift": [546873834, 0]

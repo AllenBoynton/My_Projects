@@ -1,0 +1,390 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CreditsScene"
+provides-nominal:
+- "C9SkyEscape12CreditsScene"
+provides-member:
+- ["C9SkyEscape12CreditsScene", ""]
+provides-dynamic-lookup:
+- "didMove"
+- "touchesBegan"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CreditsScene"
+- !private "MainMenu"
+- !private "SKAction"
+- "SKScene"
+- !private "SKTransition"
+- "SKView"
+- "Set"
+- !private "StringLiteralType"
+- "UIEvent"
+- "UITouch"
+depends-member:
+- !private ["Ps9AnyObject", "MainMenu"]
+- !private ["Ps9AnyObject", "SKAction"]
+- !private ["Ps9AnyObject", "SKTransition"]
+- !private ["Ps9AnyObject", "doorsOpenVertical"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "playSoundFileNamed"]
+- !private ["Ps9AnyObject", "presentScene"]
+- !private ["Ps9AnyObject", "run"]
+- !private ["Ps9AnyObject", "scaleMode"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", ""]
+- !private ["PSo15CALayerDelegate", "presentScene"]
+- !private ["Ps7CVarArg", "MainMenu"]
+- !private ["Ps7CVarArg", "SKAction"]
+- !private ["Ps7CVarArg", "SKTransition"]
+- !private ["Ps7CVarArg", "doorsOpenVertical"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "playSoundFileNamed"]
+- !private ["Ps7CVarArg", "presentScene"]
+- !private ["Ps7CVarArg", "run"]
+- !private ["Ps7CVarArg", "scaleMode"]
+- !private ["Ps7CVarArg", "view"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["C9SkyEscape12CreditsScene", "MainMenu"]
+- !private ["C9SkyEscape12CreditsScene", "SKAction"]
+- !private ["C9SkyEscape12CreditsScene", "SKTransition"]
+- ["C9SkyEscape12CreditsScene", "SKView"]
+- ["C9SkyEscape12CreditsScene", "Set"]
+- ["C9SkyEscape12CreditsScene", "UIEvent"]
+- ["C9SkyEscape12CreditsScene", "UITouch"]
+- ["C9SkyEscape12CreditsScene", "deinit"]
+- ["C9SkyEscape12CreditsScene", "didMove"]
+- ["C9SkyEscape12CreditsScene", "init"]
+- !private ["C9SkyEscape12CreditsScene", "run"]
+- ["C9SkyEscape12CreditsScene", "touchesBegan"]
+- !private ["C9SkyEscape12CreditsScene", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "MainMenu"]
+- !private ["Ps28CustomDebugStringConvertible", "SKAction"]
+- !private ["Ps28CustomDebugStringConvertible", "SKTransition"]
+- !private ["Ps28CustomDebugStringConvertible", "doorsOpenVertical"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "playSoundFileNamed"]
+- !private ["Ps28CustomDebugStringConvertible", "presentScene"]
+- !private ["Ps28CustomDebugStringConvertible", "run"]
+- !private ["Ps28CustomDebugStringConvertible", "scaleMode"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "MainMenu"]
+- !private ["Ps23CustomStringConvertible", "SKAction"]
+- !private ["Ps23CustomStringConvertible", "SKTransition"]
+- !private ["Ps23CustomStringConvertible", "doorsOpenVertical"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "playSoundFileNamed"]
+- !private ["Ps23CustomStringConvertible", "presentScene"]
+- !private ["Ps23CustomStringConvertible", "run"]
+- !private ["Ps23CustomStringConvertible", "scaleMode"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "MainMenu"]
+- !private ["Ps9Equatable", "SKAction"]
+- !private ["Ps9Equatable", "SKTransition"]
+- !private ["Ps9Equatable", "aspectFit"]
+- !private ["Ps9Equatable", "doorsOpenVertical"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "playSoundFileNamed"]
+- !private ["Ps9Equatable", "presentScene"]
+- !private ["Ps9Equatable", "run"]
+- !private ["Ps9Equatable", "scaleMode"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["PSo19GKSceneRootNodeType", "MainMenu"]
+- !private ["PSo19GKSceneRootNodeType", "SKAction"]
+- !private ["PSo19GKSceneRootNodeType", "SKTransition"]
+- !private ["PSo19GKSceneRootNodeType", "init"]
+- !private ["PSo19GKSceneRootNodeType", "run"]
+- !private ["PSo19GKSceneRootNodeType", "scaleMode"]
+- !private ["PSo19GKSceneRootNodeType", "view"]
+- ["PSo19GKSceneRootNodeType", ""]
+- !private ["Ps8Hashable", "MainMenu"]
+- !private ["Ps8Hashable", "SKAction"]
+- !private ["Ps8Hashable", "SKTransition"]
+- !private ["Ps8Hashable", "aspectFit"]
+- !private ["Ps8Hashable", "doorsOpenVertical"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "playSoundFileNamed"]
+- !private ["Ps8Hashable", "presentScene"]
+- !private ["Ps8Hashable", "run"]
+- !private ["Ps8Hashable", "scaleMode"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["C9SkyEscape8MainMenu", "init"]
+- !private ["C9SkyEscape8MainMenu", "scaleMode"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "MainMenu"]
+- !private ["PSo8NSCoding", "SKAction"]
+- !private ["PSo8NSCoding", "SKTransition"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "playSoundFileNamed"]
+- !private ["PSo8NSCoding", "presentScene"]
+- !private ["PSo8NSCoding", "run"]
+- !private ["PSo8NSCoding", "scaleMode"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "MainMenu"]
+- !private ["PSo9NSCopying", "SKAction"]
+- !private ["PSo9NSCopying", "SKTransition"]
+- !private ["PSo9NSCopying", "doorsOpenVertical"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "playSoundFileNamed"]
+- !private ["PSo9NSCopying", "run"]
+- !private ["PSo9NSCopying", "scaleMode"]
+- !private ["PSo9NSCopying", "view"]
+- ["PSo9NSCopying", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "MainMenu"]
+- !private ["CSo8NSObject", "SKAction"]
+- !private ["CSo8NSObject", "SKTransition"]
+- ["CSo8NSObject", "SKView"]
+- ["CSo8NSObject", "Set"]
+- ["CSo8NSObject", "UIEvent"]
+- ["CSo8NSObject", "UITouch"]
+- ["CSo8NSObject", "didMove"]
+- !private ["CSo8NSObject", "doorsOpenVertical"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "playSoundFileNamed"]
+- !private ["CSo8NSObject", "presentScene"]
+- !private ["CSo8NSObject", "run"]
+- !private ["CSo8NSObject", "scaleMode"]
+- ["CSo8NSObject", "touchesBegan"]
+- !private ["CSo8NSObject", "view"]
+- !private ["PSo16NSObjectProtocol", "MainMenu"]
+- !private ["PSo16NSObjectProtocol", "SKAction"]
+- !private ["PSo16NSObjectProtocol", "SKTransition"]
+- !private ["PSo16NSObjectProtocol", "doorsOpenVertical"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "playSoundFileNamed"]
+- !private ["PSo16NSObjectProtocol", "presentScene"]
+- !private ["PSo16NSObjectProtocol", "run"]
+- !private ["PSo16NSObjectProtocol", "scaleMode"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Ps16RawRepresentable", "aspectFit"]
+- !private ["CSo8SKAction", "playSoundFileNamed"]
+- !private ["CSo12SKEffectNode", "MainMenu"]
+- !private ["CSo12SKEffectNode", "SKAction"]
+- !private ["CSo12SKEffectNode", "SKTransition"]
+- ["CSo12SKEffectNode", "SKView"]
+- ["CSo12SKEffectNode", "Set"]
+- ["CSo12SKEffectNode", "UIEvent"]
+- ["CSo12SKEffectNode", "UITouch"]
+- ["CSo12SKEffectNode", "didMove"]
+- ["CSo12SKEffectNode", "init"]
+- !private ["CSo12SKEffectNode", "run"]
+- !private ["CSo12SKEffectNode", "scaleMode"]
+- ["CSo12SKEffectNode", "touchesBegan"]
+- !private ["CSo12SKEffectNode", "view"]
+- !private ["CSo6SKNode", "MainMenu"]
+- !private ["CSo6SKNode", "SKAction"]
+- !private ["CSo6SKNode", "SKTransition"]
+- ["CSo6SKNode", "SKView"]
+- ["CSo6SKNode", "Set"]
+- ["CSo6SKNode", "UIEvent"]
+- ["CSo6SKNode", "UITouch"]
+- ["CSo6SKNode", "didMove"]
+- ["CSo6SKNode", "init"]
+- !private ["CSo6SKNode", "run"]
+- !private ["CSo6SKNode", "scaleMode"]
+- ["CSo6SKNode", "touchesBegan"]
+- !private ["CSo6SKNode", "view"]
+- !private ["CSo7SKScene", "MainMenu"]
+- !private ["CSo7SKScene", "SKAction"]
+- !private ["CSo7SKScene", "SKTransition"]
+- ["CSo7SKScene", "SKView"]
+- ["CSo7SKScene", "Set"]
+- ["CSo7SKScene", "UIEvent"]
+- ["CSo7SKScene", "UITouch"]
+- ["CSo7SKScene", "didMove"]
+- ["CSo7SKScene", "init"]
+- !private ["CSo7SKScene", "run"]
+- !private ["CSo7SKScene", "scaleMode"]
+- ["CSo7SKScene", "touchesBegan"]
+- !private ["CSo7SKScene", "view"]
+- ["CSo7SKScene", ""]
+- !private ["OSC16SKSceneScaleMode", "aspectFit"]
+- !private ["CSo12SKTransition", "doorsOpenVertical"]
+- !private ["CSo6SKView", "presentScene"]
+- !private ["PSo10SKWarpable", "MainMenu"]
+- !private ["PSo10SKWarpable", "SKAction"]
+- !private ["PSo10SKWarpable", "SKTransition"]
+- !private ["PSo10SKWarpable", "init"]
+- !private ["PSo10SKWarpable", "run"]
+- !private ["PSo10SKWarpable", "scaleMode"]
+- !private ["PSo10SKWarpable", "view"]
+- ["PSo10SKWarpable", ""]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "presentScene"]
+- !private ["PSo12UIAppearance", "presentScene"]
+- !private ["PSo21UIAppearanceContainer", "presentScene"]
+- !private ["PSo17UICoordinateSpace", "presentScene"]
+- !private ["PSo13UIDynamicItem", "presentScene"]
+- !private ["PSo18UIFocusEnvironment", "MainMenu"]
+- !private ["PSo18UIFocusEnvironment", "SKAction"]
+- !private ["PSo18UIFocusEnvironment", "SKTransition"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "presentScene"]
+- !private ["PSo18UIFocusEnvironment", "run"]
+- !private ["PSo18UIFocusEnvironment", "scaleMode"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "MainMenu"]
+- !private ["PSo11UIFocusItem", "SKAction"]
+- !private ["PSo11UIFocusItem", "SKTransition"]
+- !private ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "presentScene"]
+- !private ["PSo11UIFocusItem", "run"]
+- !private ["PSo11UIFocusItem", "scaleMode"]
+- !private ["PSo11UIFocusItem", "view"]
+- ["PSo11UIFocusItem", ""]
+- !private ["CSo11UIResponder", "MainMenu"]
+- !private ["CSo11UIResponder", "SKAction"]
+- !private ["CSo11UIResponder", "SKTransition"]
+- ["CSo11UIResponder", "SKView"]
+- ["CSo11UIResponder", "Set"]
+- ["CSo11UIResponder", "UIEvent"]
+- ["CSo11UIResponder", "UITouch"]
+- ["CSo11UIResponder", "didMove"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "presentScene"]
+- !private ["CSo11UIResponder", "run"]
+- !private ["CSo11UIResponder", "scaleMode"]
+- ["CSo11UIResponder", "touchesBegan"]
+- !private ["CSo11UIResponder", "view"]
+- !private ["PSo30UIResponderStandardEditActions", "MainMenu"]
+- !private ["PSo30UIResponderStandardEditActions", "SKAction"]
+- !private ["PSo30UIResponderStandardEditActions", "SKTransition"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "presentScene"]
+- !private ["PSo30UIResponderStandardEditActions", "run"]
+- !private ["PSo30UIResponderStandardEditActions", "scaleMode"]
+- !private ["PSo30UIResponderStandardEditActions", "view"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo18UITraitEnvironment", "presentScene"]
+- !private ["CSo6UIView", "presentScene"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "presentScene"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "MainMenu"]
+- !private ["Ps9_Hashable", "SKAction"]
+- !private ["Ps9_Hashable", "SKTransition"]
+- !private ["Ps9_Hashable", "aspectFit"]
+- !private ["Ps9_Hashable", "doorsOpenVertical"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "playSoundFileNamed"]
+- !private ["Ps9_Hashable", "presentScene"]
+- !private ["Ps9_Hashable", "run"]
+- !private ["Ps9_Hashable", "scaleMode"]
+- !private ["Ps9_Hashable", "view"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "C9SkyEscape12CreditsScene"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "PSo19GKSceneRootNodeType"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "C9SkyEscape8MainMenu"
+- !private "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Ps16RawRepresentable"
+- !private "CSo8SKAction"
+- "CSo12SKEffectNode"
+- "CSo6SKNode"
+- "CSo7SKScene"
+- !private "OSC16SKSceneScaleMode"
+- !private "CSo12SKTransition"
+- !private "CSo6SKView"
+- "PSo10SKWarpable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AudioToolbox.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "61424f0e1ceb9c388a7643bde9683906"

@@ -1,0 +1,802 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MainMenuVC"
+provides-nominal:
+- "C9PokeMatch10MainMenuVC"
+provides-member:
+- ["C9PokeMatch10MainMenuVC", ""]
+provides-dynamic-lookup:
+- "addScoreAndSubmitToGC"
+- "checkGCLeaderboard"
+- "gameCenterVC"
+- "gameCenterViewControllerDidFinish"
+- "gcLabel"
+- "musicPlayer"
+- "pokeMatchVC"
+- "singlePlayerBtnPressed"
+- "startGameMusic"
+- "viewDidLoad"
+depends-top-level:
+- !private "!="
+- !private "+="
+- "AVAudioPlayer"
+- "AnyObject"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "Bundle"
+- "GKGameCenterControllerDelegate"
+- "GKGameCenterViewController"
+- !private "GKScore"
+- "GameCenterVC"
+- !private "Int64"
+- "MainMenuVC"
+- !private "NSError"
+- "PokeMatchVC"
+- !private "StringLiteralType"
+- "UILabel"
+- "UIViewController"
+- !private "URL"
+- !private "pointsLeaderboardID"
+- !private "print"
+depends-member:
+- !private ["CSo13AVAudioPlayer", "init"]
+- !private ["CSo13AVAudioPlayer", "numberOfLoops"]
+- !private ["CSo13AVAudioPlayer", "play"]
+- !private ["CSo13AVAudioPlayer", "prepareToPlay"]
+- !private ["Ps9AnyObject", "AVAudioPlayer"]
+- !private ["Ps9AnyObject", "Bundle"]
+- !private ["Ps9AnyObject", "GKScore"]
+- !private ["Ps9AnyObject", "Int64"]
+- !private ["Ps9AnyObject", "URL"]
+- !private ["Ps9AnyObject", "debugDescription"]
+- !private ["Ps9AnyObject", "dismiss"]
+- !private ["Ps9AnyObject", "gameCenterVC"]
+- ["Ps9AnyObject", "gameCenterViewControllerDidFinish"]
+- !private ["Ps9AnyObject", "gamePoints"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "main"]
+- !private ["Ps9AnyObject", "musicPlayer"]
+- !private ["Ps9AnyObject", "numberOfLoops"]
+- !private ["Ps9AnyObject", "path"]
+- !private ["Ps9AnyObject", "play"]
+- !private ["Ps9AnyObject", "pointsDisplay"]
+- !private ["Ps9AnyObject", "pointsLeaderboardID"]
+- !private ["Ps9AnyObject", "pokeMatchVC"]
+- !private ["Ps9AnyObject", "prepareToPlay"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "report"]
+- !private ["Ps9AnyObject", "saveHighScore"]
+- !private ["Ps9AnyObject", "score"]
+- !private ["Ps9AnyObject", "showLeaderboard"]
+- !private ["Ps9AnyObject", "startGameMusic"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "value"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps17BitwiseOperations", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["CSo6Bundle", "main"]
+- !private ["CSo6Bundle", "path"]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["Ps7CVarArg", "AVAudioPlayer"]
+- !private ["Ps7CVarArg", "Bundle"]
+- !private ["Ps7CVarArg", "GKScore"]
+- !private ["Ps7CVarArg", "Int64"]
+- !private ["Ps7CVarArg", "URL"]
+- !private ["Ps7CVarArg", "debugDescription"]
+- !private ["Ps7CVarArg", "dismiss"]
+- !private ["Ps7CVarArg", "gameCenterVC"]
+- ["Ps7CVarArg", "gameCenterViewControllerDidFinish"]
+- !private ["Ps7CVarArg", "gamePoints"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "main"]
+- !private ["Ps7CVarArg", "musicPlayer"]
+- !private ["Ps7CVarArg", "numberOfLoops"]
+- !private ["Ps7CVarArg", "path"]
+- !private ["Ps7CVarArg", "play"]
+- !private ["Ps7CVarArg", "pointsDisplay"]
+- !private ["Ps7CVarArg", "pointsLeaderboardID"]
+- !private ["Ps7CVarArg", "pokeMatchVC"]
+- !private ["Ps7CVarArg", "prepareToPlay"]
+- !private ["Ps7CVarArg", "print"]
+- !private ["Ps7CVarArg", "report"]
+- !private ["Ps7CVarArg", "saveHighScore"]
+- !private ["Ps7CVarArg", "score"]
+- !private ["Ps7CVarArg", "showLeaderboard"]
+- !private ["Ps7CVarArg", "startGameMusic"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "value"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "AVAudioPlayer"]
+- !private ["Ps28CustomDebugStringConvertible", "Bundle"]
+- !private ["Ps28CustomDebugStringConvertible", "GKScore"]
+- !private ["Ps28CustomDebugStringConvertible", "Int64"]
+- !private ["Ps28CustomDebugStringConvertible", "URL"]
+- !private ["Ps28CustomDebugStringConvertible", "debugDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "dismiss"]
+- !private ["Ps28CustomDebugStringConvertible", "gameCenterVC"]
+- ["Ps28CustomDebugStringConvertible", "gameCenterViewControllerDidFinish"]
+- !private ["Ps28CustomDebugStringConvertible", "gamePoints"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
+- !private ["Ps28CustomDebugStringConvertible", "musicPlayer"]
+- !private ["Ps28CustomDebugStringConvertible", "numberOfLoops"]
+- !private ["Ps28CustomDebugStringConvertible", "path"]
+- !private ["Ps28CustomDebugStringConvertible", "play"]
+- !private ["Ps28CustomDebugStringConvertible", "pointsDisplay"]
+- !private ["Ps28CustomDebugStringConvertible", "pointsLeaderboardID"]
+- !private ["Ps28CustomDebugStringConvertible", "pokeMatchVC"]
+- !private ["Ps28CustomDebugStringConvertible", "prepareToPlay"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "report"]
+- !private ["Ps28CustomDebugStringConvertible", "saveHighScore"]
+- !private ["Ps28CustomDebugStringConvertible", "score"]
+- !private ["Ps28CustomDebugStringConvertible", "showLeaderboard"]
+- !private ["Ps28CustomDebugStringConvertible", "startGameMusic"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "AVAudioPlayer"]
+- !private ["Ps23CustomStringConvertible", "Bundle"]
+- !private ["Ps23CustomStringConvertible", "GKScore"]
+- !private ["Ps23CustomStringConvertible", "Int64"]
+- !private ["Ps23CustomStringConvertible", "URL"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "debugDescription"]
+- !private ["Ps23CustomStringConvertible", "dismiss"]
+- !private ["Ps23CustomStringConvertible", "gameCenterVC"]
+- ["Ps23CustomStringConvertible", "gameCenterViewControllerDidFinish"]
+- !private ["Ps23CustomStringConvertible", "gamePoints"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "main"]
+- !private ["Ps23CustomStringConvertible", "musicPlayer"]
+- !private ["Ps23CustomStringConvertible", "numberOfLoops"]
+- !private ["Ps23CustomStringConvertible", "path"]
+- !private ["Ps23CustomStringConvertible", "play"]
+- !private ["Ps23CustomStringConvertible", "pointsDisplay"]
+- !private ["Ps23CustomStringConvertible", "pointsLeaderboardID"]
+- !private ["Ps23CustomStringConvertible", "pokeMatchVC"]
+- !private ["Ps23CustomStringConvertible", "prepareToPlay"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "report"]
+- !private ["Ps23CustomStringConvertible", "saveHighScore"]
+- !private ["Ps23CustomStringConvertible", "score"]
+- !private ["Ps23CustomStringConvertible", "showLeaderboard"]
+- !private ["Ps23CustomStringConvertible", "startGameMusic"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "value"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "AVAudioPlayer"]
+- !private ["Ps9Equatable", "Bundle"]
+- !private ["Ps9Equatable", "GKScore"]
+- !private ["Ps9Equatable", "Int64"]
+- !private ["Ps9Equatable", "URL"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "debugDescription"]
+- !private ["Ps9Equatable", "dismiss"]
+- !private ["Ps9Equatable", "gameCenterVC"]
+- ["Ps9Equatable", "gameCenterViewControllerDidFinish"]
+- !private ["Ps9Equatable", "gamePoints"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "main"]
+- !private ["Ps9Equatable", "musicPlayer"]
+- !private ["Ps9Equatable", "numberOfLoops"]
+- !private ["Ps9Equatable", "path"]
+- !private ["Ps9Equatable", "play"]
+- !private ["Ps9Equatable", "pointsDisplay"]
+- !private ["Ps9Equatable", "pointsLeaderboardID"]
+- !private ["Ps9Equatable", "pokeMatchVC"]
+- !private ["Ps9Equatable", "prepareToPlay"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "report"]
+- !private ["Ps9Equatable", "saveHighScore"]
+- !private ["Ps9Equatable", "score"]
+- !private ["Ps9Equatable", "showLeaderboard"]
+- !private ["Ps9Equatable", "startGameMusic"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "value"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps5Error", "debugDescription"]
+- !private ["Ps5Error", "localizedDescription"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["PSo30GKGameCenterControllerDelegate", "AVAudioPlayer"]
+- !private ["PSo30GKGameCenterControllerDelegate", "Bundle"]
+- !private ["PSo30GKGameCenterControllerDelegate", "GKScore"]
+- !private ["PSo30GKGameCenterControllerDelegate", "Int64"]
+- !private ["PSo30GKGameCenterControllerDelegate", "URL"]
+- !private ["PSo30GKGameCenterControllerDelegate", "gameCenterVC"]
+- ["PSo30GKGameCenterControllerDelegate", "gameCenterViewControllerDidFinish"]
+- !private ["PSo30GKGameCenterControllerDelegate", "musicPlayer"]
+- !private ["PSo30GKGameCenterControllerDelegate", "pointsLeaderboardID"]
+- !private ["PSo30GKGameCenterControllerDelegate", "pokeMatchVC"]
+- !private ["PSo30GKGameCenterControllerDelegate", "print"]
+- !private ["PSo30GKGameCenterControllerDelegate", "saveHighScore"]
+- !private ["PSo30GKGameCenterControllerDelegate", "score"]
+- !private ["PSo30GKGameCenterControllerDelegate", "showLeaderboard"]
+- !private ["PSo30GKGameCenterControllerDelegate", "startGameMusic"]
+- ["PSo30GKGameCenterControllerDelegate", ""]
+- !private ["CSo26GKGameCenterViewController", "dismiss"]
+- !private ["CSo7GKScore", "init"]
+- !private ["CSo7GKScore", "report"]
+- !private ["CSo7GKScore", "value"]
+- !private ["C9PokeMatch12GameCenterVC", "saveHighScore"]
+- !private ["C9PokeMatch12GameCenterVC", "score"]
+- !private ["C9PokeMatch12GameCenterVC", "showLeaderboard"]
+- !private ["Ps8Hashable", "AVAudioPlayer"]
+- !private ["Ps8Hashable", "Bundle"]
+- !private ["Ps8Hashable", "GKScore"]
+- !private ["Ps8Hashable", "Int64"]
+- !private ["Ps8Hashable", "URL"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "debugDescription"]
+- !private ["Ps8Hashable", "dismiss"]
+- !private ["Ps8Hashable", "gameCenterVC"]
+- ["Ps8Hashable", "gameCenterViewControllerDidFinish"]
+- !private ["Ps8Hashable", "gamePoints"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "main"]
+- !private ["Ps8Hashable", "musicPlayer"]
+- !private ["Ps8Hashable", "numberOfLoops"]
+- !private ["Ps8Hashable", "path"]
+- !private ["Ps8Hashable", "play"]
+- !private ["Ps8Hashable", "pointsDisplay"]
+- !private ["Ps8Hashable", "pointsLeaderboardID"]
+- !private ["Ps8Hashable", "pokeMatchVC"]
+- !private ["Ps8Hashable", "prepareToPlay"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "report"]
+- !private ["Ps8Hashable", "saveHighScore"]
+- !private ["Ps8Hashable", "score"]
+- !private ["Ps8Hashable", "showLeaderboard"]
+- !private ["Ps8Hashable", "startGameMusic"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "value"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Vs5Int64", "init"]
+- !private ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "init"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- ["C9PokeMatch10MainMenuVC", "AVAudioPlayer"]
+- ["C9PokeMatch10MainMenuVC", "AnyObject"]
+- !private ["C9PokeMatch10MainMenuVC", "Bundle"]
+- ["C9PokeMatch10MainMenuVC", "GKGameCenterViewController"]
+- !private ["C9PokeMatch10MainMenuVC", "GKScore"]
+- ["C9PokeMatch10MainMenuVC", "GameCenterVC"]
+- !private ["C9PokeMatch10MainMenuVC", "Int64"]
+- !private ["C9PokeMatch10MainMenuVC", "NSError"]
+- ["C9PokeMatch10MainMenuVC", "PokeMatchVC"]
+- ["C9PokeMatch10MainMenuVC", "UILabel"]
+- !private ["C9PokeMatch10MainMenuVC", "URL"]
+- ["C9PokeMatch10MainMenuVC", "addScoreAndSubmitToGC"]
+- ["C9PokeMatch10MainMenuVC", "checkGCLeaderboard"]
+- ["C9PokeMatch10MainMenuVC", "deinit"]
+- ["C9PokeMatch10MainMenuVC", "gameCenterVC"]
+- ["C9PokeMatch10MainMenuVC", "gameCenterViewControllerDidFinish"]
+- ["C9PokeMatch10MainMenuVC", "gcLabel"]
+- ["C9PokeMatch10MainMenuVC", "init"]
+- ["C9PokeMatch10MainMenuVC", "musicPlayer"]
+- !private ["C9PokeMatch10MainMenuVC", "pointsLeaderboardID"]
+- ["C9PokeMatch10MainMenuVC", "pokeMatchVC"]
+- !private ["C9PokeMatch10MainMenuVC", "print"]
+- ["C9PokeMatch10MainMenuVC", "singlePlayerBtnPressed"]
+- ["C9PokeMatch10MainMenuVC", "startGameMusic"]
+- ["C9PokeMatch10MainMenuVC", "viewDidLoad"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "AVAudioPlayer"]
+- !private ["PSo8NSCoding", "Bundle"]
+- !private ["PSo8NSCoding", "GKScore"]
+- !private ["PSo8NSCoding", "Int64"]
+- !private ["PSo8NSCoding", "URL"]
+- !private ["PSo8NSCoding", "debugDescription"]
+- !private ["PSo8NSCoding", "dismiss"]
+- !private ["PSo8NSCoding", "gameCenterVC"]
+- ["PSo8NSCoding", "gameCenterViewControllerDidFinish"]
+- !private ["PSo8NSCoding", "gamePoints"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "musicPlayer"]
+- !private ["PSo8NSCoding", "pointsDisplay"]
+- !private ["PSo8NSCoding", "pointsLeaderboardID"]
+- !private ["PSo8NSCoding", "pokeMatchVC"]
+- !private ["PSo8NSCoding", "print"]
+- !private ["PSo8NSCoding", "report"]
+- !private ["PSo8NSCoding", "saveHighScore"]
+- !private ["PSo8NSCoding", "score"]
+- !private ["PSo8NSCoding", "showLeaderboard"]
+- !private ["PSo8NSCoding", "startGameMusic"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "value"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "debugDescription"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["CSo7NSError", "debugDescription"]
+- !private ["PSo26NSExtensionRequestHandling", "AVAudioPlayer"]
+- !private ["PSo26NSExtensionRequestHandling", "Bundle"]
+- !private ["PSo26NSExtensionRequestHandling", "GKScore"]
+- !private ["PSo26NSExtensionRequestHandling", "Int64"]
+- !private ["PSo26NSExtensionRequestHandling", "URL"]
+- !private ["PSo26NSExtensionRequestHandling", "dismiss"]
+- !private ["PSo26NSExtensionRequestHandling", "gameCenterVC"]
+- ["PSo26NSExtensionRequestHandling", "gameCenterViewControllerDidFinish"]
+- !private ["PSo26NSExtensionRequestHandling", "gamePoints"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "musicPlayer"]
+- !private ["PSo26NSExtensionRequestHandling", "pointsDisplay"]
+- !private ["PSo26NSExtensionRequestHandling", "pointsLeaderboardID"]
+- !private ["PSo26NSExtensionRequestHandling", "pokeMatchVC"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
+- !private ["PSo26NSExtensionRequestHandling", "saveHighScore"]
+- !private ["PSo26NSExtensionRequestHandling", "score"]
+- !private ["PSo26NSExtensionRequestHandling", "showLeaderboard"]
+- !private ["PSo26NSExtensionRequestHandling", "startGameMusic"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AVAudioPlayer"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Bundle"]
+- ["CSo8NSObject", "GKGameCenterViewController"]
+- !private ["CSo8NSObject", "GKScore"]
+- ["CSo8NSObject", "GameCenterVC"]
+- !private ["CSo8NSObject", "Int64"]
+- !private ["CSo8NSObject", "NSError"]
+- ["CSo8NSObject", "PokeMatchVC"]
+- ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "URL"]
+- ["CSo8NSObject", "addScoreAndSubmitToGC"]
+- ["CSo8NSObject", "checkGCLeaderboard"]
+- !private ["CSo8NSObject", "debugDescription"]
+- !private ["CSo8NSObject", "dismiss"]
+- ["CSo8NSObject", "gameCenterVC"]
+- ["CSo8NSObject", "gameCenterViewControllerDidFinish"]
+- !private ["CSo8NSObject", "gamePoints"]
+- ["CSo8NSObject", "gcLabel"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "main"]
+- ["CSo8NSObject", "musicPlayer"]
+- !private ["CSo8NSObject", "numberOfLoops"]
+- !private ["CSo8NSObject", "path"]
+- !private ["CSo8NSObject", "play"]
+- !private ["CSo8NSObject", "pointsDisplay"]
+- !private ["CSo8NSObject", "pointsLeaderboardID"]
+- ["CSo8NSObject", "pokeMatchVC"]
+- !private ["CSo8NSObject", "prepareToPlay"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "report"]
+- !private ["CSo8NSObject", "saveHighScore"]
+- !private ["CSo8NSObject", "score"]
+- !private ["CSo8NSObject", "showLeaderboard"]
+- ["CSo8NSObject", "singlePlayerBtnPressed"]
+- ["CSo8NSObject", "startGameMusic"]
+- !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "value"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "AVAudioPlayer"]
+- !private ["PSo16NSObjectProtocol", "Bundle"]
+- !private ["PSo16NSObjectProtocol", "GKScore"]
+- !private ["PSo16NSObjectProtocol", "Int64"]
+- !private ["PSo16NSObjectProtocol", "URL"]
+- !private ["PSo16NSObjectProtocol", "debugDescription"]
+- !private ["PSo16NSObjectProtocol", "dismiss"]
+- !private ["PSo16NSObjectProtocol", "gameCenterVC"]
+- ["PSo16NSObjectProtocol", "gameCenterViewControllerDidFinish"]
+- !private ["PSo16NSObjectProtocol", "gamePoints"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "main"]
+- !private ["PSo16NSObjectProtocol", "musicPlayer"]
+- !private ["PSo16NSObjectProtocol", "numberOfLoops"]
+- !private ["PSo16NSObjectProtocol", "path"]
+- !private ["PSo16NSObjectProtocol", "play"]
+- !private ["PSo16NSObjectProtocol", "pointsDisplay"]
+- !private ["PSo16NSObjectProtocol", "pointsLeaderboardID"]
+- !private ["PSo16NSObjectProtocol", "pokeMatchVC"]
+- !private ["PSo16NSObjectProtocol", "prepareToPlay"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "report"]
+- !private ["PSo16NSObjectProtocol", "saveHighScore"]
+- !private ["PSo16NSObjectProtocol", "score"]
+- !private ["PSo16NSObjectProtocol", "showLeaderboard"]
+- !private ["PSo16NSObjectProtocol", "startGameMusic"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "value"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "debugDescription"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "report"]
+- !private ["PSo14NSSecureCoding", "value"]
+- !private ["CSo8NSString", "init"]
+- !private ["C9PokeMatch11PokeMatchVC", "gamePoints"]
+- !private ["C9PokeMatch11PokeMatchVC", "pointsDisplay"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["Ps13SignedInteger", "init"]
+- !private ["Ps12SignedNumber", "init"]
+- !private ["Ps10Strideable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "AVAudioPlayer"]
+- !private ["PSo21UIAppearanceContainer", "Bundle"]
+- !private ["PSo21UIAppearanceContainer", "GKScore"]
+- !private ["PSo21UIAppearanceContainer", "Int64"]
+- !private ["PSo21UIAppearanceContainer", "URL"]
+- !private ["PSo21UIAppearanceContainer", "dismiss"]
+- !private ["PSo21UIAppearanceContainer", "gameCenterVC"]
+- ["PSo21UIAppearanceContainer", "gameCenterViewControllerDidFinish"]
+- !private ["PSo21UIAppearanceContainer", "gamePoints"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "musicPlayer"]
+- !private ["PSo21UIAppearanceContainer", "pointsDisplay"]
+- !private ["PSo21UIAppearanceContainer", "pointsLeaderboardID"]
+- !private ["PSo21UIAppearanceContainer", "pokeMatchVC"]
+- !private ["PSo21UIAppearanceContainer", "print"]
+- !private ["PSo21UIAppearanceContainer", "saveHighScore"]
+- !private ["PSo21UIAppearanceContainer", "score"]
+- !private ["PSo21UIAppearanceContainer", "showLeaderboard"]
+- !private ["PSo21UIAppearanceContainer", "startGameMusic"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "AVAudioPlayer"]
+- !private ["PSo18UIContentContainer", "Bundle"]
+- !private ["PSo18UIContentContainer", "GKScore"]
+- !private ["PSo18UIContentContainer", "Int64"]
+- !private ["PSo18UIContentContainer", "URL"]
+- !private ["PSo18UIContentContainer", "dismiss"]
+- !private ["PSo18UIContentContainer", "gameCenterVC"]
+- ["PSo18UIContentContainer", "gameCenterViewControllerDidFinish"]
+- !private ["PSo18UIContentContainer", "gamePoints"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "musicPlayer"]
+- !private ["PSo18UIContentContainer", "pointsDisplay"]
+- !private ["PSo18UIContentContainer", "pointsLeaderboardID"]
+- !private ["PSo18UIContentContainer", "pokeMatchVC"]
+- !private ["PSo18UIContentContainer", "print"]
+- !private ["PSo18UIContentContainer", "saveHighScore"]
+- !private ["PSo18UIContentContainer", "score"]
+- !private ["PSo18UIContentContainer", "showLeaderboard"]
+- !private ["PSo18UIContentContainer", "startGameMusic"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "AVAudioPlayer"]
+- !private ["PSo18UIFocusEnvironment", "Bundle"]
+- !private ["PSo18UIFocusEnvironment", "GKScore"]
+- !private ["PSo18UIFocusEnvironment", "Int64"]
+- !private ["PSo18UIFocusEnvironment", "URL"]
+- !private ["PSo18UIFocusEnvironment", "dismiss"]
+- !private ["PSo18UIFocusEnvironment", "gameCenterVC"]
+- ["PSo18UIFocusEnvironment", "gameCenterViewControllerDidFinish"]
+- !private ["PSo18UIFocusEnvironment", "gamePoints"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "musicPlayer"]
+- !private ["PSo18UIFocusEnvironment", "pointsDisplay"]
+- !private ["PSo18UIFocusEnvironment", "pointsLeaderboardID"]
+- !private ["PSo18UIFocusEnvironment", "pokeMatchVC"]
+- !private ["PSo18UIFocusEnvironment", "print"]
+- !private ["PSo18UIFocusEnvironment", "saveHighScore"]
+- !private ["PSo18UIFocusEnvironment", "score"]
+- !private ["PSo18UIFocusEnvironment", "showLeaderboard"]
+- !private ["PSo18UIFocusEnvironment", "startGameMusic"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["CSo7UILabel", "text"]
+- !private ["CSo22UINavigationController", "dismiss"]
+- ["CSo11UIResponder", "AVAudioPlayer"]
+- ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "Bundle"]
+- ["CSo11UIResponder", "GKGameCenterViewController"]
+- !private ["CSo11UIResponder", "GKScore"]
+- ["CSo11UIResponder", "GameCenterVC"]
+- !private ["CSo11UIResponder", "Int64"]
+- !private ["CSo11UIResponder", "NSError"]
+- ["CSo11UIResponder", "PokeMatchVC"]
+- ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "URL"]
+- ["CSo11UIResponder", "addScoreAndSubmitToGC"]
+- ["CSo11UIResponder", "checkGCLeaderboard"]
+- !private ["CSo11UIResponder", "dismiss"]
+- ["CSo11UIResponder", "gameCenterVC"]
+- ["CSo11UIResponder", "gameCenterViewControllerDidFinish"]
+- !private ["CSo11UIResponder", "gamePoints"]
+- ["CSo11UIResponder", "gcLabel"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "musicPlayer"]
+- !private ["CSo11UIResponder", "pointsDisplay"]
+- !private ["CSo11UIResponder", "pointsLeaderboardID"]
+- ["CSo11UIResponder", "pokeMatchVC"]
+- !private ["CSo11UIResponder", "print"]
+- !private ["CSo11UIResponder", "saveHighScore"]
+- !private ["CSo11UIResponder", "score"]
+- !private ["CSo11UIResponder", "showLeaderboard"]
+- ["CSo11UIResponder", "singlePlayerBtnPressed"]
+- ["CSo11UIResponder", "startGameMusic"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "AVAudioPlayer"]
+- !private ["PSo30UIResponderStandardEditActions", "Bundle"]
+- !private ["PSo30UIResponderStandardEditActions", "GKScore"]
+- !private ["PSo30UIResponderStandardEditActions", "Int64"]
+- !private ["PSo30UIResponderStandardEditActions", "URL"]
+- !private ["PSo30UIResponderStandardEditActions", "dismiss"]
+- !private ["PSo30UIResponderStandardEditActions", "gameCenterVC"]
+- ["PSo30UIResponderStandardEditActions", "gameCenterViewControllerDidFinish"]
+- !private ["PSo30UIResponderStandardEditActions", "gamePoints"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "musicPlayer"]
+- !private ["PSo30UIResponderStandardEditActions", "pointsDisplay"]
+- !private ["PSo30UIResponderStandardEditActions", "pointsLeaderboardID"]
+- !private ["PSo30UIResponderStandardEditActions", "pokeMatchVC"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
+- !private ["PSo30UIResponderStandardEditActions", "saveHighScore"]
+- !private ["PSo30UIResponderStandardEditActions", "score"]
+- !private ["PSo30UIResponderStandardEditActions", "showLeaderboard"]
+- !private ["PSo30UIResponderStandardEditActions", "startGameMusic"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "AVAudioPlayer"]
+- !private ["PSo16UIStateRestoring", "Bundle"]
+- !private ["PSo16UIStateRestoring", "GKScore"]
+- !private ["PSo16UIStateRestoring", "Int64"]
+- !private ["PSo16UIStateRestoring", "URL"]
+- !private ["PSo16UIStateRestoring", "dismiss"]
+- !private ["PSo16UIStateRestoring", "gameCenterVC"]
+- ["PSo16UIStateRestoring", "gameCenterViewControllerDidFinish"]
+- !private ["PSo16UIStateRestoring", "gamePoints"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "musicPlayer"]
+- !private ["PSo16UIStateRestoring", "pointsDisplay"]
+- !private ["PSo16UIStateRestoring", "pointsLeaderboardID"]
+- !private ["PSo16UIStateRestoring", "pokeMatchVC"]
+- !private ["PSo16UIStateRestoring", "print"]
+- !private ["PSo16UIStateRestoring", "saveHighScore"]
+- !private ["PSo16UIStateRestoring", "score"]
+- !private ["PSo16UIStateRestoring", "showLeaderboard"]
+- !private ["PSo16UIStateRestoring", "startGameMusic"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "AVAudioPlayer"]
+- !private ["PSo18UITraitEnvironment", "Bundle"]
+- !private ["PSo18UITraitEnvironment", "GKScore"]
+- !private ["PSo18UITraitEnvironment", "Int64"]
+- !private ["PSo18UITraitEnvironment", "URL"]
+- !private ["PSo18UITraitEnvironment", "dismiss"]
+- !private ["PSo18UITraitEnvironment", "gameCenterVC"]
+- ["PSo18UITraitEnvironment", "gameCenterViewControllerDidFinish"]
+- !private ["PSo18UITraitEnvironment", "gamePoints"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "musicPlayer"]
+- !private ["PSo18UITraitEnvironment", "pointsDisplay"]
+- !private ["PSo18UITraitEnvironment", "pointsLeaderboardID"]
+- !private ["PSo18UITraitEnvironment", "pokeMatchVC"]
+- !private ["PSo18UITraitEnvironment", "print"]
+- !private ["PSo18UITraitEnvironment", "saveHighScore"]
+- !private ["PSo18UITraitEnvironment", "score"]
+- !private ["PSo18UITraitEnvironment", "showLeaderboard"]
+- !private ["PSo18UITraitEnvironment", "startGameMusic"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "AVAudioPlayer"]
+- ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "Bundle"]
+- ["CSo16UIViewController", "GKGameCenterViewController"]
+- !private ["CSo16UIViewController", "GKScore"]
+- ["CSo16UIViewController", "GameCenterVC"]
+- !private ["CSo16UIViewController", "Int64"]
+- !private ["CSo16UIViewController", "NSError"]
+- ["CSo16UIViewController", "PokeMatchVC"]
+- ["CSo16UIViewController", "UILabel"]
+- !private ["CSo16UIViewController", "URL"]
+- ["CSo16UIViewController", "addScoreAndSubmitToGC"]
+- ["CSo16UIViewController", "checkGCLeaderboard"]
+- !private ["CSo16UIViewController", "dismiss"]
+- ["CSo16UIViewController", "gameCenterVC"]
+- ["CSo16UIViewController", "gameCenterViewControllerDidFinish"]
+- !private ["CSo16UIViewController", "gamePoints"]
+- ["CSo16UIViewController", "gcLabel"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "musicPlayer"]
+- !private ["CSo16UIViewController", "pointsDisplay"]
+- !private ["CSo16UIViewController", "pointsLeaderboardID"]
+- ["CSo16UIViewController", "pokeMatchVC"]
+- !private ["CSo16UIViewController", "print"]
+- !private ["CSo16UIViewController", "saveHighScore"]
+- !private ["CSo16UIViewController", "score"]
+- !private ["CSo16UIViewController", "showLeaderboard"]
+- ["CSo16UIViewController", "singlePlayerBtnPressed"]
+- ["CSo16UIViewController", "startGameMusic"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["V10Foundation3URL", "init"]
+- !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "AVAudioPlayer"]
+- !private ["Ps9_Hashable", "Bundle"]
+- !private ["Ps9_Hashable", "GKScore"]
+- !private ["Ps9_Hashable", "Int64"]
+- !private ["Ps9_Hashable", "URL"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "debugDescription"]
+- !private ["Ps9_Hashable", "dismiss"]
+- !private ["Ps9_Hashable", "gameCenterVC"]
+- ["Ps9_Hashable", "gameCenterViewControllerDidFinish"]
+- !private ["Ps9_Hashable", "gamePoints"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "main"]
+- !private ["Ps9_Hashable", "musicPlayer"]
+- !private ["Ps9_Hashable", "numberOfLoops"]
+- !private ["Ps9_Hashable", "path"]
+- !private ["Ps9_Hashable", "play"]
+- !private ["Ps9_Hashable", "pointsDisplay"]
+- !private ["Ps9_Hashable", "pointsLeaderboardID"]
+- !private ["Ps9_Hashable", "pokeMatchVC"]
+- !private ["Ps9_Hashable", "prepareToPlay"]
+- !private ["Ps9_Hashable", "print"]
+- !private ["Ps9_Hashable", "report"]
+- !private ["Ps9_Hashable", "saveHighScore"]
+- !private ["Ps9_Hashable", "score"]
+- !private ["Ps9_Hashable", "showLeaderboard"]
+- !private ["Ps9_Hashable", "startGameMusic"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "value"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps14_SignedInteger", "init"]
+- !private ["Ps11_Strideable", "init"]
+depends-nominal:
+- !private "CSo13AVAudioPlayer"
+- "Ps9AnyObject"
+- !private "Ps17BitwiseOperations"
+- !private "Sb"
+- !private "CSo6Bundle"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps5Error"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "PSo30GKGameCenterControllerDelegate"
+- !private "CSo26GKGameCenterViewController"
+- !private "CSo7GKScore"
+- !private "C9PokeMatch12GameCenterVC"
+- "Ps8Hashable"
+- !private "Vs5Int64"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- !private "Ps25LosslessStringConvertible"
+- "C9PokeMatch10MainMenuVC"
+- !private "Ps10MirrorPath"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo7NSError"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "C9PokeMatch11PokeMatchVC"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "CSo7UILabel"
+- !private "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "V10Foundation3URL"
+- !private "Ps15_CVarArgAligned"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AudioToolbox.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "3bf1c228c1c719947177dcfb8efbb4c8"
