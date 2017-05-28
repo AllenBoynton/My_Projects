@@ -149,6 +149,22 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
         
+        // Add points to current score
+        score += 10
+        pokeMatchVC.pointsDisplay.text = "\(score)"
+        
+        // Submit score to GC leaderboard
+        let bestScoreInt = GKScore(leaderboardIdentifier: pointsLeaderboardID)
+        bestScoreInt.value = Int64(pokeMatchVC.gamePoints)
+        GKScore.report([bestScoreInt]) { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print("Best Score submitted to your Leaderboard!")
+            }
+        }
+
+        
         saveHighScore(Int64(score))
         showLeaderboard()
     }
