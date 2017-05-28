@@ -19,8 +19,11 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     
     // Class delegates
     var pokeMatchVC: PokeMatchVC!
-    var gameCenterVC: GameCenterVC!
+//    var gameCenterVC: GameCenterVC!
     var musicPlayer: AVAudioPlayer!
+    
+    // The local player object.
+    let localPlayer = GKLocalPlayer.localPlayer()
     
     // Local GC variables
     var gcEnabled = Bool() // Check if the user has Game Center enabled
@@ -39,22 +42,19 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     // Authenticates the user to access to the GC
     func authenticatePlayer() {
         
-        // The local player object.
-        let localPlayer = GKLocalPlayer.localPlayer()
-        
         localPlayer.authenticateHandler = {(view, error) -> Void in
             if((view) != nil) {
                 
                 // 1. Show login if player is not logged in
                 self.present(view!, animated: true, completion: nil)
                 
-            } else if (localPlayer.isAuthenticated) {
+            } else if (self.localPlayer.isAuthenticated) {
                 
                 // 2. Player is already authenticated & logged in, load game center
                 self.gcEnabled = true
                 
                 // Get the default leaderboard ID
-                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifier, error) in
+                self.localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifier, error) in
                     if error != nil {
                         
                         print(error as Any)
@@ -80,7 +80,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     }
     
     func notificationReceived() {
-        print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(gameCenterPlayer.isAuthenticated)")
+        print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
     }
     
     // Reporting score
@@ -105,8 +105,9 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
         }
     }
     
+    // Report example score after user logs in
     func authenticationDidChange(_ notification: Notification) {
-        saveHighScore(0) // report example score after user logs in
+        saveHighScore(0)
     }
     
     // Retrieves the GC VC leaderboard
@@ -153,23 +154,23 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     }
     
     // Add points to the score and submit to GC
-    @IBAction func addScoreAndSubmitToGC(_ sender: AnyObject) {
-        var score = 0
-        // Add points to current score
-        score += 1
-        pokeMatchVC.pointsDisplay.text = "\(score)"
-        
-        // Submit score to GC leaderboard
-        let bestScoreInt = GKScore(leaderboardIdentifier: pointsLeaderboardID)
-        bestScoreInt.value = Int64(pokeMatchVC.gamePoints)
-        GKScore.report([bestScoreInt]) { (error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                print("Best Score submitted to your Leaderboard!")
-            }
-        }
-    }
+//    @IBAction func addScoreAndSubmitToGC(_ sender: AnyObject) {
+//        var score = 0
+//        // Add points to current score
+//        score += 1
+//        pokeMatchVC.pointsDisplay.text = "\(score)"
+//        
+//        // Submit score to GC leaderboard
+//        let bestScoreInt = GKScore(leaderboardIdentifier: pointsLeaderboardID)
+//        bestScoreInt.value = Int64(pokeMatchVC.gamePoints)
+//        GKScore.report([bestScoreInt]) { (error) in
+//            if error != nil {
+//                print(error!.localizedDescription)
+//            } else {
+//                print("Best Score submitted to your Leaderboard!")
+//            }
+//        }
+//    }
     
     // Continue the game after GameCenter is closed
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {

@@ -1,12 +1,9 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "GameSceneDelegate"
 - "PokeMatchVC"
 provides-nominal:
-- "P9PokeMatch17GameSceneDelegate"
 - "C9PokeMatch11PokeMatchVC"
 provides-member:
-- ["P9PokeMatch17GameSceneDelegate", ""]
 - ["C9PokeMatch11PokeMatchVC", ""]
 provides-dynamic-lookup:
 - "backButtonPressed"
@@ -67,7 +64,6 @@ depends-top-level:
 - "CastingPrecedence"
 - !private "Date"
 - "Double"
-- "GameSceneDelegate"
 - !private "Int"
 - !private "NSError"
 - "PokeMatchVC"
@@ -595,7 +591,6 @@ depends-member:
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps13FloatingPoint", "init"]
-- ["P9PokeMatch17GameSceneDelegate", "showLeaderboard"]
 - ["Ps8Hashable", "AVAudioPlayer"]
 - ["Ps8Hashable", "Bool"]
 - !private ["Ps8Hashable", "Bundle"]
@@ -831,7 +826,6 @@ depends-member:
 - !private ["CSo8NSObject", "Bundle"]
 - !private ["CSo8NSObject", "Date"]
 - ["CSo8NSObject", "Double"]
-- ["CSo8NSObject", "GameSceneDelegate"]
 - !private ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "NSError"]
 - ["CSo8NSObject", "String"]
@@ -868,7 +862,6 @@ depends-member:
 - ["CSo8NSObject", "elapsed"]
 - ["CSo8NSObject", "gameOver"]
 - ["CSo8NSObject", "gamePoints"]
-- ["CSo8NSObject", "gameSceneDelegate"]
 - !private ["CSo8NSObject", "image"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "invalidate"]
@@ -1014,7 +1007,6 @@ depends-member:
 - !private ["C9PokeMatch11PokeMatchVC", "Bundle"]
 - !private ["C9PokeMatch11PokeMatchVC", "Date"]
 - ["C9PokeMatch11PokeMatchVC", "Double"]
-- ["C9PokeMatch11PokeMatchVC", "GameSceneDelegate"]
 - !private ["C9PokeMatch11PokeMatchVC", "Int"]
 - !private ["C9PokeMatch11PokeMatchVC", "NSError"]
 - ["C9PokeMatch11PokeMatchVC", "String"]
@@ -1042,7 +1034,6 @@ depends-member:
 - ["C9PokeMatch11PokeMatchVC", "elapsed"]
 - ["C9PokeMatch11PokeMatchVC", "gameOver"]
 - ["C9PokeMatch11PokeMatchVC", "gamePoints"]
-- ["C9PokeMatch11PokeMatchVC", "gameSceneDelegate"]
 - ["C9PokeMatch11PokeMatchVC", "init"]
 - ["C9PokeMatch11PokeMatchVC", "keepTiles"]
 - ["C9PokeMatch11PokeMatchVC", "middleView"]
@@ -1363,7 +1354,6 @@ depends-member:
 - !private ["CSo11UIResponder", "Bundle"]
 - !private ["CSo11UIResponder", "Date"]
 - ["CSo11UIResponder", "Double"]
-- ["CSo11UIResponder", "GameSceneDelegate"]
 - !private ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "NSError"]
 - ["CSo11UIResponder", "String"]
@@ -1394,7 +1384,6 @@ depends-member:
 - ["CSo11UIResponder", "elapsed"]
 - ["CSo11UIResponder", "gameOver"]
 - ["CSo11UIResponder", "gamePoints"]
-- ["CSo11UIResponder", "gameSceneDelegate"]
 - !private ["CSo11UIResponder", "image"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "isHidden"]
@@ -1640,7 +1629,6 @@ depends-member:
 - !private ["CSo16UIViewController", "Bundle"]
 - !private ["CSo16UIViewController", "Date"]
 - ["CSo16UIViewController", "Double"]
-- ["CSo16UIViewController", "GameSceneDelegate"]
 - !private ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "NSError"]
 - ["CSo16UIViewController", "String"]
@@ -1667,7 +1655,6 @@ depends-member:
 - ["CSo16UIViewController", "elapsed"]
 - ["CSo16UIViewController", "gameOver"]
 - ["CSo16UIViewController", "gamePoints"]
-- ["CSo16UIViewController", "gameSceneDelegate"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "keepTiles"]
 - ["CSo16UIViewController", "middleView"]
@@ -1908,7 +1895,6 @@ depends-nominal:
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Ps13FloatingPoint"
-- "P9PokeMatch17GameSceneDelegate"
 - "Ps8Hashable"
 - !private "Si"
 - !private "Ps7Integer"
@@ -2032,4 +2018,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "309fb01e378c7f852a2df4bd82e7bd3e"
+interface-hash: "5dcf6471c0c6b784ad6fcbadfe333e33"

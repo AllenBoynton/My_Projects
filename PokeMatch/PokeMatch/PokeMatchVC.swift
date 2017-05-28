@@ -12,16 +12,16 @@ import AVFoundation
 import GameKit
 
 // Protocol to inform the delegate GameVC if a game is over
-protocol GameSceneDelegate {
-    func showLeaderboard()
-//    func reportScore(_ score: Int64)
-}
+//protocol GameSceneDelegate {
+//    func showLeaderboard()
+////    func reportScore(_ score: Int64)
+//}
 
 class PokeMatchVC: UIViewController {
     
     // Class delegates
     var musicPlayer: AVAudioPlayer!
-    var gameSceneDelegate: GameSceneDelegate?
+//    var gameSceneDelegate: GameSceneDelegate?
     
     // Outlet for game points
     @IBOutlet weak var pointsLabel: UILabel!

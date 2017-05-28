@@ -156,15 +156,17 @@ SWIFT_CLASS("_TtC9PokeMatch11AppDelegate")
 @end
 
 @class PokeMatchVC;
+@class AVAudioPlayer;
 @class GKLocalPlayer;
 @class GKGameCenterViewController;
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC9PokeMatch12GameCenterVC")
-@interface GameCenterVC : UIViewController <GKGameCenterControllerDelegate>
-@property (nonatomic, readonly, strong) PokeMatchVC * _Nonnull pokeMatchVC;
-@property (nonatomic, readonly, strong) GKLocalPlayer * _Nonnull gameCenterPlayer;
+SWIFT_CLASS("_TtC9PokeMatch10MainMenuVC")
+@interface MainMenuVC : UIViewController <GKGameCenterControllerDelegate>
+@property (nonatomic, strong) PokeMatchVC * _Null_unspecified pokeMatchVC;
+@property (nonatomic, strong) AVAudioPlayer * _Null_unspecified musicPlayer;
+@property (nonatomic, readonly, strong) GKLocalPlayer * _Nonnull localPlayer;
 @property (nonatomic) BOOL gcEnabled;
 @property (nonatomic, copy) NSString * _Nonnull gcDefaultLeaderBoard;
 @property (nonatomic) NSInteger score;
@@ -173,27 +175,10 @@ SWIFT_CLASS("_TtC9PokeMatch12GameCenterVC")
 - (void)notificationReceived;
 - (void)saveHighScore:(int64_t)score;
 - (void)authenticationDidChange:(NSNotification * _Nonnull)notification;
-- (void)gameCenterStateChanged;
 - (void)showLeaderboard;
-- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class AVAudioPlayer;
-@class UILabel;
-
-SWIFT_CLASS("_TtC9PokeMatch10MainMenuVC")
-@interface MainMenuVC : UIViewController <GKGameCenterControllerDelegate>
-@property (nonatomic, strong) PokeMatchVC * _Null_unspecified pokeMatchVC;
-@property (nonatomic, strong) GameCenterVC * _Null_unspecified gameCenterVC;
-@property (nonatomic, strong) AVAudioPlayer * _Null_unspecified musicPlayer;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified gcLabel;
-- (void)viewDidLoad;
 - (void)startGameMusic;
 - (IBAction)singlePlayerBtnPressed:(id _Nonnull)sender;
 - (IBAction)checkGCLeaderboard:(id _Nonnull)sender;
-- (IBAction)addScoreAndSubmitToGC:(id _Nonnull)sender;
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -214,7 +199,6 @@ SWIFT_CLASS("_TtC9PokeMatch9OptionsVC")
 @interface OptionsVC : UIViewController
 @property (nonatomic, readonly, strong) MainMenuVC * _Nonnull mainMenuVC;
 @property (nonatomic, readonly, strong) PokeMatchVC * _Nonnull pokeMatchVC;
-@property (nonatomic, readonly, strong) GameCenterVC * _Nonnull gameCenterVC;
 @property (nonatomic, strong) UISwitch * _Null_unspecified musicSwitch;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified radioButtonOne;
 - (void)viewDidLoad;
@@ -225,6 +209,7 @@ SWIFT_CLASS("_TtC9PokeMatch9OptionsVC")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
 @class UIImageView;
 @class NSTimer;
 @class UITapGestureRecognizer;

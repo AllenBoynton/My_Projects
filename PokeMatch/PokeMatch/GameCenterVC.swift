@@ -6,17 +6,17 @@
 //  Copyright © 2017 Allen Boynton. All rights reserved.
 //
 
-import UIKit
-import GameKit
-
+//import UIKit
+//import GameKit
+//
 //let timeLeaderboardID = "BEST_TIME"
 //let pointsLeaderboardID = "HIGH_POINTS"
 
 /************************************ Game Center Methods *****************************************/
 // MARK: - Game Center Methods
 
-class GameCenterVC: UIViewController, GKGameCenterControllerDelegate {
-    
+//class GameCenterVC: UIViewController, GKGameCenterControllerDelegate {
+
     // Class delegates
 //    let pokeMatchVC = PokeMatchVC()
     
@@ -29,12 +29,12 @@ class GameCenterVC: UIViewController, GKGameCenterControllerDelegate {
 //    
 //    var score = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
 //        authenticatePlayer()
-    }
-    
+//    }
+
 //    // Authenticates the user to access to the GC
 //    func authenticatePlayer() {
 //        
@@ -134,5 +134,5 @@ class GameCenterVC: UIViewController, GKGameCenterControllerDelegate {
 //        
 //        pokeMatchVC.gameOver = false
 //    }
-}
+//}
 

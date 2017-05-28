@@ -15,7 +15,7 @@ class OptionsVC: UIViewController {
     
     let mainMenuVC = MainMenuVC()
     let pokeMatchVC = PokeMatchVC()
-    let gameCenterVC = GameCenterVC()
+//    let gameCenterVC = GameCenterVC()
     
     var musicSwitch: UISwitch!
     

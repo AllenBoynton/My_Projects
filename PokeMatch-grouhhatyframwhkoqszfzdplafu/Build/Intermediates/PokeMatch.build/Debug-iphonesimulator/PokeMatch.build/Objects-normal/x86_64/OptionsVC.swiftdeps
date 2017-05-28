@@ -7,7 +7,6 @@ provides-member:
 - ["C9PokeMatch9OptionsVC", ""]
 provides-dynamic-lookup:
 - "backToMain"
-- "gameCenterVC"
 - "mainMenuVC"
 - "musicOptionSwitch"
 - "musicSwitch"
@@ -19,7 +18,6 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- "GameCenterVC"
 - "MainMenuVC"
 - "OptionsVC"
 - "PokeMatchVC"
@@ -32,7 +30,6 @@ depends-top-level:
 depends-member:
 - !private ["CSo13AVAudioPlayer", "pause"]
 - !private ["CSo13AVAudioPlayer", "play"]
-- ["Ps9AnyObject", "GameCenterVC"]
 - ["Ps9AnyObject", "MainMenuVC"]
 - ["Ps9AnyObject", "PokeMatchVC"]
 - !private ["Ps9AnyObject", "UIControlState"]
@@ -52,7 +49,6 @@ depends-member:
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["PSo15CALayerDelegate", "isOn"]
 - !private ["PSo15CALayerDelegate", "setImage"]
-- ["Ps7CVarArg", "GameCenterVC"]
 - ["Ps7CVarArg", "MainMenuVC"]
 - ["Ps7CVarArg", "PokeMatchVC"]
 - !private ["Ps7CVarArg", "UIControlState"]
@@ -70,7 +66,6 @@ depends-member:
 - !private ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
 - !private ["Ps10Comparable", "init"]
-- ["Ps28CustomDebugStringConvertible", "GameCenterVC"]
 - ["Ps28CustomDebugStringConvertible", "MainMenuVC"]
 - ["Ps28CustomDebugStringConvertible", "PokeMatchVC"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
@@ -91,7 +86,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "init"]
-- ["Ps23CustomStringConvertible", "GameCenterVC"]
 - ["Ps23CustomStringConvertible", "MainMenuVC"]
 - ["Ps23CustomStringConvertible", "PokeMatchVC"]
 - !private ["Ps23CustomStringConvertible", "UIControlState"]
@@ -109,7 +103,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "setImage"]
 - !private ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
-- ["Ps9Equatable", "GameCenterVC"]
 - ["Ps9Equatable", "MainMenuVC"]
 - ["Ps9Equatable", "PokeMatchVC"]
 - !private ["Ps9Equatable", "UIControlState"]
@@ -135,8 +128,6 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["PSo30GKGameCenterControllerDelegate", "init"]
 - !private ["PSo30GKGameCenterControllerDelegate", "musicPlayer"]
-- ["C9PokeMatch12GameCenterVC", "init"]
-- ["Ps8Hashable", "GameCenterVC"]
 - ["Ps8Hashable", "MainMenuVC"]
 - ["Ps8Hashable", "PokeMatchVC"]
 - !private ["Ps8Hashable", "UIControlState"]
@@ -159,7 +150,6 @@ depends-member:
 - ["C9PokeMatch10MainMenuVC", "init"]
 - !private ["C9PokeMatch10MainMenuVC", "musicPlayer"]
 - !private ["Ps10MirrorPath", "init"]
-- ["PSo8NSCoding", "GameCenterVC"]
 - ["PSo8NSCoding", "MainMenuVC"]
 - ["PSo8NSCoding", "PokeMatchVC"]
 - !private ["PSo8NSCoding", "UIControlState"]
@@ -175,7 +165,6 @@ depends-member:
 - !private ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "init"]
-- ["PSo26NSExtensionRequestHandling", "GameCenterVC"]
 - ["PSo26NSExtensionRequestHandling", "MainMenuVC"]
 - ["PSo26NSExtensionRequestHandling", "PokeMatchVC"]
 - !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
@@ -189,7 +178,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo16NSMutableCopying", "init"]
-- ["CSo8NSObject", "GameCenterVC"]
 - ["CSo8NSObject", "MainMenuVC"]
 - ["CSo8NSObject", "PokeMatchVC"]
 - ["CSo8NSObject", "UIButton"]
@@ -198,7 +186,6 @@ depends-member:
 - ["CSo8NSObject", "UISwitch"]
 - ["CSo8NSObject", "backToMain"]
 - !private ["CSo8NSObject", "dismiss"]
-- ["CSo8NSObject", "gameCenterVC"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isOn"]
 - ["CSo8NSObject", "mainMenuVC"]
@@ -212,7 +199,6 @@ depends-member:
 - ["CSo8NSObject", "radioButtonOne"]
 - !private ["CSo8NSObject", "setImage"]
 - ["CSo8NSObject", "viewDidLoad"]
-- ["PSo16NSObjectProtocol", "GameCenterVC"]
 - ["PSo16NSObjectProtocol", "MainMenuVC"]
 - ["PSo16NSObjectProtocol", "PokeMatchVC"]
 - !private ["PSo16NSObjectProtocol", "UIControlState"]
@@ -232,7 +218,6 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
 - !private ["Ps9OptionSet", "normal"]
-- ["C9PokeMatch9OptionsVC", "GameCenterVC"]
 - ["C9PokeMatch9OptionsVC", "MainMenuVC"]
 - ["C9PokeMatch9OptionsVC", "PokeMatchVC"]
 - ["C9PokeMatch9OptionsVC", "UIButton"]
@@ -242,7 +227,6 @@ depends-member:
 - ["C9PokeMatch9OptionsVC", "backToMain"]
 - ["C9PokeMatch9OptionsVC", "deinit"]
 - !private ["C9PokeMatch9OptionsVC", "dismiss"]
-- ["C9PokeMatch9OptionsVC", "gameCenterVC"]
 - ["C9PokeMatch9OptionsVC", "init"]
 - ["C9PokeMatch9OptionsVC", "mainMenuVC"]
 - ["C9PokeMatch9OptionsVC", "musicOptionSwitch"]
@@ -262,7 +246,6 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "setImage"]
 - !private ["PSo12UIAppearance", "isOn"]
 - !private ["PSo12UIAppearance", "setImage"]
-- ["PSo21UIAppearanceContainer", "GameCenterVC"]
 - ["PSo21UIAppearanceContainer", "MainMenuVC"]
 - ["PSo21UIAppearanceContainer", "PokeMatchVC"]
 - !private ["PSo21UIAppearanceContainer", "UIControlState"]
@@ -278,7 +261,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo8UIButton", "setImage"]
-- ["PSo18UIContentContainer", "GameCenterVC"]
 - ["PSo18UIContentContainer", "MainMenuVC"]
 - ["PSo18UIContentContainer", "PokeMatchVC"]
 - !private ["PSo18UIContentContainer", "UIControlState"]
@@ -298,7 +280,6 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "setImage"]
 - !private ["PSo13UIDynamicItem", "isOn"]
 - !private ["PSo13UIDynamicItem", "setImage"]
-- ["PSo18UIFocusEnvironment", "GameCenterVC"]
 - ["PSo18UIFocusEnvironment", "MainMenuVC"]
 - ["PSo18UIFocusEnvironment", "PokeMatchVC"]
 - !private ["PSo18UIFocusEnvironment", "UIControlState"]
@@ -316,7 +297,6 @@ depends-member:
 - !private ["PSo11UIFocusItem", "isOn"]
 - !private ["PSo11UIFocusItem", "setImage"]
 - !private ["CSo7UIImage", "init"]
-- ["CSo11UIResponder", "GameCenterVC"]
 - ["CSo11UIResponder", "MainMenuVC"]
 - ["CSo11UIResponder", "PokeMatchVC"]
 - ["CSo11UIResponder", "UIButton"]
@@ -325,7 +305,6 @@ depends-member:
 - ["CSo11UIResponder", "UISwitch"]
 - ["CSo11UIResponder", "backToMain"]
 - !private ["CSo11UIResponder", "dismiss"]
-- ["CSo11UIResponder", "gameCenterVC"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "isOn"]
 - ["CSo11UIResponder", "mainMenuVC"]
@@ -337,7 +316,6 @@ depends-member:
 - ["CSo11UIResponder", "radioButtonOne"]
 - !private ["CSo11UIResponder", "setImage"]
 - ["CSo11UIResponder", "viewDidLoad"]
-- ["PSo30UIResponderStandardEditActions", "GameCenterVC"]
 - ["PSo30UIResponderStandardEditActions", "MainMenuVC"]
 - ["PSo30UIResponderStandardEditActions", "PokeMatchVC"]
 - !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
@@ -352,7 +330,6 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "setImage"]
 - !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
-- ["PSo16UIStateRestoring", "GameCenterVC"]
 - ["PSo16UIStateRestoring", "MainMenuVC"]
 - ["PSo16UIStateRestoring", "PokeMatchVC"]
 - !private ["PSo16UIStateRestoring", "UIControlState"]
@@ -366,7 +343,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo8UISwitch", "isOn"]
-- ["PSo18UITraitEnvironment", "GameCenterVC"]
 - ["PSo18UITraitEnvironment", "MainMenuVC"]
 - ["PSo18UITraitEnvironment", "PokeMatchVC"]
 - !private ["PSo18UITraitEnvironment", "UIControlState"]
@@ -383,7 +359,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "isOn"]
 - !private ["CSo6UIView", "setImage"]
-- ["CSo16UIViewController", "GameCenterVC"]
 - ["CSo16UIViewController", "MainMenuVC"]
 - ["CSo16UIViewController", "PokeMatchVC"]
 - ["CSo16UIViewController", "UIButton"]
@@ -392,7 +367,6 @@ depends-member:
 - ["CSo16UIViewController", "UISwitch"]
 - ["CSo16UIViewController", "backToMain"]
 - !private ["CSo16UIViewController", "dismiss"]
-- ["CSo16UIViewController", "gameCenterVC"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "mainMenuVC"]
 - ["CSo16UIViewController", "musicOptionSwitch"]
@@ -413,7 +387,6 @@ depends-member:
 - !private ["Ps26_ExpressibleByImageLiteral", "init"]
 - !private ["Ps33_ExpressibleByStringInterpolation", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- ["Ps9_Hashable", "GameCenterVC"]
 - ["Ps9_Hashable", "MainMenuVC"]
 - ["Ps9_Hashable", "PokeMatchVC"]
 - !private ["Ps9_Hashable", "UIControlState"]
@@ -451,7 +424,6 @@ depends-nominal:
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "PSo30GKGameCenterControllerDelegate"
-- "C9PokeMatch12GameCenterVC"
 - "Ps8Hashable"
 - !private "Ps25LosslessStringConvertible"
 - "C9PokeMatch10MainMenuVC"
@@ -535,4 +507,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "494fd4db5d121576ab78cd427d5a0e77"
+interface-hash: "f53dce12402270f914d57c2e901fd3cc"
