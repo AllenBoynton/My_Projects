@@ -143,7 +143,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     
     @IBAction func singlePlayerBtnPressed(_ sender: Any) {
         
-//        musicPlayer.pause()
+        musicPlayer.pause()
     }
     
     // Open Game Center Leaderboard
@@ -175,8 +175,6 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     // Continue the game after GameCenter is closed
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-        
-        pokeMatchVC.gameOver = false
+        gameCenterViewController.dismiss(animated: true, completion: nil)        
     }
 }

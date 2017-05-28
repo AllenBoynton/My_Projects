@@ -33,13 +33,17 @@ class OptionsVC: UIViewController {
         radioButtonOne.setImage(image, for: UIControlState.normal)
     }
     
+    // Button brings you to GC leaderboard
+    @IBAction func gcLeaderboardBtn(_ sender: Any) {
+        
+        mainMenuVC.showLeaderboard()
+    }
     // Audio button mutes/unmutes music
     @IBAction func musicOptionSwitch(_ sender: UISwitch) {
         
-        if musicSwitch.isOn == true {
+        if musicSwitch.isOn {
             mainMenuVC.musicPlayer.play()
         } else {
-            musicSwitch.isOn = false
             mainMenuVC.musicPlayer.pause()
         }
     }

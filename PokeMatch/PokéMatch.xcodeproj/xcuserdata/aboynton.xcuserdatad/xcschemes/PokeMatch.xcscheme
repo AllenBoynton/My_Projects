@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0907CD801ED3832D00350677"
-               BuildableName = "PokeMatch.app"
-               BlueprintName = "PokeMatch"
-               ReferencedContainer = "container:PokeMatch.xcodeproj">
+               BuildableName = "Poke&#x301;Match.app"
+               BlueprintName = "Poke&#x301;Match"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0907CD971ED3832D00350677"
-               BuildableName = "PokeMatchTests.xctest"
-               BlueprintName = "PokeMatchTests"
-               ReferencedContainer = "container:PokeMatch.xcodeproj">
+               BuildableName = "Poke&#x301;MatchTests.xctest"
+               BlueprintName = "Poke&#x301;MatchTests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0907CDA21ED3832D00350677"
-               BuildableName = "PokeMatchUITests.xctest"
-               BlueprintName = "PokeMatchUITests"
-               ReferencedContainer = "container:PokeMatch.xcodeproj">
+               BuildableName = "Poke&#x301;MatchUITests.xctest"
+               BlueprintName = "Poke&#x301;MatchUITests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0907CD801ED3832D00350677"
-            BuildableName = "PokeMatch.app"
-            BlueprintName = "PokeMatch"
-            ReferencedContainer = "container:PokeMatch.xcodeproj">
+            BuildableName = "Poke&#x301;Match.app"
+            BlueprintName = "Poke&#x301;Match"
+            ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0907CD801ED3832D00350677"
-            BuildableName = "PokeMatch.app"
-            BlueprintName = "PokeMatch"
-            ReferencedContainer = "container:PokeMatch.xcodeproj">
+            BuildableName = "Poke&#x301;Match.app"
+            BlueprintName = "Poke&#x301;Match"
+            ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0907CD801ED3832D00350677"
-            BuildableName = "PokeMatch.app"
-            BlueprintName = "PokeMatch"
-            ReferencedContainer = "container:PokeMatch.xcodeproj">
+            BuildableName = "Poke&#x301;Match.app"
+            BlueprintName = "Poke&#x301;Match"
+            ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

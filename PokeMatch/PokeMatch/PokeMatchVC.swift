@@ -131,7 +131,7 @@ class PokeMatchVC: UIViewController {
             randomImageLoop()
         }
         
-//        startGameMusic()
+        startGameMusic()
     }
     
     // for in loop to populate array images by removing a random one at a time while array depletes to ensure pairs
