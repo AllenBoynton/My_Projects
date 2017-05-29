@@ -12,3 +12,5 @@ Web View
 *.xcindexdb-wal
 
 *.hmap
+
+*.xcactivitylog
