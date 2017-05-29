@@ -8,3 +8,5 @@ Web View
 *.xcuserstate
 
 *.xcuserstate
+
+*.xcindexdb-wal
