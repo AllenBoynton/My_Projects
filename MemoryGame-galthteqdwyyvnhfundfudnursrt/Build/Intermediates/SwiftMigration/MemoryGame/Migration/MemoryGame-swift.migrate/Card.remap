@@ -1,0 +1,52 @@
+[
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 272,
+  "remove": 3,
+  "text": ":",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 281,
+  "remove": 3,
+  "text": " ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 476,
+  "text": "(",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 483,
+  "text": " as NSUUID)",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 494,
+  "remove": 3,
+  "text": " ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 671,
+  "remove": 4,
+  "text": "uuid",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 711,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 748,
+  "text": "(",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Model/Card.swift",
+  "offset": 755,
+  "remove": 10,
+  "text": " == i",
+ }
+]

@@ -54,7 +54,7 @@ class MainMenuVC: UIViewController {
         super.viewDidLoad()
         
         authenticatePlayer()
-//        startGameMusic()
+        startGameMusic()
     }
     
     // Authenticates the user to access to the GC
@@ -140,34 +140,29 @@ class MainMenuVC: UIViewController {
         // Show leaderboard
         viewController?.present(gameCenterViewController, animated: true, completion: nil)
     }
-
-//    func startGameMusic() {
-//        
-//        // Create function to initiate music playing when game begins
-//        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
-//        
-//        do {
-//            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
-//            musicPlayer.prepareToPlay()
-//            musicPlayer.numberOfLoops = -1
-//            musicPlayer.play()
-//            
-//        } catch let err as NSError {
-//            
-//            print(err.debugDescription)
-//        }
-//    }
+    
+    // Create function to initiate music playing when game begins
+    func startGameMusic() {
+        
+        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
+        
+        do {
+            try bgMusic = AVAudioPlayer(contentsOf: url)
+            bgMusic?.delegate = self as? AVAudioPlayerDelegate
+            bgMusic?.prepareToPlay()
+            bgMusic?.play()
+        } catch let error as NSError {
+            print("audioPlayer error \(error.localizedDescription)")
+        }
+    }
     
     // IBActions for main menu buttons
     @IBAction func singlePlayerBtnPressed(_ sender: Any) {
         
-//        musicPlayer.pause()
+//        bgMusic?.pause()
     }
     
-    @IBAction func showMatchMakerViewController(sender: UIButton) {
-        
-//        gameKitHelper.findMatch(minPlayers: 2,maxPlayers: 2, presentingViewController: self, delegate: self as! GameKitHelperDelegate)
-    }
+    
     
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
@@ -177,28 +172,29 @@ class MainMenuVC: UIViewController {
         
         saveHighScore(Int64(score))
         showLeaderboard()
-        updateAchievements()
+//        updateAchievements()
     }
     
     // Achievements
-    func updateAchievements() {
-        
-        // Incremental achievement ************************************************************
-        if score <= 300 {
-            
-            let achievement300 = GKAchievement(identifier: inc300AchievementID)
-            
-            achievement300.percentComplete = Double(score / 1500)
-            achievement300.showsCompletionBanner = true  // use Game Center's UI
-            
-            GKAchievement.report([achievement300], withCompletionHandler: nil)
-        }
-        if score <= 300 {
-            inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
-            
-            progressPercentage = Int64(score * 1500 / 300)
-            achievementIdentifier = inc300AchievementID
-        }
+//    func updateAchievements() {
+//        
+//        // Incremental achievement ************************************************************
+//        if score <= 300 {
+//            
+//            let achievement300 = GKAchievement(identifier: inc300AchievementID)
+//            
+//            achievement300.percentComplete = Double(score / 1500)
+//            achievement300.showsCompletionBanner = true  // use Game Center's UI
+//            
+//            GKAchievement.report([achievement300], withCompletionHandler: nil)
+//        }
+//        
+//        if score <= 300 {
+//            inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 300)
+//            achievementIdentifier = inc300AchievementID
+//        }
 //        else if score <= 500 {
 //            inc500AchievementID = "500_POINTS" // Incremental 500 point achievement
 //            
@@ -229,22 +225,22 @@ class MainMenuVC: UIViewController {
 //            progressPercentage = Int64(score * 1500 / 1500)
 //            achievementIdentifier = incMaxAchievementID
 //        }
-        do {
-            fullProgressID = "MAX_POINTS" // Incremental Max point achievement
-            
-            progressPercentage = Int64(score * 1500 / 1500)
-            achievementIdentifier = fullProgressID
-        }
-        scoreAchievement = GKAchievement(identifier: achievementIdentifier)
-        scoreAchievement?.percentComplete = Double(progressPercentage)
-        
-        // Load the user's current achievement progress anytime
-        GKAchievement.loadAchievements() { achievements, error in
-            guard let achievements = achievements else { return }
-            
-            print(achievements)
-        }
-    }
+//        do {
+//            fullProgressID = "MAX_POINTS" // Incremental Max point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 1500)
+//            achievementIdentifier = fullProgressID
+//        }
+//        scoreAchievement = GKAchievement(identifier: achievementIdentifier)
+//        scoreAchievement?.percentComplete = Double(progressPercentage)
+//        
+//        // Load the user's current achievement progress anytime
+//        GKAchievement.loadAchievements() { achievements, error in
+//            guard let achievements = achievements else { return }
+//            
+//            print(achievements)
+//        }
+//    }
 
     
     // Continue the game after GameCenter is closed

@@ -1,0 +1,111 @@
+[
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 552,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 732,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 950,
+  "remove": 12,
+  "text": "(in ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1071,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1207,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1242,
+  "remove": 10,
+  "text": "t",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1263,
+  "remove": 3,
+  "text": " ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1346,
+  "remove": 1,
+  "text": "(w",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1360,
+  "remove": 1,
+  "text": ": ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1376,
+  "remove": 10,
+  "text": "r",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1738,
+  "remove": 2,
+  "text": "isHi",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1848,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1885,
+  "remove": 10,
+  "text": "t",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1906,
+  "remove": 3,
+  "text": " ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1951,
+  "remove": 8,
+  "text": "(",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 1961,
+  "remove": 2,
+  "text": ": ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 2038,
+  "remove": 8,
+  "text": "(",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 2048,
+  "remove": 2,
+  "text": ": ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/Controller/ScoresTableViewController.swift",
+  "offset": 2092,
+  "remove": 2,
+  "text": "isHi",
+ }
+]

@@ -1,0 +1,862 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "OptionsVC"
+provides-nominal:
+- "C10Poke_Match9OptionsVC"
+provides-member:
+- ["C10Poke_Match9OptionsVC", ""]
+provides-dynamic-lookup:
+- "backToMain"
+- "dropDownList"
+- "gcLeaderboardBtn"
+- "mainMenuVC"
+- "musicOptionSwitch"
+- "musicPlayer"
+- "musicSwitch"
+- "numberOfComponentsInPickerView"
+- "pickerView"
+- "pokeMatchVC"
+- "pushedButtonOne"
+- "radioButtonOne"
+- "textCardList"
+- "textFieldDidBeginEditing"
+- "viewDidLoad"
+depends-top-level:
+- !private "=="
+- "AVAudioPlayer"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "Int"
+- "MainMenuVC"
+- "OptionsVC"
+- "PokeMatchVC"
+- "String"
+- "StringLiteralType"
+- "UIButton"
+- !private "UIControlState"
+- "UIImage"
+- "UIPickerView"
+- "UIPickerViewDelegate"
+- "UISwitch"
+- "UITextField"
+- "UIViewController"
+depends-member:
+- ["CSo13AVAudioPlayer", "init"]
+- !private ["CSo13AVAudioPlayer", "pause"]
+- !private ["CSo13AVAudioPlayer", "play"]
+- ["Ps9AnyObject", "AVAudioPlayer"]
+- ["Ps9AnyObject", "MainMenuVC"]
+- ["Ps9AnyObject", "PokeMatchVC"]
+- !private ["Ps9AnyObject", "UIControlState"]
+- ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "cardsArray"]
+- !private ["Ps9AnyObject", "dismiss"]
+- !private ["Ps9AnyObject", "dropDownList"]
+- !private ["Ps9AnyObject", "endEditing"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isHidden"]
+- !private ["Ps9AnyObject", "isOn"]
+- !private ["Ps9AnyObject", "mainMenuVC"]
+- !private ["Ps9AnyObject", "musicPlayer"]
+- !private ["Ps9AnyObject", "musicSwitch"]
+- !private ["Ps9AnyObject", "pause"]
+- ["Ps9AnyObject", "pickerView"]
+- !private ["Ps9AnyObject", "play"]
+- !private ["Ps9AnyObject", "radioButtonOne"]
+- !private ["Ps9AnyObject", "setImage"]
+- !private ["Ps9AnyObject", "showLeaderboard"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textCardList"]
+- !private ["Ps9AnyObject", "view"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo15CALayerDelegate", "endEditing"]
+- !private ["PSo15CALayerDelegate", "isHidden"]
+- !private ["PSo15CALayerDelegate", "isOn"]
+- !private ["PSo15CALayerDelegate", "setImage"]
+- !private ["PSo15CALayerDelegate", "text"]
+- ["Ps7CVarArg", "AVAudioPlayer"]
+- ["Ps7CVarArg", "MainMenuVC"]
+- ["Ps7CVarArg", "PokeMatchVC"]
+- !private ["Ps7CVarArg", "UIControlState"]
+- ["Ps7CVarArg", "UIImage"]
+- !private ["Ps7CVarArg", "cardsArray"]
+- !private ["Ps7CVarArg", "count"]
+- !private ["Ps7CVarArg", "dismiss"]
+- !private ["Ps7CVarArg", "dropDownList"]
+- !private ["Ps7CVarArg", "endEditing"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isHidden"]
+- !private ["Ps7CVarArg", "isOn"]
+- !private ["Ps7CVarArg", "mainMenuVC"]
+- !private ["Ps7CVarArg", "musicPlayer"]
+- !private ["Ps7CVarArg", "musicSwitch"]
+- !private ["Ps7CVarArg", "pause"]
+- ["Ps7CVarArg", "pickerView"]
+- !private ["Ps7CVarArg", "play"]
+- !private ["Ps7CVarArg", "radioButtonOne"]
+- !private ["Ps7CVarArg", "setImage"]
+- !private ["Ps7CVarArg", "showLeaderboard"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "textCardList"]
+- !private ["Ps7CVarArg", "view"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "subscript"]
+- ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "AVAudioPlayer"]
+- ["Ps28CustomDebugStringConvertible", "MainMenuVC"]
+- ["Ps28CustomDebugStringConvertible", "PokeMatchVC"]
+- !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
+- ["Ps28CustomDebugStringConvertible", "UIImage"]
+- !private ["Ps28CustomDebugStringConvertible", "cardsArray"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- !private ["Ps28CustomDebugStringConvertible", "dismiss"]
+- !private ["Ps28CustomDebugStringConvertible", "dropDownList"]
+- !private ["Ps28CustomDebugStringConvertible", "endEditing"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isHidden"]
+- !private ["Ps28CustomDebugStringConvertible", "isOn"]
+- !private ["Ps28CustomDebugStringConvertible", "mainMenuVC"]
+- !private ["Ps28CustomDebugStringConvertible", "musicPlayer"]
+- !private ["Ps28CustomDebugStringConvertible", "musicSwitch"]
+- !private ["Ps28CustomDebugStringConvertible", "pause"]
+- ["Ps28CustomDebugStringConvertible", "pickerView"]
+- !private ["Ps28CustomDebugStringConvertible", "play"]
+- !private ["Ps28CustomDebugStringConvertible", "radioButtonOne"]
+- !private ["Ps28CustomDebugStringConvertible", "setImage"]
+- !private ["Ps28CustomDebugStringConvertible", "showLeaderboard"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textCardList"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "count"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- ["Ps23CustomStringConvertible", "AVAudioPlayer"]
+- ["Ps23CustomStringConvertible", "MainMenuVC"]
+- ["Ps23CustomStringConvertible", "PokeMatchVC"]
+- !private ["Ps23CustomStringConvertible", "UIControlState"]
+- ["Ps23CustomStringConvertible", "UIImage"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "cardsArray"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- !private ["Ps23CustomStringConvertible", "dismiss"]
+- !private ["Ps23CustomStringConvertible", "dropDownList"]
+- !private ["Ps23CustomStringConvertible", "endEditing"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isHidden"]
+- !private ["Ps23CustomStringConvertible", "isOn"]
+- !private ["Ps23CustomStringConvertible", "mainMenuVC"]
+- !private ["Ps23CustomStringConvertible", "musicPlayer"]
+- !private ["Ps23CustomStringConvertible", "musicSwitch"]
+- !private ["Ps23CustomStringConvertible", "pause"]
+- ["Ps23CustomStringConvertible", "pickerView"]
+- !private ["Ps23CustomStringConvertible", "play"]
+- !private ["Ps23CustomStringConvertible", "radioButtonOne"]
+- !private ["Ps23CustomStringConvertible", "setImage"]
+- !private ["Ps23CustomStringConvertible", "showLeaderboard"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textCardList"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "AVAudioPlayer"]
+- ["Ps9Equatable", "MainMenuVC"]
+- ["Ps9Equatable", "PokeMatchVC"]
+- !private ["Ps9Equatable", "UIControlState"]
+- ["Ps9Equatable", "UIImage"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "cardsArray"]
+- !private ["Ps9Equatable", "dismiss"]
+- !private ["Ps9Equatable", "dropDownList"]
+- !private ["Ps9Equatable", "endEditing"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isHidden"]
+- !private ["Ps9Equatable", "isOn"]
+- !private ["Ps9Equatable", "mainMenuVC"]
+- !private ["Ps9Equatable", "musicPlayer"]
+- !private ["Ps9Equatable", "musicSwitch"]
+- !private ["Ps9Equatable", "normal"]
+- !private ["Ps9Equatable", "pause"]
+- ["Ps9Equatable", "pickerView"]
+- !private ["Ps9Equatable", "play"]
+- !private ["Ps9Equatable", "radioButtonOne"]
+- !private ["Ps9Equatable", "setImage"]
+- !private ["Ps9Equatable", "showLeaderboard"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textCardList"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "normal"]
+- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps8Hashable", "AVAudioPlayer"]
+- ["Ps8Hashable", "MainMenuVC"]
+- ["Ps8Hashable", "PokeMatchVC"]
+- !private ["Ps8Hashable", "UIControlState"]
+- ["Ps8Hashable", "UIImage"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "cardsArray"]
+- !private ["Ps8Hashable", "dismiss"]
+- !private ["Ps8Hashable", "dropDownList"]
+- !private ["Ps8Hashable", "endEditing"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isHidden"]
+- !private ["Ps8Hashable", "isOn"]
+- !private ["Ps8Hashable", "mainMenuVC"]
+- !private ["Ps8Hashable", "musicPlayer"]
+- !private ["Ps8Hashable", "musicSwitch"]
+- !private ["Ps8Hashable", "pause"]
+- ["Ps8Hashable", "pickerView"]
+- !private ["Ps8Hashable", "play"]
+- !private ["Ps8Hashable", "radioButtonOne"]
+- !private ["Ps8Hashable", "setImage"]
+- !private ["Ps8Hashable", "showLeaderboard"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textCardList"]
+- !private ["Ps8Hashable", "view"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["C10Poke_Match10MainMenuVC", "init"]
+- !private ["C10Poke_Match10MainMenuVC", "showLeaderboard"]
+- ["P10Poke_Match18MemoryGameDelegate", "init"]
+- ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "subscript"]
+- ["PSo8NSCoding", "AVAudioPlayer"]
+- ["PSo8NSCoding", "MainMenuVC"]
+- ["PSo8NSCoding", "PokeMatchVC"]
+- !private ["PSo8NSCoding", "UIControlState"]
+- ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "cardsArray"]
+- !private ["PSo8NSCoding", "dismiss"]
+- !private ["PSo8NSCoding", "dropDownList"]
+- !private ["PSo8NSCoding", "endEditing"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isHidden"]
+- !private ["PSo8NSCoding", "isOn"]
+- !private ["PSo8NSCoding", "mainMenuVC"]
+- !private ["PSo8NSCoding", "musicPlayer"]
+- !private ["PSo8NSCoding", "musicSwitch"]
+- ["PSo8NSCoding", "pickerView"]
+- !private ["PSo8NSCoding", "radioButtonOne"]
+- !private ["PSo8NSCoding", "setImage"]
+- !private ["PSo8NSCoding", "showLeaderboard"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textCardList"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo9NSCopying", "init"]
+- ["PSo26NSExtensionRequestHandling", "AVAudioPlayer"]
+- ["PSo26NSExtensionRequestHandling", "MainMenuVC"]
+- ["PSo26NSExtensionRequestHandling", "PokeMatchVC"]
+- !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
+- ["PSo26NSExtensionRequestHandling", "UIImage"]
+- !private ["PSo26NSExtensionRequestHandling", "cardsArray"]
+- !private ["PSo26NSExtensionRequestHandling", "dismiss"]
+- !private ["PSo26NSExtensionRequestHandling", "dropDownList"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "mainMenuVC"]
+- !private ["PSo26NSExtensionRequestHandling", "musicPlayer"]
+- !private ["PSo26NSExtensionRequestHandling", "musicSwitch"]
+- ["PSo26NSExtensionRequestHandling", "pickerView"]
+- !private ["PSo26NSExtensionRequestHandling", "radioButtonOne"]
+- !private ["PSo26NSExtensionRequestHandling", "showLeaderboard"]
+- !private ["PSo26NSExtensionRequestHandling", "textCardList"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AVAudioPlayer"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "MainMenuVC"]
+- ["CSo8NSObject", "PokeMatchVC"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UIControlState"]
+- ["CSo8NSObject", "UIImage"]
+- ["CSo8NSObject", "UIPickerView"]
+- ["CSo8NSObject", "UISwitch"]
+- ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "backToMain"]
+- ["CSo8NSObject", "cardsArray"]
+- !private ["CSo8NSObject", "dismiss"]
+- ["CSo8NSObject", "dropDownList"]
+- !private ["CSo8NSObject", "endEditing"]
+- ["CSo8NSObject", "gcLeaderboardBtn"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isHidden"]
+- !private ["CSo8NSObject", "isOn"]
+- ["CSo8NSObject", "mainMenuVC"]
+- ["CSo8NSObject", "musicOptionSwitch"]
+- ["CSo8NSObject", "musicPlayer"]
+- ["CSo8NSObject", "musicSwitch"]
+- ["CSo8NSObject", "numberOfComponentsInPickerView"]
+- !private ["CSo8NSObject", "pause"]
+- ["CSo8NSObject", "pickerView"]
+- !private ["CSo8NSObject", "play"]
+- ["CSo8NSObject", "pokeMatchVC"]
+- ["CSo8NSObject", "pushedButtonOne"]
+- ["CSo8NSObject", "radioButtonOne"]
+- !private ["CSo8NSObject", "setImage"]
+- !private ["CSo8NSObject", "showLeaderboard"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "textCardList"]
+- ["CSo8NSObject", "textFieldDidBeginEditing"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "AVAudioPlayer"]
+- ["PSo16NSObjectProtocol", "MainMenuVC"]
+- ["PSo16NSObjectProtocol", "PokeMatchVC"]
+- !private ["PSo16NSObjectProtocol", "UIControlState"]
+- ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "cardsArray"]
+- !private ["PSo16NSObjectProtocol", "dismiss"]
+- !private ["PSo16NSObjectProtocol", "dropDownList"]
+- !private ["PSo16NSObjectProtocol", "endEditing"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isHidden"]
+- !private ["PSo16NSObjectProtocol", "isOn"]
+- !private ["PSo16NSObjectProtocol", "mainMenuVC"]
+- !private ["PSo16NSObjectProtocol", "musicPlayer"]
+- !private ["PSo16NSObjectProtocol", "musicSwitch"]
+- !private ["PSo16NSObjectProtocol", "pause"]
+- ["PSo16NSObjectProtocol", "pickerView"]
+- !private ["PSo16NSObjectProtocol", "play"]
+- !private ["PSo16NSObjectProtocol", "radioButtonOne"]
+- !private ["PSo16NSObjectProtocol", "setImage"]
+- !private ["PSo16NSObjectProtocol", "showLeaderboard"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textCardList"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- !private ["Ps9OptionSet", "normal"]
+- ["C10Poke_Match9OptionsVC", "AVAudioPlayer"]
+- ["C10Poke_Match9OptionsVC", "Int"]
+- ["C10Poke_Match9OptionsVC", "MainMenuVC"]
+- ["C10Poke_Match9OptionsVC", "PokeMatchVC"]
+- ["C10Poke_Match9OptionsVC", "String"]
+- ["C10Poke_Match9OptionsVC", "UIButton"]
+- !private ["C10Poke_Match9OptionsVC", "UIControlState"]
+- ["C10Poke_Match9OptionsVC", "UIImage"]
+- ["C10Poke_Match9OptionsVC", "UIPickerView"]
+- ["C10Poke_Match9OptionsVC", "UISwitch"]
+- ["C10Poke_Match9OptionsVC", "UITextField"]
+- ["C10Poke_Match9OptionsVC", "backToMain"]
+- ["C10Poke_Match9OptionsVC", "cardsArray"]
+- ["C10Poke_Match9OptionsVC", "deinit"]
+- !private ["C10Poke_Match9OptionsVC", "dismiss"]
+- ["C10Poke_Match9OptionsVC", "dropDownList"]
+- ["C10Poke_Match9OptionsVC", "gcLeaderboardBtn"]
+- ["C10Poke_Match9OptionsVC", "init"]
+- ["C10Poke_Match9OptionsVC", "mainMenuVC"]
+- ["C10Poke_Match9OptionsVC", "musicOptionSwitch"]
+- ["C10Poke_Match9OptionsVC", "musicPlayer"]
+- ["C10Poke_Match9OptionsVC", "musicSwitch"]
+- ["C10Poke_Match9OptionsVC", "numberOfComponentsInPickerView"]
+- ["C10Poke_Match9OptionsVC", "pickerView"]
+- ["C10Poke_Match9OptionsVC", "pokeMatchVC"]
+- ["C10Poke_Match9OptionsVC", "pushedButtonOne"]
+- ["C10Poke_Match9OptionsVC", "radioButtonOne"]
+- ["C10Poke_Match9OptionsVC", "textCardList"]
+- ["C10Poke_Match9OptionsVC", "textFieldDidBeginEditing"]
+- !private ["C10Poke_Match9OptionsVC", "view"]
+- ["C10Poke_Match9OptionsVC", "viewDidLoad"]
+- ["C10Poke_Match11PokeMatchVC", "init"]
+- !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["Ps16RawRepresentable", "normal"]
+- !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Ps10SetAlgebra", "normal"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "endEditing"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isHidden"]
+- !private ["PSo29UIAccessibilityIdentification", "isOn"]
+- !private ["PSo29UIAccessibilityIdentification", "setImage"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "endEditing"]
+- !private ["PSo12UIAppearance", "isHidden"]
+- !private ["PSo12UIAppearance", "isOn"]
+- !private ["PSo12UIAppearance", "setImage"]
+- !private ["PSo12UIAppearance", "text"]
+- ["PSo21UIAppearanceContainer", "AVAudioPlayer"]
+- ["PSo21UIAppearanceContainer", "MainMenuVC"]
+- ["PSo21UIAppearanceContainer", "PokeMatchVC"]
+- !private ["PSo21UIAppearanceContainer", "UIControlState"]
+- ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "cardsArray"]
+- !private ["PSo21UIAppearanceContainer", "dismiss"]
+- !private ["PSo21UIAppearanceContainer", "dropDownList"]
+- !private ["PSo21UIAppearanceContainer", "endEditing"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isHidden"]
+- !private ["PSo21UIAppearanceContainer", "isOn"]
+- !private ["PSo21UIAppearanceContainer", "mainMenuVC"]
+- !private ["PSo21UIAppearanceContainer", "musicPlayer"]
+- !private ["PSo21UIAppearanceContainer", "musicSwitch"]
+- ["PSo21UIAppearanceContainer", "pickerView"]
+- !private ["PSo21UIAppearanceContainer", "radioButtonOne"]
+- !private ["PSo21UIAppearanceContainer", "setImage"]
+- !private ["PSo21UIAppearanceContainer", "showLeaderboard"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textCardList"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "setImage"]
+- ["PSo26UICollectionViewDataSource", "init"]
+- ["PSo24UICollectionViewDelegate", "init"]
+- ["PSo34UICollectionViewDelegateFlowLayout", "init"]
+- ["PSo18UIContentContainer", "AVAudioPlayer"]
+- ["PSo18UIContentContainer", "MainMenuVC"]
+- ["PSo18UIContentContainer", "PokeMatchVC"]
+- !private ["PSo18UIContentContainer", "UIControlState"]
+- ["PSo18UIContentContainer", "UIImage"]
+- !private ["PSo18UIContentContainer", "cardsArray"]
+- !private ["PSo18UIContentContainer", "dismiss"]
+- !private ["PSo18UIContentContainer", "dropDownList"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "mainMenuVC"]
+- !private ["PSo18UIContentContainer", "musicPlayer"]
+- !private ["PSo18UIContentContainer", "musicSwitch"]
+- ["PSo18UIContentContainer", "pickerView"]
+- !private ["PSo18UIContentContainer", "radioButtonOne"]
+- !private ["PSo18UIContentContainer", "showLeaderboard"]
+- !private ["PSo18UIContentContainer", "textCardList"]
+- !private ["PSo18UIContentContainer", "view"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "endEditing"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["CSo9UIControl", "endEditing"]
+- !private ["CSo9UIControl", "isOn"]
+- !private ["CSo9UIControl", "setImage"]
+- !private ["CSo9UIControl", "text"]
+- !private ["VSC14UIControlState", "normal"]
+- !private ["PSo17UICoordinateSpace", "endEditing"]
+- !private ["PSo17UICoordinateSpace", "isHidden"]
+- !private ["PSo17UICoordinateSpace", "isOn"]
+- !private ["PSo17UICoordinateSpace", "setImage"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "endEditing"]
+- !private ["PSo13UIDynamicItem", "isHidden"]
+- !private ["PSo13UIDynamicItem", "isOn"]
+- !private ["PSo13UIDynamicItem", "setImage"]
+- !private ["PSo13UIDynamicItem", "text"]
+- ["PSo18UIFocusEnvironment", "AVAudioPlayer"]
+- ["PSo18UIFocusEnvironment", "MainMenuVC"]
+- ["PSo18UIFocusEnvironment", "PokeMatchVC"]
+- !private ["PSo18UIFocusEnvironment", "UIControlState"]
+- ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "cardsArray"]
+- !private ["PSo18UIFocusEnvironment", "dismiss"]
+- !private ["PSo18UIFocusEnvironment", "dropDownList"]
+- !private ["PSo18UIFocusEnvironment", "endEditing"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isHidden"]
+- !private ["PSo18UIFocusEnvironment", "isOn"]
+- !private ["PSo18UIFocusEnvironment", "mainMenuVC"]
+- !private ["PSo18UIFocusEnvironment", "musicPlayer"]
+- !private ["PSo18UIFocusEnvironment", "musicSwitch"]
+- ["PSo18UIFocusEnvironment", "pickerView"]
+- !private ["PSo18UIFocusEnvironment", "radioButtonOne"]
+- !private ["PSo18UIFocusEnvironment", "setImage"]
+- !private ["PSo18UIFocusEnvironment", "showLeaderboard"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textCardList"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "endEditing"]
+- !private ["PSo11UIFocusItem", "isHidden"]
+- !private ["PSo11UIFocusItem", "isOn"]
+- !private ["PSo11UIFocusItem", "setImage"]
+- !private ["PSo11UIFocusItem", "text"]
+- ["CSo7UIImage", "init"]
+- !private ["PSo10UIKeyInput", "endEditing"]
+- !private ["PSo10UIKeyInput", "text"]
+- !private ["CSo12UIPickerView", "isHidden"]
+- ["PSo20UIPickerViewDelegate", "AVAudioPlayer"]
+- ["PSo20UIPickerViewDelegate", "MainMenuVC"]
+- ["PSo20UIPickerViewDelegate", "PokeMatchVC"]
+- !private ["PSo20UIPickerViewDelegate", "UIControlState"]
+- ["PSo20UIPickerViewDelegate", "UIImage"]
+- !private ["PSo20UIPickerViewDelegate", "cardsArray"]
+- !private ["PSo20UIPickerViewDelegate", "dismiss"]
+- !private ["PSo20UIPickerViewDelegate", "dropDownList"]
+- !private ["PSo20UIPickerViewDelegate", "mainMenuVC"]
+- !private ["PSo20UIPickerViewDelegate", "musicPlayer"]
+- !private ["PSo20UIPickerViewDelegate", "musicSwitch"]
+- ["PSo20UIPickerViewDelegate", "pickerView"]
+- !private ["PSo20UIPickerViewDelegate", "radioButtonOne"]
+- !private ["PSo20UIPickerViewDelegate", "textCardList"]
+- !private ["PSo20UIPickerViewDelegate", "view"]
+- ["PSo20UIPickerViewDelegate", ""]
+- ["CSo11UIResponder", "AVAudioPlayer"]
+- ["CSo11UIResponder", "Int"]
+- ["CSo11UIResponder", "MainMenuVC"]
+- ["CSo11UIResponder", "PokeMatchVC"]
+- ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UIControlState"]
+- ["CSo11UIResponder", "UIImage"]
+- ["CSo11UIResponder", "UIPickerView"]
+- ["CSo11UIResponder", "UISwitch"]
+- ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "backToMain"]
+- ["CSo11UIResponder", "cardsArray"]
+- !private ["CSo11UIResponder", "dismiss"]
+- ["CSo11UIResponder", "dropDownList"]
+- !private ["CSo11UIResponder", "endEditing"]
+- ["CSo11UIResponder", "gcLeaderboardBtn"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isHidden"]
+- !private ["CSo11UIResponder", "isOn"]
+- ["CSo11UIResponder", "mainMenuVC"]
+- ["CSo11UIResponder", "musicOptionSwitch"]
+- ["CSo11UIResponder", "musicPlayer"]
+- ["CSo11UIResponder", "musicSwitch"]
+- ["CSo11UIResponder", "numberOfComponentsInPickerView"]
+- ["CSo11UIResponder", "pickerView"]
+- ["CSo11UIResponder", "pokeMatchVC"]
+- ["CSo11UIResponder", "pushedButtonOne"]
+- ["CSo11UIResponder", "radioButtonOne"]
+- !private ["CSo11UIResponder", "setImage"]
+- !private ["CSo11UIResponder", "showLeaderboard"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "textCardList"]
+- ["CSo11UIResponder", "textFieldDidBeginEditing"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "AVAudioPlayer"]
+- ["PSo30UIResponderStandardEditActions", "MainMenuVC"]
+- ["PSo30UIResponderStandardEditActions", "PokeMatchVC"]
+- !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
+- ["PSo30UIResponderStandardEditActions", "UIImage"]
+- !private ["PSo30UIResponderStandardEditActions", "cardsArray"]
+- !private ["PSo30UIResponderStandardEditActions", "dismiss"]
+- !private ["PSo30UIResponderStandardEditActions", "dropDownList"]
+- !private ["PSo30UIResponderStandardEditActions", "endEditing"]
+- ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isHidden"]
+- !private ["PSo30UIResponderStandardEditActions", "isOn"]
+- !private ["PSo30UIResponderStandardEditActions", "mainMenuVC"]
+- !private ["PSo30UIResponderStandardEditActions", "musicPlayer"]
+- !private ["PSo30UIResponderStandardEditActions", "musicSwitch"]
+- ["PSo30UIResponderStandardEditActions", "pickerView"]
+- !private ["PSo30UIResponderStandardEditActions", "radioButtonOne"]
+- !private ["PSo30UIResponderStandardEditActions", "setImage"]
+- !private ["PSo30UIResponderStandardEditActions", "showLeaderboard"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "textCardList"]
+- !private ["PSo30UIResponderStandardEditActions", "view"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo20UIScrollViewDelegate", "init"]
+- ["PSo16UIStateRestoring", "AVAudioPlayer"]
+- ["PSo16UIStateRestoring", "MainMenuVC"]
+- ["PSo16UIStateRestoring", "PokeMatchVC"]
+- !private ["PSo16UIStateRestoring", "UIControlState"]
+- ["PSo16UIStateRestoring", "UIImage"]
+- !private ["PSo16UIStateRestoring", "cardsArray"]
+- !private ["PSo16UIStateRestoring", "dismiss"]
+- !private ["PSo16UIStateRestoring", "dropDownList"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "mainMenuVC"]
+- !private ["PSo16UIStateRestoring", "musicPlayer"]
+- !private ["PSo16UIStateRestoring", "musicSwitch"]
+- ["PSo16UIStateRestoring", "pickerView"]
+- !private ["PSo16UIStateRestoring", "radioButtonOne"]
+- !private ["PSo16UIStateRestoring", "showLeaderboard"]
+- !private ["PSo16UIStateRestoring", "textCardList"]
+- !private ["PSo16UIStateRestoring", "view"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo8UISwitch", "isOn"]
+- !private ["CSo11UITextField", "endEditing"]
+- !private ["CSo11UITextField", "text"]
+- !private ["PSo11UITextInput", "endEditing"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "endEditing"]
+- !private ["PSo17UITextInputTraits", "text"]
+- ["PSo18UITraitEnvironment", "AVAudioPlayer"]
+- ["PSo18UITraitEnvironment", "MainMenuVC"]
+- ["PSo18UITraitEnvironment", "PokeMatchVC"]
+- !private ["PSo18UITraitEnvironment", "UIControlState"]
+- ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "cardsArray"]
+- !private ["PSo18UITraitEnvironment", "dismiss"]
+- !private ["PSo18UITraitEnvironment", "dropDownList"]
+- !private ["PSo18UITraitEnvironment", "endEditing"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isHidden"]
+- !private ["PSo18UITraitEnvironment", "isOn"]
+- !private ["PSo18UITraitEnvironment", "mainMenuVC"]
+- !private ["PSo18UITraitEnvironment", "musicPlayer"]
+- !private ["PSo18UITraitEnvironment", "musicSwitch"]
+- ["PSo18UITraitEnvironment", "pickerView"]
+- !private ["PSo18UITraitEnvironment", "radioButtonOne"]
+- !private ["PSo18UITraitEnvironment", "setImage"]
+- !private ["PSo18UITraitEnvironment", "showLeaderboard"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textCardList"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "endEditing"]
+- !private ["CSo6UIView", "isHidden"]
+- !private ["CSo6UIView", "isOn"]
+- !private ["CSo6UIView", "setImage"]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "AVAudioPlayer"]
+- ["CSo16UIViewController", "Int"]
+- ["CSo16UIViewController", "MainMenuVC"]
+- ["CSo16UIViewController", "PokeMatchVC"]
+- ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UIControlState"]
+- ["CSo16UIViewController", "UIImage"]
+- ["CSo16UIViewController", "UIPickerView"]
+- ["CSo16UIViewController", "UISwitch"]
+- ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "backToMain"]
+- ["CSo16UIViewController", "cardsArray"]
+- !private ["CSo16UIViewController", "dismiss"]
+- ["CSo16UIViewController", "dropDownList"]
+- ["CSo16UIViewController", "gcLeaderboardBtn"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "mainMenuVC"]
+- ["CSo16UIViewController", "musicOptionSwitch"]
+- ["CSo16UIViewController", "musicPlayer"]
+- ["CSo16UIViewController", "musicSwitch"]
+- ["CSo16UIViewController", "numberOfComponentsInPickerView"]
+- ["CSo16UIViewController", "pickerView"]
+- ["CSo16UIViewController", "pokeMatchVC"]
+- ["CSo16UIViewController", "pushedButtonOne"]
+- ["CSo16UIViewController", "radioButtonOne"]
+- !private ["CSo16UIViewController", "showLeaderboard"]
+- ["CSo16UIViewController", "textCardList"]
+- ["CSo16UIViewController", "textFieldDidBeginEditing"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
+- !private ["Ps23_BidirectionalIndexable", "subscript"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "endEditing"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isOn"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setImage"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps26_ExpressibleByImageLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "AVAudioPlayer"]
+- ["Ps9_Hashable", "MainMenuVC"]
+- ["Ps9_Hashable", "PokeMatchVC"]
+- !private ["Ps9_Hashable", "UIControlState"]
+- ["Ps9_Hashable", "UIImage"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "cardsArray"]
+- !private ["Ps9_Hashable", "dismiss"]
+- !private ["Ps9_Hashable", "dropDownList"]
+- !private ["Ps9_Hashable", "endEditing"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isHidden"]
+- !private ["Ps9_Hashable", "isOn"]
+- !private ["Ps9_Hashable", "mainMenuVC"]
+- !private ["Ps9_Hashable", "musicPlayer"]
+- !private ["Ps9_Hashable", "musicSwitch"]
+- !private ["Ps9_Hashable", "pause"]
+- ["Ps9_Hashable", "pickerView"]
+- !private ["Ps9_Hashable", "play"]
+- !private ["Ps9_Hashable", "radioButtonOne"]
+- !private ["Ps9_Hashable", "setImage"]
+- !private ["Ps9_Hashable", "showLeaderboard"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "textCardList"]
+- !private ["Ps9_Hashable", "view"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps10_Indexable", "count"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "count"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps17_MutableIndexable", "count"]
+- !private ["Ps17_MutableIndexable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps22_RandomAccessIndexable", "count"]
+- !private ["Ps22_RandomAccessIndexable", "subscript"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
+- !private ["Ps26_RangeReplaceableIndexable", "subscript"]
+depends-nominal:
+- "CSo13AVAudioPlayer"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Sb"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "C10Poke_Match10MainMenuVC"
+- "P10Poke_Match18MemoryGameDelegate"
+- "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- !private "Ps9OptionSet"
+- "C10Poke_Match9OptionsVC"
+- "C10Poke_Match11PokeMatchVC"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps16RawRepresentable"
+- !private "Ps8Sequence"
+- !private "Ps10SetAlgebra"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- "PSo26UICollectionViewDataSource"
+- "PSo24UICollectionViewDelegate"
+- "PSo34UICollectionViewDelegateFlowLayout"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
+- !private "VSC14UIControlState"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- "CSo7UIImage"
+- !private "PSo10UIKeyInput"
+- !private "CSo12UIPickerView"
+- "PSo20UIPickerViewDelegate"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- !private "CSo8UISwitch"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps26_ExpressibleByImageLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps17_MutableIndexable"
+- "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AudioToolbox.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "ad0359ca88eb27dffa4213bc299a33bf"

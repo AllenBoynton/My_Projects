@@ -1,0 +1,44 @@
+[
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 441,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 515,
+  "remove": 8,
+  "text": "UIApplicationLaunchOptionsKey",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 527,
+  "remove": 7,
+  "text": "y",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 742,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 1260,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 1698,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 1929,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/aboynton/Desktop/swift-memory-game-master/MemoryGame/MemoryGame/AppDelegate.swift",
+  "offset": 2195,
+  "text": "_ ",
+ }
+]
