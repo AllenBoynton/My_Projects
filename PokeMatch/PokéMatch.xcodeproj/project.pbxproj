@@ -14,7 +14,6 @@
 		0907CD9D1ED3832D00350677 /* PokeMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CD9C1ED3832D00350677 /* PokeMatchTests.swift */; };
 		0907CDA81ED3832D00350677 /* PokeMatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDA71ED3832D00350677 /* PokeMatchUITests.swift */; };
 		0907CDBF1ED385C800350677 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CDBE1ED385C800350677 /* AVFoundation.framework */; };
-		0907CDC11ED385E500350677 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0907CDC01ED385E500350677 /* CoreData.framework */; };
 		0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDEA1ED4128500350677 /* PokeMatchVC.swift */; };
 		0907CDED1ED4129700350677 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEC1ED4129700350677 /* pokemon.ttf */; };
 		0907CDEF1ED412A700350677 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEE1ED412A700350677 /* music.mp3 */; };
@@ -28,9 +27,10 @@
 		094AEF181ED4FB5B007FDFC9 /* RoundedLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */; };
 		094AEF1E1ED64CA1007FDFC9 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */; };
 		094AEF201ED65732007FDFC9 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF1F1ED65732007FDFC9 /* RoundedButtons.swift */; };
-		094AEF261ED7BA79007FDFC9 /* GameCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF251ED7BA79007FDFC9 /* GameCenterVC.swift */; };
 		094AEF281ED8FF8F007FDFC9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AEF271ED8FF8F007FDFC9 /* GameKit.framework */; };
 		094AEF2A1ED90FED007FDFC9 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF291ED90FED007FDFC9 /* OptionsVC.swift */; };
+		09936A091EDB3F4800D0E418 /* GameKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09936A081EDB3F4800D0E418 /* GameKitHelper.swift */; };
+		09936A0B1EDB4A0600D0E418 /* MultiplayerNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09936A0A1EDB4A0600D0E418 /* MultiplayerNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		0907CDA71ED3832D00350677 /* PokeMatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeMatchUITests.swift; sourceTree = "<group>"; };
 		0907CDA91ED3832D00350677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0907CDBE1ED385C800350677 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0907CDC01ED385E500350677 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0907CDEA1ED4128500350677 /* PokeMatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeMatchVC.swift; sourceTree = "<group>"; };
 		0907CDEC1ED4129700350677 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 		0907CDEE1ED412A700350677 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
@@ -78,9 +77,10 @@
 		094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabels.swift; sourceTree = "<group>"; };
 		094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		094AEF1F1ED65732007FDFC9 /* RoundedButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButtons.swift; sourceTree = "<group>"; };
-		094AEF251ED7BA79007FDFC9 /* GameCenterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterVC.swift; sourceTree = "<group>"; };
 		094AEF271ED8FF8F007FDFC9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		094AEF291ED90FED007FDFC9 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		09936A081EDB3F4800D0E418 /* GameKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameKitHelper.swift; sourceTree = "<group>"; };
+		09936A0A1EDB4A0600D0E418 /* MultiplayerNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0907CDC11ED385E500350677 /* CoreData.framework in Frameworks */,
 				0907CDBF1ED385C800350677 /* AVFoundation.framework in Frameworks */,
 				094AEF281ED8FF8F007FDFC9 /* GameKit.framework in Frameworks */,
 			);
@@ -202,7 +201,7 @@
 		0907CDBA1ED3852B00350677 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				094AEF251ED7BA79007FDFC9 /* GameCenterVC.swift */,
+				09936A081EDB3F4800D0E418 /* GameKitHelper.swift */,
 				094AEF291ED90FED007FDFC9 /* OptionsVC.swift */,
 				094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */,
 				0907CDEA1ED4128500350677 /* PokeMatchVC.swift */,
@@ -225,6 +224,7 @@
 		0907CDBC1ED3853C00350677 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				09936A0A1EDB4A0600D0E418 /* MultiplayerNetworking.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -233,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				094AEF271ED8FF8F007FDFC9 /* GameKit.framework */,
-				0907CDC01ED385E500350677 /* CoreData.framework */,
 				0907CDBE1ED385C800350677 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -416,11 +415,12 @@
 				094AEF141ED469CF007FDFC9 /* RoundedImageView.swift in Sources */,
 				094AEF201ED65732007FDFC9 /* RoundedButtons.swift in Sources */,
 				094AEF181ED4FB5B007FDFC9 /* RoundedLabels.swift in Sources */,
+				09936A0B1EDB4A0600D0E418 /* MultiplayerNetworking.swift in Sources */,
 				094AEF161ED47721007FDFC9 /* MatchedViews.swift in Sources */,
 				0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */,
 				094AEF2A1ED90FED007FDFC9 /* OptionsVC.swift in Sources */,
+				09936A091EDB3F4800D0E418 /* GameKitHelper.swift in Sources */,
 				0907CDF11ED4160E00350677 /* MaterialView.swift in Sources */,
-				094AEF261ED7BA79007FDFC9 /* GameCenterVC.swift in Sources */,
 				094AEF1E1ED64CA1007FDFC9 /* MainMenuVC.swift in Sources */,
 				0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */,
 			);

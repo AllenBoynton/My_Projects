@@ -12,14 +12,25 @@ import AVFoundation
 import GameKit
 
 // Global identifiers
-//let timeLeaderboardID = "BEST_TIME"
-let pointsLeaderboardID = "HIGH_POINTS"
+let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
+let pointsLeaderboardID = "HIGH_POINTS" // Score Leaderboard
 
-class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
+// Achievement identifiers
+var inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
+//        var inc500AchievementID = "500_POINTS" // Incremental 500 point achievement
+//        var inc800AchievementID = "800_POINTS" // Incremental 800 point achievement
+//        var inc1000AchievementID = "1000_POINTS" // Incremental 1000 point achievement
+//        var inc1200AchievementID = "1200_POINTS" // Incremental 1200 point achievement
+//        var incMaxAchievementID = "MAX_POINTS" // Incremental 1500 point achievement
+var fullProgressID = "MAX_POINTS" // Incremental Max point achievement
+
+class MainMenuVC: UIViewController {
     
     // Class delegates
     var pokeMatchVC: PokeMatchVC!
-//    var gameCenterVC: GameCenterVC!
+//    var gameKitHelper: GameKitHelper!
+    
+    // Create AV player
     var musicPlayer: AVAudioPlayer!
     
     // The local player object.
@@ -28,15 +39,22 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     // Local GC variables
     var gcEnabled = Bool() // Check if the user has Game Center enabled
     var gcDefaultLeaderBoard = String() // Check the default leaderboardID
-    
     var score = 0
+    
+    // Game Center Achievement properties
+    var achievementIdentifier: String?
+    var progressPercentage: Int64 = 0
+    var progressInLevelAchievement: Bool?
+    var levelAchievement: GKAchievement?
+    var scoreAchievement: GKAchievement?
+    var powerUpAchievement: GKAchievement?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         authenticatePlayer()
-        startGameMusic()
+//        startGameMusic()
     }
     
     // Authenticates the user to access to the GC
@@ -47,6 +65,11 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
                 
                 // 1. Show login if player is not logged in
                 self.present(view!, animated: true, completion: nil)
+               
+                NotificationCenter.default.addObserver(
+                    self, selector: #selector(self.authenticationDidChange(_:)),
+                    name: NSNotification.Name(rawValue: GKPlayerAuthenticationDidChangeNotificationName),
+                    object: nil)
                 
             } else if (self.localPlayer.isAuthenticated) {
                 
@@ -71,12 +94,6 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
                 print(error as Any)
             }
         }
-        
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(authenticationDidChange(_:)),
-            name: NSNotification.Name(rawValue: GKPlayerAuthenticationDidChangeNotificationName),
-            object: nil
-        )
     }
     
     func notificationReceived() {
@@ -98,7 +115,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
                 
                 let vc = GKGameCenterViewController()
                 vc.leaderboardIdentifier = pointsLeaderboardID
-                vc.gameCenterDelegate = self
+                vc.gameCenterDelegate = self as? GKGameCenterControllerDelegate
                 vc.viewState = .leaderboards
                 
                 self.present(vc, animated: true, completion: nil)   })
@@ -116,7 +133,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
         let viewController = self.view.window?.rootViewController
         
         let gameCenterViewController = GKGameCenterViewController()
-        gameCenterViewController.gameCenterDelegate = self
+        gameCenterViewController.gameCenterDelegate = self as? GKGameCenterControllerDelegate
         gameCenterViewController.viewState = .leaderboards
         gameCenterViewController.leaderboardIdentifier = pointsLeaderboardID
         
@@ -124,69 +141,111 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
         viewController?.present(gameCenterViewController, animated: true, completion: nil)
     }
 
-    func startGameMusic() {
-        
-        // Create function to initiate music playing when game begins
-        let audioPath5 = Bundle.main.path(forResource: "music", ofType: "mp3")!
-        
-        do {
-            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: audioPath5)!)
-            musicPlayer.prepareToPlay()
-            musicPlayer.numberOfLoops = -1
-            musicPlayer.play()
-            
-        } catch let err as NSError {
-            
-            print(err.debugDescription)
-        }
-    }
+//    func startGameMusic() {
+//        
+//        // Create function to initiate music playing when game begins
+//        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
+//        
+//        do {
+//            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
+//            musicPlayer.prepareToPlay()
+//            musicPlayer.numberOfLoops = -1
+//            musicPlayer.play()
+//            
+//        } catch let err as NSError {
+//            
+//            print(err.debugDescription)
+//        }
+//    }
     
+    // IBActions for main menu buttons
     @IBAction func singlePlayerBtnPressed(_ sender: Any) {
         
-        musicPlayer.pause()
+//        musicPlayer.pause()
+    }
+    
+    @IBAction func showMatchMakerViewController(sender: UIButton) {
+        
+//        gameKitHelper.findMatch(minPlayers: 2,maxPlayers: 2, presentingViewController: self, delegate: self as! GameKitHelperDelegate)
     }
     
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
         
         // Add points to current score
-        score += 10
-        pokeMatchVC.pointsDisplay.text = "\(score)"
-        
-        // Submit score to GC leaderboard
-        let bestScoreInt = GKScore(leaderboardIdentifier: pointsLeaderboardID)
-        bestScoreInt.value = Int64(pokeMatchVC.gamePoints)
-        GKScore.report([bestScoreInt]) { (error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                print("Best Score submitted to your Leaderboard!")
-            }
-        }
-
+        score += 300
         
         saveHighScore(Int64(score))
         showLeaderboard()
+        updateAchievements()
     }
     
-    // Add points to the score and submit to GC
-//    @IBAction func addScoreAndSubmitToGC(_ sender: AnyObject) {
-//        var score = 0
-//        // Add points to current score
-//        score += 1
-//        pokeMatchVC.pointsDisplay.text = "\(score)"
-//        
-//        // Submit score to GC leaderboard
-//        let bestScoreInt = GKScore(leaderboardIdentifier: pointsLeaderboardID)
-//        bestScoreInt.value = Int64(pokeMatchVC.gamePoints)
-//        GKScore.report([bestScoreInt]) { (error) in
-//            if error != nil {
-//                print(error!.localizedDescription)
-//            } else {
-//                print("Best Score submitted to your Leaderboard!")
-//            }
+    // Achievements
+    func updateAchievements() {
+        
+        // Incremental achievement ************************************************************
+        if score <= 300 {
+            
+            let achievement300 = GKAchievement(identifier: inc300AchievementID)
+            
+            achievement300.percentComplete = Double(score / 1500)
+            achievement300.showsCompletionBanner = true  // use Game Center's UI
+            
+            GKAchievement.report([achievement300], withCompletionHandler: nil)
+        }
+        if score <= 300 {
+            inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
+            
+            progressPercentage = Int64(score * 1500 / 300)
+            achievementIdentifier = inc300AchievementID
+        }
+//        else if score <= 500 {
+//            inc500AchievementID = "500_POINTS" // Incremental 500 point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 500)
+//            achievementIdentifier = inc500AchievementID
 //        }
-//    }
+//        else if score <= 800 {
+//            inc800AchievementID = "800_POINTS" // Incremental 800 point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 800)
+//            achievementIdentifier = inc800AchievementID
+//        }
+//        else if score <= 1000 {
+//            inc1000AchievementID = "1000_POINTS" // Incremental 1000 point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 1000)
+//            achievementIdentifier = inc1000AchievementID
+//        }
+//        else if score <= 1200 {
+//            inc1200AchievementID = "1200_POINTS" // Incremental 1200 point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 1200)
+//            achievementIdentifier = inc1200AchievementID
+//        }
+//        else if score <= 1500 {
+//            incMaxAchievementID = "MAX_POINTS" // Incremental 1500 point achievement
+//            
+//            progressPercentage = Int64(score * 1500 / 1500)
+//            achievementIdentifier = incMaxAchievementID
+//        }
+        do {
+            fullProgressID = "MAX_POINTS" // Incremental Max point achievement
+            
+            progressPercentage = Int64(score * 1500 / 1500)
+            achievementIdentifier = fullProgressID
+        }
+        scoreAchievement = GKAchievement(identifier: achievementIdentifier)
+        scoreAchievement?.percentComplete = Double(progressPercentage)
+        
+        // Load the user's current achievement progress anytime
+        GKAchievement.loadAchievements() { achievements, error in
+            guard let achievements = achievements else { return }
+            
+            print(achievements)
+        }
+    }
+
     
     // Continue the game after GameCenter is closed
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {

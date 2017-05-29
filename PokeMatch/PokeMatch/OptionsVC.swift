@@ -15,7 +15,8 @@ class OptionsVC: UIViewController {
     
     let mainMenuVC = MainMenuVC()
     let pokeMatchVC = PokeMatchVC()
-//    let gameCenterVC = GameCenterVC()
+    
+    var musicPlayer = AVAudioPlayer()
     
     var musicSwitch: UISwitch!
     
@@ -24,6 +25,23 @@ class OptionsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    func startGameMusic() {
+        
+        // Create function to initiate music playing when game begins
+        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
+        
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+            
+        } catch let err as NSError {
+            
+            print(err.debugDescription)
+        }
     }
     
     // Button changes game screens background
@@ -42,9 +60,9 @@ class OptionsVC: UIViewController {
     @IBAction func musicOptionSwitch(_ sender: UISwitch) {
         
         if musicSwitch.isOn {
-            mainMenuVC.musicPlayer.play()
+            musicPlayer.play()
         } else {
-            mainMenuVC.musicPlayer.pause()
+            musicPlayer.pause()
         }
     }
     
