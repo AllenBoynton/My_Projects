@@ -10,3 +10,5 @@ Web View
 *.xcuserstate
 
 *.xcindexdb-wal
+
+*.hmap
