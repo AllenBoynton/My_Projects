@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/aboynton/School/My_Projects/BRYXBannerExample-cdfbqejqtuieulbrsgqhsisylcag/Build/Products/Debug-iphonesimulator/BRYXBanner.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "BRYXBanner-Swift.h",
+          'external-contents': "/Users/aboynton/School/My_Projects/BRYXBannerExample-cdfbqejqtuieulbrsgqhsisylcag/Build/Products/Debug-iphonesimulator/BRYXBanner.framework/Headers/BRYXBanner-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "BRYXBanner-umbrella.h",
+          'external-contents': "/Users/aboynton/School/Libraries/BRYXBanner-swift3/Example/Pods/Target Support Files/BRYXBanner/BRYXBanner-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aboynton/School/My_Projects/BRYXBannerExample-cdfbqejqtuieulbrsgqhsisylcag/Build/Products/Debug-iphonesimulator/BRYXBanner.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aboynton/School/My_Projects/BRYXBannerExample-cdfbqejqtuieulbrsgqhsisylcag/Build/Intermediates/Pods.build/Debug-iphonesimulator/BRYXBanner.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

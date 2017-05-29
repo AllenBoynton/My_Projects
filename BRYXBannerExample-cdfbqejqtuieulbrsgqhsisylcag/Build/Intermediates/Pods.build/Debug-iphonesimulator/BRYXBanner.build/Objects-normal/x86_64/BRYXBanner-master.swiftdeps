@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "0e074ef753d0fb6c62451e672e4fa5f3"
+build_time: [549292603, 724278000]
+inputs:
+  "/Users/aboynton/School/Libraries/BRYXBanner-swift3/Pod/Classes/Banner.swift": [525048722, 0]

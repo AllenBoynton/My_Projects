@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/aboynton/School/My_Projects/BRYXBannerExample-cdfbqejqtuieulbrsgqhsisylcag/Build/Products/Debug-iphonesimulator/BRYXBanner.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/aboynton/School/My_Projects/BRYXBannerExample-cdfbqejqtuieulbrsgqhsisylcag/Build/Intermediates/Pods.build/Debug-iphonesimulator/BRYXBanner.build/unextended-module.modulemap',
+    }]
+  }]
+}
