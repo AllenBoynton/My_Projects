@@ -36,8 +36,8 @@ class Highscores {
         scores.append(entry)
         
         let sortedScores = scores.sorted { (entry1, entry2) -> Bool in
-            let n1:String = entry1["score"]!
-            let n2:String = entry2["score"]!
+            let n1: String = entry1["score"]!
+            let n2: String = entry2["score"]!
             
             return Double(n1) < Double(n2)
         }

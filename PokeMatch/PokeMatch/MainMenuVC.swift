@@ -12,23 +12,22 @@ import AVFoundation
 import GameKit
 
 // Global identifiers
-let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
+//let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
 let pointsLeaderboardID = "HIGH_POINTS" // Score Leaderboard
 
 // Achievement identifiers
-var inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
+//var inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
 //        var inc500AchievementID = "500_POINTS" // Incremental 500 point achievement
 //        var inc800AchievementID = "800_POINTS" // Incremental 800 point achievement
 //        var inc1000AchievementID = "1000_POINTS" // Incremental 1000 point achievement
 //        var inc1200AchievementID = "1200_POINTS" // Incremental 1200 point achievement
 //        var incMaxAchievementID = "MAX_POINTS" // Incremental 1500 point achievement
-var fullProgressID = "MAX_POINTS" // Incremental Max point achievement
+//var fullProgressID = "MAX_POINTS" // Incremental Max point achievement
 
 class MainMenuVC: UIViewController {
     
     // Class delegates
     var pokeMatchVC: PokeMatchVC!
-//    var gameKitHelper: GameKitHelper!
     
     // Create AV player
     var musicPlayer: AVAudioPlayer!
@@ -42,12 +41,7 @@ class MainMenuVC: UIViewController {
     var score = 0
     
     // Game Center Achievement properties
-    var achievementIdentifier: String?
     var progressPercentage: Int64 = 0
-    var progressInLevelAchievement: Bool?
-    var levelAchievement: GKAchievement?
-    var scoreAchievement: GKAchievement?
-    var powerUpAchievement: GKAchievement?
     
     
     override func viewDidLoad() {
@@ -118,7 +112,8 @@ class MainMenuVC: UIViewController {
                 vc.gameCenterDelegate = self as? GKGameCenterControllerDelegate
                 vc.viewState = .leaderboards
                 
-                self.present(vc, animated: true, completion: nil)   })
+                self.present(vc, animated: true, completion: nil)
+            })
         }
     }
     
@@ -147,7 +142,7 @@ class MainMenuVC: UIViewController {
         let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
         
         do {
-            try bgMusic = AVAudioPlayer(contentsOf: url)
+            bgMusic = try AVAudioPlayer(contentsOf: url)
             bgMusic?.delegate = self as? AVAudioPlayerDelegate
             bgMusic?.prepareToPlay()
             bgMusic?.play()
@@ -157,12 +152,6 @@ class MainMenuVC: UIViewController {
     }
     
     // IBActions for main menu buttons
-    @IBAction func singlePlayerBtnPressed(_ sender: Any) {
-        
-//        bgMusic?.pause()
-    }
-    
-    
     
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {

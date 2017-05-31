@@ -34,6 +34,8 @@
 		099274EF1EDC93FE002C465A /* RandomArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274EE1EDC93FE002C465A /* RandomArray.swift */; };
 		099274F11EDCA3E9002C465A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274F01EDCA3E9002C465A /* Card.swift */; };
 		099274F31EDCC0C2002C465A /* HighScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274F21EDCC0C2002C465A /* HighScores.swift */; };
+		099274F91EDD26CF002C465A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099274F81EDD26CF002C465A /* StoreKit.framework */; };
+		099274FB1EDD289E002C465A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099274FA1EDD289E002C465A /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		099274EE1EDC93FE002C465A /* RandomArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomArray.swift; sourceTree = "<group>"; };
 		099274F01EDCA3E9002C465A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		099274F21EDCC0C2002C465A /* HighScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScores.swift; sourceTree = "<group>"; };
+		099274F81EDD26CF002C465A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		099274FA1EDD289E002C465A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099274FB1EDD289E002C465A /* AdSupport.framework in Frameworks */,
+				099274F91EDD26CF002C465A /* StoreKit.framework in Frameworks */,
 				0907CDBF1ED385C800350677 /* AVFoundation.framework in Frameworks */,
 				094AEF281ED8FF8F007FDFC9 /* GameKit.framework in Frameworks */,
 			);
@@ -241,6 +247,8 @@
 		0907CDBD1ED385B100350677 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				099274FA1EDD289E002C465A /* AdSupport.framework */,
+				099274F81EDD26CF002C465A /* StoreKit.framework */,
 				094AEF271ED8FF8F007FDFC9 /* GameKit.framework */,
 				0907CDBE1ED385C800350677 /* AVFoundation.framework */,
 			);
@@ -347,11 +355,14 @@
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.GameCenter = {
 								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};

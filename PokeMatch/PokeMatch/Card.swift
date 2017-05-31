@@ -13,13 +13,13 @@ class Card : CustomStringConvertible {
     
     // MARK: - Properties
     
-    var id:UUID = UUID.init()
-    var shown:Bool = false
-    var image:UIImage
+    var id: UUID = UUID.init()
+    var shown: Bool = false
+    var image: UIImage
     
     // MARK: - Lifecycle
     
-    init(image:UIImage) {
+    init(image: UIImage) {
         self.image = image
     }
     

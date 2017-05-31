@@ -15,7 +15,7 @@ protocol MemoryGameDelegate {
     func memoryGameDidStart(_ game: PokeMemoryGame)
     func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card])
     func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card])
-    func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval, points: Int)
+    func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval)
 }
 
 // MARK: - MemoryGame
@@ -37,12 +37,12 @@ class PokeMemoryGame {
         UIImage(named: "10")!
     ]
     
-    var cards:[Card] = [Card]()
+    var cards: [Card] = [Card]()
     var delegate: MemoryGameDelegate?
     var isPlaying: Bool = false
     
-    fileprivate var cardsShown:[Card] = [Card]()
-    fileprivate var startTime:Date?
+    fileprivate var cardsShown: [Card] = [Card]()
+    fileprivate var startTime: Date?
     
     var numberOfCards: Int {
         get {
@@ -50,7 +50,8 @@ class PokeMemoryGame {
         }
     }
     
-    var elapsedTime : TimeInterval {
+    // Calculates timer
+    var elapsedTime: TimeInterval {
         get {
             guard startTime != nil else {
                 return -1
@@ -61,7 +62,7 @@ class PokeMemoryGame {
     
     // MARK: - Methods
     
-    func newGame(_ cardsData:[UIImage]) {
+    func newGame(_ cardsData: [UIImage]) {
         cards = randomCards(cardsData)
         startTime = Date.init()
         isPlaying = true
@@ -87,7 +88,7 @@ class PokeMemoryGame {
             } else {
                 let unpairedCard = cardsShown.removeLast()
                 
-                let delayTime = DispatchTime.now() + Double(Int64(1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+                let delayTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
                 DispatchQueue.main.asyncAfter(deadline: delayTime) {
                     self.delegate?.memoryGame(self, hideCards:[card, unpairedCard])
                 }
@@ -110,7 +111,7 @@ class PokeMemoryGame {
     }
     
     func indexForCard(_ card: Card) -> Int? {
-        for index in 0...cards.count-1 {
+        for index in 0...cards.count - 1 {
             if card === cards[index] {
                 return index
             }
@@ -120,7 +121,7 @@ class PokeMemoryGame {
     
     fileprivate func finishGame() {
         isPlaying = false
-        delegate?.memoryGameDidEnd(self, elapsedTime: elapsedTime, points: Int)
+        delegate?.memoryGameDidEnd(self, elapsedTime: elapsedTime)
     }
     
     fileprivate func unpairedCardShown() -> Bool {

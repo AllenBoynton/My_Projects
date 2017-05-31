@@ -11,75 +11,46 @@ import AVFoundation
 import GameKit
 
 
-class OptionsVC: UIViewController, UIPickerViewDelegate {
+class OptionsVC: UIViewController {
     
     let mainMenuVC = MainMenuVC()
     let pokeMatchVC = PokeMatchVC()
     
     var musicPlayer = AVAudioPlayer()
     
-    var musicSwitch: UISwitch!
-    
-    @IBOutlet weak var textCardList: UITextField!
-    @IBOutlet weak var dropDownList: UIPickerView!
+    // Outlets to initialize the items
+    @IBOutlet weak var difficultyPicker: UIPickerView!
     @IBOutlet weak var radioButtonOne: UIButton!
     
-    // Card Option Themes
-    var cardsArray: [(name: String, image: Any)] = [("Popular", UIImage(named: "\(25)")!), ("Powerful", UIImage(named: "\(500)")!)]
-
+    var musicSwitch: UISwitch?
+    
+    var difficultyArray: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Picker data
+        difficultyArray = ["Easy", "Medium", "Hard"]
+        
 
     }
     
-    // Dropdown list methods
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    // Create function to initiate music playing when game begins
+    func startGameMusic() {
         
-        return 2
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
         
-        return cardsArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        self.view.endEditing(true)
-        return cardsArray[row].name
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        self.textCardList.text = self.cardsArray[row].image as? String
-        self.dropDownList.isHidden = true
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        
-        if textField == self.textCardList {
-            self.dropDownList.isHidden = false
+        do {
+            bgMusic! = try AVAudioPlayer(contentsOf: url)
+            bgMusic!.delegate = self as? AVAudioPlayerDelegate
+            bgMusic!.prepareToPlay()
+            bgMusic!.play()
+        } catch let error as NSError {
+            print("audioPlayer error \(error.localizedDescription)")
         }
-        textField.endEditing(true)
     }
     
-//    func startGameMusic() {
-//        
-//        // Create function to initiate music playing when game begins
-//        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
-//        
-//        do {
-//            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
-//            musicPlayer.prepareToPlay()
-//            musicPlayer.numberOfLoops = -1
-//            musicPlayer.play()
-//            
-//        } catch let err as NSError {
-//            
-//            print(err.debugDescription)
-//        }
-//    }
-    
+        
     // Button changes game screens background
     @IBAction func pushedButtonOne() {
         
@@ -92,13 +63,17 @@ class OptionsVC: UIViewController, UIPickerViewDelegate {
         
         mainMenuVC.showLeaderboard()
     }
+    
     // Audio button mutes/unmutes music
     @IBAction func musicOptionSwitch(_ sender: UISwitch) {
         
-        if musicSwitch.isOn {
-            musicPlayer.play()
+        if (sender.isOn == true) {
+            musicSwitch?.setOn(false, animated: true)
+            bgMusic?.play()
         } else {
-            musicPlayer.pause()
+            musicSwitch?.setOn(true, animated: true)
+            musicSwitch?.isOn = true
+            bgMusic?.pause()
         }
     }
     
