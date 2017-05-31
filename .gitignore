@@ -14,3 +14,5 @@ Web View
 *.hmap
 
 *.xcactivitylog
+
+ModuleCache/modules.timestamp
