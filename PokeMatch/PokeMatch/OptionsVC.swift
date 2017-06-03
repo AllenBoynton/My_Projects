@@ -19,8 +19,11 @@ class OptionsVC: UIViewController {
     var musicPlayer = AVAudioPlayer()
     
     // Outlets to initialize the items
-    @IBOutlet weak var difficultyPicker: UIPickerView!
-    @IBOutlet weak var radioButtonOne: UIButton!
+    @IBOutlet weak var bgImage: UIImageView!
+    
+    
+    let imagePassed = UIImage(named: "bg")
+    let bgImage2 = UIImage(named: "bg2")
     
     var musicSwitch: UISwitch?
     
@@ -52,10 +55,11 @@ class OptionsVC: UIViewController {
     
         
     // Button changes game screens background
-    @IBAction func pushedButtonOne() {
+    @IBAction func changeBGImageBtnPressed(_ sender: UIButton) {
         
-        let image = UIImage(named: "bg2")
-        radioButtonOne.setImage(image, for: UIControlState.normal)
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
+        myVC.theImagePassed = bgImage.image!
+        navigationController?.pushViewController(myVC, animated: true)
     }
     
     // Button brings you to GC leaderboard

@@ -12,7 +12,7 @@ import UIKit.UIImage
 // MARK: - MemoryGameDelegate
 
 protocol MemoryGameDelegate {
-    func memoryGameDidStart(_ game: PokeMemoryGame)
+//    func memoryGameDidStart(_ game: PokeMemoryGame)
     func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card])
     func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card])
     func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval)
@@ -66,7 +66,7 @@ class PokeMemoryGame {
         cards = randomCards(cardsData)
         startTime = Date.init()
         isPlaying = true
-        delegate?.memoryGameDidStart(self)
+//        delegate?.memoryGameDidStart(self)
     }
     
     func stopGame() {
@@ -88,7 +88,7 @@ class PokeMemoryGame {
             } else {
                 let unpairedCard = cardsShown.removeLast()
                 
-                let delayTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+                let delayTime = DispatchTime.now() + Double(Int64(100.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
                 DispatchQueue.main.asyncAfter(deadline: delayTime) {
                     self.delegate?.memoryGame(self, hideCards:[card, unpairedCard])
                 }
