@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tll-LZ-yxO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vf1-Is-Asn">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +47,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="PokeMatchVC" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="E7I-19-aJE"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="PokeMatchVC" id="E7I-19-aJE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67Y-bL-Wdc">
@@ -60,7 +60,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="wLW-oD-n7h" kind="presentation" identifier="OptionsVC" modalTransitionStyle="partialCurl" id="Hhr-6w-8mr"/>
+                                            <segue destination="wLW-oD-n7h" kind="show" identifier="OptionsVC" id="Hhr-6w-8mr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svK-0z-9Hz">
-                                <rect key="frame" x="128" y="190" width="64" height="64"/>
+                                <rect key="frame" x="128" y="150" width="64" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="svK-0z-9Hz" secondAttribute="height" multiplier="1:1" id="wyE-CN-ErH"/>
@@ -91,7 +91,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gEd-YG-YiQ">
-                                <rect key="frame" x="120" y="254" width="80" height="21"/>
+                                <rect key="frame" x="120" y="214" width="80" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mLx-Cq-tbW"/>
                                 </constraints>
@@ -99,16 +99,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokeMatch" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-gW-roJ">
-                                <rect key="frame" x="0.0" y="60" width="320" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="GlL-D2-xCk"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memorygame" translatesAutoresizingMaskIntoConstraints="NO" id="8we-7v-DQd">
-                                <rect key="frame" x="16" y="140" width="288.5" height="40"/>
+                                <rect key="frame" x="16" y="100" width="288.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YJu-Nv-GD3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokeMatch" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-gW-roJ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="GlL-D2-xCk"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -131,18 +131,19 @@
                             <constraint firstAttribute="trailing" secondItem="Brl-gW-roJ" secondAttribute="trailing" id="hcF-es-nKY"/>
                             <constraint firstItem="9Xu-8g-q8s" firstAttribute="leading" secondItem="uOC-pB-snq" secondAttribute="leading" id="id6-rV-54o"/>
                             <constraint firstAttribute="trailing" secondItem="9Xu-8g-q8s" secondAttribute="trailing" constant="8" id="j7e-VJ-6sc"/>
+                            <constraint firstItem="Brl-gW-roJ" firstAttribute="top" secondItem="Pl3-SZ-UxZ" secondAttribute="bottom" id="juy-Zs-HIA"/>
                             <constraint firstItem="svK-0z-9Hz" firstAttribute="centerX" secondItem="uOC-pB-snq" secondAttribute="centerX" id="kuC-Fh-LMx"/>
                             <constraint firstItem="AOK-FZ-MnE" firstAttribute="height" secondItem="uOC-pB-snq" secondAttribute="height" multiplier="0.15" id="mAw-Y4-PGZ"/>
                             <constraint firstItem="AOK-FZ-MnE" firstAttribute="width" secondItem="uOC-pB-snq" secondAttribute="width" multiplier="0.5" id="njq-vH-SXZ"/>
                             <constraint firstItem="PE9-Hx-yGG" firstAttribute="top" secondItem="uOC-pB-snq" secondAttribute="top" id="qV1-ql-CuT"/>
                             <constraint firstItem="gEd-YG-YiQ" firstAttribute="centerX" secondItem="svK-0z-9Hz" secondAttribute="centerX" id="s3R-RY-OD9"/>
-                            <constraint firstItem="Brl-gW-roJ" firstAttribute="top" secondItem="Pl3-SZ-UxZ" secondAttribute="bottom" constant="40" id="tYe-mg-Dax"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eA6-wN-U9Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJ1-7n-AOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260.625" y="51.760563380281688"/>
+            <point key="canvasLocation" x="1258.125" y="51.760563380281688"/>
         </scene>
         <!--OptionsVC-->
         <scene sceneID="fEE-j5-N5f">
@@ -215,8 +216,9 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pgH-jL-UeI">
                                                 <rect key="frame" x="152.5" y="0.0" width="60" height="110"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="F1P-DX-lIR">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" highlightedImage="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="F1P-DX-lIR">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="60" id="4CM-uy-QKr"/>
                                                             <constraint firstAttribute="height" constant="85" id="ZcW-b7-Zek"/>
@@ -224,6 +226,9 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="4VB-Js-KRA" appends="YES" id="ali-bc-ON3"/>
+                                                        </connections>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Un-kz-m7S" customClass="RoundedButtons" customModule="Poke_Match" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="90" width="60" height="20"/>
@@ -368,11 +373,17 @@
                     </view>
                     <connections>
                         <outlet property="bgImage" destination="F1P-DX-lIR" id="3g4-HS-Wo8"/>
+                        <outlet property="changeImageButton" destination="4Un-kz-m7S" id="nJ8-vL-4aP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlb-gq-eHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4VB-Js-KRA">
+                    <connections>
+                        <action selector="selectImageFromImageLibrary:" destination="wLW-oD-n7h" id="Gnw-Ok-Zxg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="261" y="794"/>
+            <point key="canvasLocation" x="1258" y="815"/>
         </scene>
         <!--Poke MatchVC-->
         <scene sceneID="tne-QT-ifu">
@@ -431,7 +442,7 @@
                                     <constraint firstItem="H4c-hG-6hQ" firstAttribute="leading" secondItem="xVt-VA-AL2" secondAttribute="leading" id="iM1-uc-eJD"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" highlightedImage="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="N3E-Nq-v74">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N3E-Nq-v74">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTL-YP-sUm" userLabel="Points View">
@@ -555,7 +566,7 @@
                                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-Zq-Owi" customClass="RoundedImageView" customModule="Poke_Match" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-IU-pFI" userLabel="Poke Image View" customClass="RoundedImageView" customModule="Poke_Match" customModuleProvider="target">
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="200" highlightedImage="question" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-IU-pFI" userLabel="Poke Image View" customClass="RoundedImageView" customModule="Poke_Match" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 </imageView>
                                             </subviews>
@@ -615,9 +626,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bgImageView" destination="N3E-Nq-v74" id="a0j-Jw-DYs"/>
                         <outlet property="bottomView" destination="PmH-Sr-PBK" id="1iU-hJ-s9B"/>
                         <outlet property="collectionView" destination="Kbz-5F-YG3" id="4gz-7h-G3d"/>
+                        <outlet property="imagePassed" destination="N3E-Nq-v74" id="NtK-M6-LOH"/>
                         <outlet property="pointsDisplay" destination="vf2-qJ-2V4" id="A0d-86-0i1"/>
                         <outlet property="pointsView" destination="DTL-YP-sUm" id="dGv-Hg-4Nz"/>
                         <outlet property="startButton" destination="UD9-oZ-ell" id="7td-UO-vJW"/>
@@ -626,10 +637,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102.5" y="51.760563380281688"/>
+            <point key="canvasLocation" x="2100" y="51.760563380281688"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lYQ-mF-Nrr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vf1-Is-Asn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" userInteractionEnabled="NO" contentMode="scaleToFill" id="wyk-hZ-VFt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tll-LZ-yxO" kind="relationship" relationship="rootViewController" id="QIq-3T-m5R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8c-3M-UxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="52"/>
         </scene>
     </scenes>
     <resources>
+        <image name="200" width="96" height="96"/>
         <image name="500" width="96" height="96"/>
         <image name="6" width="137" height="120"/>
         <image name="PokeMatch" width="429" height="122"/>

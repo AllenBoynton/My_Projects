@@ -8,10 +8,13 @@
 
 import UIKit
 import AVFoundation
+import AVKit
+import CoreGraphics
+import CoreMedia
 import GameKit
 
 
-class OptionsVC: UIViewController {
+class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let mainMenuVC = MainMenuVC()
     let pokeMatchVC = PokeMatchVC()
@@ -20,10 +23,9 @@ class OptionsVC: UIViewController {
     
     // Outlets to initialize the items
     @IBOutlet weak var bgImage: UIImageView!
-    
+    @IBOutlet weak var changeImageButton: UIButton!
     
     let imagePassed = UIImage(named: "bg")
-    let bgImage2 = UIImage(named: "bg2")
     
     var musicSwitch: UISwitch?
     
@@ -32,10 +34,11 @@ class OptionsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Start with image Change button not enabled
+//        changeImageButton.isEnabled = false
+        
         // Picker data
         difficultyArray = ["Easy", "Medium", "Hard"]
-        
-
     }
     
     // Create function to initiate music playing when game begins
@@ -53,18 +56,36 @@ class OptionsVC: UIViewController {
         }
     }
     
+    // Dismesses image controller when done
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Finalizes pick of image
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        bgImage.image = selectedPhoto
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Pick new image from library
+    @IBAction func selectImageFromImageLibrary(_ sender: UITapGestureRecognizer) {
+        let imagePickerController = UIImagePickerController()
         
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+            
     // Button changes game screens background
     @IBAction func changeBGImageBtnPressed(_ sender: UIButton) {
-        
         let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
-        myVC.theImagePassed = bgImage.image!
+        myVC.theImagePassed = self.bgImage.image!
         navigationController?.pushViewController(myVC, animated: true)
     }
     
     // Button brings you to GC leaderboard
     @IBAction func gcLeaderboardBtn(_ sender: Any) {
-        
         mainMenuVC.showLeaderboard()
     }
     

@@ -31,7 +31,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Collection view to hold all images
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var imagePassed: UIImageView!
     
     // Outlet for game displays
     @IBOutlet weak var pointsDisplay: UILabel!
@@ -70,7 +70,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         super.viewDidLoad()
         
         // Passing image from OptionsVC
-        bgImageView.image = theImagePassed
+        imagePassed.image = theImagePassed
 
         // Game delegate
 //        gameController.delegate = self
@@ -185,7 +185,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         timerDisplay.text = String(format: "%@:%@:%@", NSLocalizedString("", comment: ""), gameController.elapsedTime)
         
         collectionView.reloadData()
-        collectionView.isUserInteractionEnabled = true
+//        collectionView.isUserInteractionEnabled = true
     }
 
 //    func savePlayerScore(_ name: String, score: TimeInterval) {
