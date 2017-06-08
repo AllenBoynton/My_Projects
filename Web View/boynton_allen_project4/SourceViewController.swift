@@ -19,10 +19,11 @@ class SourceViewController: UIViewController, NSURLConnectionDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        request = URLRequest(url: urlString!)
-        
-        connection = URLSession(configuration: request!, delegate: self, delegateQueue: true)
-        
+        // Request connection to url and retrieve data
+        func connection (_ connection: NSURLConnection, didReceiveData data: Data)  -> Void {
+            
+            requestData.append(data)
+        }
     }
     
     @IBOutlet weak var myWebSource: UITextView!

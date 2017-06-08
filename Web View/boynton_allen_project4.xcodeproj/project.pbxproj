@@ -142,6 +142,7 @@
 				TargetAttributes = {
 					094859EF1BFACD3900317C9F = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6GTM24L94G;
 						LastSwiftMigration = 0830;
 					};
 				};
@@ -302,7 +303,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6GTM24L94G;
 				INFOPLIST_FILE = boynton_allen_project4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullsail.boynton-allen-project4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,7 +318,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6GTM24L94G;
 				INFOPLIST_FILE = boynton_allen_project4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullsail.boynton-allen-project4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
