@@ -56,12 +56,12 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-    // Dismesses image controller when done
+    // Allows for VC to be dismissed
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
-    // Finalizes pick of image
+    // Image picker picks selected image and dismisses VC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
         bgImage.image = selectedPhoto
@@ -79,9 +79,20 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             
     // Button changes game screens background
     @IBAction func changeBGImageBtnPressed(_ sender: UIButton) {
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
-        myVC.theImagePassed = self.bgImage.image!
-        navigationController?.pushViewController(myVC, animated: true)
+        
+        let alert = UIAlertController(title: "Would you like to personalize your background?", message: "Tap the image above the \"Change\" button to pick a New Image", preferredStyle: .alert)
+        
+        // Dismiss button
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        // Change font of the title and message
+        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
+        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
+            myVC.theImagePassed = self.bgImage.image!
+            navigationController?.pushViewController(myVC, animated: true)
     }
     
     // Button brings you to GC leaderboard
@@ -91,7 +102,6 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     // Audio button mutes/unmutes music
     @IBAction func musicOptionSwitch(_ sender: UISwitch) {
-        
         if (sender.isOn == true) {
             musicSwitch?.setOn(false, animated: true)
             bgMusic?.play()
@@ -103,7 +113,6 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     @IBAction func backToMain(_ sender: UIButton) {
-        
         dismiss(animated: true, completion: nil)
     }
 

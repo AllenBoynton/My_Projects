@@ -9,6 +9,7 @@
 
 import UIKit
 import AVFoundation
+import UserNotifications
 import GameKit
 
 // Protocol to inform the delegate GameVC if a game is over
@@ -68,6 +69,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(showNotification), userInfo: nil, repeats: true)
         
         // Passing image from OptionsVC
         imagePassed.image = theImagePassed
@@ -140,6 +143,30 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             print("audioPlayer error \(error.localizedDescription)")
         }
     }
+    
+    // Notification function
+    func showNotification()  {
+        
+        // Create timer for notification to alert once app is exited
+        time -= 1
+        
+        if time <= 0 {
+            
+            let notification = UNMutableNotificationContent()
+            
+            notification.title = "Go back to PokéMatch?"
+            notification.body = "See you next time!"
+            notification.badge = 1
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+            
+            let request = UNNotificationRequest(identifier: "bgChange", content: notification, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+            timer?.invalidate()
+        }
+    }
+    
     
     // Starts time when play button is pressed.
 //    func startGameTime() {

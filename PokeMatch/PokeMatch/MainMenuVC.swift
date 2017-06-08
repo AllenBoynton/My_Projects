@@ -9,6 +9,7 @@
 
 import UIKit
 import AVFoundation
+import UserNotifications
 import GameKit
 
 // Global identifiers
@@ -46,6 +47,8 @@ class MainMenuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 
         
         authenticatePlayer()
         startGameMusic()
@@ -124,9 +127,7 @@ class MainMenuVC: UIViewController {
     
     // Retrieves the GC VC leaderboard
     func showLeaderboard() {
-        
         let viewController = self.view.window?.rootViewController
-        
         let gameCenterViewController = GKGameCenterViewController()
         gameCenterViewController.gameCenterDelegate = self as? GKGameCenterControllerDelegate
         gameCenterViewController.viewState = .leaderboards
@@ -164,6 +165,19 @@ class MainMenuVC: UIViewController {
 //        updateAchievements()
     }
     
+    @IBAction func enterOptionsWithAlert(_ sender: AnyObject) {
+        
+//        let alert = UIAlertController(title: "Would you like to personalize your background?", message: "Tap the image above the \"Change\" button to pick a New Image", preferredStyle: .alert)
+//        
+//        // Dismiss button
+//        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+//        
+//        self.present(alert, animated: true, completion: nil)
+//        
+//        // Change font of the title and message
+//        let _:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)! ]
+//        let _:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)! ]
+    }
     // Achievements
 //    func updateAchievements() {
 //        

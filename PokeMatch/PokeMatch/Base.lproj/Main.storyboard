@@ -60,6 +60,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="enterOptionsWithAlert:" destination="tll-LZ-yxO" eventType="touchUpInside" id="fJK-fs-Ozu"/>
                                             <segue destination="wLW-oD-n7h" kind="show" identifier="OptionsVC" id="Hhr-6w-8mr"/>
                                         </connections>
                                     </button>
