@@ -8,9 +8,6 @@
 
 import UIKit
 import AVFoundation
-import AVKit
-import CoreGraphics
-import CoreMedia
 import GameKit
 
 
@@ -68,6 +65,9 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         dismiss(animated: true, completion: nil)
     }
     
+    // Prepare for return from next VC when back button is tapped
+    
+    
     // Pick new image from library
     @IBAction func selectImageFromImageLibrary(_ sender: UITapGestureRecognizer) {
         let imagePickerController = UIImagePickerController()
@@ -90,9 +90,10 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         // Change font of the title and message
         let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
         let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
-            myVC.theImagePassed = self.bgImage.image!
-            navigationController?.pushViewController(myVC, animated: true)
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
+        myVC.theImagePassed = self.bgImage.image!
+//        navigationController?.pushViewController(myVC, animated: true)
     }
     
     // Button brings you to GC leaderboard

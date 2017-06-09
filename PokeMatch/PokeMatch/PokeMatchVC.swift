@@ -28,7 +28,7 @@ var wrong:     AVAudioPlayer?
 
 let cellIdentifier = "PokeCell"
 
-class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout { //, MemoryGameDelegate {
+class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MemoryGameDelegate {
     
     // Collection view to hold all images
     @IBOutlet weak var collectionView: UICollectionView!
@@ -70,16 +70,23 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(showNotification), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(showNotification), userInfo: nil, repeats: true)
         
-        // Passing image from OptionsVC
-        imagePassed.image = theImagePassed
-
+        // Setting BG image
+        if imagePassed == nil {
+            imagePassed.image = UIImage(named: "bg")
+        } else {
+            // Passing image from OptionsVC
+            imagePassed.image = theImagePassed
+        }
+        
         // Game delegate
-//        gameController.delegate = self
+        gameController.delegate = self
         
         // Methods contained to reset game
-        resetGame()
+        if gameController.isPlaying {
+            resetGame()
+        }
     }
     
     // Sound files
@@ -145,28 +152,34 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     // Notification function
-    func showNotification()  {
-        // Create timer for notification to alert once app is exited
-        time -= 1
-        
-        if time <= 0 {
-            
-            let notification = UNMutableNotificationContent()
-            
-            notification.title = "Go back to PokéMatch?"
-            notification.body = "See you next time!"
-            notification.badge = 1
-            
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            
-            let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-            
-            timer?.invalidate()
-            bgMusic?.pause()
-        }
-    }
-    
+//    func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
+//        
+//        // Create timer for notification to alert once app is exited
+//        let notification = UNMutableNotificationContent()
+//        
+//        notification.title = "Final Notification"
+//        notification.subtitle = "Go back to PokéMatch?"
+//        notification.body = "Don't forget to finish your game!"
+//        notification.badge = 1
+//        
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+//        
+//        let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
+//        
+//        // Add to Notification Center
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+//            
+//            if error != nil {
+//                print(error.debugDescription)
+//                completion(false)
+//            } else {
+//                completion(true)
+//            }
+//        })
+//        
+//        timer?.invalidate()
+//        bgMusic?.pause()
+//    }
     
     // Starts time when play button is pressed.
 //    func startGameTime() {
@@ -174,47 +187,46 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
 //        startTime = Date().timeIntervalSinceReferenceDate - elapsed
 //        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
 //    }
-//    
-//    // Updates game time on displays
-//    @objc func updateCounter() -> String {
+    
+    // Updates game time on displays
+    func startGameTimer() -> String {
+        
+        // Calculate total time since timer started in seconds
+        time = gameController.elapsedTime
+        
+        // Calculate minutes
+        let minutes = UInt32(time / 60.0)
+        time -= (TimeInterval(minutes) * 60)
+        
+        // Calculate seconds
+        let seconds = UInt32(time)
+        time -= TimeInterval(seconds)
+        
+        // Calculate milliseconds
+        let milliseconds = UInt32(time * 100)
+        
+        // Format time vars with leading zero
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        let strMilliseconds = String(format: "%02d", milliseconds)
+        
+        // Add time vars to relevant labels
+        display = String(format: "\(strMinutes):\(strSeconds):\(strMilliseconds)", NSLocalizedString("", comment: ""), gameController.elapsedTime)
+        
+        // Display game time counter
+        timerDisplay.text = display
+        print(display)
+        
+        return display
+    }
+    
+//    func gameTimerAction() {
+//        timerDisplay.text = String(format: "%02.f:%02.f:%02.f", NSLocalizedString("", comment: ""), gameController.elapsedTime)
 //        
 //        collectionView.reloadData()
 //        collectionView.isUserInteractionEnabled = true
-//        
-//        // Calculate total time since timer started in seconds
-//        time = Date().timeIntervalSinceReferenceDate - startTime
-//        
-//        // Calculate minutes
-//        let minutes = UInt8(time / 60.0)
-//        time -= (TimeInterval(minutes) * 60)
-//        
-//        // Calculate seconds
-//        let seconds = UInt8(time)
-//        time -= TimeInterval(seconds)
-//        
-//        // Calculate milliseconds
-//        let milliseconds = UInt8(time * 100)
-//        
-//        // Format time vars with leading zero
-//        let strMinutes = String(format: "%02d", minutes)
-//        let strSeconds = String(format: "%02d", seconds)
-//        let strMilliseconds = String(format: "%02d", milliseconds)
-//        
-//        // Add time vars to relevant labels
-//        display = "\(strMinutes):\(strSeconds):\(strMilliseconds)"
-//        timerDisplay.text = display
-//        print(display)
-//        
-//        return display
 //    }
-    
-    func gameTimerAction() {
-        timerDisplay.text = String(format: "%@:%@:%@", NSLocalizedString("", comment: ""), gameController.elapsedTime)
-        
-        collectionView.reloadData()
-//        collectionView.isUserInteractionEnabled = true
-    }
-
+//
 //    func savePlayerScore(_ name: String, score: TimeInterval) {
 //        Highscores.sharedInstance.saveHighscore(name, score: score)
 //    }
@@ -230,14 +242,56 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         gameController.stopGame()
         if timer?.isValid == true {
             timer?.invalidate()
-            timer = nil
         }
-        collectionView.isUserInteractionEnabled = false
+        collectionView.isUserInteractionEnabled = true
         collectionView.reloadData()
-        
         
         startButton.isHidden = false
         startButton.isEnabled = true
+    }
+    
+    // MARK: - MemoryGameDelegate
+    
+    func memoryGameDidStart(_ game: PokeMemoryGame) {
+        
+        collectionView.reloadData()
+        collectionView.isUserInteractionEnabled = true
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
+    }
+    
+    
+    //
+    func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card]) {
+        gamePoints -= 25
+        patSound?.play()
+        
+        for card in cards {
+            guard let index = gameController.indexForCard(card) else { continue }
+            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
+            cell.showCard(true, animated: true)
+        }
+    }
+    
+    //
+    func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card]) {
+        gamePoints += 100
+        prepareAudios()
+        chime?.play()
+        
+        for card in cards {
+            guard let index = gameController.indexForCard(card) else { continue }
+            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
+            cell.showCard(false, animated: true)
+        }
+    }
+    
+    //
+    func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
+        timer?.invalidate()
+        prepareAudios()
+        tadaSound?.play()
+        cheering?.play()
     }
     
     // MARK: - UICollectionViewDataSource
@@ -251,6 +305,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PokeVCell
         cell.showCard(false, animated: false)
         
@@ -263,6 +318,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let cell = collectionView.cellForItem(at: indexPath) as! PokeVCell
         
         if cell.shown { return }
@@ -280,52 +336,12 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
-    // MARK: - MemoryGameDelegate
-    
-//    func memoryGameDidStart(_ game: PokeMemoryGame) {
-//        
-//        collectionView.reloadData()
-//        collectionView.isUserInteractionEnabled = true
-//        
-//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(gameTimerAction), userInfo: nil, repeats: true)
-//
-//    }
-    
-    func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card]) {
-        gamePoints -= 25
-        patSound?.play()
-        
-        for card in cards {
-            guard let index = gameController.indexForCard(card) else { continue }
-            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
-            cell.showCard(true, animated: true)
-        }
-    }
-    
-    func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card]) {
-        gamePoints += 100
-        prepareAudios()
-        chime?.play()
-        
-        for card in cards {
-            guard let index = gameController.indexForCard(card) else { continue }
-            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
-            cell.showCard(false, animated: true)
-        }
-    }
-    
-    func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
-        timer?.invalidate()
-        
-        prepareAudios()
-        tadaSound?.play()
-        cheering?.play()
-        
-    }
     
     // MARK - IBAction functions
     
     @IBAction func startButton(_ sender: UIButton) {
+        
+        setupNewGame()
         
         // Button sound
         prepareAudios()
@@ -340,11 +356,11 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         collectionView.isHidden = false
         bottomView.isHidden = false
         
-        collectionView.reloadData()
-        collectionView.isUserInteractionEnabled = true
+//        collectionView.reloadData()
+//        collectionView.isUserInteractionEnabled = true
         
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(gameTimerAction), userInfo: nil, repeats: true)
-        
+//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
+//        
 //        if gameController.isPlaying {
 //            resetGame()
 //            startButton.setTitle(NSLocalizedString("Start", comment: "start"), for: UIControlState())
@@ -371,9 +387,15 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Back button to bring to main menu
     @IBAction func backButtonPressed(_ sender: Any) {
+//        showNotification(inSeconds: 5, completion: { success in
+//            if success {
+//                print("Successfully scheduled notification")
+//            } else {
+//                print("Error scheduling notification")
+//            }
+//        })
         
         dismiss(animated: true, completion: nil)
-        timer?.invalidate()
+//        timer?.invalidate()
     }
-    
 }

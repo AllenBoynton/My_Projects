@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vf1-Is-Asn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tll-LZ-yxO">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -47,7 +48,10 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="PokeMatchVC" id="E7I-19-aJE"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="PokeMatchVC" id="E7I-19-aJE">
+                                                <segue key="commit" inheritsFrom="parent" id="dAC-7k-MUo"/>
+                                                <segue key="preview" inheritsFrom="commit" id="Cg7-uD-yah"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67Y-bL-Wdc">
@@ -61,7 +65,10 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="enterOptionsWithAlert:" destination="tll-LZ-yxO" eventType="touchUpInside" id="fJK-fs-Ozu"/>
-                                            <segue destination="wLW-oD-n7h" kind="show" identifier="OptionsVC" id="Hhr-6w-8mr"/>
+                                            <segue destination="wLW-oD-n7h" kind="show" identifier="OptionsVC" id="Hhr-6w-8mr">
+                                                <segue key="commit" inheritsFrom="parent" id="Pn4-yn-zSL"/>
+                                                <segue key="preview" inheritsFrom="commit" id="qsz-BX-6Ys"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -443,7 +450,7 @@
                                     <constraint firstItem="H4c-hG-6hQ" firstAttribute="leading" secondItem="xVt-VA-AL2" secondAttribute="leading" id="iM1-uc-eJD"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N3E-Nq-v74">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="N3E-Nq-v74">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTL-YP-sUm" userLabel="Points View">
@@ -460,7 +467,7 @@
                                                 <rect key="frame" x="145" y="0.0" width="145" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="27"/>
-                                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.99986320734024048" green="0.88060528039932251" blue="0.19105792045593262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="shadowColor" red="0.127836436" green="0.2871302664" blue="0.72907185549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <size key="shadowOffset" width="-2" height="1"/>
@@ -507,7 +514,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-Mw-z0P" userLabel="Timer Display">
                                                 <rect key="frame" x="0.0" y="23.5" width="140" height="36.5"/>
                                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="28"/>
-                                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="1" green="0.8726733922958374" blue="0.18637603521347046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.1035917625" green="0.23175284269999999" blue="0.58173000809999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <size key="shadowOffset" width="-2" height="1"/>
@@ -520,7 +527,7 @@
                                             <constraint firstAttribute="width" constant="140" id="gmf-gi-yoS"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="500" translatesAutoresizingMaskIntoConstraints="NO" id="pat-SS-tKh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="472" translatesAutoresizingMaskIntoConstraints="NO" id="pat-SS-tKh">
                                         <rect key="frame" x="15" y="8.5" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -564,10 +571,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-Zq-Owi" customClass="RoundedImageView" customModule="Poke_Match" customModuleProvider="target">
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-Zq-Owi" customClass="BorderImageView" customModule="Poke_Match" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="243" highlightedImage="question" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-IU-pFI" userLabel="Poke Image View" customClass="RoundedImageView" customModule="Poke_Match" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="210" highlightedImage="question" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-IU-pFI" userLabel="Poke Image View" customClass="BorderImageView" customModule="Poke_Match" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
@@ -641,28 +648,10 @@
             </objects>
             <point key="canvasLocation" x="2100" y="51.760563380281688"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lYQ-mF-Nrr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vf1-Is-Asn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" userInteractionEnabled="NO" contentMode="scaleToFill" id="wyk-hZ-VFt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tll-LZ-yxO" kind="relationship" relationship="rootViewController" id="QIq-3T-m5R"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t8c-3M-UxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="384" y="52"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="243" width="96" height="96"/>
-        <image name="500" width="96" height="96"/>
+        <image name="210" width="120" height="120"/>
+        <image name="472" width="120" height="120"/>
         <image name="6" width="137" height="120"/>
         <image name="PokeMatch" width="429" height="122"/>
         <image name="back" width="100" height="67"/>
@@ -678,5 +667,9 @@
         <image name="points" width="711" height="149"/>
         <image name="question" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hhr-6w-8mr"/>
+        <segue reference="E7I-19-aJE"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

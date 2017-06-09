@@ -48,8 +48,6 @@ class MainMenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 
-        
         authenticatePlayer()
         startGameMusic()
     }
@@ -76,14 +74,11 @@ class MainMenuVC: UIViewController {
                 // Get the default leaderboard ID
                 self.localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifier, error) in
                     if error != nil {
-                        
                         print(error as Any)
                     } else {
-                        
                         self.gcDefaultLeaderBoard = leaderboardIdentifier!
                     }
                 })
-                
             } else {
                 // 3. Game center is not enabled on the users device
                 self.gcEnabled = false
@@ -127,6 +122,7 @@ class MainMenuVC: UIViewController {
     
     // Retrieves the GC VC leaderboard
     func showLeaderboard() {
+        
         let viewController = self.view.window?.rootViewController
         let gameCenterViewController = GKGameCenterViewController()
         gameCenterViewController.gameCenterDelegate = self as? GKGameCenterControllerDelegate
@@ -173,9 +169,7 @@ class MainMenuVC: UIViewController {
 //        
 //        self.present(alert, animated: true, completion: nil)
 //        
-//        // Change font of the title and message
-//        let _:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)! ]
-//        let _:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)! ]
+        
     }
     // Achievements
 //    func updateAchievements() {

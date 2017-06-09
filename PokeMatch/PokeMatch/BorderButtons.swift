@@ -1,5 +1,5 @@
 //
-//  RoundedButtons.swift
+//  BorderButtons.swift
 //  PokeMatch
 //
 //  Created by Allen Boynton on 5/24/17.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class RoundedButtons: UIButton {
+class BorderButtons: UIButton {
     
     // Creates rounded buttons for choice buttons
     override func awakeFromNib() {
         self.layer.cornerRadius = 3.0
         self.layer.borderWidth = 2.0
-        self.layer.borderColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1.0).cgColor
+        self.layer.borderColor = UIColor.darkGray.cgColor
         self.clipsToBounds = true
     }
 }
