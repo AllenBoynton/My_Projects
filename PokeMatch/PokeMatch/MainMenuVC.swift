@@ -156,7 +156,6 @@ class MainMenuVC: UIViewController {
     
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
-        
         // Add points to current score
         score += 300
         
@@ -248,7 +247,6 @@ class MainMenuVC: UIViewController {
     
     // Continue the game after GameCenter is closed
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        
         gameCenterViewController.dismiss(animated: true, completion: nil)        
     }
 }

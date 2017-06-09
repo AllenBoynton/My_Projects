@@ -146,7 +146,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Notification function
     func showNotification()  {
-        
         // Create timer for notification to alert once app is exited
         time -= 1
         
@@ -158,12 +157,13 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             notification.body = "See you next time!"
             notification.badge = 1
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
             
-            let request = UNNotificationRequest(identifier: "bgChange", content: notification, trigger: trigger)
+            let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             
             timer?.invalidate()
+            bgMusic?.pause()
         }
     }
     

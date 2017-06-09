@@ -5,6 +5,9 @@
 //  Created by Allen Boynton on 5/22/17.
 //  Copyright © 2017 Allen Boynton. All rights reserved.
 //
+//  All content & design © Pokémon Database, 2008-2017. Pokémon images & names © 1995-2017 Nintendo/Game Freak.
+//  https://pokemondb.net/about#privacy
+
 
 import UIKit
 import UserNotifications
@@ -18,7 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {granted, error in
+        
+            if granted {
+                print("Notification access granted")
+            } else {
+                print(error?.localizedDescription as Any)
+            }
+        })
         
         return true
     }
