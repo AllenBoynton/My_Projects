@@ -21,7 +21,6 @@ class SourceViewController: UIViewController, NSURLConnectionDataDelegate {
         
         // Request connection to url and retrieve data
         func connection (_ connection: NSURLConnection, didReceiveData data: Data)  -> Void {
-            
             requestData.append(data)
         }
     }
@@ -29,14 +28,11 @@ class SourceViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var myWebSource: UITextView!
 
     func connection(_ connection: NSURLConnection, didReceive data: Data) {
-        
         requestData.append(data)
-        
     }
     
     // Function is called when the connection is complete and all data is received
     func connectionDidFinishLoading(_ connection: NSURLConnection) {
-        
         let htmlView = String(data: requestData as Data, encoding: String.Encoding.ascii)!
         myWebSource.text = htmlView
     }
