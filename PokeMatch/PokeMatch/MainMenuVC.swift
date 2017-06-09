@@ -153,7 +153,7 @@ class MainMenuVC: UIViewController {
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
         // Add points to current score
-        score += 300
+        score += 25
         
         saveHighScore(Int64(score))
         showLeaderboard()

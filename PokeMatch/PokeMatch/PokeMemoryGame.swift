@@ -21,10 +21,12 @@ protocol MemoryGameDelegate {
 // MARK: - MemoryGame
 
 class PokeMemoryGame {
+    
+    var pokeMatchVC: PokeMatchVC!
 
     // MARK: - Properties
     
-    static var defaultCardImages:[UIImage] = [
+    static var defaultCardImages: [UIImage] = [
         UIImage(named: "1")!,
         UIImage(named: "2")!,
         UIImage(named: "3")!,
@@ -131,6 +133,12 @@ class PokeMemoryGame {
     
     // Determines if game is being played and if not...capture time
     fileprivate func finishGame() {
+        // Game Over methods
+        
+        // Winning cheers
+        tadaSound?.play()
+        cheering?.play()
+        
         isPlaying = false
         delegate?.memoryGameDidEnd(self, elapsedTime: elapsedTime)
     }

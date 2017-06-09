@@ -36,14 +36,14 @@ class PokeVCell: UICollectionViewCell {
                 UIView.transition(from: backImageView,
                                   to: frontImageView,
                                   duration: 0.5,
-                                  options: [.transitionFlipFromTop, .showHideTransitionViews],
+                                  options: [.transitionFlipFromLeft, .showHideTransitionViews],
                                   completion: { (finished: Bool) -> () in
                 })
             } else {
                 UIView.transition(from: frontImageView,
                                   to: backImageView,
                                   duration: 0.5,
-                                  options: [.transitionFlipFromBottom, .showHideTransitionViews],
+                                  options: [.transitionFlipFromRight, .showHideTransitionViews],
                                   completion:  { (finished: Bool) -> () in
                 })
             }

@@ -69,9 +69,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(showNotification), userInfo: nil, repeats: true)
-        
+                
         // Setting BG image
         if imagePassed == nil {
             imagePassed.image = UIImage(named: "bg")
@@ -181,13 +179,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
 //        bgMusic?.pause()
 //    }
     
-    // Starts time when play button is pressed.
-//    func startGameTime() {
-//        
-//        startTime = Date().timeIntervalSinceReferenceDate - elapsed
-//        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-//    }
-    
     // Updates game time on displays
     func startGameTimer() -> String {
         
@@ -220,17 +211,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return display
     }
     
-//    func gameTimerAction() {
-//        timerDisplay.text = String(format: "%02.f:%02.f:%02.f", NSLocalizedString("", comment: ""), gameController.elapsedTime)
-//        
-//        collectionView.reloadData()
-//        collectionView.isUserInteractionEnabled = true
-//    }
-//
-//    func savePlayerScore(_ name: String, score: TimeInterval) {
-//        Highscores.sharedInstance.saveHighscore(name, score: score)
-//    }
-    
     // Sets up for new game
     func setupNewGame() {
         let cardsData: [UIImage] = PokeMemoryGame.defaultCardImages
@@ -253,43 +233,39 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // MARK: - MemoryGameDelegate
     
     func memoryGameDidStart(_ game: PokeMemoryGame) {
-        
         collectionView.reloadData()
         collectionView.isUserInteractionEnabled = true
         
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
     }
     
-    
     //
     func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card]) {
-        gamePoints -= 25
-        patSound?.play()
-        
         for card in cards {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(true, animated: true)
         }
+        gamePoints += 100
+        chime?.play()
+        pointsDisplay.text = "\(gamePoints)"
     }
     
     //
     func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card]) {
-        gamePoints += 100
-        prepareAudios()
-        chime?.play()
-        
         for card in cards {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(false, animated: true)
         }
+        gamePoints -= 25
+        patSound?.play()
+        pointsDisplay.text = "\(gamePoints)"
     }
     
     //
     func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
         timer?.invalidate()
-        prepareAudios()
         tadaSound?.play()
         cheering?.play()
     }
