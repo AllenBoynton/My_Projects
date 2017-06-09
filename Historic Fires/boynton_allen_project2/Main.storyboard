@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FgA-gV-qDd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FgA-gV-qDd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boston2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9yG-AP-z03">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boston2" translatesAutoresizingMaskIntoConstraints="NO" id="9yG-AP-z03">
                                 <rect key="frame" x="36" y="372" width="303" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -60,7 +60,7 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boston.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LJO-Tz-iM0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boston" translatesAutoresizingMaskIntoConstraints="NO" id="LJO-Tz-iM0">
                                 <rect key="frame" x="36" y="121" width="303" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -124,7 +124,7 @@
                                     <segue destination="JdH-So-Z2Z" kind="show" id="EsH-gK-2CN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="San_Francisco.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="10u-Qh-JVB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="San_Francisco" translatesAutoresizingMaskIntoConstraints="NO" id="10u-Qh-JVB">
                                 <rect key="frame" x="36" y="123" width="303" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -135,7 +135,7 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="San-Francisco2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-Pe-GHq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="San-Francisco2" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-Pe-GHq">
                                 <rect key="frame" x="36" y="377" width="303" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -203,7 +203,7 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chicago2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-dC-sVz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chicago2" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-dC-sVz">
                                 <rect key="frame" x="36" y="377" width="303" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -215,7 +215,7 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chicago1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="stX-5T-PwV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chicago1" translatesAutoresizingMaskIntoConstraints="NO" id="stX-5T-PwV">
                                 <rect key="frame" x="36" y="123" width="303" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -234,6 +234,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FgA-gV-qDd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="zSF-2y-cLb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,7 +276,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="123" id="qCq-74-0EM" customClass="ObjectViewCell" customModule="boynton_allen_project2" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="123" id="qCq-74-0EM" customClass="ObjectViewCell" customModule="HistoricFires" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCq-74-0EM" id="gKZ-0T-vZt">
@@ -292,7 +293,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efr-Kp-XDN" userLabel="fireSource">
-                                                    <rect key="frame" x="228.5" y="78" width="44.5" height="21"/>
+                                                    <rect key="frame" x="228.5" y="78.5" width="44.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -344,7 +345,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99064213040000004" green="0.41627809300000002" blue="0.060680292740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" badgeValue="Articles" systemItem="featured" id="H51-PM-I9p"/>
+                    <tabBarItem key="tabBarItem" title="Articles" image="ArticleIcon" id="H51-PM-I9p"/>
                     <connections>
                         <outlet property="fireTableView" destination="9As-n7-bFL" id="dU3-Zp-oiq"/>
                     </connections>
@@ -365,7 +366,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fire.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ahy-bV-tH0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fire" translatesAutoresizingMaskIntoConstraints="NO" id="ahy-bV-tH0">
                                 <rect key="frame" x="0.0" y="28" width="375" height="590"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -377,7 +378,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wildfire.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eki-s1-ihc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wildfire" translatesAutoresizingMaskIntoConstraints="NO" id="Eki-s1-ihc">
                                 <rect key="frame" x="20" y="205" width="335" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -404,7 +405,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" badgeValue="Video" systemItem="mostViewed" id="P6J-x8-saJ"/>
+                    <tabBarItem key="tabBarItem" title="Video" image="VideoIcon" id="P6J-x8-saJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jao-KS-ggD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -413,7 +414,7 @@
         <!--Video Web View-->
         <scene sceneID="DJO-fO-d7H">
             <objects>
-                <viewController title="Video Web View" id="2Uv-mc-TiG" customClass="VideoViewController" customModule="boynton_allen_project2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Video Web View" id="2Uv-mc-TiG" customClass="VideoViewController" customModule="HistoricFires" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iyf-f0-B3M"/>
                         <viewControllerLayoutGuide type="bottom" id="6wh-9e-xlJ"/>
@@ -445,11 +446,13 @@
                                     <navigationItem id="ZKI-zM-qoO">
                                         <leftBarButtonItems>
                                             <barButtonItem title="&lt;" id="L9G-Dc-8nO">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <connections>
                                                     <action selector="back:" destination="2Uv-mc-TiG" id="Bu5-nt-Ctp"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="&gt;" id="30g-nd-Soy">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <connections>
                                                     <action selector="forward:" destination="2Uv-mc-TiG" id="DhD-c2-MeN"/>
                                                 </connections>
@@ -457,11 +460,13 @@
                                         </leftBarButtonItems>
                                         <rightBarButtonItems>
                                             <barButtonItem systemItem="refresh" id="laF-bB-o20">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <connections>
                                                     <action selector="refresh:" destination="2Uv-mc-TiG" id="0J2-93-rHT"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem systemItem="stop" id="iux-bE-TDO">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <connections>
                                                     <action selector="stop:" destination="2Uv-mc-TiG" id="XP1-Fd-Fpk"/>
                                                 </connections>
@@ -520,7 +525,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Firefighter.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fyx-P6-ymf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Firefighter" translatesAutoresizingMaskIntoConstraints="NO" id="fyx-P6-ymf">
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -593,7 +598,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firemans-helmet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LuU-uI-MZ9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firemans-helmet" translatesAutoresizingMaskIntoConstraints="NO" id="LuU-uI-MZ9">
                                 <rect key="frame" x="0.0" y="42" width="375" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -668,7 +673,7 @@
         <!--Map View Controller-->
         <scene sceneID="Rb0-SD-zKI">
             <objects>
-                <viewController storyboardIdentifier="Fire Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JdH-So-Z2Z" customClass="MapViewController" customModule="boynton_allen_project2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fire Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JdH-So-Z2Z" customClass="MapViewController" customModule="HistoricFires" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="swq-wD-LAI"/>
                         <viewControllerLayoutGuide type="bottom" id="Dec-eQ-LlC"/>
@@ -690,15 +695,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvt-77-CZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3761" y="-356"/>
+            <point key="canvasLocation" x="3839" y="-1043"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Gallery-->
         <scene sceneID="WYQ-cv-1Lx">
             <objects>
                 <navigationController storyboardIdentifier="Famous Fire Gallery" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uIG-jC-HQ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" badgeValue="Gallery" systemItem="mostViewed" id="m1y-0Y-2JD"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="PhotoIcon" id="m1y-0Y-2JD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k78-VM-zjY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k78-VM-zjY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -717,18 +722,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Boston.jpg" width="450" height="332"/>
-        <image name="Boston2.jpg" width="1800" height="1234"/>
-        <image name="Chicago1.jpg" width="640" height="360"/>
-        <image name="Chicago2.jpg" width="580" height="250"/>
-        <image name="Fire.jpg" width="640" height="960"/>
-        <image name="Firefighter.jpg" width="300" height="168"/>
-        <image name="San-Francisco2.jpg" width="1280" height="761"/>
-        <image name="San_Francisco.jpg" width="707" height="482"/>
-        <image name="Wildfire.png" width="1516" height="792"/>
-        <image name="firemans-helmet.jpg" width="987" height="702"/>
+        <image name="ArticleIcon" width="22" height="22"/>
+        <image name="Boston" width="450" height="332"/>
+        <image name="Boston2" width="1800" height="1234"/>
+        <image name="Chicago1" width="640" height="360"/>
+        <image name="Chicago2" width="580" height="250"/>
+        <image name="Fire" width="640" height="960"/>
+        <image name="Firefighter" width="300" height="168"/>
+        <image name="PhotoIcon" width="22" height="22"/>
+        <image name="San-Francisco2" width="1280" height="761"/>
+        <image name="San_Francisco" width="707" height="482"/>
+        <image name="VideoIcon" width="22" height="22"/>
+        <image name="Wildfire" width="1516" height="792"/>
+        <image name="firemans-helmet" width="987" height="702"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EsH-gK-2CN"/>
+        <segue reference="PPr-pe-3Ss"/>
     </inferredMetricsTieBreakers>
 </document>
