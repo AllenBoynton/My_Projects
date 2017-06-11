@@ -44,10 +44,9 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
         
         do {
-            bgMusic! = try AVAudioPlayer(contentsOf: url)
-            bgMusic!.delegate = self as? AVAudioPlayerDelegate
-            bgMusic!.prepareToPlay()
-            bgMusic!.play()
+            bgMusic = try AVAudioPlayer(contentsOf: url)
+            bgMusic.prepareToPlay()
+            bgMusic.play()
         } catch let error as NSError {
             print("audioPlayer error \(error.localizedDescription)")
         }
@@ -83,7 +82,8 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         let alert = UIAlertController(title: "Would you like to personalize your background?", message: "Tap the image above the \"Change\" button to pick a New Image", preferredStyle: .alert)
         
         // Dismiss button
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Continue", style: .default , handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         
@@ -93,7 +93,7 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
         myVC.theImagePassed = self.bgImage.image!
-//        navigationController?.pushViewController(myVC, animated: true)
+        navigationController?.pushViewController(myVC, animated: true)
     }
     
     // Button brings you to GC leaderboard
@@ -105,16 +105,19 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBAction func musicOptionSwitch(_ sender: UISwitch) {
         if (sender.isOn == true) {
             musicSwitch?.setOn(false, animated: true)
-            bgMusic?.play()
+            bgMusic.play()
         } else {
             musicSwitch?.setOn(true, animated: true)
             musicSwitch?.isOn = true
-            bgMusic?.pause()
+            
+            if bgMusic != nil {
+                bgMusic.pause()
+                bgMusic = nil
+            }
         }
     }
     
     @IBAction func backToMain(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
 }

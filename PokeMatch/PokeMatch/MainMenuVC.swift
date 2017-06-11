@@ -28,7 +28,7 @@ let pointsLeaderboardID = "HIGH_POINTS" // Score Leaderboard
 class MainMenuVC: UIViewController {
     
     // Class delegates
-    var pokeMatchVC: PokeMatchVC!
+    var pokeMatchVC = PokeMatchVC()
     
     // Create AV player
     var musicPlayer: AVAudioPlayer!
@@ -140,7 +140,6 @@ class MainMenuVC: UIViewController {
         
         do {
             bgMusic = try AVAudioPlayer(contentsOf: url)
-            bgMusic?.delegate = self as? AVAudioPlayerDelegate
             bgMusic?.prepareToPlay()
             bgMusic?.play()
         } catch let error as NSError {
@@ -162,15 +161,8 @@ class MainMenuVC: UIViewController {
     
     @IBAction func enterOptionsWithAlert(_ sender: AnyObject) {
         
-//        let alert = UIAlertController(title: "Would you like to personalize your background?", message: "Tap the image above the \"Change\" button to pick a New Image", preferredStyle: .alert)
-//        
-//        // Dismiss button
-//        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-//        
-//        self.present(alert, animated: true, completion: nil)
-//        
-        
     }
+    
     // Achievements
 //    func updateAchievements() {
 //        

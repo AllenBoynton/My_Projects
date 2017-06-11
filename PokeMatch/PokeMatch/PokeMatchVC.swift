@@ -18,17 +18,18 @@ protocol GameSceneDelegate {
     func reportScore(_ score: Int64)
 }
 
-// Global references
-var bgMusic:   AVAudioPlayer?
-var cheering:  AVAudioPlayer?
-var tadaSound: AVAudioPlayer?
-var patSound:  AVAudioPlayer?
-var chime:     AVAudioPlayer?
-var wrong:     AVAudioPlayer?
-
+// Global Identifier
 let cellIdentifier = "PokeCell"
 
+// Global references
+var bgMusic:   AVAudioPlayer!
+var cheering: AVAudioPlayer!
+var patSound: AVAudioPlayer!
+
+
 class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MemoryGameDelegate {
+    
+    let gameController = PokeMemoryGame()
     
     // Collection view to hold all images
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,16 +45,19 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     @IBOutlet weak var startButton: UIButton!
     
-    let gameController = PokeMemoryGame()
     
     // MARK - Local variables
     
     // Images passed from OptionsVC
     var theImagePassed = UIImage()
     
+    // Scores passed to WinnerVC
+    var gamePointsPassed = UILabel()
+    var gameTimePassed = UILabel()
+    
     // Deducts images until we reach 0 and the user wins
-    var tileCounter = 0
     var gamePoints = 0
+    var gameOver = Bool()
     
     // NSTimers for game time and delays in revealed images
     var timer: Timer?
@@ -64,19 +68,13 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     var time: Double = 0
     var elapsed: Double = 0
     var display: String = ""
-    var gameOver = Bool()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        // Setting BG image
-        if imagePassed == nil {
-            imagePassed.image = UIImage(named: "bg")
-        } else {
-            // Passing image from OptionsVC
-            imagePassed.image = theImagePassed
-        }
+        // Passing image from OptionsVC
+        imagePassed.image = theImagePassed
         
         // Game delegate
         gameController.delegate = self
@@ -87,97 +85,95 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         }
     }
     
-    // Sound files
-    func prepareAudios() {
+    // MARK: Sound files
+    
+    func playCheering() {
         // Cheering audio
-        let url1 = URL.init(fileURLWithPath: Bundle.main.path(forResource: "cheering", ofType: "mp3")!)
+        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "cheering", ofType: "mp3")!)
         
         do {
-            cheering? = try AVAudioPlayer(contentsOf: url1)
-            cheering?.delegate = self as? AVAudioPlayerDelegate
-            cheering?.prepareToPlay()
+            cheering = try AVAudioPlayer(contentsOf: url)
+            cheering.prepareToPlay()
+            cheering.play()
         } catch let error as NSError {
             print("audioPlayer error \(error.localizedDescription)")
         }
-        
-        // TaDa audio
-        let url2 = URL.init(fileURLWithPath: Bundle.main.path(forResource: "taDa", ofType: "mp3")!)
-        
-        do {
-            tadaSound? = try AVAudioPlayer(contentsOf: url2)
-            tadaSound?.delegate = self as? AVAudioPlayerDelegate
-            tadaSound?.prepareToPlay()
-        } catch let error as NSError {
-            print("audioPlayer error \(error.localizedDescription)")
-        }
-        
-        // Chime audio
-        let url3 = URL.init(fileURLWithPath: Bundle.main.path(forResource: "chime", ofType: "mp3")!)
-        
-        do {
-            chime? = try AVAudioPlayer(contentsOf: url3)
-            chime?.delegate = self as? AVAudioPlayerDelegate
-            chime?.prepareToPlay()
-        } catch let error as NSError {
-            print("audioPlayer error \(error.localizedDescription)")
-        }
-        
+    }
+    
+    // Sound file
+    func playPatSound() {
+    
         // Pat audio
-        let url4 = URL.init(fileURLWithPath: Bundle.main.path(forResource: "pat", ofType: "mp3")!)
+        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "pat", ofType: "mp3")!)
         
         do {
-            patSound? = try AVAudioPlayer(contentsOf: url4)
-            patSound?.delegate = self as? AVAudioPlayerDelegate
-            patSound?.prepareToPlay()
+            patSound = try AVAudioPlayer(contentsOf: url)
+            patSound.prepareToPlay()
+            patSound.play()
         } catch let error as NSError {
             print("audioPlayer error \(error.localizedDescription)")
         }
     }
     
     // Create function to initiate music playing when game begins
-    func startGameMusic() {
-        
-        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
-        
-        do {
-            bgMusic? = try AVAudioPlayer(contentsOf: url)
-            bgMusic?.delegate = self as? AVAudioPlayerDelegate
-            bgMusic?.prepareToPlay()
-            bgMusic?.play()
-        } catch let error as NSError {
-            print("audioPlayer error \(error.localizedDescription)")
-        }
-    }
-    
-    // Notification function
-//    func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
+//    func startGameMusic() {
 //        
-//        // Create timer for notification to alert once app is exited
-//        let notification = UNMutableNotificationContent()
+//        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
 //        
-//        notification.title = "Final Notification"
-//        notification.subtitle = "Go back to PokéMatch?"
-//        notification.body = "Don't forget to finish your game!"
-//        notification.badge = 1
-//        
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
-//        
-//        let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
-//        
-//        // Add to Notification Center
-//        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-//            
-//            if error != nil {
-//                print(error.debugDescription)
-//                completion(false)
-//            } else {
-//                completion(true)
-//            }
-//        })
-//        
-//        timer?.invalidate()
-//        bgMusic?.pause()
+//        do {
+//            bgMusic? = try AVAudioPlayer(contentsOf: url)
+//            bgMusic?.delegate = self as? AVAudioPlayerDelegate
+//            bgMusic?.prepareToPlay()
+//            bgMusic?.play()
+//        } catch let error as NSError {
+//            print("audioPlayer error \(error.localizedDescription)")
+//        }
 //    }
+    
+    // MARK: Notification function
+    
+    func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
+        
+        // Add an attachment
+        let logoImage = "ABTECH_LOGO"
+        guard let imageURL = Bundle.main.url(forResource: logoImage, withExtension: "png") else {
+            completion(false)
+            
+            return
+        }
+        
+        var attachment: UNNotificationAttachment
+        
+        attachment = try! UNNotificationAttachment(identifier: "myNotification", url: imageURL, options: .none)
+        
+        // Create timer for notification to alert once app is exited
+        let notification = UNMutableNotificationContent()
+        
+        notification.title = "PokéMatch Message"
+        notification.subtitle = "Stop back to PokéMatch?"
+        notification.body = "Tap here to finish your game!"
+        notification.badge = 1
+        
+        notification.attachments = [attachment]
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
+        
+        // Add to Notification Center
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+            
+            if error != nil {
+                print(error.debugDescription)
+                completion(false)
+            } else {
+                completion(true)
+            }
+        })
+        
+        timer?.invalidate()
+        bgMusic.pause()
+    }
     
     // Updates game time on displays
     func startGameTimer() -> String {
@@ -247,7 +243,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             cell.showCard(true, animated: true)
         }
         gamePoints += 100
-        chime?.play()
+        playPatSound()
         pointsDisplay.text = "\(gamePoints)"
     }
     
@@ -259,15 +255,19 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             cell.showCard(false, animated: true)
         }
         gamePoints -= 25
-        patSound?.play()
+//        playPatSound()
         pointsDisplay.text = "\(gamePoints)"
     }
     
     //
     func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
         timer?.invalidate()
-        tadaSound?.play()
-        cheering?.play()
+        playCheering()
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "WinnersVC") as! WinnersVC
+        myVC.pointsPassed = self.pointsDisplay.text!
+        myVC.timePassed = self.display
+        navigationController?.pushViewController(myVC, animated: true)
     }
     
     // MARK: - UICollectionViewDataSource
@@ -316,12 +316,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // MARK - IBAction functions
     
     @IBAction func startButton(_ sender: UIButton) {
-        
+        // Begin with new setup
         setupNewGame()
-        
-        // Button sound
-        prepareAudios()
-        patSound?.play()
         
         // Shows button at beginning of game
         startButton.isHidden = true
@@ -331,47 +327,34 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         pointsView.isHidden = false
         collectionView.isHidden = false
         bottomView.isHidden = false
-        
-//        collectionView.reloadData()
-//        collectionView.isUserInteractionEnabled = true
-        
-//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
-//        
-//        if gameController.isPlaying {
-//            resetGame()
-//            startButton.setTitle(NSLocalizedString("Start", comment: "start"), for: UIControlState())
-//        } else {
-//            setupNewGame()
-//            startButton.setTitle(NSLocalizedString("Stop", comment: "stop"), for: UIControlState())
-//        }
     }
     
     // Audio button mutes/unmutes music
     @IBAction func musicButtonPressed(_ sender: UIButton) {
         
-        if (bgMusic?.isPlaying)! {
+        if bgMusic.isPlaying {
             // pauses music & makes partial transparent
-            bgMusic?.pause()
+            bgMusic.pause()
             sender.alpha = 0.2
-            
         } else {
             // plays music & makes full view
-            bgMusic?.play()
+            bgMusic.play()
             sender.alpha = 1.0
         }
     }
     
     // Back button to bring to main menu
     @IBAction func backButtonPressed(_ sender: Any) {
-//        showNotification(inSeconds: 5, completion: { success in
-//            if success {
-//                print("Successfully scheduled notification")
-//            } else {
-//                print("Error scheduling notification")
-//            }
-//        })
+        
+        showNotification(inSeconds: 5, completion: { success in
+            if success {
+                print("Successfully scheduled notification")
+            } else {
+                print("Error scheduling notification")
+            }
+        })
         
         dismiss(animated: true, completion: nil)
-//        timer?.invalidate()
+        timer?.invalidate()
     }
 }

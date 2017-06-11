@@ -17,9 +17,8 @@
 		0907CDEF1ED412A700350677 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDEE1ED412A700350677 /* music.mp3 */; };
 		0907CDF11ED4160E00350677 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CDF01ED4160E00350677 /* MaterialView.swift */; };
 		0907CDF61ED41ADE00350677 /* cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF21ED41ADE00350677 /* cheering.mp3 */; };
-		0907CDF71ED41ADE00350677 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF31ED41ADE00350677 /* chime.mp3 */; };
 		0907CDF81ED41ADE00350677 /* pat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF41ED41ADE00350677 /* pat.mp3 */; };
-		0907CDF91ED41ADE00350677 /* taDa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF51ED41ADE00350677 /* taDa.mp3 */; };
+		090A22CF1EECF1F7008C3198 /* WinnersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A22CE1EECF1F7008C3198 /* WinnersVC.swift */; };
 		094AEF141ED469CF007FDFC9 /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF131ED469CF007FDFC9 /* BorderImageView.swift */; };
 		094AEF161ED47721007FDFC9 /* MatchedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF151ED47721007FDFC9 /* MatchedViews.swift */; };
 		094AEF181ED4FB5B007FDFC9 /* RoundedLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */; };
@@ -68,9 +67,8 @@
 		0907CDEE1ED412A700350677 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		0907CDF01ED4160E00350677 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0907CDF21ED41ADE00350677 /* cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheering.mp3; sourceTree = "<group>"; };
-		0907CDF31ED41ADE00350677 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		0907CDF41ED41ADE00350677 /* pat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pat.mp3; sourceTree = "<group>"; };
-		0907CDF51ED41ADE00350677 /* taDa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taDa.mp3; sourceTree = "<group>"; };
+		090A22CE1EECF1F7008C3198 /* WinnersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnersVC.swift; sourceTree = "<group>"; };
 		094AEF131ED469CF007FDFC9 /* BorderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
 		094AEF151ED47721007FDFC9 /* MatchedViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedViews.swift; sourceTree = "<group>"; };
 		094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabels.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				0907CDB61ED384EF00350677 /* AppDelegate */,
 				0907CDB81ED3850D00350677 /* Resources */,
 				0907CDB71ED384FE00350677 /* Utilities */,
-				0907CDB91ED3851F00350677 /* Storyboard */,
 				0907CDBC1ED3853C00350677 /* Model */,
 				0907CDBB1ED3853400350677 /* View */,
 				0907CDBA1ED3852B00350677 /* Controller */,
@@ -172,6 +169,7 @@
 				0907CDD11ED390F300350677 /* Font */,
 				0907CDD01ED390DB00350677 /* Audio */,
 				0907CD8E1ED3832D00350677 /* Assets.xcassets */,
+				0907CDB91ED3851F00350677 /* Storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -188,8 +186,9 @@
 		0907CDBA1ED3852B00350677 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				094AEF291ED90FED007FDFC9 /* OptionsVC.swift */,
+				090A22CE1EECF1F7008C3198 /* WinnersVC.swift */,
 				0907CDEA1ED4128500350677 /* PokeMatchVC.swift */,
+				094AEF291ED90FED007FDFC9 /* OptionsVC.swift */,
 				094AEF1D1ED64CA1007FDFC9 /* MainMenuVC.swift */,
 			);
 			name = Controller;
@@ -233,9 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				0907CDF21ED41ADE00350677 /* cheering.mp3 */,
-				0907CDF31ED41ADE00350677 /* chime.mp3 */,
 				0907CDF41ED41ADE00350677 /* pat.mp3 */,
-				0907CDF51ED41ADE00350677 /* taDa.mp3 */,
 				0907CDEE1ED412A700350677 /* music.mp3 */,
 			);
 			name = Audio;
@@ -383,12 +380,10 @@
 			files = (
 				0907CD921ED3832D00350677 /* LaunchScreen.storyboard in Resources */,
 				0907CDF61ED41ADE00350677 /* cheering.mp3 in Resources */,
-				0907CDF91ED41ADE00350677 /* taDa.mp3 in Resources */,
 				0907CDF81ED41ADE00350677 /* pat.mp3 in Resources */,
 				0907CD8F1ED3832D00350677 /* Assets.xcassets in Resources */,
 				0907CDED1ED4129700350677 /* pokemon.ttf in Resources */,
 				0907CDEF1ED412A700350677 /* music.mp3 in Resources */,
-				0907CDF71ED41ADE00350677 /* chime.mp3 in Resources */,
 				0907CD8A1ED3832D00350677 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +420,7 @@
 				099274F31EDCC0C2002C465A /* HighScores.swift in Sources */,
 				094AEF2A1ED90FED007FDFC9 /* OptionsVC.swift in Sources */,
 				099274EF1EDC93FE002C465A /* RandomArray.swift in Sources */,
+				090A22CF1EECF1F7008C3198 /* WinnersVC.swift in Sources */,
 				0907CDF11ED4160E00350677 /* MaterialView.swift in Sources */,
 				094AEF1E1ED64CA1007FDFC9 /* MainMenuVC.swift in Sources */,
 				0907CDEB1ED4128500350677 /* PokeMatchVC.swift in Sources */,
@@ -578,7 +574,7 @@
 		0907CDAD1ED3832D00350677 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6GTM24L94G;
 				INFOPLIST_FILE = PokeMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -591,7 +587,7 @@
 		0907CDAE1ED3832D00350677 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6GTM24L94G;
 				INFOPLIST_FILE = PokeMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

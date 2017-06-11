@@ -55,11 +55,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var display: String = ""
 
     // Audio player
-    var cheering = AVAudioPlayer()
-    var tadaSound = AVAudioPlayer()
-    var patSound = AVAudioPlayer()
-    var chime = AVAudioPlayer()
-    var wrongAnswer = AVAudioPlayer()
+    var cheering: AVAudioPlayer!
+    var tadaSound: AVAudioPlayer!
+    var patSound: AVAudioPlayer!
+    var chime: AVAudioPlayer!
+    var wrongAnswer: AVAudioPlayer!
     
     
     override func viewDidLoad() {
@@ -164,6 +164,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
     }
+    
+    // MARK: Play Sound
     
     // Sound files
     func prepareAudios() {

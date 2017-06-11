@@ -94,6 +94,8 @@ class PokeMemoryGame {
             let unpaired = unpairedCard()!
             if card.equals(unpaired) {
                 cardsShown.append(card)
+                // Add points
+                
             } else {
                 let unpairedCard = cardsShown.removeLast()
                 
@@ -105,6 +107,8 @@ class PokeMemoryGame {
         } else {
             // If cards are a match
             cardsShown.append(card)
+            // Subtract points
+            
         }
         
         // Adjusts remaining cards. If none -> finish the game
@@ -136,8 +140,8 @@ class PokeMemoryGame {
         // Game Over methods
         
         // Winning cheers
-        tadaSound?.play()
-        cheering?.play()
+//        tadaSound?.play()
+//        cheering?.play()
         
         isPlaying = false
         delegate?.memoryGameDidEnd(self, elapsedTime: elapsedTime)
