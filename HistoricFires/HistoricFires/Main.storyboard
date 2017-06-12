@@ -293,7 +293,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efr-Kp-XDN" userLabel="fireSource">
-                                                    <rect key="frame" x="228.5" y="78.5" width="44.5" height="21"/>
+                                                    <rect key="frame" x="228.5" y="79" width="44.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="TruetypewriterPolyglOTT" family="Truetypewriter PolyglOTT" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -703,7 +703,7 @@
                 <navigationController storyboardIdentifier="Famous Fire Gallery" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uIG-jC-HQ8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gallery" image="PhotoIcon" id="m1y-0Y-2JD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k78-VM-zjY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k78-VM-zjY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
