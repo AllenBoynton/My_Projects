@@ -4,7 +4,8 @@
 //
 //  Created by Allen Boynton on 5/24/17.
 //  Copyright © 2017 Allen Boynton. All rights reserved.
-//  Image Source: © Pokémon Go
+//  Icon made by Raier from www.zerochan.net
+//  http://www.zerochan.net/1037761
 //
 
 import UIKit
@@ -13,17 +14,9 @@ import UserNotifications
 import GameKit
 
 // Global identifiers
-//let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
+let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
 let pointsLeaderboardID = "HIGH_POINTS" // Score Leaderboard
 
-// Achievement identifiers
-//var inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
-//        var inc500AchievementID = "500_POINTS" // Incremental 500 point achievement
-//        var inc800AchievementID = "800_POINTS" // Incremental 800 point achievement
-//        var inc1000AchievementID = "1000_POINTS" // Incremental 1000 point achievement
-//        var inc1200AchievementID = "1200_POINTS" // Incremental 1200 point achievement
-//        var incMaxAchievementID = "MAX_POINTS" // Incremental 1500 point achievement
-//var fullProgressID = "MAX_POINTS" // Incremental Max point achievement
 
 class MainMenuVC: UIViewController {
     
@@ -88,6 +81,19 @@ class MainMenuVC: UIViewController {
         }
     }
     
+//    // Add Game Center Challenges
+//    func challengeFriends(forScore playerScore: Int64, inLeaderboard leaderboard: String) {
+//        let query = GKLeaderboard()
+//        query.leaderboardIdentifier = leaderboard
+//        query.playerScope = .friendsOnly
+//        query.range = NSRange(location: 1, length: 100)
+//        query.loadScores(completionHandler: {(_ scores: [Any], _ error: Error?) -> Void in
+//            let filter = NSPredicate(format: "value < %qi", playerScore)
+//            let lesserScores: [Any] = scores.filter { filter.evaluate(with: $0) }
+//            self.presentChallenge(withPreselectedScores: lesserScores)
+//        })
+//    }
+    
     func notificationReceived() {
         print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
     }
@@ -142,6 +148,7 @@ class MainMenuVC: UIViewController {
             bgMusic = try AVAudioPlayer(contentsOf: url)
             bgMusic?.prepareToPlay()
             bgMusic?.play()
+            bgMusic?.numberOfLoops = -1
         } catch let error as NSError {
             print("audioPlayer error \(error.localizedDescription)")
         }
@@ -156,80 +163,11 @@ class MainMenuVC: UIViewController {
         
         saveHighScore(Int64(score))
         showLeaderboard()
-//        updateAchievements()
     }
     
     @IBAction func enterOptionsWithAlert(_ sender: AnyObject) {
         
     }
-    
-    // Achievements
-//    func updateAchievements() {
-//        
-//        // Incremental achievement ************************************************************
-//        if score <= 300 {
-//            
-//            let achievement300 = GKAchievement(identifier: inc300AchievementID)
-//            
-//            achievement300.percentComplete = Double(score / 1500)
-//            achievement300.showsCompletionBanner = true  // use Game Center's UI
-//            
-//            GKAchievement.report([achievement300], withCompletionHandler: nil)
-//        }
-//        
-//        if score <= 300 {
-//            inc300AchievementID = "300_POINTS" // Incremental 300 point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 300)
-//            achievementIdentifier = inc300AchievementID
-//        }
-//        else if score <= 500 {
-//            inc500AchievementID = "500_POINTS" // Incremental 500 point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 500)
-//            achievementIdentifier = inc500AchievementID
-//        }
-//        else if score <= 800 {
-//            inc800AchievementID = "800_POINTS" // Incremental 800 point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 800)
-//            achievementIdentifier = inc800AchievementID
-//        }
-//        else if score <= 1000 {
-//            inc1000AchievementID = "1000_POINTS" // Incremental 1000 point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 1000)
-//            achievementIdentifier = inc1000AchievementID
-//        }
-//        else if score <= 1200 {
-//            inc1200AchievementID = "1200_POINTS" // Incremental 1200 point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 1200)
-//            achievementIdentifier = inc1200AchievementID
-//        }
-//        else if score <= 1500 {
-//            incMaxAchievementID = "MAX_POINTS" // Incremental 1500 point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 1500)
-//            achievementIdentifier = incMaxAchievementID
-//        }
-//        do {
-//            fullProgressID = "MAX_POINTS" // Incremental Max point achievement
-//            
-//            progressPercentage = Int64(score * 1500 / 1500)
-//            achievementIdentifier = fullProgressID
-//        }
-//        scoreAchievement = GKAchievement(identifier: achievementIdentifier)
-//        scoreAchievement?.percentComplete = Double(progressPercentage)
-//        
-//        // Load the user's current achievement progress anytime
-//        GKAchievement.loadAchievements() { achievements, error in
-//            guard let achievements = achievements else { return }
-//            
-//            print(achievements)
-//        }
-//    }
-
     
     // Continue the game after GameCenter is closed
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {

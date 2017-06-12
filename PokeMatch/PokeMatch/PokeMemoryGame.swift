@@ -138,11 +138,6 @@ class PokeMemoryGame {
     // Determines if game is being played and if not...capture time
     fileprivate func finishGame() {
         // Game Over methods
-        
-        // Winning cheers
-//        tadaSound?.play()
-//        cheering?.play()
-        
         isPlaying = false
         delegate?.memoryGameDidEnd(self, elapsedTime: elapsedTime)
     }

@@ -81,19 +81,19 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         let alert = UIAlertController(title: "Would you like to personalize your background?", message: "Tap the image above the \"Change\" button to pick a New Image", preferredStyle: .alert)
         
-        // Dismiss button
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Continue", style: .default , handler: nil))
+        alert.addAction(UIAlertAction(title: "Change it!", style: .default , handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ -> Void in
+            let myVC = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
+            myVC.theImagePassed = self.bgImage.image!
+            self.present(myVC, animated: true, completion: nil)
+        }))
         
         self.present(alert, animated: true, completion: nil)
         
         // Change font of the title and message
         let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
         let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
-        
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
-        myVC.theImagePassed = self.bgImage.image!
-        navigationController?.pushViewController(myVC, animated: true)
     }
     
     // Button brings you to GC leaderboard

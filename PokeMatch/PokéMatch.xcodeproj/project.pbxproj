@@ -19,6 +19,9 @@
 		0907CDF61ED41ADE00350677 /* cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF21ED41ADE00350677 /* cheering.mp3 */; };
 		0907CDF81ED41ADE00350677 /* pat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0907CDF41ED41ADE00350677 /* pat.mp3 */; };
 		090A22CF1EECF1F7008C3198 /* WinnersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A22CE1EECF1F7008C3198 /* WinnersVC.swift */; };
+		090A22D61EEDEC05008C3198 /* tenor.gif in Resources */ = {isa = PBXBuildFile; fileRef = 090A22D51EEDEC05008C3198 /* tenor.gif */; };
+		090A22D81EEDEC2C008C3198 /* tenor1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 090A22D71EEDEC2C008C3198 /* tenor1.gif */; };
+		090A22F11EEE3D7B008C3198 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 090A22F01EEE3D7B008C3198 /* gameover.mp3 */; };
 		094AEF141ED469CF007FDFC9 /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF131ED469CF007FDFC9 /* BorderImageView.swift */; };
 		094AEF161ED47721007FDFC9 /* MatchedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF151ED47721007FDFC9 /* MatchedViews.swift */; };
 		094AEF181ED4FB5B007FDFC9 /* RoundedLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */; };
@@ -30,7 +33,6 @@
 		099274EC1EDC9218002C465A /* PokeVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274EB1EDC9218002C465A /* PokeVCell.swift */; };
 		099274EF1EDC93FE002C465A /* RandomArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274EE1EDC93FE002C465A /* RandomArray.swift */; };
 		099274F11EDCA3E9002C465A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274F01EDCA3E9002C465A /* Card.swift */; };
-		099274F31EDCC0C2002C465A /* HighScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274F21EDCC0C2002C465A /* HighScores.swift */; };
 		099274F91EDD26CF002C465A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099274F81EDD26CF002C465A /* StoreKit.framework */; };
 		099274FB1EDD289E002C465A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099274FA1EDD289E002C465A /* AdSupport.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		090A22EF1EEDF53C008C3198 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0907CD811ED3832D00350677 /* PokéMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PokéMatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0907CD841ED3832D00350677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +84,11 @@
 		0907CDF21ED41ADE00350677 /* cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheering.mp3; sourceTree = "<group>"; };
 		0907CDF41ED41ADE00350677 /* pat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pat.mp3; sourceTree = "<group>"; };
 		090A22CE1EECF1F7008C3198 /* WinnersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnersVC.swift; sourceTree = "<group>"; };
+		090A22D51EEDEC05008C3198 /* tenor.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tenor.gif; sourceTree = "<group>"; };
+		090A22D71EEDEC2C008C3198 /* tenor1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tenor1.gif; sourceTree = "<group>"; };
+		090A22DE1EEDF53C008C3198 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		090A22E01EEDF53C008C3198 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		090A22F01EEE3D7B008C3198 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
 		094AEF131ED469CF007FDFC9 /* BorderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
 		094AEF151ED47721007FDFC9 /* MatchedViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedViews.swift; sourceTree = "<group>"; };
 		094AEF171ED4FB5B007FDFC9 /* RoundedLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabels.swift; sourceTree = "<group>"; };
@@ -80,7 +100,6 @@
 		099274EB1EDC9218002C465A /* PokeVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeVCell.swift; sourceTree = "<group>"; };
 		099274EE1EDC93FE002C465A /* RandomArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomArray.swift; sourceTree = "<group>"; };
 		099274F01EDCA3E9002C465A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		099274F21EDCC0C2002C465A /* HighScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScores.swift; sourceTree = "<group>"; };
 		099274F81EDD26CF002C465A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		099274FA1EDD289E002C465A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -166,6 +185,7 @@
 		0907CDB81ED3850D00350677 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				090A22D01EEDDC75008C3198 /* gif */,
 				0907CDD11ED390F300350677 /* Font */,
 				0907CDD01ED390DB00350677 /* Audio */,
 				0907CD8E1ED3832D00350677 /* Assets.xcassets */,
@@ -212,7 +232,6 @@
 			children = (
 				099274F01EDCA3E9002C465A /* Card.swift */,
 				099274E91EDC918E002C465A /* PokeMemoryGame.swift */,
-				099274F21EDCC0C2002C465A /* HighScores.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -224,6 +243,8 @@
 				099274F81EDD26CF002C465A /* StoreKit.framework */,
 				094AEF271ED8FF8F007FDFC9 /* GameKit.framework */,
 				0907CDBE1ED385C800350677 /* AVFoundation.framework */,
+				090A22DE1EEDF53C008C3198 /* UserNotifications.framework */,
+				090A22E01EEDF53C008C3198 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,6 +255,7 @@
 				0907CDF21ED41ADE00350677 /* cheering.mp3 */,
 				0907CDF41ED41ADE00350677 /* pat.mp3 */,
 				0907CDEE1ED412A700350677 /* music.mp3 */,
+				090A22F01EEE3D7B008C3198 /* gameover.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -244,6 +266,15 @@
 				0907CDEC1ED4129700350677 /* pokemon.ttf */,
 			);
 			name = Font;
+			sourceTree = "<group>";
+		};
+		090A22D01EEDDC75008C3198 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				090A22D51EEDEC05008C3198 /* tenor.gif */,
+				090A22D71EEDEC2C008C3198 /* tenor1.gif */,
+			);
+			name = gif;
 			sourceTree = "<group>";
 		};
 		099274ED1EDC9356002C465A /* Extensions */ = {
@@ -264,6 +295,7 @@
 				0907CD7D1ED3832D00350677 /* Sources */,
 				0907CD7E1ED3832D00350677 /* Frameworks */,
 				0907CD7F1ED3832D00350677 /* Resources */,
+				090A22EF1EEDF53C008C3198 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -378,11 +410,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090A22D81EEDEC2C008C3198 /* tenor1.gif in Resources */,
 				0907CD921ED3832D00350677 /* LaunchScreen.storyboard in Resources */,
 				0907CDF61ED41ADE00350677 /* cheering.mp3 in Resources */,
 				0907CDF81ED41ADE00350677 /* pat.mp3 in Resources */,
 				0907CD8F1ED3832D00350677 /* Assets.xcassets in Resources */,
 				0907CDED1ED4129700350677 /* pokemon.ttf in Resources */,
+				090A22F11EEE3D7B008C3198 /* gameover.mp3 in Resources */,
+				090A22D61EEDEC05008C3198 /* tenor.gif in Resources */,
 				0907CDEF1ED412A700350677 /* music.mp3 in Resources */,
 				0907CD8A1ED3832D00350677 /* Main.storyboard in Resources */,
 			);
@@ -417,7 +452,6 @@
 				094AEF161ED47721007FDFC9 /* MatchedViews.swift in Sources */,
 				099274EA1EDC918E002C465A /* PokeMemoryGame.swift in Sources */,
 				0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */,
-				099274F31EDCC0C2002C465A /* HighScores.swift in Sources */,
 				094AEF2A1ED90FED007FDFC9 /* OptionsVC.swift in Sources */,
 				099274EF1EDC93FE002C465A /* RandomArray.swift in Sources */,
 				090A22CF1EECF1F7008C3198 /* WinnersVC.swift in Sources */,

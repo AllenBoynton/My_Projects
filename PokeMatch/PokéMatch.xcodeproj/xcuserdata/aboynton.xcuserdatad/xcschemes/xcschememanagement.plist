@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PokeMatch.xcscheme</key>
+		<key>ContentExtension.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>PokeMatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>0907CDA21ED3832D00350677</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>090A22DC1EEDF53C008C3198</key>
 		<dict>
 			<key>primary</key>
 			<true/>

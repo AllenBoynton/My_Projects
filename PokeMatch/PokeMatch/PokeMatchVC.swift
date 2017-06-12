@@ -25,6 +25,7 @@ let cellIdentifier = "PokeCell"
 var bgMusic:   AVAudioPlayer!
 var cheering: AVAudioPlayer!
 var patSound: AVAudioPlayer!
+var gameOver: AVAudioPlayer!
 
 
 class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MemoryGameDelegate {
@@ -130,51 +131,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
 //        }
 //    }
     
-    // MARK: Notification function
-    
-    func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
-        
-        // Add an attachment
-        let logoImage = "ABTECH_LOGO"
-        guard let imageURL = Bundle.main.url(forResource: logoImage, withExtension: "png") else {
-            completion(false)
-            
-            return
-        }
-        
-        var attachment: UNNotificationAttachment
-        
-        attachment = try! UNNotificationAttachment(identifier: "myNotification", url: imageURL, options: .none)
-        
-        // Create timer for notification to alert once app is exited
-        let notification = UNMutableNotificationContent()
-        
-        notification.title = "PokéMatch Message"
-        notification.subtitle = "Stop back to PokéMatch?"
-        notification.body = "Tap here to finish your game!"
-        notification.badge = 1
-        
-        notification.attachments = [attachment]
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
-        
-        // Add to Notification Center
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-            
-            if error != nil {
-                print(error.debugDescription)
-                completion(false)
-            } else {
-                completion(true)
-            }
-        })
-        
-        timer?.invalidate()
-        bgMusic.pause()
-    }
-    
     // Updates game time on displays
     func startGameTimer() -> String {
         
@@ -255,7 +211,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             cell.showCard(false, animated: true)
         }
         gamePoints -= 25
-//        playPatSound()
         pointsDisplay.text = "\(gamePoints)"
     }
     
@@ -264,10 +219,20 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         timer?.invalidate()
         playCheering()
         
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "WinnersVC") as! WinnersVC
-        myVC.pointsPassed = self.pointsDisplay.text!
-        myVC.timePassed = self.display
-        navigationController?.pushViewController(myVC, animated: true)
+        let alert = UIAlertController(title: "CONGRATULATIONS!", message: "You finished with \(gamePoints) Points with a time of \(display)!", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ -> Void in
+            let myVC = self.storyboard?.instantiateViewController(withIdentifier: "WinnersVC") as! WinnersVC
+            myVC.pointsPassed = self.pointsDisplay.text!
+            myVC.timePassed = self.display
+            self.present(myVC, animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        // Change font of the title and message
+        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
+        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
     }
     
     // MARK: - UICollectionViewDataSource
@@ -313,6 +278,51 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     
+    // MARK: Notification function
+    
+    func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
+        
+        // Add an attachment
+        let logoImage = "tenor1"
+        guard let imageURL = Bundle.main.url(forResource: logoImage, withExtension: "gif") else {
+            completion(false)
+            return
+        }
+        
+        var attachment: UNNotificationAttachment
+        
+        attachment = try! UNNotificationAttachment(identifier: "myNotification", url: imageURL, options: .none)
+        
+        // Create timer for notification to alert once app is exited
+        let notification = UNMutableNotificationContent()
+        
+        notification.title = "New PokéMatch Notification"
+        notification.subtitle = "Come back to PokéMatch?"
+        notification.body = "Tap here to finish your game!"
+        notification.badge = 1
+        
+        notification.attachments = [attachment]
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "gameOver", content: notification, trigger: trigger)
+        
+        // Add to Notification Center
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+            
+            if error != nil {
+                print(error.debugDescription)
+                completion(false)
+            } else {
+                completion(true)
+            }
+        })
+        
+        timer?.invalidate()
+//        bgMusic.pause()
+    }
+    
+    
     // MARK - IBAction functions
     
     @IBAction func startButton(_ sender: UIButton) {
@@ -345,7 +355,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Back button to bring to main menu
     @IBAction func backButtonPressed(_ sender: Any) {
-        
         showNotification(inSeconds: 5, completion: { success in
             if success {
                 print("Successfully scheduled notification")
