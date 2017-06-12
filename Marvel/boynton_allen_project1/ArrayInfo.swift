@@ -1,9 +1,9 @@
 //
 //  ArrayInfo.swift
-//  boynton_allen_project1
+//  Marvel
 //
 //  Created by Allen Boynton on 10/27/15.
-//  Copyright © 2015 Full Sail University. All rights reserved.
+//  Copyright © 2015 Allen Boynton. All rights reserved.
 //
 
 import Foundation
