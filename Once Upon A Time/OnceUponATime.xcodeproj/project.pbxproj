@@ -141,7 +141,7 @@
 		09CAE4701BBF74BA00495796 = {
 			isa = PBXGroup;
 			children = (
-				09CAE47B1BBF74BA00495796 /* Boynton_Allen_project1 */,
+				09CAE47B1BBF74BA00495796 /* OnceUponATime */,
 				09CAE4901BBF74BA00495796 /* Boynton_Allen_project1Tests */,
 				09CAE49B1BBF74BA00495796 /* Boynton_Allen_project1UITests */,
 				09CAE47A1BBF74BA00495796 /* Products */,
@@ -158,7 +158,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09CAE47B1BBF74BA00495796 /* Boynton_Allen_project1 */ = {
+		09CAE47B1BBF74BA00495796 /* OnceUponATime */ = {
 			isa = PBXGroup;
 			children = (
 				0923CF381EE8F2B30074FA81 /* Utilities */,
@@ -169,6 +169,7 @@
 				0923CF361EE8F2620074FA81 /* Controller */,
 				0923CF3A1EE8F2E70074FA81 /* Storyboard */,
 			);
+			name = OnceUponATime;
 			path = Boynton_Allen_project1;
 			sourceTree = "<group>";
 		};

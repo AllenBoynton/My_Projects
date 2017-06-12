@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Local variables
     var dataArray: [ArrayInfo] = []
     
-    var castArray: [ArrayInfo] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -143,14 +141,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cast20.image = "Zelena"
         
         // Pass in the characters into the storyboard
-        castArray = [cast1, cast2, cast3, cast4, cast5,
+        dataArray = [cast1, cast2, cast3, cast4, cast5,
                      cast6, cast7, cast8, cast9, cast10,
                      cast11, cast12, cast13, cast14, cast15,
                      cast16, cast17, cast18, cast19, cast20
         ]
         
-        for cast in castArray {
-            dataArray.append(cast)
+        for data in dataArray {
+            dataArray.append(data)
         }
     }
 
