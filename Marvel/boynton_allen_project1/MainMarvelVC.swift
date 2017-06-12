@@ -161,21 +161,16 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Add labels to the table view section
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell: MarvelViewCell = tableView.dequeueReusableCell(withIdentifier: heroCell)! as? MarvelViewCell {
+        let cell: MarvelViewCell = tableView.dequeueReusableCell(withIdentifier: heroCell)! as! MarvelViewCell
         
-            let currentHero: ArrayInfo = dataArray[indexPath.row]
-            
-            // Uses the local variable array as its return
-            cell.heroLabel!.text = currentHero.title
-            cell.subLabel!.text = currentHero.subtitle
-            cell.heroImage!.image = UIImage(named: currentHero.image)
+        let currentHero: ArrayInfo = dataArray[indexPath.row]
         
-            return cell
-            
-        } else {
-            
-            return MarvelViewCell()
-        }
+        // Uses the local variable array as its return
+        cell.heroLabel!.text = currentHero.title
+        cell.subLabel!.text = currentHero.subtitle
+        cell.heroImage!.image = UIImage(named: currentHero.image)
+        
+        return cell
     }
     
         // Allows to edit row deletion
@@ -193,13 +188,7 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Function connects segue from View Controller to Detail View
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toDetailVC" {
-            
-            let vc = segue.destination as? MarvelDetailVC
-            
-            vc?.currentHero = currentHero
-        }
-        let detailView: MarvelDetailVC = segue.destination as! MarvelDetailVC
+        let detailView: DetailViewController = segue.destination as! DetailViewController
         
         let indexPath: IndexPath? = heroView.indexPathForSelectedRow
         
@@ -215,4 +204,6 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         heroView.isEditing = !heroView.isEditing
         
     }
+    
+    
 }

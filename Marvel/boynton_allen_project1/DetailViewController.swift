@@ -1,5 +1,5 @@
 //
-//  MarvelDetailVC.swift
+//  DetailViewController.swift
 //  Marvel
 //
 //  Created by Allen Boynton on 10/27/15.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MarvelDetailVC: UIViewController {
+class DetailViewController: UIViewController {
     
-    var currentHero: ArrayInfo! = nil
+    var currentHero = ArrayInfo()
     
     // IB Outlets to connect labels to label views
     @IBOutlet weak var detailLabel: UILabel!
@@ -28,9 +28,9 @@ class MarvelDetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         // Function to create the open variable to be viewed
-        aliasLabel.text! = currentHero!.subtitle
-        detailLabel.text! = currentHero!.detail
-        imageView.image = UIImage(named: currentHero!.image)
+        aliasLabel.text! = currentHero.subtitle
+        detailLabel.text! = currentHero.detail
+        imageView.image = UIImage(named: currentHero.image)
     }
     
     // Created Action outlet to return to root controller

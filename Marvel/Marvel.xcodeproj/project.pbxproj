@@ -13,7 +13,7 @@
 		09FABAB91BE0726800B6A0BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FABAB71BE0726800B6A0BB /* Main.storyboard */; };
 		09FABABB1BE0726800B6A0BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FABABA1BE0726800B6A0BB /* Assets.xcassets */; };
 		09FABABE1BE0726800B6A0BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FABABC1BE0726800B6A0BB /* LaunchScreen.storyboard */; };
-		09FABAC61BE072C400B6A0BB /* MarvelDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FABAC51BE072C400B6A0BB /* MarvelDetailVC.swift */; };
+		09FABAC61BE072C400B6A0BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FABAC51BE072C400B6A0BB /* DetailViewController.swift */; };
 		09FABAC81BE073F100B6A0BB /* ArrayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FABAC71BE073F100B6A0BB /* ArrayInfo.swift */; };
 		09FABB211BE0A0F900B6A0BB /* American Captain.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09FABB1E1BE0A0F900B6A0BB /* American Captain.ttf */; };
 		09FABB2A1BE1A26800B6A0BB /* MarvelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FABB291BE1A26800B6A0BB /* MarvelViewCell.swift */; };
@@ -35,7 +35,7 @@
 		09FABABA1BE0726800B6A0BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FABABD1BE0726800B6A0BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09FABABF1BE0726800B6A0BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09FABAC51BE072C400B6A0BB /* MarvelDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelDetailVC.swift; sourceTree = "<group>"; };
+		09FABAC51BE072C400B6A0BB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		09FABAC71BE073F100B6A0BB /* ArrayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayInfo.swift; sourceTree = "<group>"; };
 		09FABB1E1BE0A0F900B6A0BB /* American Captain.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "American Captain.ttf"; sourceTree = "<group>"; };
 		09FABB291BE1A26800B6A0BB /* MarvelViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelViewCell.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		090A22FF1EEF1A13008C3198 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				09FABAC51BE072C400B6A0BB /* MarvelDetailVC.swift */,
+				09FABAC51BE072C400B6A0BB /* DetailViewController.swift */,
 				09FABAB51BE0726800B6A0BB /* MainMarvelVC.swift */,
 			);
 			name = Controller;
@@ -123,8 +123,8 @@
 		090A23011EEF1A28008C3198 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				09FABB291BE1A26800B6A0BB /* MarvelViewCell.swift */,
 				090A23021EEF23F0008C3198 /* MaterialView.swift */,
+				09FABB291BE1A26800B6A0BB /* MarvelViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FABAC61BE072C400B6A0BB /* MarvelDetailVC.swift in Sources */,
+				09FABAC61BE072C400B6A0BB /* DetailViewController.swift in Sources */,
 				09FABAC81BE073F100B6A0BB /* ArrayInfo.swift in Sources */,
 				09FABAB61BE0726800B6A0BB /* MainMarvelVC.swift in Sources */,
 				090A23031EEF23F0008C3198 /* MaterialView.swift in Sources */,

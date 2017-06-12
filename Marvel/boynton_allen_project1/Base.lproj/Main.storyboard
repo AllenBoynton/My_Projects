@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -67,7 +68,7 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="20" reuseIdentifier="MyCell" rowHeight="100" id="fVv-om-RIV" customClass="MarvelViewCell" customModule="Marvel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="20" reuseIdentifier="MyCell" rowHeight="100" id="fVv-om-RIV" customClass="MarvelViewCell" customModule="Marvel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVv-om-RIV" id="wfC-Aq-Z5c">
@@ -121,6 +122,7 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.99993187189102173" blue="0.0066417069174349308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="epO-5M-ve9" secondAttribute="trailing" id="uPG-OW-eht"/>
                                                         <constraint firstItem="epO-5M-ve9" firstAttribute="leading" secondItem="qap-QF-5Ne" secondAttribute="leading" id="vPo-1K-SSc"/>
@@ -142,7 +144,10 @@
                                             <outlet property="heroImage" destination="H5q-G1-Ey8" id="4Ld-zt-rj6"/>
                                             <outlet property="heroLabel" destination="GSg-KK-uLD" id="xa7-cY-L5b"/>
                                             <outlet property="subLabel" destination="ZoU-Xq-xWp" id="FaX-tu-67h"/>
-                                            <segue destination="Pky-AQ-3qj" kind="presentation" identifier="toDetailVC" modalTransitionStyle="partialCurl" id="JH3-A1-AcE"/>
+                                            <segue destination="Pky-AQ-3qj" kind="presentation" identifier="toDetailVC" modalTransitionStyle="partialCurl" id="JH3-A1-AcE">
+                                                <segue key="commit" inheritsFrom="parent" id="4PQ-Yr-3S5"/>
+                                                <segue key="preview" inheritsFrom="commit" id="Dkg-BH-hYX"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -275,4 +280,7 @@
     <resources>
         <image name="Superhero" width="650" height="284"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JH3-A1-AcE"/>
+    </inferredMetricsTieBreakers>
 </document>
