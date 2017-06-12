@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,7 +30,7 @@
         <!--Super Hero Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Super Hero Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="boynton_allen_project1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMarvelVC" title="Super Hero Controller" id="BYZ-38-t0r" customClass="MainMarvelVC" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,17 +39,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MARVEL SUPERHEROES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWw-ZI-3X8">
+                            <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARVEL SUPERHEROES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWw-ZI-3X8">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Rz7-6n-Bgg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BfC-Yp-6wk" userLabel="Hero View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BfC-Yp-6wk" userLabel="Hero View">
                                 <rect key="frame" x="0.0" y="73" width="375" height="594"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,49 +63,86 @@
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="myToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0m-ZZ-5sC"/>
+                                        <action selector="myToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ID-n9-ocE"/>
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="20" reuseIdentifier="MyCell" rowHeight="100" id="fVv-om-RIV" customClass="ObjectViewCell" customModule="Marvel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="20" reuseIdentifier="MyCell" rowHeight="100" id="fVv-om-RIV" customClass="MarvelViewCell" customModule="Marvel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVv-om-RIV" id="wfC-Aq-Z5c">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alias: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXq-wk-cHS">
-                                                    <rect key="frame" x="18" y="53" width="46" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MaskedMarvelLight" family="Masked Marvel Light" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoU-Xq-xWp">
-                                                    <rect key="frame" x="73" y="46" width="161" height="47"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MaskedMarvelExpanded" family="Masked Marvel Expanded" pointSize="18"/>
-                                                    <color key="textColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5q-G1-Ey8">
-                                                    <rect key="frame" x="236" y="0.0" width="101" height="99"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5q-G1-Ey8">
+                                                    <rect key="frame" x="238" y="0.0" width="99" height="99"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="99" id="QvZ-UR-rE4"/>
+                                                        <constraint firstAttribute="width" secondItem="H5q-G1-Ey8" secondAttribute="height" multiplier="1:1" id="hJQ-K9-X30"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="zSb-6j-PEq"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-KK-uLD">
-                                                    <rect key="frame" x="18" y="13" width="216" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MaskedMarvelBold" family="Masked Marvel Bold" pointSize="32"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qap-QF-5Ne" userLabel="Label Stack View">
+                                                    <rect key="frame" x="20" y="10" width="208" height="79.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-KK-uLD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="32.5"/>
+                                                            <fontDescription key="fontDescription" name="MaskedMarvelBold" family="Masked Marvel Bold" pointSize="32"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epO-5M-ve9" userLabel="Alias Stack View">
+                                                            <rect key="frame" x="0.0" y="32.5" width="208" height="47"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXq-wk-cHS">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="47"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="9aU-Pt-VHw"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="MaskedMarvelLight" family="Masked Marvel Light" pointSize="17"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoU-Xq-xWp">
+                                                                    <rect key="frame" x="50" y="0.0" width="158" height="47"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="47" id="drf-Xo-bMf"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="MaskedMarvelExpanded" family="Masked Marvel Expanded" pointSize="18"/>
+                                                                    <color key="textColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="ZoU-Xq-xWp" secondAttribute="trailing" id="RIu-eH-Zhf"/>
+                                                                <constraint firstItem="ZoU-Xq-xWp" firstAttribute="leading" secondItem="ZXq-wk-cHS" secondAttribute="trailing" id="ft3-UL-2DU"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="epO-5M-ve9" secondAttribute="trailing" id="uPG-OW-eht"/>
+                                                        <constraint firstItem="epO-5M-ve9" firstAttribute="leading" secondItem="qap-QF-5Ne" secondAttribute="leading" id="vPo-1K-SSc"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="H5q-G1-Ey8" secondAttribute="trailing" constant="38" id="Qot-p1-qly"/>
+                                                <constraint firstItem="qap-QF-5Ne" firstAttribute="leading" secondItem="wfC-Aq-Z5c" secondAttribute="leading" constant="20" id="TeR-Nl-6wl"/>
+                                                <constraint firstItem="qap-QF-5Ne" firstAttribute="top" secondItem="wfC-Aq-Z5c" secondAttribute="top" constant="10" id="W4K-eQ-aVV"/>
+                                                <constraint firstItem="H5q-G1-Ey8" firstAttribute="top" secondItem="wfC-Aq-Z5c" secondAttribute="top" id="ln3-We-QI7"/>
+                                                <constraint firstAttribute="bottom" secondItem="qap-QF-5Ne" secondAttribute="bottom" constant="10" id="q1K-hN-L9N"/>
+                                                <constraint firstItem="H5q-G1-Ey8" firstAttribute="leading" secondItem="qap-QF-5Ne" secondAttribute="trailing" constant="10" id="sLO-ve-jKu"/>
+                                                <constraint firstItem="H5q-G1-Ey8" firstAttribute="centerY" secondItem="wfC-Aq-Z5c" secondAttribute="centerY" id="yP9-Qk-owq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="heroImage" destination="H5q-G1-Ey8" id="4Ld-zt-rj6"/>
                                             <outlet property="heroLabel" destination="GSg-KK-uLD" id="xa7-cY-L5b"/>
                                             <outlet property="subLabel" destination="ZoU-Xq-xWp" id="FaX-tu-67h"/>
-                                            <segue destination="Pky-AQ-3qj" kind="presentation" modalTransitionStyle="partialCurl" id="JH3-A1-AcE"/>
+                                            <segue destination="Pky-AQ-3qj" kind="presentation" identifier="toDetailVC" modalTransitionStyle="partialCurl" id="JH3-A1-AcE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,19 +153,25 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BfC-Yp-6wk" secondAttribute="trailing" id="Bqc-Yr-dvv"/>
+                            <constraint firstItem="wWw-ZI-3X8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ad7-js-rmd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BfC-Yp-6wk" secondAttribute="bottom" id="afS-FE-W09"/>
+                            <constraint firstItem="BfC-Yp-6wk" firstAttribute="top" secondItem="wWw-ZI-3X8" secondAttribute="bottom" id="cnb-MF-Tck"/>
+                            <constraint firstItem="wWw-ZI-3X8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dgY-RB-Uld"/>
+                            <constraint firstAttribute="trailing" secondItem="wWw-ZI-3X8" secondAttribute="trailing" id="gSA-Ih-nz3"/>
+                            <constraint firstItem="BfC-Yp-6wk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hcX-MH-OM2"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="heroView" destination="BfC-Yp-6wk" id="ZRn-YQ-2l2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="387.5"/>
+            <point key="canvasLocation" x="9" y="387"/>
         </scene>
         <!--Hero Details-->
         <scene sceneID="rPB-GZ-1Vq">
             <objects>
-                <viewController title="Hero Details" id="Pky-AQ-3qj" customClass="DetailViewController" customModule="boynton_allen_project1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MarvelDetailVC" title="Hero Details" id="Pky-AQ-3qj" customClass="MarvelDetailVC" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZNt-m2-895"/>
                         <viewControllerLayoutGuide type="bottom" id="Frp-WQ-qtA"/>
@@ -135,66 +180,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axd-Ch-dYm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axd-Ch-dYm">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fgx-je-Wdf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Superhero.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jEO-5B-bfo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Superhero" translatesAutoresizingMaskIntoConstraints="NO" id="jEO-5B-bfo">
                                 <rect key="frame" x="0.0" y="73" width="375" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="O4g-Vm-pnr"/>
+                                    <constraint firstAttribute="width" secondItem="jEO-5B-bfo" secondAttribute="height" multiplier="375:167" id="b1E-se-VQt"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uoj-0M-VEg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uoj-0M-VEg">
                                 <rect key="frame" x="110" y="248" width="154" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uoj-0M-VEg" secondAttribute="height" multiplier="1:1" id="0mS-y5-EFZ"/>
+                                    <constraint firstAttribute="width" constant="154" id="2tX-gl-nEx"/>
+                                    <constraint firstAttribute="height" constant="154" id="Vty-sA-blg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NA-1r-66c">
-                                <rect key="frame" x="0.0" y="401" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MaskedMarvelLight" family="Masked Marvel Light" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-fM-LTg">
-                                <rect key="frame" x="0.0" y="422" width="375" height="196"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-fM-LTg">
+                                <rect key="frame" x="0.0" y="428" width="375" height="190"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.066666666669999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MaskedMarvelExpanded" family="Masked Marvel Expanded" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndG-Dg-Dbr">
-                                <rect key="frame" x="0.0" y="629" width="375" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndG-Dg-Dbr">
+                                <rect key="frame" x="0.0" y="626" width="375" height="41"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Ofh-0T-4LU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MaskedMarvelRotate" family="Masked Marvel Rotate" pointSize="21"/>
                                 <state key="normal" title="Back to Main Menu.......">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gj4-Yg-tfb" kind="unwind" unwindAction="backButton:" id="Fyp-ll-7wO"/>
+                                    <action selector="backButtonPressed:" destination="Pky-AQ-3qj" eventType="touchUpInside" id="Xpu-t6-w9o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NA-1r-66c">
+                                <rect key="frame" x="0.0" y="407" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zda-fc-tyu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MaskedMarvelLight" family="Masked Marvel Light" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Frp-WQ-qtA" firstAttribute="top" secondItem="ndG-Dg-Dbr" secondAttribute="bottom" id="40O-g2-0Uj"/>
+                            <constraint firstAttribute="trailing" secondItem="jEO-5B-bfo" secondAttribute="trailing" id="8pB-Zh-pb1"/>
+                            <constraint firstItem="Uoj-0M-VEg" firstAttribute="centerX" secondItem="Cch-HC-cTZ" secondAttribute="centerX" id="9um-uZ-fy8"/>
+                            <constraint firstItem="1z9-fM-LTg" firstAttribute="top" secondItem="1NA-1r-66c" secondAttribute="bottom" id="BHh-ee-dsy"/>
+                            <constraint firstItem="axd-Ch-dYm" firstAttribute="leading" secondItem="Cch-HC-cTZ" secondAttribute="leading" id="MqJ-Jj-SPE"/>
+                            <constraint firstItem="ndG-Dg-Dbr" firstAttribute="leading" secondItem="Cch-HC-cTZ" secondAttribute="leading" id="STx-1Q-lcg"/>
+                            <constraint firstItem="axd-Ch-dYm" firstAttribute="top" secondItem="ZNt-m2-895" secondAttribute="bottom" constant="8" id="XhE-8f-W0u"/>
+                            <constraint firstItem="ndG-Dg-Dbr" firstAttribute="top" secondItem="1z9-fM-LTg" secondAttribute="bottom" constant="8" id="bF2-SA-sPZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ndG-Dg-Dbr" secondAttribute="trailing" id="dhx-MT-9Bs"/>
+                            <constraint firstItem="1NA-1r-66c" firstAttribute="top" secondItem="Uoj-0M-VEg" secondAttribute="bottom" constant="5" id="eJc-dm-GXa"/>
+                            <constraint firstItem="1z9-fM-LTg" firstAttribute="leading" secondItem="Cch-HC-cTZ" secondAttribute="leading" id="fa7-py-GxB"/>
+                            <constraint firstItem="jEO-5B-bfo" firstAttribute="leading" secondItem="Cch-HC-cTZ" secondAttribute="leading" id="iWO-ws-dbg"/>
+                            <constraint firstItem="Uoj-0M-VEg" firstAttribute="top" secondItem="jEO-5B-bfo" secondAttribute="bottom" constant="8" id="jHh-BS-ksS"/>
+                            <constraint firstItem="jEO-5B-bfo" firstAttribute="top" secondItem="axd-Ch-dYm" secondAttribute="bottom" id="jyH-hP-zIl"/>
+                            <constraint firstAttribute="trailing" secondItem="1NA-1r-66c" secondAttribute="trailing" id="kBC-1B-k35"/>
+                            <constraint firstItem="1NA-1r-66c" firstAttribute="leading" secondItem="Cch-HC-cTZ" secondAttribute="leading" id="oeo-9F-5fN"/>
+                            <constraint firstAttribute="trailing" secondItem="axd-Ch-dYm" secondAttribute="trailing" id="p2G-cm-sEm"/>
+                            <constraint firstAttribute="trailing" secondItem="1z9-fM-LTg" secondAttribute="trailing" id="zkU-G5-vcd"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="aliasLabel" destination="1NA-1r-66c" id="UET-Dc-cGD"/>
                         <outlet property="detailLabel" destination="1z9-fM-LTg" id="NK7-4e-ZmA"/>
                         <outlet property="imageView" destination="Uoj-0M-VEg" id="NLd-9O-FGA"/>
-                        <outlet property="nameLabel" destination="axd-Ch-dYm" id="PkE-t9-ge5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UED-fy-dfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="gj4-Yg-tfb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="777.5" y="387.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Superhero.jpg" width="650" height="284"/>
+        <image name="Superhero" width="650" height="284"/>
     </resources>
 </document>

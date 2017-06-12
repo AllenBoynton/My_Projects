@@ -19,8 +19,6 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Local variables
     var dataArray: [ArrayInfo] = []
     
-    var heroArray: [ArrayInfo] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -146,12 +144,12 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         hero20.image = "Human_Torch"
         
         // Pass in the heroes into the storyboard
-        heroArray = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15, hero16, hero17, hero18, hero19, hero20
+        dataArray = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15, hero16, hero17, hero18, hero19, hero20
         ]
         
         // For in loop to iterate through array
-        for hero in heroArray {
-            dataArray.append(hero)
+        for data in dataArray {
+            dataArray.append(data)
         }
     }
     
@@ -163,16 +161,21 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Add labels to the table view section
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: MarvelViewCell = tableView.dequeueReusableCell(withIdentifier: heroCell)! as! MarvelViewCell
+        if let cell: MarvelViewCell = tableView.dequeueReusableCell(withIdentifier: heroCell)! as? MarvelViewCell {
         
-        let currentHero: ArrayInfo = dataArray[indexPath.row]
+            let currentHero: ArrayInfo = dataArray[indexPath.row]
+            
+            // Uses the local variable array as its return
+            cell.heroLabel!.text = currentHero.title
+            cell.subLabel!.text = currentHero.subtitle
+            cell.heroImage!.image = UIImage(named: currentHero.image)
         
-        // Uses the local variable array as its return
-        cell.heroLabel!.text = currentHero.title
-        cell.subLabel!.text = currentHero.subtitle
-        cell.heroImage!.image = UIImage(named: currentHero.image)
-        
-        return cell
+            return cell
+            
+        } else {
+            
+            return MarvelViewCell()
+        }
     }
     
         // Allows to edit row deletion
@@ -190,9 +193,15 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Function connects segue from View Controller to Detail View
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == "toDetailVC" {
+            
+            let vc = segue.destination as? MarvelDetailVC
+            
+            vc?.currentHero = currentHero
+        }
         let detailView: MarvelDetailVC = segue.destination as! MarvelDetailVC
         
-        let indexPath: IndexPath? = heroView.indexPathForSelectedRow!
+        let indexPath: IndexPath? = heroView.indexPathForSelectedRow
         
         let currentHero: ArrayInfo = dataArray[indexPath!.row]
         
@@ -206,10 +215,4 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         heroView.isEditing = !heroView.isEditing
         
     }
-    
-    // Created back button to return to the main menu
-    @IBAction func backButton(_ segue: UIStoryboardSegue) {
-        
-    }
-    
 }

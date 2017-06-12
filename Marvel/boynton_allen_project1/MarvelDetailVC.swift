@@ -13,7 +13,6 @@ class MarvelDetailVC: UIViewController {
     var currentHero: ArrayInfo! = nil
     
     // IB Outlets to connect labels to label views
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var aliasLabel: UILabel!
@@ -22,10 +21,20 @@ class MarvelDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = currentHero.title
+    }
+    
+    // Function to create the open variable to be viewed
+    override func viewWillAppear(_ animated: Bool) {
+        
         // Function to create the open variable to be viewed
-        nameLabel.text! = currentHero!.title
         aliasLabel.text! = currentHero!.subtitle
         detailLabel.text! = currentHero!.detail
         imageView.image = UIImage(named: currentHero!.image)
+    }
+    
+    // Created Action outlet to return to root controller
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }
