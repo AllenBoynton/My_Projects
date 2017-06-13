@@ -164,10 +164,10 @@
 				0923CF381EE8F2B30074FA81 /* Utilities */,
 				0923CF371EE8F2A30074FA81 /* AppDelegate */,
 				0923CF391EE8F2BF0074FA81 /* Resources */,
+				0923CF3A1EE8F2E70074FA81 /* Storyboard */,
 				0923CF341EE8F2460074FA81 /* Model */,
 				0923CF351EE8F2560074FA81 /* View */,
 				0923CF361EE8F2620074FA81 /* Controller */,
-				0923CF3A1EE8F2E70074FA81 /* Storyboard */,
 			);
 			name = OnceUponATime;
 			path = Boynton_Allen_project1;

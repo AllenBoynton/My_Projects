@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Boynton_Allen_project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnceUponATime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -59,7 +59,7 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyCell" editingAccessoryType="detailButton" rowHeight="84" id="OGm-xb-tf2" customClass="LabelTableCell" customModule="Boynton_Allen_project1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyCell" editingAccessoryType="detailButton" rowHeight="84" id="OGm-xb-tf2" customClass="LabelTableCell" customModule="OnceUponATime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OGm-xb-tf2" id="Ra6-qH-y6O">
@@ -146,6 +146,7 @@
                     <navigationItem key="navigationItem" id="mP1-sS-3CU"/>
                     <connections>
                         <outlet property="characterView" destination="pXp-oW-1gE" id="nll-DF-td1"/>
+                        <outlet property="tableView" destination="pXp-oW-1gE" id="FmN-mC-9dT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,7 +156,7 @@
         <!--Detail View Controller-->
         <scene sceneID="6lZ-YJ-aUp">
             <objects>
-                <viewController id="XWB-NE-Czu" customClass="DetailViewController" customModule="Boynton_Allen_project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XWB-NE-Czu" customClass="DetailViewController" customModule="OnceUponATime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Wc-sN-PSl"/>
                         <viewControllerLayoutGuide type="bottom" id="siV-7B-7HO"/>
@@ -196,12 +197,12 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="-2" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="secondLabel" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-eX-wyc">
-                                <rect key="frame" x="0.0" y="508" width="375" height="111"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="secondLabel" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-eX-wyc">
+                                <rect key="frame" x="20" y="508" width="335" height="111"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <color key="textColor" red="0.96470588239999999" green="0.64705882349999999" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" red="0.37828776240348816" green="0.20328730344772339" blue="0.60489529371261597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="-2" height="2"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageView" image="Emma" translatesAutoresizingMaskIntoConstraints="NO" id="qhn-f1-cdb">
@@ -217,10 +218,10 @@
                             <constraint firstAttribute="trailing" secondItem="lRF-Rh-UoM" secondAttribute="trailing" id="3fe-vS-Pzs"/>
                             <constraint firstItem="U5a-eX-wyc" firstAttribute="top" secondItem="qhn-f1-cdb" secondAttribute="bottom" constant="5" id="7YR-OT-u7w"/>
                             <constraint firstItem="siV-7B-7HO" firstAttribute="top" secondItem="CuL-S0-JzI" secondAttribute="bottom" id="CJL-01-WtP"/>
-                            <constraint firstAttribute="trailing" secondItem="U5a-eX-wyc" secondAttribute="trailing" id="EsM-PP-eT1"/>
+                            <constraint firstAttribute="trailing" secondItem="U5a-eX-wyc" secondAttribute="trailing" constant="20" id="EsM-PP-eT1"/>
                             <constraint firstItem="M7w-ag-zA5" firstAttribute="top" secondItem="lRF-Rh-UoM" secondAttribute="bottom" constant="8" id="Ftv-6q-iz9"/>
                             <constraint firstAttribute="trailing" secondItem="CuL-S0-JzI" secondAttribute="trailing" id="MBe-k3-XBc"/>
-                            <constraint firstItem="U5a-eX-wyc" firstAttribute="leading" secondItem="fTt-3T-ueP" secondAttribute="leading" id="RzO-WM-5cv"/>
+                            <constraint firstItem="U5a-eX-wyc" firstAttribute="leading" secondItem="fTt-3T-ueP" secondAttribute="leading" constant="20" id="RzO-WM-5cv"/>
                             <constraint firstItem="M7w-ag-zA5" firstAttribute="leading" secondItem="fTt-3T-ueP" secondAttribute="leadingMargin" id="SBH-rZ-AsG"/>
                             <constraint firstItem="lRF-Rh-UoM" firstAttribute="leading" secondItem="fTt-3T-ueP" secondAttribute="leading" id="SJJ-Kj-26h"/>
                             <constraint firstItem="lRF-Rh-UoM" firstAttribute="top" secondItem="6Wc-sN-PSl" secondAttribute="bottom" id="TTK-8U-LrT"/>

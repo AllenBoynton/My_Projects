@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
     // Connects table view with storyboard
-    @IBOutlet weak var characterView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     // Local variables
     var dataArray: [ArrayInfo] = []
@@ -141,10 +141,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cast20.image = "Zelena"
         
         // Pass in the characters into the storyboard
-        dataArray = [cast1, cast2, cast3, cast4, cast5,
-                     cast6, cast7, cast8, cast9, cast10,
-                     cast11, cast12, cast13, cast14, cast15,
-                     cast16, cast17, cast18, cast19, cast20
+        dataArray = [cast1, cast2, cast3, cast4, cast5, cast6, cast7, cast8, cast9, cast10, cast11, cast12,
+                     cast13, cast14, cast15, cast16, cast17, cast18, cast19, cast20
         ]
         
         for data in dataArray {
@@ -186,7 +184,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let detailView: DetailViewController = segue.destination as! DetailViewController
         
-        let indexPath: IndexPath? = characterView.indexPathForSelectedRow
+        let indexPath: IndexPath? = tableView.indexPathForSelectedRow
         
         let currentCharacter: ArrayInfo = dataArray[indexPath!.row]
         
@@ -198,7 +196,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Toggle edit button for row deletion
     @IBAction func myToggle(_ sender: UIButton) {
         
-        characterView.isEditing = !characterView.isEditing
+        tableView.isEditing = !tableView.isEditing
         
     }
     
@@ -210,7 +208,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // This will delete the item from the dataArray
             dataArray.remove(at: indexPath.row)
             
-            characterView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
 }
