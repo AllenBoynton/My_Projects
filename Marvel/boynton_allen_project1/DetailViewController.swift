@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var currentHero = ArrayInfo()
+    var currentHero: ArrayInfo! = nil
     
     // IB Outlets to connect labels to label views
     @IBOutlet weak var detailLabel: UILabel!
@@ -21,13 +21,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Objects sent from Main Marvel VC
         navigationItem.title = currentHero.title
-    }
-    
-    // Function to create the open variable to be viewed
-    override func viewWillAppear(_ animated: Bool) {
-        
-        // Function to create the open variable to be viewed
         aliasLabel.text! = currentHero.subtitle
         detailLabel.text! = currentHero.detail
         imageView.image = UIImage(named: currentHero.image)

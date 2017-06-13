@@ -14,7 +14,7 @@ let heroCell = "MyCell"
 class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Create IB Outlet for cell table view
-    @IBOutlet weak var heroView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     // Local variables
     var dataArray: [ArrayInfo] = []
@@ -161,7 +161,7 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Add labels to the table view section
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: MarvelViewCell = tableView.dequeueReusableCell(withIdentifier: heroCell)! as! MarvelViewCell
+        if let cell: MarvelViewCell = tableView.dequeueReusableCell(withIdentifier: heroCell)! as? MarvelViewCell {
         
         let currentHero: ArrayInfo = dataArray[indexPath.row]
         
@@ -171,6 +171,12 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.heroImage!.image = UIImage(named: currentHero.image)
         
         return cell
+            
+        } else {
+            
+            return MarvelViewCell()
+            
+        }
     }
     
         // Allows to edit row deletion
@@ -181,7 +187,7 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             // This will delete the item from the dataArray
             dataArray.remove(at: indexPath.row)
             
-            heroView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
     
@@ -190,7 +196,7 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let detailView: DetailViewController = segue.destination as! DetailViewController
         
-        let indexPath: IndexPath? = heroView.indexPathForSelectedRow
+        let indexPath: IndexPath? = tableView.indexPathForSelectedRow
         
         let currentHero: ArrayInfo = dataArray[indexPath!.row]
         
@@ -201,7 +207,7 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     // Toggle edit button for row deletion
     @IBAction func myToggle(_ sender: UIButton) {
         
-        heroView.isEditing = !heroView.isEditing
+        tableView.isEditing = !tableView.isEditing
         
     }
     

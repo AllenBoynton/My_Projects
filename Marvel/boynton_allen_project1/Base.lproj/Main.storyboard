@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -144,10 +143,7 @@
                                             <outlet property="heroImage" destination="H5q-G1-Ey8" id="4Ld-zt-rj6"/>
                                             <outlet property="heroLabel" destination="GSg-KK-uLD" id="xa7-cY-L5b"/>
                                             <outlet property="subLabel" destination="ZoU-Xq-xWp" id="FaX-tu-67h"/>
-                                            <segue destination="Pky-AQ-3qj" kind="presentation" identifier="toDetailVC" modalTransitionStyle="partialCurl" id="JH3-A1-AcE">
-                                                <segue key="commit" inheritsFrom="parent" id="4PQ-Yr-3S5"/>
-                                                <segue key="preview" inheritsFrom="commit" id="Dkg-BH-hYX"/>
-                                            </segue>
+                                            <segue destination="Pky-AQ-3qj" kind="presentation" identifier="toDetailVC" modalTransitionStyle="partialCurl" id="JH3-A1-AcE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,6 +164,9 @@
                             <constraint firstItem="BfC-Yp-6wk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hcX-MH-OM2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BfC-Yp-6wk" id="Fft-JN-FjH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +175,7 @@
         <!--Hero Details-->
         <scene sceneID="rPB-GZ-1Vq">
             <objects>
-                <viewController storyboardIdentifier="MarvelDetailVC" title="Hero Details" id="Pky-AQ-3qj" customClass="MarvelDetailVC" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" title="Hero Details" id="Pky-AQ-3qj" customClass="DetailViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZNt-m2-895"/>
                         <viewControllerLayoutGuide type="bottom" id="Frp-WQ-qtA"/>
@@ -198,7 +197,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Superhero" translatesAutoresizingMaskIntoConstraints="NO" id="jEO-5B-bfo">
                                 <rect key="frame" x="0.0" y="73" width="375" height="167"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="O4g-Vm-pnr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="O4g-Vm-pnr"/>
                                     <constraint firstAttribute="width" secondItem="jEO-5B-bfo" secondAttribute="height" multiplier="375:167" id="b1E-se-VQt"/>
                                 </constraints>
                             </imageView>
@@ -280,7 +279,4 @@
     <resources>
         <image name="Superhero" width="650" height="284"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="JH3-A1-AcE"/>
-    </inferredMetricsTieBreakers>
 </document>
