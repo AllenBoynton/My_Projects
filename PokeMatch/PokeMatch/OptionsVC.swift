@@ -20,7 +20,7 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     // Outlets to initialize the items
     @IBOutlet weak var bgImage: UIImageView!
-    @IBOutlet weak var changeImageButton: UIButton!
+//    @IBOutlet weak var changeImageButton: UIButton!
     
     let imagePassed = UIImage(named: "bg")
     
@@ -52,20 +52,27 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-    // Allows for VC to be dismissed
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     // Image picker picks selected image and dismisses VC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage
         bgImage.image = selectedPhoto
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            selectedPhoto = editedImage
+        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            selectedPhoto = originalImage
+        }
+        
+        if let selectedImage = selectedPhoto {
+            bgImage?.image = selectedImage
+        }
+        
         dismiss(animated: true, completion: nil)
     }
     
     // Prepare for return from next VC when back button is tapped
-    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     // Pick new image from library
     @IBAction func selectImageFromImageLibrary(_ sender: UITapGestureRecognizer) {
