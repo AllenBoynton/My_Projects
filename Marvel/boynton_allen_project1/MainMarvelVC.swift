@@ -179,7 +179,7 @@ class MainMarvelVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
     
-        // Allows to edit row deletion
+    // Allows to edit row deletion
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if (editingStyle == .delete) {

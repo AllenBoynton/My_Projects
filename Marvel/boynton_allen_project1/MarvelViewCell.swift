@@ -14,4 +14,14 @@ class MarvelViewCell: UITableViewCell {
     @IBOutlet weak var heroLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
+    
+    var heroData: ArrayInfo!
+    
+    func configureCell(_ heroData: ArrayInfo) {
+        self.heroData = heroData
+        
+        heroImage.image = UIImage(named: "\(self.heroData.image)")
+        heroLabel.text = self.heroData.title
+        subLabel.text = self.heroData.subtitle
+    }
 }
