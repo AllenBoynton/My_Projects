@@ -4,7 +4,7 @@
 //
 //  Created by Allen Boynton on 5/24/17.
 //  Copyright © 2017 Allen Boynton. All rights reserved.
-//  Icon made by Raier from www.zerochan.net
+//  Icon partially made by Raier from www.zerochan.net
 //  http://www.zerochan.net/1037761
 //
 

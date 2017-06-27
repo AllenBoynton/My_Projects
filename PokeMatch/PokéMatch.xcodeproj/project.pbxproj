@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00A632CED9274937BB150654 /* Pods_Poke_MatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FC811F399E468EE342EA6B /* Pods_Poke_MatchTests.framework */; };
-		090281311F028AD20076DB99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090281301F028AD20076DB99 /* GoogleService-Info.plist */; };
 		090281331F028D9E0076DB99 /* DesignableSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090281321F028D9E0076DB99 /* DesignableSegmentControl.swift */; };
+		090281361F0297CC0076DB99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090281351F0297CC0076DB99 /* GoogleService-Info.plist */; };
 		0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907CD841ED3832D00350677 /* AppDelegate.swift */; };
 		0907CD8A1ED3832D00350677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0907CD881ED3832D00350677 /* Main.storyboard */; };
 		0907CD8F1ED3832D00350677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0907CD8E1ED3832D00350677 /* Assets.xcassets */; };
@@ -74,8 +74,8 @@
 
 /* Begin PBXFileReference section */
 		08D8D938B74F4C9BFD46C2B5 /* Pods_Poke_MatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poke_MatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		090281301F028AD20076DB99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		090281321F028D9E0076DB99 /* DesignableSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableSegmentControl.swift; sourceTree = "<group>"; };
+		090281351F0297CC0076DB99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0907CD811ED3832D00350677 /* PokéMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PokéMatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0907CD841ED3832D00350677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0907CD891ED3832D00350677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				0907CD931ED3832D00350677 /* Info.plist */,
-				090281301F028AD20076DB99 /* GoogleService-Info.plist */,
+				090281351F0297CC0076DB99 /* GoogleService-Info.plist */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 				0907CDED1ED4129700350677 /* pokemon.ttf in Resources */,
 				090A22F11EEE3D7B008C3198 /* gameover.mp3 in Resources */,
 				090A22D61EEDEC05008C3198 /* tenor.gif in Resources */,
-				090281311F028AD20076DB99 /* GoogleService-Info.plist in Resources */,
+				090281361F0297CC0076DB99 /* GoogleService-Info.plist in Resources */,
 				0907CDEF1ED412A700350677 /* music.mp3 in Resources */,
 				0907CD8A1ED3832D00350677 /* Main.storyboard in Resources */,
 			);
