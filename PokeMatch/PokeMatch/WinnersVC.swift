@@ -15,7 +15,7 @@ class WinnersVC: UIViewController {
     @IBOutlet weak var finalGameTime: UILabel!
     
     
-    // Images passed from OptionsVC
+    // Scores passed from PokeMatchVC
     var pointsPassed = ""
     var timePassed = ""
 
