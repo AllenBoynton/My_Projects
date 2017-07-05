@@ -20,7 +20,6 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     // Outlets to initialize the items
     @IBOutlet weak var bgImage: UIImageView!
-//    @IBOutlet weak var changeImageButton: UIButton!
     
     let imagePassed = UIImage(named: "bg")
     
@@ -30,9 +29,6 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Start with image Change button not enabled
-//        changeImageButton.isEnabled = false
         
         // Picker data
         difficultyArray = ["Easy", "Medium", "Hard"]
@@ -60,7 +56,10 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             selectedPhoto = editedImage
         } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             selectedPhoto = originalImage
-        }
+            
+           // ****************************************
+            
+        } // Code if no image is picked to use default
         
         if let selectedImage = selectedPhoto {
             bgImage?.image = selectedImage

@@ -13,6 +13,7 @@ import AVFoundation
 import UserNotifications
 import GameKit
 
+
 // Global identifiers
 let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
 let pointsLeaderboardID = "HIGH_POINTS" // Score Leaderboard
@@ -33,11 +34,9 @@ class MainMenuVC: UIViewController {
     var gcEnabled = Bool() // Check if the user has Game Center enabled
     var gcDefaultLeaderBoard = String() // Check the default leaderboardID
     var score = 0
+    var time = 0
     
-    // Game Center Achievement properties
-    var progressPercentage: Int64 = 0
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,19 +80,6 @@ class MainMenuVC: UIViewController {
         }
     }
     
-//    // Add Game Center Challenges
-//    func challengeFriends(forScore playerScore: Int64, inLeaderboard leaderboard: String) {
-//        let query = GKLeaderboard()
-//        query.leaderboardIdentifier = leaderboard
-//        query.playerScope = .friendsOnly
-//        query.range = NSRange(location: 1, length: 100)
-//        query.loadScores(completionHandler: {(_ scores: [Any], _ error: Error?) -> Void in
-//            let filter = NSPredicate(format: "value < %qi", playerScore)
-//            let lesserScores: [Any] = scores.filter { filter.evaluate(with: $0) }
-//            self.presentChallenge(withPreselectedScores: lesserScores)
-//        })
-//    }
-    
     func notificationReceived() {
         print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
     }
@@ -103,7 +89,34 @@ class MainMenuVC: UIViewController {
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
+            // Save game points to GC
             let gkScore = GKScore(leaderboardIdentifier: pointsLeaderboardID)
+            gkScore.value = score
+            
+            let gkScoreArray: [GKScore] = [gkScore]
+            
+            GKScore.report(gkScoreArray, withCompletionHandler: { error in
+                guard error == nil  else { return }
+                
+                let vc = GKGameCenterViewController()
+                vc.leaderboardIdentifier = pointsLeaderboardID
+                vc.gameCenterDelegate = self as? GKGameCenterControllerDelegate
+                vc.viewState = .leaderboards
+                
+                self.present(vc, animated: true, completion: nil)
+            })
+        }
+    }
+    
+    // score = 2 * 60 + 22
+    
+    // Reporting game time
+    func saveBestTime(_ score: Int64) {
+        
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            // Save game time to GC
+            let gkScore = GKScore(leaderboardIdentifier: timeLeaderboardID)
             gkScore.value = score
             
             let gkScoreArray: [GKScore] = [gkScore]
@@ -124,6 +137,7 @@ class MainMenuVC: UIViewController {
     // Report example score after user logs in
     func authenticationDidChange(_ notification: Notification) {
         saveHighScore(0)
+        saveBestTime(Int64(score))
     }
     
     // Retrieves the GC VC leaderboard
@@ -163,10 +177,6 @@ class MainMenuVC: UIViewController {
         
         saveHighScore(Int64(score))
         showLeaderboard()
-    }
-    
-    @IBAction func enterOptionsWithAlert(_ sender: AnyObject) {
-        
     }
     
     // Continue the game after GameCenter is closed

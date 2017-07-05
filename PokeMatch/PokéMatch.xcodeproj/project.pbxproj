@@ -32,6 +32,7 @@
 		094AEF201ED65732007FDFC9 /* DesignableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF1F1ED65732007FDFC9 /* DesignableButtons.swift */; };
 		094AEF281ED8FF8F007FDFC9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AEF271ED8FF8F007FDFC9 /* GameKit.framework */; };
 		094AEF2A1ED90FED007FDFC9 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF291ED90FED007FDFC9 /* OptionsVC.swift */; };
+		096334AE1F06F27C00B621A9 /* DeviceTypeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096334AD1F06F27C00B621A9 /* DeviceTypeCheck.swift */; };
 		099274EA1EDC918E002C465A /* PokeMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274E91EDC918E002C465A /* PokeMemoryGame.swift */; };
 		099274EC1EDC9218002C465A /* PokeVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274EB1EDC9218002C465A /* PokeVCell.swift */; };
 		099274EF1EDC93FE002C465A /* RandomArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099274EE1EDC93FE002C465A /* RandomArray.swift */; };
@@ -104,6 +105,7 @@
 		094AEF1F1ED65732007FDFC9 /* DesignableButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButtons.swift; sourceTree = "<group>"; };
 		094AEF271ED8FF8F007FDFC9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		094AEF291ED90FED007FDFC9 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		096334AD1F06F27C00B621A9 /* DeviceTypeCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTypeCheck.swift; sourceTree = "<group>"; };
 		099274E91EDC918E002C465A /* PokeMemoryGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeMemoryGame.swift; sourceTree = "<group>"; };
 		099274EB1EDC9218002C465A /* PokeVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeVCell.swift; sourceTree = "<group>"; };
 		099274EE1EDC93FE002C465A /* RandomArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomArray.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				099274EE1EDC93FE002C465A /* RandomArray.swift */,
+				096334AD1F06F27C00B621A9 /* DeviceTypeCheck.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096334AE1F06F27C00B621A9 /* DeviceTypeCheck.swift in Sources */,
 				094AEF141ED469CF007FDFC9 /* DesignableImageViews.swift in Sources */,
 				099274F11EDCA3E9002C465A /* Card.swift in Sources */,
 				094AEF201ED65732007FDFC9 /* DesignableButtons.swift in Sources */,
