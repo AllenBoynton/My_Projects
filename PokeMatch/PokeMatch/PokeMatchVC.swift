@@ -116,21 +116,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         }
     }
     
-    // Create function to initiate music playing when game begins
-//    func startGameMusic() {
-//        
-//        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
-//        
-//        do {
-//            bgMusic? = try AVAudioPlayer(contentsOf: url)
-//            bgMusic?.delegate = self as? AVAudioPlayerDelegate
-//            bgMusic?.prepareToPlay()
-//            bgMusic?.play()
-//        } catch let error as NSError {
-//            print("audioPlayer error \(error.localizedDescription)")
-//        }
-//    }
-    
     // Updates game time on displays
     func startGameTimer() -> String {
         
@@ -191,27 +176,27 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
     }
     
-    //
+    // Function for cards that are being shown
     func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card]) {
         for card in cards {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(true, animated: true)
         }
-        gamePoints += 100
+//        gamePoints += 100
         playPatSound()
-        pointsDisplay.text = "\(gamePoints)"
+//        pointsDisplay.text = "\(gamePoints)"
     }
     
-    //
+    // Function for cards that are being hidden
     func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card]) {
         for card in cards {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(false, animated: true)
         }
-        gamePoints -= 25
-        pointsDisplay.text = "\(gamePoints)"
+//        gamePoints -= 25
+//        pointsDisplay.text = "\(gamePoints)"
     }
     
     //
@@ -242,6 +227,13 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if DeviceType.IS_IPHONE {
+            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
+        } else if DeviceType.IS_IPAD {
+            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 30
+        } else if DeviceType.UNSPECIFIED {
+            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
+        }
         return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
     }
     
@@ -319,7 +311,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         })
         
         timer?.invalidate()
-//        bgMusic.pause()
+        bgMusic?.pause()
     }
     
     
