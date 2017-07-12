@@ -25,6 +25,7 @@
 		090A22D61EEDEC05008C3198 /* tenor.gif in Resources */ = {isa = PBXBuildFile; fileRef = 090A22D51EEDEC05008C3198 /* tenor.gif */; };
 		090A22D81EEDEC2C008C3198 /* tenor1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 090A22D71EEDEC2C008C3198 /* tenor1.gif */; };
 		090A22F11EEE3D7B008C3198 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 090A22F01EEE3D7B008C3198 /* gameover.mp3 */; };
+		091FB6451F0EFEF7006CDFAE /* DesignableSwitchColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091FB6441F0EFEF7006CDFAE /* DesignableSwitchColor.swift */; };
 		094AEF141ED469CF007FDFC9 /* DesignableImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF131ED469CF007FDFC9 /* DesignableImageViews.swift */; };
 		094AEF161ED47721007FDFC9 /* DesignableTextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF151ED47721007FDFC9 /* DesignableTextViews.swift */; };
 		094AEF181ED4FB5B007FDFC9 /* DesignableLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AEF171ED4FB5B007FDFC9 /* DesignableLabels.swift */; };
@@ -98,6 +99,7 @@
 		090A22DE1EEDF53C008C3198 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		090A22E01EEDF53C008C3198 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		090A22F01EEE3D7B008C3198 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
+		091FB6441F0EFEF7006CDFAE /* DesignableSwitchColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableSwitchColor.swift; sourceTree = "<group>"; };
 		094AEF131ED469CF007FDFC9 /* DesignableImageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageViews.swift; sourceTree = "<group>"; };
 		094AEF151ED47721007FDFC9 /* DesignableTextViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextViews.swift; sourceTree = "<group>"; };
 		094AEF171ED4FB5B007FDFC9 /* DesignableLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabels.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				094AEF151ED47721007FDFC9 /* DesignableTextViews.swift */,
 				094AEF171ED4FB5B007FDFC9 /* DesignableLabels.swift */,
 				094AEF1F1ED65732007FDFC9 /* DesignableButtons.swift */,
+				091FB6441F0EFEF7006CDFAE /* DesignableSwitchColor.swift */,
 			);
 			name = Designables;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				094AEF181ED4FB5B007FDFC9 /* DesignableLabels.swift in Sources */,
 				099274EC1EDC9218002C465A /* PokeVCell.swift in Sources */,
 				094AEF161ED47721007FDFC9 /* DesignableTextViews.swift in Sources */,
+				091FB6451F0EFEF7006CDFAE /* DesignableSwitchColor.swift in Sources */,
 				099274EA1EDC918E002C465A /* PokeMemoryGame.swift in Sources */,
 				0907CD851ED3832D00350677 /* AppDelegate.swift in Sources */,
 				094AEF2A1ED90FED007FDFC9 /* OptionsVC.swift in Sources */,
@@ -733,6 +737,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -784,6 +790,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
