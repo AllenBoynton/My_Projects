@@ -111,33 +111,33 @@ class MainMenuVC: UIViewController {
     // score = 2 * 60 + 22
     
     // Reporting game time
-    func saveBestTime(_ score: Int64) {
-        
-        if GKLocalPlayer.localPlayer().isAuthenticated {
-            
-            // Save game time to GC
-            let gkScore = GKScore(leaderboardIdentifier: timeLeaderboardID)
-            gkScore.value = score
-            
-            let gkScoreArray: [GKScore] = [gkScore]
-            
-            GKScore.report(gkScoreArray, withCompletionHandler: { error in
-                guard error == nil  else { return }
-                
-                let vc = GKGameCenterViewController()
-                vc.leaderboardIdentifier = pointsLeaderboardID
-                vc.gameCenterDelegate = self as? GKGameCenterControllerDelegate
-                vc.viewState = .leaderboards
-                
-                self.present(vc, animated: true, completion: nil)
-            })
-        }
-    }
+//    func saveBestTime(_ score: Int64) {
+//        
+//        if GKLocalPlayer.localPlayer().isAuthenticated {
+//            
+//            // Save game time to GC
+//            let gkScore = GKScore(leaderboardIdentifier: timeLeaderboardID)
+//            gkScore.value = score
+//            
+//            let gkScoreArray: [GKScore] = [gkScore]
+//            
+//            GKScore.report(gkScoreArray, withCompletionHandler: { error in
+//                guard error == nil  else { return }
+//                
+//                let vc = GKGameCenterViewController()
+//                vc.leaderboardIdentifier = pointsLeaderboardID
+//                vc.gameCenterDelegate = self as? GKGameCenterControllerDelegate
+//                vc.viewState = .leaderboards
+//                
+//                self.present(vc, animated: true, completion: nil)
+//            })
+//        }
+//    }
     
     // Report example score after user logs in
     func authenticationDidChange(_ notification: Notification) {
         saveHighScore(0)
-        saveBestTime(Int64(score))
+//        saveBestTime(Int64(score))
     }
     
     // Retrieves the GC VC leaderboard
@@ -172,9 +172,6 @@ class MainMenuVC: UIViewController {
     
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
-        // Add points to current score
-        score += 25
-        
         saveHighScore(Int64(score))
         showLeaderboard()
     }
