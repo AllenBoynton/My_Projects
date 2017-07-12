@@ -22,7 +22,7 @@ protocol GameSceneDelegate {
 let cellIdentifier = "PokeCell"
 
 // Global references
-var bgMusic:   AVAudioPlayer!
+var bgMusic:   AVAudioPlayer?
 var cheering: AVAudioPlayer!
 var patSound: AVAudioPlayer!
 var gameOver: AVAudioPlayer!
@@ -73,7 +73,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // Passing image from OptionsVC
         imagePassed.image = theImagePassed
         
@@ -87,7 +87,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     // MARK: Sound files
-    
     func playCheering() {
         // Cheering audio
         let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "cheering", ofType: "mp3")!)
@@ -183,9 +182,9 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(true, animated: true)
         }
-//        gamePoints += 100
+        gamePoints += 100
         playPatSound()
-//        pointsDisplay.text = "\(gamePoints)"
+        pointsDisplay.text = "\(gamePoints)"
     }
     
     // Function for cards that are being hidden
@@ -195,8 +194,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(false, animated: true)
         }
-//        gamePoints -= 25
-//        pointsDisplay.text = "\(gamePoints)"
+        gamePoints -= 25
+        pointsDisplay.text = "\(gamePoints)"
     }
     
     //
@@ -333,14 +332,14 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Audio button mutes/unmutes music
     @IBAction func musicButtonPressed(_ sender: UIButton) {
-        
-        if bgMusic.isPlaying {
+        if (bgMusic?.isPlaying)! {
             // pauses music & makes partial transparent
-            bgMusic.pause()
+            bgMusic?.pause()
             sender.alpha = 0.2
+            bgMusic = nil
         } else {
             // plays music & makes full view
-            bgMusic.play()
+            bgMusic?.play()
             sender.alpha = 1.0
         }
     }
