@@ -11,19 +11,22 @@ import XCTest
 
 class NSNotificationsTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSquareInt() {
+        let value = 3
+        let squaredValue = value.square()
+        
+        XCTAssertEqual(squaredValue, 9)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
+    func testHelloWorld() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        var helloWorld: String?
+        
+        XCTAssertNil(helloWorld)
+        
+        helloWorld = "hello world"
+        XCTAssertEqual(helloWorld, "hello world")
     }
     
     func testPerformanceExample() {

@@ -8,21 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
     
     
-
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print(2.square())
     }
 
-    @IBAction func pushNotification(_ sender: UIButton) {
-        let alertView = UIAlertController(title: "You Won!", message: "Press 'Go' to continue", preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "Go", style: .default, handler: nil))
-        self.present(alertView, animated: true, completion: nil)
-        
-    }
-
+    
 }
 
+extension Int {
+    func square() -> Int {
+        return self * self
+    }
+    
+}
