@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0548A1557A782D0369476533 /* Pods_PassportChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC1586C50E1423794EBC6A /* Pods_PassportChallenge.framework */; };
+		090A23111EEF5AC0008C3198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23101EEF5AC0008C3198 /* AppDelegate.swift */; };
+		090A23131EEF5AC0008C3198 /* MainProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23121EEF5AC0008C3198 /* MainProfileVC.swift */; };
+		090A23161EEF5AC0008C3198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090A23141EEF5AC0008C3198 /* Main.storyboard */; };
+		090A23181EEF5AC0008C3198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090A23171EEF5AC0008C3198 /* Assets.xcassets */; };
+		090A231B1EEF5AC0008C3198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090A23191EEF5AC0008C3198 /* LaunchScreen.storyboard */; };
+		090A232B1EEF696D008C3198 /* ProfileDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A232A1EEF696D008C3198 /* ProfileDetailsVC.swift */; };
+		090A232D1EEF8019008C3198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A232C1EEF8019008C3198 /* GoogleService-Info.plist */; };
+		090A232F1EEF8F25008C3198 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090A232E1EEF8F25008C3198 /* AdSupport.framework */; };
+		090A23311EEF904A008C3198 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090A23301EEF904A008C3198 /* iAd.framework */; };
+		090A23351EF0DDAD008C3198 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23341EF0DDAD008C3198 /* ProfileModel.swift */; };
+		090A23371EF0E662008C3198 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23361EF0E662008C3198 /* ProfileViewCell.swift */; };
+		090A23391EF0F0F4008C3198 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23381EF0F0F4008C3198 /* MaterialView.swift */; };
+		090A233B1EF0F5F7008C3198 /* UISwitchColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A233A1EF0F5F7008C3198 /* UISwitchColor.swift */; };
+		096CE5991EF5DD1E0068DEC8 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5981EF5DD1E0068DEC8 /* DesignableButton.swift */; };
+		096CE59B1EF5F08F0068DEC8 /* DesignableLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE59A1EF5F08F0068DEC8 /* DesignableLabels.swift */; };
+		096CE59D1EF619260068DEC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE59C1EF619260068DEC8 /* Extensions.swift */; };
+		096CE59F1EF78DBB0068DEC8 /* FilterControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE59E1EF78DBB0068DEC8 /* FilterControls.swift */; };
+		096CE5A31EF7B3D40068DEC8 /* DesignableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5A21EF7B3D40068DEC8 /* DesignableViews.swift */; };
+		096CE5A51EF7B5AF0068DEC8 /* DesignableTextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5A41EF7B5AF0068DEC8 /* DesignableTextViews.swift */; };
+		096CE5A81EF7C31E0068DEC8 /* DesignableImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5A71EF7C31E0068DEC8 /* DesignableImageViews.swift */; };
+		096CE5AA1EF88C040068DEC8 /* ProfileLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5A91EF88C040068DEC8 /* ProfileLauncher.swift */; };
+		096CE5AC1EF8A4800068DEC8 /* DesignableTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5AB1EF8A4800068DEC8 /* DesignableTextFields.swift */; };
+		096CE5B41EFC22500068DEC8 /* PassportChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5B31EFC22500068DEC8 /* PassportChallengeUITests.swift */; };
+		096CE5C01EFCD9400068DEC8 /* InitialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CE5BF1EFCD9400068DEC8 /* InitialScreenVC.swift */; };
+		09A46C4F1EFED85F00E90C22 /* thumbsUp.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09A46C4E1EFED85F00E90C22 /* thumbsUp.gif */; };
+		09A46C511F002C2400E90C22 /* LoginAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46C501F002C2400E90C22 /* LoginAuthVC.swift */; };
+		09A46C531F00455E00E90C22 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46C521F00455E00E90C22 /* SignUpVC.swift */; };
+		09AAF57A1EF35870007B802D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AAF5791EF35870007B802D /* CoreData.framework */; };
+		09AAF5C31EF4AAD9007B802D /* SquaredSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAF5C21EF4AAD9007B802D /* SquaredSegmentedControl.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		096CE5B61EFC22500068DEC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 090A23051EEF5AC0008C3198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 090A230C1EEF5AC0008C3198;
+			remoteInfo = PassportChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		090A230D1EEF5AC0008C3198 /* PassportChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassportChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		090A23101EEF5AC0008C3198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		090A23121EEF5AC0008C3198 /* MainProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileVC.swift; sourceTree = "<group>"; };
+		090A23151EEF5AC0008C3198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		090A23171EEF5AC0008C3198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		090A231A1EEF5AC0008C3198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		090A231C1EEF5AC0008C3198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		090A232A1EEF696D008C3198 /* ProfileDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsVC.swift; sourceTree = "<group>"; };
+		090A232C1EEF8019008C3198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		090A232E1EEF8F25008C3198 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		090A23301EEF904A008C3198 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		090A23341EF0DDAD008C3198 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		090A23361EF0E662008C3198 /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		090A23381EF0F0F4008C3198 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		090A233A1EF0F5F7008C3198 /* UISwitchColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchColor.swift; sourceTree = "<group>"; };
+		096CE5971EF5C8A50068DEC8 /* PassportChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PassportChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
+		096CE5981EF5DD1E0068DEC8 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		096CE59A1EF5F08F0068DEC8 /* DesignableLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabels.swift; sourceTree = "<group>"; };
+		096CE59C1EF619260068DEC8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		096CE59E1EF78DBB0068DEC8 /* FilterControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterControls.swift; sourceTree = "<group>"; };
+		096CE5A21EF7B3D40068DEC8 /* DesignableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableViews.swift; sourceTree = "<group>"; };
+		096CE5A41EF7B5AF0068DEC8 /* DesignableTextViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextViews.swift; sourceTree = "<group>"; };
+		096CE5A71EF7C31E0068DEC8 /* DesignableImageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageViews.swift; sourceTree = "<group>"; };
+		096CE5A91EF88C040068DEC8 /* ProfileLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLauncher.swift; sourceTree = "<group>"; };
+		096CE5AB1EF8A4800068DEC8 /* DesignableTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextFields.swift; sourceTree = "<group>"; };
+		096CE5B11EFC22500068DEC8 /* PassportChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassportChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		096CE5B31EFC22500068DEC8 /* PassportChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportChallengeUITests.swift; sourceTree = "<group>"; };
+		096CE5B51EFC22500068DEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		096CE5BF1EFCD9400068DEC8 /* InitialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenVC.swift; sourceTree = "<group>"; };
+		09A46C4E1EFED85F00E90C22 /* thumbsUp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thumbsUp.gif; sourceTree = "<group>"; };
+		09A46C501F002C2400E90C22 /* LoginAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthVC.swift; sourceTree = "<group>"; };
+		09A46C521F00455E00E90C22 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		09AAF5791EF35870007B802D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		09AAF5C21EF4AAD9007B802D /* SquaredSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquaredSegmentedControl.swift; sourceTree = "<group>"; };
+		D71C39365C6A8FA87B20598E /* Pods-PassportChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PassportChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PassportChallenge/Pods-PassportChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D8EC1586C50E1423794EBC6A /* Pods_PassportChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PassportChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D4643808AD33B3B56825CE /* Pods-PassportChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PassportChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-PassportChallenge/Pods-PassportChallenge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		090A230A1EEF5AC0008C3198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AAF57A1EF35870007B802D /* CoreData.framework in Frameworks */,
+				090A23311EEF904A008C3198 /* iAd.framework in Frameworks */,
+				090A232F1EEF8F25008C3198 /* AdSupport.framework in Frameworks */,
+				0548A1557A782D0369476533 /* Pods_PassportChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		096CE5AE1EFC22500068DEC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		090A23041EEF5AC0008C3198 = {
+			isa = PBXGroup;
+			children = (
+				090A230F1EEF5AC0008C3198 /* PassportChallenge */,
+				096CE5B21EFC22500068DEC8 /* PassportChallengeUITests */,
+				090A230E1EEF5AC0008C3198 /* Products */,
+				957B2923AF496E90304102CA /* Pods */,
+				63DFA4C004A1AB4569F62800 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		090A230E1EEF5AC0008C3198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				090A230D1EEF5AC0008C3198 /* PassportChallenge.app */,
+				096CE5B11EFC22500068DEC8 /* PassportChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		090A230F1EEF5AC0008C3198 /* PassportChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				090A23251EEF68AC008C3198 /* Extensions */,
+				090A23221EEF6885008C3198 /* AppDelegate */,
+				090A23241EEF689F008C3198 /* Utilities */,
+				090A23231EEF6892008C3198 /* Resources */,
+				090A23261EEF68C1008C3198 /* Storyboards */,
+				090A23291EEF690E008C3198 /* Model */,
+				090A23281EEF6903008C3198 /* View */,
+				090A23271EEF68D0008C3198 /* Controller */,
+			);
+			path = PassportChallenge;
+			sourceTree = "<group>";
+		};
+		090A23221EEF6885008C3198 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				090A23101EEF5AC0008C3198 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		090A23231EEF6892008C3198 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09A46C4E1EFED85F00E90C22 /* thumbsUp.gif */,
+				090A23171EEF5AC0008C3198 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		090A23241EEF689F008C3198 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				090A232C1EEF8019008C3198 /* GoogleService-Info.plist */,
+				090A231C1EEF5AC0008C3198 /* Info.plist */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		090A23251EEF68AC008C3198 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				096CE5971EF5C8A50068DEC8 /* PassportChallenge-Bridging-Header.h */,
+				096CE59C1EF619260068DEC8 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		090A23261EEF68C1008C3198 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				090A23191EEF5AC0008C3198 /* LaunchScreen.storyboard */,
+				090A23141EEF5AC0008C3198 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		090A23271EEF68D0008C3198 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				096CE59E1EF78DBB0068DEC8 /* FilterControls.swift */,
+				096CE5A91EF88C040068DEC8 /* ProfileLauncher.swift */,
+				096CE5BF1EFCD9400068DEC8 /* InitialScreenVC.swift */,
+				090A232A1EEF696D008C3198 /* ProfileDetailsVC.swift */,
+				090A23121EEF5AC0008C3198 /* MainProfileVC.swift */,
+				09A46C521F00455E00E90C22 /* SignUpVC.swift */,
+				09A46C501F002C2400E90C22 /* LoginAuthVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		090A23281EEF6903008C3198 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				096CE5A61EF7BE700068DEC8 /* Designables */,
+				090A23361EF0E662008C3198 /* ProfileViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		090A23291EEF690E008C3198 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				090A23341EF0DDAD008C3198 /* ProfileModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		096CE5A61EF7BE700068DEC8 /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				096CE5AB1EF8A4800068DEC8 /* DesignableTextFields.swift */,
+				096CE5A41EF7B5AF0068DEC8 /* DesignableTextViews.swift */,
+				096CE59A1EF5F08F0068DEC8 /* DesignableLabels.swift */,
+				096CE5A71EF7C31E0068DEC8 /* DesignableImageViews.swift */,
+				096CE5A21EF7B3D40068DEC8 /* DesignableViews.swift */,
+				096CE5981EF5DD1E0068DEC8 /* DesignableButton.swift */,
+				09AAF5C21EF4AAD9007B802D /* SquaredSegmentedControl.swift */,
+				090A233A1EF0F5F7008C3198 /* UISwitchColor.swift */,
+				090A23381EF0F0F4008C3198 /* MaterialView.swift */,
+			);
+			name = Designables;
+			sourceTree = "<group>";
+		};
+		096CE5B21EFC22500068DEC8 /* PassportChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				096CE5B31EFC22500068DEC8 /* PassportChallengeUITests.swift */,
+				096CE5B51EFC22500068DEC8 /* Info.plist */,
+			);
+			path = PassportChallengeUITests;
+			sourceTree = "<group>";
+		};
+		63DFA4C004A1AB4569F62800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09AAF5791EF35870007B802D /* CoreData.framework */,
+				090A23301EEF904A008C3198 /* iAd.framework */,
+				090A232E1EEF8F25008C3198 /* AdSupport.framework */,
+				D8EC1586C50E1423794EBC6A /* Pods_PassportChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		957B2923AF496E90304102CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D71C39365C6A8FA87B20598E /* Pods-PassportChallenge.debug.xcconfig */,
+				F1D4643808AD33B3B56825CE /* Pods-PassportChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		090A230C1EEF5AC0008C3198 /* PassportChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 090A231F1EEF5AC0008C3198 /* Build configuration list for PBXNativeTarget "PassportChallenge" */;
+			buildPhases = (
+				729837443DC04FEE809FC2F0 /* [CP] Check Pods Manifest.lock */,
+				090A23091EEF5AC0008C3198 /* Sources */,
+				090A230A1EEF5AC0008C3198 /* Frameworks */,
+				090A230B1EEF5AC0008C3198 /* Resources */,
+				12FC3D490F728945706F70A3 /* [CP] Embed Pods Frameworks */,
+				7972AA56276E448B3BAE870E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PassportChallenge;
+			productName = PassportChallenge;
+			productReference = 090A230D1EEF5AC0008C3198 /* PassportChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		096CE5B01EFC22500068DEC8 /* PassportChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 096CE5B81EFC22500068DEC8 /* Build configuration list for PBXNativeTarget "PassportChallengeUITests" */;
+			buildPhases = (
+				096CE5AD1EFC22500068DEC8 /* Sources */,
+				096CE5AE1EFC22500068DEC8 /* Frameworks */,
+				096CE5AF1EFC22500068DEC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				096CE5B71EFC22500068DEC8 /* PBXTargetDependency */,
+			);
+			name = PassportChallengeUITests;
+			productName = PassportChallengeUITests;
+			productReference = 096CE5B11EFC22500068DEC8 /* PassportChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		090A23051EEF5AC0008C3198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Allen Boynton";
+				TargetAttributes = {
+					090A230C1EEF5AC0008C3198 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6GTM24L94G;
+						ProvisioningStyle = Automatic;
+					};
+					096CE5B01EFC22500068DEC8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6GTM24L94G;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 090A230C1EEF5AC0008C3198;
+					};
+				};
+			};
+			buildConfigurationList = 090A23081EEF5AC0008C3198 /* Build configuration list for PBXProject "PassportChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 090A23041EEF5AC0008C3198;
+			productRefGroup = 090A230E1EEF5AC0008C3198 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				090A230C1EEF5AC0008C3198 /* PassportChallenge */,
+				096CE5B01EFC22500068DEC8 /* PassportChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		090A230B1EEF5AC0008C3198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090A231B1EEF5AC0008C3198 /* LaunchScreen.storyboard in Resources */,
+				090A232D1EEF8019008C3198 /* GoogleService-Info.plist in Resources */,
+				090A23181EEF5AC0008C3198 /* Assets.xcassets in Resources */,
+				090A23161EEF5AC0008C3198 /* Main.storyboard in Resources */,
+				09A46C4F1EFED85F00E90C22 /* thumbsUp.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		096CE5AF1EFC22500068DEC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12FC3D490F728945706F70A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PassportChallenge/Pods-PassportChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		729837443DC04FEE809FC2F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7972AA56276E448B3BAE870E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PassportChallenge/Pods-PassportChallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		090A23091EEF5AC0008C3198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A46C511F002C2400E90C22 /* LoginAuthVC.swift in Sources */,
+				090A23371EF0E662008C3198 /* ProfileViewCell.swift in Sources */,
+				090A23131EEF5AC0008C3198 /* MainProfileVC.swift in Sources */,
+				09AAF5C31EF4AAD9007B802D /* SquaredSegmentedControl.swift in Sources */,
+				096CE5A31EF7B3D40068DEC8 /* DesignableViews.swift in Sources */,
+				096CE5AC1EF8A4800068DEC8 /* DesignableTextFields.swift in Sources */,
+				090A23111EEF5AC0008C3198 /* AppDelegate.swift in Sources */,
+				096CE5A51EF7B5AF0068DEC8 /* DesignableTextViews.swift in Sources */,
+				09A46C531F00455E00E90C22 /* SignUpVC.swift in Sources */,
+				090A232B1EEF696D008C3198 /* ProfileDetailsVC.swift in Sources */,
+				090A23351EF0DDAD008C3198 /* ProfileModel.swift in Sources */,
+				096CE5AA1EF88C040068DEC8 /* ProfileLauncher.swift in Sources */,
+				090A233B1EF0F5F7008C3198 /* UISwitchColor.swift in Sources */,
+				096CE59B1EF5F08F0068DEC8 /* DesignableLabels.swift in Sources */,
+				096CE5C01EFCD9400068DEC8 /* InitialScreenVC.swift in Sources */,
+				096CE5991EF5DD1E0068DEC8 /* DesignableButton.swift in Sources */,
+				096CE5A81EF7C31E0068DEC8 /* DesignableImageViews.swift in Sources */,
+				096CE59F1EF78DBB0068DEC8 /* FilterControls.swift in Sources */,
+				090A23391EF0F0F4008C3198 /* MaterialView.swift in Sources */,
+				096CE59D1EF619260068DEC8 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		096CE5AD1EFC22500068DEC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				096CE5B41EFC22500068DEC8 /* PassportChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		096CE5B71EFC22500068DEC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 090A230C1EEF5AC0008C3198 /* PassportChallenge */;
+			targetProxy = 096CE5B61EFC22500068DEC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		090A23141EEF5AC0008C3198 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				090A23151EEF5AC0008C3198 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		090A23191EEF5AC0008C3198 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				090A231A1EEF5AC0008C3198 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		090A231D1EEF5AC0008C3198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		090A231E1EEF5AC0008C3198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		090A23201EEF5AC0008C3198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71C39365C6A8FA87B20598E /* Pods-PassportChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6GTM24L94G;
+				INFOPLIST_FILE = PassportChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.PassportChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		090A23211EEF5AC0008C3198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D4643808AD33B3B56825CE /* Pods-PassportChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6GTM24L94G;
+				INFOPLIST_FILE = PassportChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.PassportChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		096CE5B91EFC22500068DEC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6GTM24L94G;
+				INFOPLIST_FILE = PassportChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.PassportChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PassportChallenge;
+			};
+			name = Debug;
+		};
+		096CE5BA1EFC22500068DEC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6GTM24L94G;
+				INFOPLIST_FILE = PassportChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.PassportChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PassportChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		090A23081EEF5AC0008C3198 /* Build configuration list for PBXProject "PassportChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090A231D1EEF5AC0008C3198 /* Debug */,
+				090A231E1EEF5AC0008C3198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		090A231F1EEF5AC0008C3198 /* Build configuration list for PBXNativeTarget "PassportChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090A23201EEF5AC0008C3198 /* Debug */,
+				090A23211EEF5AC0008C3198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		096CE5B81EFC22500068DEC8 /* Build configuration list for PBXNativeTarget "PassportChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				096CE5B91EFC22500068DEC8 /* Debug */,
+				096CE5BA1EFC22500068DEC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 090A23051EEF5AC0008C3198 /* Project object */;
+}
