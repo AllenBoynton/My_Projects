@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         guard let url = URL(string: jsonUrlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             // check err
             // also check response status 200
             guard let data = data else { return }
