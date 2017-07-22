@@ -40,7 +40,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-kw-Scr" customClass="DesignableButtons" customModule="Poke_Match" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="43"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Play" backgroundImage="change_button">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.64720532718120805" colorSpace="calibratedRGB"/>
                                         </state>
@@ -48,6 +48,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="startButtonTapped:" destination="tll-LZ-yxO" eventType="touchUpInside" id="hgG-US-c6x"/>
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="PokeMatchVC" id="E7I-19-aJE">
                                                 <segue key="commit" inheritsFrom="parent" id="dAC-7k-MUo"/>
                                                 <segue key="preview" inheritsFrom="commit" id="Cg7-uD-yah"/>
@@ -56,9 +57,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67Y-bL-Wdc" customClass="DesignableButtons" customModule="Poke_Match" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="175" height="43"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Options" backgroundImage="change_button">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.64720532718120805" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
@@ -423,7 +424,7 @@
                                             <constraint firstAttribute="height" constant="40" id="DLL-lE-5Kt"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQv-IQ-7TK">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQv-IQ-7TK" userLabel="Mute Button">
                                         <rect key="frame" x="376" y="27" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SSE-Q8-181"/>
@@ -697,7 +698,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explode" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-be-tkb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explode" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-be-tkb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winner" translatesAutoresizingMaskIntoConstraints="NO" id="zce-cb-h3d">
@@ -794,34 +795,35 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <action selector="tapScreenToRestart:" destination="mC1-8T-uzl" eventType="touchUpInside" id="6MH-SE-0hl"/>
+                                    <action selector="handleScreenTap:" destination="mC1-8T-uzl" eventType="touchUpInside" id="dx5-AN-Uex"/>
                                     <outletCollection property="gestureRecognizers" destination="tgm-IU-YLo" appends="YES" id="RIK-aC-2f2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-eN-UAi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtI-uW-enl">
                                 <rect key="frame" x="119.66666666666669" y="343" width="175" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Jd6-6r-KRn"/>
-                                    <constraint firstAttribute="width" constant="175" id="gqy-YY-3nW"/>
+                                    <constraint firstAttribute="width" constant="175" id="SZN-ji-WqW"/>
+                                    <constraint firstAttribute="height" constant="50" id="bNo-Xg-JtF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Reset" backgroundImage="change_button">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Restart" backgroundImage="change_button">
+                                    <color key="titleColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetButtonPressed:" destination="mC1-8T-uzl" eventType="touchUpInside" id="0B3-Qr-crp"/>
+                                    <action selector="resetButtonPressed:" destination="mC1-8T-uzl" eventType="touchUpInside" id="0l2-WE-xWR"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GtI-uW-enl" firstAttribute="centerX" secondItem="6Qr-4G-2pk" secondAttribute="centerX" id="022-tw-9E9"/>
                             <constraint firstItem="SVR-2K-JD9" firstAttribute="top" secondItem="6Qr-4G-2pk" secondAttribute="top" id="05v-Jg-eUr"/>
                             <constraint firstItem="YDY-qG-ejC" firstAttribute="centerX" secondItem="Hqr-GW-CeE" secondAttribute="centerX" id="3vR-ag-Iz9"/>
                             <constraint firstItem="YDY-qG-ejC" firstAttribute="width" secondItem="6Qr-4G-2pk" secondAttribute="width" multiplier="0.85" id="4ug-co-40h"/>
                             <constraint firstItem="zce-cb-h3d" firstAttribute="height" secondItem="6Qr-4G-2pk" secondAttribute="height" multiplier="0.15" id="5kd-e9-N2Z"/>
-                            <constraint firstItem="Pv1-eN-UAi" firstAttribute="centerX" secondItem="6Qr-4G-2pk" secondAttribute="centerX" id="Bf9-UU-a99"/>
                             <constraint firstItem="Mda-be-tkb" firstAttribute="top" secondItem="6Qr-4G-2pk" secondAttribute="top" id="E5D-Dl-5U3"/>
                             <constraint firstItem="Hth-iJ-qkU" firstAttribute="top" secondItem="Mda-be-tkb" secondAttribute="bottom" id="FnQ-FX-bpz"/>
+                            <constraint firstItem="GtI-uW-enl" firstAttribute="centerY" secondItem="6Qr-4G-2pk" secondAttribute="centerY" id="ODk-y7-WVv"/>
                             <constraint firstItem="Mda-be-tkb" firstAttribute="leading" secondItem="6Qr-4G-2pk" secondAttribute="leading" id="Oto-kj-hJX"/>
                             <constraint firstItem="Hqr-GW-CeE" firstAttribute="centerX" secondItem="6Qr-4G-2pk" secondAttribute="centerX" id="SII-Cb-NOF"/>
                             <constraint firstItem="zce-cb-h3d" firstAttribute="leading" secondItem="6Qr-4G-2pk" secondAttribute="leading" id="Vhm-MA-h8b"/>
@@ -830,7 +832,6 @@
                             <constraint firstItem="Hth-iJ-qkU" firstAttribute="top" secondItem="YDY-qG-ejC" secondAttribute="bottom" constant="20" id="ceP-DV-CNq"/>
                             <constraint firstAttribute="trailing" secondItem="Mda-be-tkb" secondAttribute="trailing" id="gxp-1n-H6V"/>
                             <constraint firstItem="YDY-qG-ejC" firstAttribute="top" secondItem="Hqr-GW-CeE" secondAttribute="bottom" constant="20" id="hMu-yZ-xoE"/>
-                            <constraint firstItem="Pv1-eN-UAi" firstAttribute="centerY" secondItem="6Qr-4G-2pk" secondAttribute="centerY" id="nM4-mw-imf"/>
                             <constraint firstItem="Hqr-GW-CeE" firstAttribute="width" secondItem="YDY-qG-ejC" secondAttribute="width" id="uRt-jn-7Ea"/>
                             <constraint firstItem="Hth-iJ-qkU" firstAttribute="top" secondItem="SVR-2K-JD9" secondAttribute="bottom" id="v2f-tJ-tjK"/>
                             <constraint firstAttribute="trailing" secondItem="zce-cb-h3d" secondAttribute="trailing" id="yP8-A6-Adb"/>
@@ -841,7 +842,7 @@
                         <outlet property="backgroundButton" destination="SVR-2K-JD9" id="40e-Hj-BXa"/>
                         <outlet property="finalGamePoints" destination="pZM-Jj-48P" id="vu6-Bg-GWU"/>
                         <outlet property="finalGameTime" destination="tvx-5S-IaQ" id="87i-Bh-fu8"/>
-                        <outlet property="resetButton" destination="Pv1-eN-UAi" id="1xS-9C-AOj"/>
+                        <outlet property="resetButton" destination="GtI-uW-enl" id="2ew-Qs-Ma0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfl-mD-a5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
