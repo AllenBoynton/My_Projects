@@ -7,6 +7,8 @@ use_frameworks!
 
   # Pods for PokéMatch
 pod 'Firebase/Core'
+pod 'Firebase/AdMob'
+pod 'Firebase/Messaging'
 
 target 'PokéMatchTests' do
 inherit! :search_paths
