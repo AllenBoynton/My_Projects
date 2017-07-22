@@ -74,8 +74,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Passing image from OptionsVC
-        imagePassed.image = theImagePassed
+        // Passing image from OptionsVC if changed/or default background
+        handleBackground()
         
         // Game delegate
         gameController.delegate = self
@@ -83,6 +83,15 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         // Methods contained to reset game
         if gameController.isPlaying {
             resetGame()
+        }
+    }
+    
+    // Determine which image is shown in background
+    func handleBackground() {
+        if (imagePassed.image != UIImage(named: "bg")) {
+            imagePassed.image = theImagePassed
+        } else {
+            imagePassed.image = UIImage(named: "bg")
         }
     }
     
@@ -142,7 +151,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         // Display game time counter
         timerDisplay.text = display
-        print(display)
         
         return display
     }
@@ -182,7 +190,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(true, animated: true)
         }
-        gamePoints += 100
+        gamePoints += 10
         playPatSound()
         pointsDisplay.text = "\(gamePoints)"
     }
@@ -194,11 +202,11 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(false, animated: true)
         }
-        gamePoints -= 25
+        gamePoints -= 5
         pointsDisplay.text = "\(gamePoints)"
     }
     
-    //
+    // Alert shows to display score and game time to user
     func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
         timer?.invalidate()
         playCheering()
@@ -207,11 +215,13 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ -> Void in
             let myVC = self.storyboard?.instantiateViewController(withIdentifier: "WinnersVC") as! WinnersVC
-            myVC.pointsPassed = self.pointsDisplay.text!
+            myVC.scorePassed = self.pointsDisplay.text!
             myVC.timePassed = self.display
+            myVC.score = Int64(self.pointsDisplay.text!)
+            myVC.time = Int64(self.display)
             self.present(myVC, animated: true, completion: nil)
         }))
-        
+        // present alert to the user
         self.present(alert, animated: true, completion: nil)
         
         // Change font of the title and message
@@ -225,6 +235,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return 1
     }
     
+    // Determines which device the user has - determines # of cards
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if DeviceType.IS_IPHONE {
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
@@ -332,16 +343,16 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Audio button mutes/unmutes music
     @IBAction func musicButtonPressed(_ sender: UIButton) {
-        if (bgMusic?.isPlaying)! {
-            // pauses music & makes partial transparent
-            bgMusic?.pause()
-            sender.alpha = 0.2
-            bgMusic = nil
-        } else {
-            // plays music & makes full view
-            bgMusic?.play()
-            sender.alpha = 1.0
-        }
+//        if (bgMusic?.isPlaying)! {
+//            // pauses music & makes partial transparent
+//            bgMusic?.pause()
+//            sender.alpha = 0.2
+//            bgMusic = nil
+//        } else {
+//            // plays music & makes full view
+//            bgMusic?.play()
+//            sender.alpha = 1.0
+//        }
     }
     
     // Back button to bring to main menu
@@ -355,6 +366,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         })
         
         dismiss(animated: true, completion: nil)
+        bgMusic?.play()
         timer?.invalidate()
     }
 }
