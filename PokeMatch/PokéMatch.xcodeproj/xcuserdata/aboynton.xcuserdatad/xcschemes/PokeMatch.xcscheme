@@ -81,6 +81,12 @@
             ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-AnalyticsDebugEnabled"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"
