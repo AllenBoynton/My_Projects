@@ -23,9 +23,12 @@ protocol MemoryGameDelegate {
 class PokeMemoryGame {
     
     var pokeMatchVC: PokeMatchVC!
-
+    var score = 0
+    
     // MARK: - Properties
     
+//    static var defaultCardImages: [UIImage]!
+//    if DeviceType.IS_IPHONE {
     static var defaultCardImages: [UIImage] = [
         UIImage(named: "1")!,
         UIImage(named: "2")!,
@@ -37,7 +40,26 @@ class PokeMemoryGame {
         UIImage(named: "8")!,
         UIImage(named: "9")!,
         UIImage(named: "10")!
+        //    ]
+        //    } else if DeviceType.IS_IPAD {
+        //    defaultCardImages: [UIImage] = [
+        //    UIImage(named: "1")!,
+        //    UIImage(named: "2")!,
+        //    UIImage(named: "3")!,
+        //    UIImage(named: "4")!,
+        //    UIImage(named: "5")!,
+        //    UIImage(named: "6")!,
+        //    UIImage(named: "7")!,
+        //    UIImage(named: "8")!,
+        //    UIImage(named: "9")!,
+        //    UIImage(named: "10")!,
+//        UIImage(named: "11")!,
+//        UIImage(named: "12")!,
+//        UIImage(named: "13")!,
+//        UIImage(named: "14")!,
+//        UIImage(named: "15")!
     ]
+//    }
     
     var cards: [Card] = [Card]()
     var delegate: MemoryGameDelegate?
@@ -49,7 +71,6 @@ class PokeMemoryGame {
     // Gets number of cards
     var numberOfCards: Int {
         get {
-            print("Number of cards: \(cards.count)")
             return cards.count
         }
     }
@@ -72,7 +93,6 @@ class PokeMemoryGame {
         startTime = Date.init()
         isPlaying = true
         delegate?.memoryGameDidStart(self)
-        print("Cards: \(cards)")
     }
     
     // Operations when game has been stopped
@@ -94,7 +114,7 @@ class PokeMemoryGame {
             let unpaired = unpairedCard()!
             if card.equals(unpaired) {
                 cardsShown.append(card)
-                // Add points
+                
                 
             } else {
                 let unpairedCard = cardsShown.removeLast()
@@ -107,7 +127,6 @@ class PokeMemoryGame {
         } else {
             // If cards are a match
             cardsShown.append(card)
-            // Subtract points
             
         }
         

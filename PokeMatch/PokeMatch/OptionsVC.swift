@@ -12,7 +12,8 @@ import GameKit
 
 class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    let mainMenuVC = MainMenuVC()
+    // Class delegates
+    let finalScoreVC = FinalScoreVC()
     let pokeMatchVC = PokeMatchVC()
     
     let musicPlayer = AVAudioPlayer()
@@ -24,13 +25,13 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     var musicSwitch: UISwitch?
     
-    var difficultyArray: [String] = []
+    var sizeArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Picker data
-        difficultyArray = ["Easy", "Medium", "Hard"]
+        sizeArray = ["4x5", "5x5", "6x6"]
     }
     
     // Create function to initiate music playing when game begins
@@ -49,15 +50,12 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     // Image picker picks selected image and dismisses VC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         var selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage
-        bgImage.image = selectedPhoto
+                            bgImage.image = selectedPhoto
         if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             selectedPhoto = editedImage
         } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             selectedPhoto = originalImage
-            
-           // ****************************************
-            
-        } // Code if no image is picked to use default
+        }
         
         if let selectedImage = selectedPhoto {
             bgImage?.image = selectedImage
@@ -97,11 +95,6 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         // Change font of the title and message
         let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
         let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
-    }
-    
-    // Button brings you to GC leaderboard
-    @IBAction func gcLeaderboardBtn(_ sender: Any) {
-        mainMenuVC.showLeaderboard()
     }
     
     // Audio button mutes/unmutes music

@@ -12,21 +12,14 @@ import AVFoundation
 import UserNotifications
 import GameKit
 
-// Protocol to inform the delegate GameVC if a game is over
-protocol GameSceneDelegate {
-    func showLeaderboard()
-    func reportScore(_ score: Int64)
-}
-
 // Global Identifier
-let cellIdentifier = "PokeCell"
+let cellId = "PokeCell"
 
 // Global references
 var bgMusic:   AVAudioPlayer?
 var cheering: AVAudioPlayer!
 var patSound: AVAudioPlayer!
 var gameOver: AVAudioPlayer!
-
 
 class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MemoryGameDelegate {
     
@@ -36,14 +29,11 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var imagePassed: UIImageView!
     
-    // Outlet for game displays
-    @IBOutlet weak var pointsDisplay: UILabel!
+    // Outlet for game display
     @IBOutlet weak var timerDisplay: UILabel!
     
     // Outlets for views
-    @IBOutlet weak var pointsView: UIView!
     @IBOutlet weak var bottomView: UIView!
-    
     @IBOutlet weak var startButton: UIButton!
     
     
@@ -52,12 +42,10 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // Images passed from OptionsVC
     var theImagePassed = UIImage()
     
-    // Scores passed to WinnerVC
-    var gamePointsPassed = UILabel()
+    // Time passed to WinnerVC
     var gameTimePassed = UILabel()
     
     // Deducts images until we reach 0 and the user wins
-    var gamePoints = 0
     var gameOver = Bool()
     
     // NSTimers for game time and delays in revealed images
@@ -70,12 +58,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     var elapsed: Double = 0
     var display: String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Passing image from OptionsVC if changed/or default background
-        handleBackground()
         
         // Game delegate
         gameController.delegate = self
@@ -88,7 +72,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Determine which image is shown in background
     func handleBackground() {
-        if (imagePassed.image != UIImage(named: "bg")) {
+        if imagePassed != nil {
             imagePassed.image = theImagePassed
         } else {
             imagePassed.image = UIImage(named: "bg")
@@ -111,7 +95,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Sound file
     func playPatSound() {
-    
         // Pat audio
         let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "pat", ofType: "mp3")!)
         
@@ -126,7 +109,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     // Updates game time on displays
     func startGameTimer() -> String {
-        
         // Calculate total time since timer started in seconds
         time = gameController.elapsedTime
         
@@ -190,9 +172,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(true, animated: true)
         }
-        gamePoints += 10
         playPatSound()
-        pointsDisplay.text = "\(gamePoints)"
     }
     
     // Function for cards that are being hidden
@@ -202,8 +182,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeVCell
             cell.showCard(false, animated: true)
         }
-        gamePoints -= 5
-        pointsDisplay.text = "\(gamePoints)"
     }
     
     // Alert shows to display score and game time to user
@@ -211,29 +189,13 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         timer?.invalidate()
         playCheering()
         
-        let alert = UIAlertController(title: "CONGRATULATIONS!", message: "You finished with \(gamePoints) Points with a time of \(display)!", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ -> Void in
-            let myVC = self.storyboard?.instantiateViewController(withIdentifier: "WinnersVC") as! WinnersVC
-            myVC.scorePassed = self.pointsDisplay.text!
-            myVC.timePassed = self.display
-            myVC.score = Int64(self.pointsDisplay.text!)
-            myVC.time = Int64(self.display)
-            self.present(myVC, animated: true, completion: nil)
-        }))
-        // present alert to the user
-        self.present(alert, animated: true, completion: nil)
-        
-        // Change font of the title and message
-        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
-        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
+        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalScoreVC") as! FinalScoreVC
+        myVC.timePassed = self.display
+        myVC.time = Int64(self.display)
+        self.present(myVC, animated: true, completion: nil)
     }
     
     // MARK: - UICollectionViewDataSource
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
     // Determines which device the user has - determines # of cards
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -249,7 +211,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PokeVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PokeVCell
         cell.showCard(false, animated: false)
         
         guard let card = gameController.cardAtIndex(indexPath.item) else { return cell }
@@ -261,7 +223,6 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let cell = collectionView.cellForItem(at: indexPath) as! PokeVCell
         
         if cell.shown { return }
@@ -273,19 +234,24 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let itemWidth: CGFloat = collectionView.frame.width / 4.0 - 10.0 // 4 wide
-        
-        return CGSize(width: itemWidth, height: itemWidth)
+        let itemWidth: CGFloat!
+        if DeviceType.IS_IPHONE {
+            itemWidth = collectionView.frame.width / 5.0 - 10.0 // 4 wide
+            return CGSize(width: itemWidth, height: itemWidth)
+        } else if DeviceType.IS_IPAD {
+            itemWidth = collectionView.frame.width / 5.0 - 10.0 // 5 wide
+            return CGSize(width: itemWidth, height: itemWidth)
+        } else {
+            return CGSize(width: 65.0, height: 65.0)
+        }
     }
     
     
     // MARK: Notification function
     
     func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
-        
         // Add an attachment
-        let logoImage = "tenor1"
+        let logoImage = "tenor"
         guard let imageURL = Bundle.main.url(forResource: logoImage, withExtension: "gif") else {
             completion(false)
             return
@@ -318,10 +284,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             } else {
                 completion(true)
             }
-        })
-        
-        timer?.invalidate()
-        bgMusic?.pause()
+        })        
     }
     
     
@@ -336,23 +299,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         startButton.isEnabled = false
         
         // Unhides views after start button is pressed
-        pointsView.isHidden = false
         collectionView.isHidden = false
         bottomView.isHidden = false
-    }
-    
-    // Audio button mutes/unmutes music
-    @IBAction func musicButtonPressed(_ sender: UIButton) {
-//        if (bgMusic?.isPlaying)! {
-//            // pauses music & makes partial transparent
-//            bgMusic?.pause()
-//            sender.alpha = 0.2
-//            bgMusic = nil
-//        } else {
-//            // plays music & makes full view
-//            bgMusic?.play()
-//            sender.alpha = 1.0
-//        }
     }
     
     // Back button to bring to main menu
@@ -365,8 +313,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             }
         })
         
-        dismiss(animated: true, completion: nil)
         bgMusic?.play()
         timer?.invalidate()
+        dismiss(animated: true, completion: nil)
     }
 }

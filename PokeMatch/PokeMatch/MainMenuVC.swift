@@ -10,18 +10,16 @@ import UIKit
 import AVFoundation
 import UserNotifications
 import GameKit
-import Firebase
+//import Firebase
 
 // Global identifiers
 let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
-let pointsLeaderboardID = "HIGH_POINTS" // Score Leaderboard
 
-
-class MainMenuVC: UIViewController {
+class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     
     // Class delegates
     var pokeMatchVC = PokeMatchVC()
-    var winnersVC = WinnersVC()
+    var finalScoreVC = FinalScoreVC()
     
     // Create AV player
     var musicPlayer: AVAudioPlayer!
@@ -32,7 +30,6 @@ class MainMenuVC: UIViewController {
     // Local GC variables
     var gcEnabled = Bool() // Check if the user has Game Center enabled
     var gcDefaultLeaderBoard = String() // Check the default leaderboardID
-    var score = 0
     var time = 0
 
     override func viewDidLoad() {
@@ -79,8 +76,7 @@ class MainMenuVC: UIViewController {
     
     // Report example score after user logs in
     func authenticationDidChange(_ notification: Notification) {
-        winnersVC.saveHighScore(10)
-        winnersVC.saveBestTime(20000)
+        finalScoreVC.saveBestTime(Int64(time))
     }
     
     //
@@ -93,9 +89,8 @@ class MainMenuVC: UIViewController {
         let viewController = self.view.window?.rootViewController
         let gameCenterViewController = GKGameCenterViewController()
         
-        gameCenterViewController.gameCenterDelegate = self as? GKGameCenterControllerDelegate
+        gameCenterViewController.gameCenterDelegate = self
         gameCenterViewController.viewState = .leaderboards
-//        gameCenterViewController.leaderboardIdentifier = pointsLeaderboardID
         gameCenterViewController.leaderboardIdentifier = timeLeaderboardID
         
         // Show leaderboard
@@ -122,15 +117,10 @@ class MainMenuVC: UIViewController {
     }
     
     // IBActions for main menu buttons
-    @IBAction func startButtonTapped(_ sender: UIButton) {
-        Analytics.logEvent("start_button_pressed", parameters: nil)
-    }
+    @IBAction func startButtonTapped(_ sender: UIButton) {}
     
     // Open Game Center Leaderboard
     @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
-        Analytics.logEvent("check_leaderboard_button_pressed", parameters: nil)
-        winnersVC.saveHighScore(Int64(score))
-        winnersVC.saveBestTime(Int64(time))
         showLeaderboard()
     }
 }
