@@ -6,13 +6,11 @@
 //  Copyright © 2017 Allen Boynton. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import GameKit
-//import GoogleMobileAds
 
-//var interstitial: DFPInterstitial?
-
-class FinalScoreVC: UIViewController, UIAlertViewDelegate {
+class FinalScoreVC: UIViewController {
     
     let pokeMatchVC = PokeMatchVC()
     
@@ -22,84 +20,66 @@ class FinalScoreVC: UIViewController, UIAlertViewDelegate {
     // Time passed from PokeMatchVC
     var timePassed = ""
     
-    // GC score variables
-    var time: Int64!
+    var score = Int()
     
     // AdMob variables
-//    var interstitial: DFPInterstitial?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Assign value to labels after checking for nil
-        if timePassed == "" {
-            timePassed = ""
-        } else {
+        if !timePassed.isEmpty {
             finalGameTime.text = timePassed
+        } else {
+            finalGameTime.text = "0"
         }
         
         // Call interstitial ad function
-//        interstitial = createAndLoadInterstitial() as? DFPInterstitial
     }
     
-//    // Interstitial ad allocation
-//    func createAndLoadInterstitial() -> GADInterstitial {
-//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712") as? DFPInterstitial
-//            //"ca-app-pub-2292175261120907/5861239922") as? DFPInterstitial
-//        interstitial?.delegate = self as? GADInterstitialDelegate
-//        
-//        let request = GADRequest()
-//        interstitial?.load(request)
-//        request.testDevices = [ kGADSimulatorID,   // All simulators
-//            "7ed9d992b26e0010d4bee7686ba6b7e30224852b" ]  // iPad device ID
-//        
-//        return interstitial!
-//    }
-//    
-//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-//        interstitial = createAndLoadInterstitial() as? DFPInterstitial
-//    }
+    // Interstitial ad allocation
+    
+    // Seperate string out to numbers
+    func convertStringToNumbers() -> Int64 {
+        let strToInt64 = timePassed.westernArabicNumeralsOnly
+        print("Converted score: \(strToInt64)")
+        return Int64(strToInt64)!
+    }
     
     // Reporting game time
-    func saveBestTime(_ time: Int64) {
+    func saveHighScore(_ score: Int) {
+        // if player is logged in to GC, then report the score
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
             // Save game time to GC
-            let gkScore = GKScore(leaderboardIdentifier: timeLeaderboardID)
-            gkScore.value = time
+            let scoreReporter = GKScore(leaderboardIdentifier: timeLeaderboardID)
+            scoreReporter.value = Int64(score)
             
-            let gkScoreArray: [GKScore] = [gkScore]
+            let gkScoreArray: [GKScore] = [scoreReporter]
             
             GKScore.report(gkScoreArray, withCompletionHandler: { error in
                 guard error == nil  else { return }
-                
-                let vc = GKGameCenterViewController()
-                vc.leaderboardIdentifier = timeLeaderboardID
-                vc.gameCenterDelegate = self as? GKGameCenterControllerDelegate
-                vc.viewState = .leaderboards
-                
-                self.present(vc, animated: true, completion: nil)
             })
         }
-    }
-    
-    // Continue the game after GameCenter is closed
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
+        
+        // Send score to HighScoreVC
+        if !timePassed.isEmpty {
+            let highScoreVC = HighScoreVC()
+            highScoreVC.score = Int(score)
+            
+            self.present(highScoreVC, animated: true, completion: nil)
+        }
     }
     
     // Restart game button to main menu
     @IBAction func restartButtonPressed(_ sender: UIButton) {
-        saveBestTime(time)
-        print("\(time)")
+        saveHighScore(Int(convertStringToNumbers()))
+        print("GC Time: \(Int(convertStringToNumbers()))")
         
-        // Call ad
-//        if (interstitial?.isReady)! {
-//            interstitial?.present(fromRootViewController: self)
-//        } else {
-//            print("Ad wasn't ready")
-//        }
+        pokeMatchVC.setupNewGame()
         
-        navigationController?.popToRootViewController(animated:true)
+        // Return to game screen
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC")
+        self.show(vc!, sender: self)
     }
 }
