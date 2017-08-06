@@ -16,3 +16,12 @@ extension Array {
         }
     }
 }
+
+// Extension to filter numbers out of string
+extension String {
+    var westernArabicNumeralsOnly: String {
+        let pattern = UnicodeScalar("0")..."9"
+        return String(unicodeScalars
+            .flatMap { pattern ~= $0 ? Character($0) : nil })
+    }
+}
