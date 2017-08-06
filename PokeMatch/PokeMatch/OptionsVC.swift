@@ -30,8 +30,6 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Picker data
-        sizeArray = ["4x5", "5x5", "6x6"]
     }
     
     // Create function to initiate music playing when game begins
@@ -50,15 +48,27 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     // Image picker picks selected image and dismisses VC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         var selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage
-                            bgImage.image = selectedPhoto
-        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-            selectedPhoto = editedImage
-        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            selectedPhoto = originalImage
-        }
+            bgImage.image = selectedPhoto
+        
+//        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+//            selectedPhoto = editedImage
+//        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//            selectedPhoto = originalImage
+//        }
         
         if let selectedImage = selectedPhoto {
-            bgImage?.image = selectedImage
+            //Save image
+            let img = UIImage() //Change to be from UIPicker
+            let data = UIImagePNGRepresentation(img)
+            UserDefaults.standard.set(data, forKey: "myImageKey")
+            UserDefaults.standard.synchronize()
+            
+            //Get image
+            if let imgData = UserDefaults.standard.object(forKey: "myImageKey") as? NSData {
+            
+                selectedPhoto = UIImage(data: imgData as Data)
+                bgImage?.image =  selectedImage
+            }
         }
         
         dismiss(animated: true, completion: nil)
@@ -71,30 +81,28 @@ class OptionsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     // Pick new image from library
     @IBAction func selectImageFromImageLibrary(_ sender: UITapGestureRecognizer) {
-        let imagePickerController = UIImagePickerController()
+        let imagePicker = UIImagePickerController()
         
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+//        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+//        imagePicker.modalPresentationStyle = .popover
+        present(imagePicker, animated: true, completion: nil)
     }
             
     // Button changes game screens background
     @IBAction func changeBGImageBtnPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Would you like to personalize your background?", message: "Tap the image above the \"Change\" button to pick a New Image", preferredStyle: .alert)
+        //Get image
+        if let imgData = UserDefaults.standard.object(forKey: "myImageKey") as? NSData {
+            let retrievedImage = UIImage(data: imgData as Data)!
+            bgImage?.image =  retrievedImage
+        }
+
+        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
+        myVC.theImagePassed = self.bgImage.image!
         
-        alert.addAction(UIAlertAction(title: "Change it!", style: .default , handler: nil))
-        
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ -> Void in
-            let myVC = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchVC") as! PokeMatchVC
-            myVC.theImagePassed = self.bgImage.image!
-            self.present(myVC, animated: true, completion: nil)
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-        
-        // Change font of the title and message
-        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 18)!]
-        let _: [String : AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14)!]
+        self.present(myVC, animated: true, completion: nil)
     }
     
     // Audio button mutes/unmutes music
