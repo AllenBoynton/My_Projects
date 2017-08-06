@@ -21,25 +21,22 @@ protocol MemoryGameDelegate {
 // MARK: - MemoryGame
 
 class PokeMemoryGame {
-    
-    var pokeMatchVC: PokeMatchVC!
-    var score = 0
-    
+        
     // MARK: - Properties
     
-//    static var defaultCardImages: [UIImage]!
-//    if DeviceType.IS_IPHONE {
+    //    static var defaultCardImages: [UIImage]!
+    //    if DeviceType.IS_IPHONE {
     static var defaultCardImages: [UIImage] = [
-        UIImage(named: "1")!,
-        UIImage(named: "2")!,
-        UIImage(named: "3")!,
-        UIImage(named: "4")!,
-        UIImage(named: "5")!,
+        UIImage(named: "25")!,
         UIImage(named: "6")!,
-        UIImage(named: "7")!,
-        UIImage(named: "8")!,
-        UIImage(named: "9")!,
-        UIImage(named: "10")!
+        UIImage(named: "150")!,
+        UIImage(named: "448")!,
+        UIImage(named: "94")!,
+        UIImage(named: "133")!,
+        UIImage(named: "249")!,
+        UIImage(named: "257")!,
+        UIImage(named: "384")!,
+        UIImage(named: "445")!
         //    ]
         //    } else if DeviceType.IS_IPAD {
         //    defaultCardImages: [UIImage] = [
@@ -53,13 +50,13 @@ class PokeMemoryGame {
         //    UIImage(named: "8")!,
         //    UIImage(named: "9")!,
         //    UIImage(named: "10")!,
-//        UIImage(named: "11")!,
-//        UIImage(named: "12")!,
-//        UIImage(named: "13")!,
-//        UIImage(named: "14")!,
-//        UIImage(named: "15")!
+        //        UIImage(named: "11")!,
+        //        UIImage(named: "12")!,
+        //        UIImage(named: "13")!,
+        //        UIImage(named: "14")!,
+        //        UIImage(named: "15")!
     ]
-//    }
+    //    }
     
     var cards: [Card] = [Card]()
     var delegate: MemoryGameDelegate?
@@ -114,8 +111,6 @@ class PokeMemoryGame {
             let unpaired = unpairedCard()!
             if card.equals(unpaired) {
                 cardsShown.append(card)
-                
-                
             } else {
                 let unpairedCard = cardsShown.removeLast()
                 
@@ -127,7 +122,6 @@ class PokeMemoryGame {
         } else {
             // If cards are a match
             cardsShown.append(card)
-            
         }
         
         // Adjusts remaining cards. If none -> finish the game
