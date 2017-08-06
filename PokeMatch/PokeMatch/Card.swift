@@ -9,7 +9,7 @@
 import Foundation
 import UIKit.UIImage
 
-class Card : CustomStringConvertible {
+class Card: CustomStringConvertible {
     
     // MARK: - Properties
     
@@ -37,5 +37,5 @@ class Card : CustomStringConvertible {
     
     func equals(_ card: Card) -> Bool {
         return (card.id == id)
-    }
+    }    
 }
