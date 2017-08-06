@@ -9,25 +9,37 @@
 import UIKit
 import GameKit
 
-class AboutVC: UIViewController {
+class AboutVC: UIViewController, GKGameCenterControllerDelegate {
     
     // Clas delegates
-    let finalScoreVC = FinalScoreVC()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
     
-    // Continue the game after GameCenter is closed
+    // Retrieves the GC VC leaderboard
+    func showLeaderboard() {
+        let gameCenterViewController = GKGameCenterViewController()
+        
+        gameCenterViewController.gameCenterDelegate = self
+        gameCenterViewController.viewState = .leaderboards
+        gameCenterViewController.leaderboardIdentifier = timeLeaderboardID
+        
+        // Show leaderboard
+        self.present(gameCenterViewController, animated: true, completion: nil)
+    }
+    
+    // Adds the Done button to the GC view controller
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
     
     // Button brings you to GC leaderboard
     @IBAction func gcLeaderboardBtn(_ sender: UIButton) {
-        finalScoreVC.saveBestTime(Int64(0))
+        showLeaderboard()
     }
     
     // Dismiss VC
