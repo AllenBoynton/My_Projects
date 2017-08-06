@@ -42,7 +42,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     // Images passed from OptionsVC
     var theImagePassed = UIImage()
     
-    // Time passed to WinnerVC
+    // Time passed to FinalScoreVC
     var gameTimePassed = UILabel()
     
     // Deducts images until we reach 0 and the user wins
@@ -68,15 +68,8 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         if gameController.isPlaying {
             resetGame()
         }
-    }
-    
-    // Determine which image is shown in background
-    func handleBackground() {
-        if imagePassed != nil {
-            imagePassed.image = theImagePassed
-        } else {
-            imagePassed.image = UIImage(named: "bg")
-        }
+        
+        imagePassed.image = theImagePassed
     }
     
     // MARK: Sound files
@@ -129,7 +122,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         let strMilliseconds = String(format: "%02d", milliseconds)
         
         // Add time vars to relevant labels
-        display = String(format: "\(strMinutes):\(strSeconds):\(strMilliseconds)", NSLocalizedString("", comment: ""), gameController.elapsedTime)
+        display = String(format: "\(strMinutes):\(strSeconds).\(strMilliseconds)", NSLocalizedString("", comment: ""), gameController.elapsedTime)
         
         // Display game time counter
         timerDisplay.text = display
@@ -184,14 +177,13 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         }
     }
     
-    // Alert shows to display score and game time to user
+    // End of game methods
     func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
         timer?.invalidate()
         playCheering()
         
         let myVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalScoreVC") as! FinalScoreVC
         myVC.timePassed = self.display
-        myVC.time = Int64(self.display)
         self.present(myVC, animated: true, completion: nil)
     }
     
@@ -205,8 +197,9 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 30
         } else if DeviceType.UNSPECIFIED {
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
+        } else {
+            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
         }
-        return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -236,13 +229,11 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth: CGFloat!
         if DeviceType.IS_IPHONE {
-            itemWidth = collectionView.frame.width / 5.0 - 10.0 // 4 wide
-            return CGSize(width: itemWidth, height: itemWidth)
-        } else if DeviceType.IS_IPAD {
-            itemWidth = collectionView.frame.width / 5.0 - 10.0 // 5 wide
-            return CGSize(width: itemWidth, height: itemWidth)
-        } else {
-            return CGSize(width: 65.0, height: 65.0)
+            itemWidth = collectionView.frame.width / 4.0 - 10.0 // 4 wide
+            return CGSize(width: itemWidth, height: itemWidth + 15)
+        } else {//if DeviceType.IS_IPAD {
+            itemWidth = collectionView.frame.width / 5.0 - 8.0 // 5 wide
+            return CGSize(width: itemWidth, height: itemWidth + 15)
         }
     }
     
@@ -251,7 +242,7 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func showNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ())  {
         // Add an attachment
-        let logoImage = "tenor"
+        let logoImage = "tenor1"
         guard let imageURL = Bundle.main.url(forResource: logoImage, withExtension: "gif") else {
             completion(false)
             return
@@ -303,6 +294,12 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         bottomView.isHidden = false
     }
     
+    // Go forward to Best Times
+    @IBAction func goToBestTimes(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreVC") as! HighScoreVC
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     // Back button to bring to main menu
     @IBAction func backButtonPressed(_ sender: Any) {
         showNotification(inSeconds: 5, completion: { success in
@@ -313,8 +310,9 @@ class PokeMatchVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             }
         })
         
-        bgMusic?.play()
         timer?.invalidate()
-        dismiss(animated: true, completion: nil)
+        
+        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuVC") as! MainMenuVC
+        self.present(myVC, animated: true, completion: nil)
     }
 }
