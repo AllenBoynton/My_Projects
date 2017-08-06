@@ -43,13 +43,33 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0953F3F01F2942C900BB4426"
+               BuildableName = "PokeMatchTests.xctest"
+               BlueprintName = "PokeMatchTests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0953F3FE1F29433E00BB4426"
+               BuildableName = "PokeMatchUITests.xctest"
+               BlueprintName = "PokeMatchUITests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "090A22DC1EEDF53C008C3198"
-            BuildableName = "ContentExtension.appex"
-            BlueprintName = "ContentExtension"
+            BlueprintIdentifier = "0907CD801ED3832D00350677"
+            BuildableName = "Poke&#x301;Match.app"
+            BlueprintName = "Poke&#x301;Match"
             ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0907CD971ED3832D00350677"
+               BlueprintIdentifier = "0953F4131F29465100BB4426"
                BuildableName = "Poke&#x301;MatchTests.xctest"
                BlueprintName = "Poke&#x301;MatchTests"
                ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
@@ -42,9 +42,29 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0907CDA21ED3832D00350677"
+               BlueprintIdentifier = "0953F4211F29466700BB4426"
                BuildableName = "Poke&#x301;MatchUITests.xctest"
                BlueprintName = "Poke&#x301;MatchUITests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0953F3F01F2942C900BB4426"
+               BuildableName = "PokeMatchTests.xctest"
+               BlueprintName = "PokeMatchTests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0953F3FE1F29433E00BB4426"
+               BuildableName = "PokeMatchUITests.xctest"
+               BlueprintName = "PokeMatchUITests"
                ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -90,7 +110,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"
-            value = "${DEBUG_ACTIVITY_MODE}"
+            value = "disable"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
