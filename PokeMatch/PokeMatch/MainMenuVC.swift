@@ -36,13 +36,13 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
         super.viewDidLoad()
         
         authenticatePlayer()
-        startGameMusic()
+//        startGameMusic()
     }
     
     // Authenticates the user to access to the GC
     func authenticatePlayer() {
         localPlayer.authenticateHandler = {(view, error) -> Void in
-            if((view) != nil) {
+            if view != nil {
                 
                 // 1. Show login if player is not logged in
                 self.present(view!, animated: true, completion: nil)
@@ -52,7 +52,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
                     name: NSNotification.Name(rawValue: GKPlayerAuthenticationDidChangeNotificationName),
                     object: nil)
                 
-            } else if (self.localPlayer.isAuthenticated) {
+            } else if self.localPlayer.isAuthenticated {
                 
                 // 2. Player is already authenticated & logged in, load game center
                 self.gcEnabled = true
@@ -76,7 +76,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     
     // Report example score after user logs in
     func authenticationDidChange(_ notification: Notification) {
-        finalScoreVC.saveBestTime(Int64(time))
+        finalScoreVC.saveHighScore(time)
     }
     
     //
@@ -86,7 +86,7 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
     
     // Retrieves the GC VC leaderboard
     func showLeaderboard() {
-        let viewController = self.view.window?.rootViewController
+//        let viewController = self.view.window?.rootViewController
         let gameCenterViewController = GKGameCenterViewController()
         
         gameCenterViewController.gameCenterDelegate = self
@@ -94,10 +94,10 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
         gameCenterViewController.leaderboardIdentifier = timeLeaderboardID
         
         // Show leaderboard
-        viewController?.present(gameCenterViewController, animated: true, completion: nil)
+        self.present(gameCenterViewController, animated: true, completion: nil)
     }
     
-    // Continue the game after GameCenter is closed
+    // Allows GameCenter view controller to close
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
@@ -116,11 +116,8 @@ class MainMenuVC: UIViewController, GKGameCenterControllerDelegate {
         }
     }
     
-    // IBActions for main menu buttons
-    @IBAction func startButtonTapped(_ sender: UIButton) {}
-    
     // Open Game Center Leaderboard
-    @IBAction func checkGCLeaderboard(_ sender: AnyObject) {
+    @IBAction func checkGCLeaderboard(_ sender: UIButton) {
         showLeaderboard()
     }
 }
