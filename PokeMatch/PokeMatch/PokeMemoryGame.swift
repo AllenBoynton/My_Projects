@@ -9,15 +9,6 @@
 import Foundation
 import UIKit.UIImage
 
-// MARK: - MemoryGameDelegate
-
-protocol MemoryGameDelegate {
-    func memoryGameDidStart(_ game: PokeMemoryGame)
-    func memoryGame(_ game: PokeMemoryGame, showCards cards: [Card])
-    func memoryGame(_ game: PokeMemoryGame, hideCards cards: [Card])
-    func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval)
-}
-
 // MARK: - MemoryGame
 
 class PokeMemoryGame {
@@ -40,21 +31,21 @@ class PokeMemoryGame {
         //    ]
         //    } else if DeviceType.IS_IPAD {
         //    defaultCardImages: [UIImage] = [
-        //    UIImage(named: "1")!,
-        //    UIImage(named: "2")!,
-        //    UIImage(named: "3")!,
-        //    UIImage(named: "4")!,
-        //    UIImage(named: "5")!,
+        //    UIImage(named: "25")!,
         //    UIImage(named: "6")!,
-        //    UIImage(named: "7")!,
-        //    UIImage(named: "8")!,
-        //    UIImage(named: "9")!,
-        //    UIImage(named: "10")!,
-        //        UIImage(named: "11")!,
-        //        UIImage(named: "12")!,
-        //        UIImage(named: "13")!,
-        //        UIImage(named: "14")!,
-        //        UIImage(named: "15")!
+        //    UIImage(named: "150")!,
+        //    UIImage(named: "448")!,
+        //    UIImage(named: "94")!,
+        //    UIImage(named: "133")!,
+        //    UIImage(named: "249")!,
+        //    UIImage(named: "257")!,
+        //    UIImage(named: "384")!,
+        //    UIImage(named: "445")!,
+        //        UIImage(named: "26")!,
+        //        UIImage(named: "93")!,
+        //        UIImage(named: "259")!,
+        //        UIImage(named: "254")!,
+        //        UIImage(named: "386")!
     ]
     //    }
     

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 extension Array {
     //Randomizes the order of the array elements

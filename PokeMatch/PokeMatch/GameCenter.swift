@@ -9,6 +9,9 @@
 import UIKit
 import GameKit
 
+// Global GC identifiers
+let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
+
 class GameCenter: UIViewController {
     
     let gameController = PokeMemoryGame()
@@ -72,18 +75,6 @@ class GameCenter: UIViewController {
     // Authentication notification
     func notificationReceived() {
         print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
-    }
-    
-    // Retrieves the GC VC leaderboard
-    func showLeaderboard() {
-        let gameCenterViewController = GKGameCenterViewController()
-        
-        gameCenterViewController.gameCenterDelegate = self as? GKGameCenterControllerDelegate
-        gameCenterViewController.viewState = .leaderboards
-        gameCenterViewController.leaderboardIdentifier = timeLeaderboardID
-        
-        // Show leaderboard
-        self.present(gameCenterViewController, animated: true, completion: nil)
     }
     
     // Reporting game time
