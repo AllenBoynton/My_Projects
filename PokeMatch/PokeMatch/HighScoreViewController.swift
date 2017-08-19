@@ -11,43 +11,36 @@ import GameKit
 
 class HighScoreViewController: UIViewController {
     
+    var mainMenuViewController = MainMenuViewController()
     var pokeMatchViewController = PokeMatchViewController()
-    var gameCenter = GameCenter()
     
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var currentHighScore: UILabel!
+    @IBOutlet weak var highScore1Lbl: UILabel!
+    @IBOutlet weak var highScore2Lbl: UILabel!
+    @IBOutlet weak var highScore3Lbl: UILabel!
+    @IBOutlet weak var highScore4Lbl: UILabel!
+    @IBOutlet weak var highScore5Lbl: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
     
-    var score = Int()
-    var highScore = Int()
+    lazy var score = Int()
+    lazy var highScore1 = Int()
+    lazy var highScore2 = Int()
+    lazy var highScore3 = Int()
+    lazy var highScore4 = Int()
+    lazy var highScore5 = Int()
     
-    var minutes: Int!
-    var seconds: Int!
-    var millis: Int!
-    
-    var scoreString: String!
-    var highScoreString: String!
+    lazy var minutes = Int()
+    lazy var seconds = Int()
+    lazy var millis = Int()
     
     // Time passed from PokeMatchVC
-    var timePassed = ""
-    var strToInt64: String?
-        
-    // AdMob variables
-    
+    var timePassed: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Assign value to labels after checking for nil
-        if !timePassed.isEmpty {
-            scoreLabel.text = timePassed
-        } else {
-            scoreLabel.text = "0"
-        }
-        
-        // Call interstitial ad function
-        
-        
-        print("Score: \(score)")
+        showItems()
         checkHighScoreForNil()
         addScore()
     }
@@ -55,65 +48,80 @@ class HighScoreViewController: UIViewController {
     // Interstitial ad allocation
     
     
+    // Shows items depending on best score screen or final score screen
+    func showItems() {
+        playAgainButton.isHidden = false
+        menuButton.isHidden = false
+    }
+
     // Verifies score/time is not nil
     func checkHighScoreForNil() {
         let highScoreDefault = UserDefaults.standard
         
         if highScoreDefault.value(forKey: "HighScore") != nil {
-            highScore = score
-            highScore = highScoreDefault.value(forKey: "HighScore") as! NSInteger
-            
-            currentHighScore.text = intToHighScoreString(score: highScore)
+            highScore1 = highScoreDefault.value(forKey: "HighScore") as! NSInteger
+            highScore1Lbl.text = "\(intToScoreString(score: highScore1))"
         }
     }
     
-    func intToScoreString(score: Int) ->String {
+    // Score format for time
+    func intToScoreString(score: Int) -> String {
         minutes = score / 10000
         seconds = (score / 100) % 100
         millis = score % 100
         
-        scoreString = NSString(format: "Time: %i:%02i.%02i", minutes, seconds, millis) as String
+        let scoreString = NSString(format: "%02i:%02i.%02i", minutes, seconds, millis) as String
         return scoreString
     }
     
-    func intToHighScoreString(score: Int) ->String {
-        minutes = score / 10000
-        seconds = (score / 100) % 100
-        millis = score % 100
-        
-        highScoreString = NSString(format: "Best Time: %i:%02i.%02i", minutes, seconds, millis) as String
-        return highScoreString
-    }
+//    // Score format for best time
+//    func intToHighScoreString(score: Int) -> String {
+//        minutes = score / 10000
+//        seconds = (score / 100) % 100
+//        millis = score % 100
+//        
+//        let highScoreString = NSString(format: "%02i:%02i.%02i", minutes, seconds, millis) as String
+//        return highScoreString
+//    }
     
     // Adds time from game to high scores. Compares again others for order
     func addScore() {
-        scoreLabel.text = "Returned: \(intToScoreString(score: score))"
-        if (score > highScore) {
-            highScore = score            
-            currentHighScore.text = "Returned High: \(intToHighScoreString(score: highScore))"
-            
-            handleHighScoreReset()
+        if timePassed != nil {
+            menuButton.isHidden = true
+            score = Int(convertStringToNumbers(time: timePassed!)!)
+            scoreLabel.text = "\(intToScoreString(score: score))"
+            if (score < highScore1) {
+                highScore1 = score
+                highScore1Lbl.text = "\(intToScoreString(score: Int(highScore1)))"
+                
+                handleHighScoreReset()
+            }
+        } else {
+            scoreLabel.isHidden = true
+            playAgainButton.isHidden = true
+            print("timePassed = nil")
         }
     }
     
     // Handles the saving of high score as cumulative or reset to 0
     func handleHighScoreReset() {
         let highScoreDefault = UserDefaults.standard
-        highScoreDefault.set(highScore, forKey: "HighScore")
+        highScoreDefault.set(highScore1, forKey: "HighScore")
         highScoreDefault.synchronize()
     }
     
     // Seperate string out to numbers
-    func convertStringToNumbers() -> Int64 {
-        let strToInt64 = timePassed.westernArabicNumeralsOnly
-        print("Converted score: \(strToInt64)")
-        return Int64(strToInt64)!
+    func convertStringToNumbers(time: String) -> Int? {
+        let strToInt = time.westernArabicNumeralsOnly
+        return Int(strToInt)!
     }
     
     // Play again game button to main menu
     @IBAction func playAgainButtonPressed(_ sender: UIButton) {
-        gameCenter.saveHighScore(Int(convertStringToNumbers()))
-        print("GC Time: \(Int(convertStringToNumbers()))")
+        if timePassed != nil {
+            mainMenuViewController.saveHighScore(Int64(convertStringToNumbers(time: timePassed!)!))
+            print("GC Time: \(String(describing: convertStringToNumbers(time: timePassed!)!))")
+        }
         
         pokeMatchViewController.setupNewGame()
         
@@ -122,22 +130,10 @@ class HighScoreViewController: UIViewController {
         self.show(vc!, sender: self)
     }
     
-    // Resets score/time and high score back to 0
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
-        score = 0
-        highScore = 0
-        
-        scoreLabel.text = NSString(format: "Time: %i", score) as String
-        currentHighScore.text = NSString(format: "Best Time: %i", highScore) as String
-        
-        handleHighScoreReset()
-    }
-    
     @IBAction func backButtonTapped(_ sender: UIButton) {
         pokeMatchViewController.setupNewGame()
 
-        dismiss(animated: true, completion: nil)
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuViewController")
-//        self.show(vc!, sender: self)
+        let vc = self.storyboard?.instantiateInitialViewController()
+        self.show(vc!, sender: self)
     }
 }
