@@ -1,4 +1,5 @@
 PODS:
+  - DeviceKit (1.2.3)
   - Firebase/AdMob (4.0.4):
     - Firebase/Core
     - Google-Mobile-Ads-SDK (= 7.21.0)
@@ -37,11 +38,13 @@ PODS:
   - Protobuf (3.3.0)
 
 DEPENDENCIES:
+  - DeviceKit (~> 1.0)
   - Firebase/AdMob
   - Firebase/Core
   - Firebase/Messaging
 
 SPEC CHECKSUMS:
+  DeviceKit: f33cbc6e67d9bb416e42dedc647557c7c2f6d3d7
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
@@ -52,6 +55,6 @@ SPEC CHECKSUMS:
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
 
-PODFILE CHECKSUM: 5d08c1e0fec97680d593af41601c6f7dc4bf72f9
+PODFILE CHECKSUM: c2a76b2c99458f3198cc0d56caeebf1bd9b30147
 
 COCOAPODS: 1.2.1
