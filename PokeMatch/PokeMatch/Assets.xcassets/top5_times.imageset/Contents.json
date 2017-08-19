@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "top5_times.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "explode.jpg",
       "scale" : "2x"
     },
     {
