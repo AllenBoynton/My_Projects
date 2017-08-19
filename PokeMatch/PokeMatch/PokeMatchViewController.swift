@@ -8,11 +8,12 @@
 //
 
 import UIKit
+import DeviceKit
 
 // Global Identifier
-let cellId = "PokeCell"
+let cellID = "PokeCell"
 
-class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MemoryGameDelegate {
+class PokeMatchViewController: UIViewController {
     
     var gameController = PokeMemoryGame()
     var notifications = Notifications()
@@ -29,24 +30,29 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
     
     // MARK - Local variables
     
+    // Uses DeviceKit to determine device family
+    let device = Device()
+    
     // Time passed to FinalScoreVC
-    var gameTimePassed = UILabel()
+    lazy var gameTimePassed = UILabel()
     
     // Deducts images until we reach 0 and the user wins
-    var gameOver = Bool()
+    lazy var gameOver = Bool()
     
     // NSTimers for game time and delays in revealed images
     var timer: Timer?
     var timer1 = Timer(), timer2 = Timer(), timer3 = Timer()
     
     // Time values instantiated
-    var startTime: Double = 0
-    var time: Double = 0
-    var elapsed: Double = 0
-    var display: String = ""
+    lazy var startTime: Double = 0
+    lazy var time: Double = 0
+    lazy var elapsed: Double = 0
+    lazy var display: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gameController.delegate = self
         
         // Methods contained to reset game
         if gameController.isPlaying {
@@ -102,7 +108,9 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
         playButton.isHidden = false
         playButton.isEnabled = true
     }
-    
+}
+
+extension PokeMatchViewController: MemoryGameDelegate {
     // MARK: - MemoryGameDelegate
     
     func memoryGameDidStart(_ game: PokeMemoryGame) {
@@ -138,17 +146,17 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
         myVC.timePassed = self.display
         self.present(myVC, animated: true, completion: nil)
     }
-    
+}
+
+extension PokeMatchViewController: UICollectionViewDataSource {
     // MARK: - UICollectionViewDataSource
     
     // Determines which device the user has - determines # of cards
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if DeviceType.IS_IPHONE {
+        if device.isPhone { // iPhone (real or simulator)
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
-        } else if DeviceType.IS_IPAD {
+        } else if device.isPad { // iPad (real or simulator)
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 30
-        } else if DeviceType.UNSPECIFIED {
-            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
         } else {
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
         }
@@ -156,7 +164,7 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PokeVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PokeVCell
         cell.showCard(false, animated: false)
         
         guard let card = gameController.cardAtIndex(indexPath.item) else { return cell }
@@ -164,7 +172,9 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
         
         return cell
     }
-    
+}
+
+extension PokeMatchViewController: UICollectionViewDelegate {
     // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -174,19 +184,27 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
         gameController.didSelectCard(cell.card)
         
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("Card tapped")
     }
-    
-    // MARK: - UICollectionViewDataSource
+}
+
+extension PokeMatchViewController: UICollectionViewDelegateFlowLayout {
+    // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth: CGFloat!
-        if DeviceType.IS_IPHONE {
+        let itemHeight: CGFloat!
+        if device.isPhone {
             itemWidth = collectionView.frame.width / 4.0 - 10.0 // 4 wide
-            return CGSize(width: itemWidth, height: itemWidth + 15)
-        } else {//if DeviceType.IS_IPAD {
-            itemWidth = collectionView.frame.width / 5.0 - 8.0 // 5 wide
-            return CGSize(width: itemWidth, height: itemWidth + 15)
+            itemHeight = collectionView.frame.height / 5.0 - 10.0
+            return CGSize(width: itemWidth, height: itemHeight)
+        } else if device.isPad {//if DeviceType.IS_IPAD {
+            itemWidth = collectionView.frame.width / 5.0 - 20.0 // 5 wide
+            itemHeight = collectionView.frame.height / 6.0 - 10.0
+            return CGSize(width: itemWidth, height: itemHeight)
+        } else {
+            itemWidth = collectionView.frame.width / 4.0 - 10.0 // 4 wide
+            itemHeight = collectionView.frame.height / 5.0 - 10.0
+            return CGSize(width: itemWidth, height: itemHeight)
         }
     }
     
@@ -203,7 +221,6 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
         // Unhides views after start button is pressed
         collectionView.isHidden = false
         bottomView.isHidden = false
-        collectionView.allowsSelection = true
     }
     
     // Back button to bring to main menu
@@ -218,8 +235,7 @@ class PokeMatchViewController: UIViewController, UICollectionViewDelegate, UICol
         
         timer?.invalidate()
         
-        dismiss(animated: true, completion: nil)
-//        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
-//        self.show(myVC, sender: self)
+        let myVC = self.storyboard?.instantiateInitialViewController()
+        self.show(myVC!, sender: self)
     }
 }
