@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DeviceKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>49E86F9A376B372B2555FB8BA6609C5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4D6A6386C9AD0019411FFA17C12640D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E184D086C7374D800812919C2A35317</key>
+		<key>669BE5AE2986E4336C77C8623D60BF3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A871B7818D7DF39AABAD2202DD65816E</key>
+		<key>B74671AC4AD442223B677430EE6BBBF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
