@@ -13,7 +13,7 @@ class AboutViewController: UIViewController, GKGameCenterControllerDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     // Retrieves the GC VC leaderboard
