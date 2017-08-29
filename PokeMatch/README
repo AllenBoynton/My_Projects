@@ -5,8 +5,7 @@ targeted for young children and adults, both male and female into their 30s and 
 is playing on and adjusts for both iPhone and iPad. The app connects to Apple’s Game Center using GameKit. The
 game uses Game Center’s leaderboard to track time and points scored. Authenticating the user asks proper
 permission to connect. It also creates notifications with GKGameCenterViewController and push notifications with
-attachments. An options menu allows the user to mute the background music. Another feature the user can utilize is
-changing the game screen’s background image using UIImagePickerController. Here the user can pull up the leader
+attachments. An options menu allows the user to mute the background music. Here the user can pull up the leader
 board and can choose the level of difficulty.
 Responsibilities:
 • Involved solely in the life cycle of conception, design, prototype, and build.
