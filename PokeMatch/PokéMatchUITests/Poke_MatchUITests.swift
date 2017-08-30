@@ -2,7 +2,7 @@
 //  Poke_MatchUITests.swift
 //  PokéMatchUITests
 //
-//  Created by Allen Boynton on 7/26/17.
+//  Created by Allen Boynton on 8/30/17.
 //  Copyright © 2017 Allen Boynton. All rights reserved.
 //
 
@@ -31,29 +31,6 @@ class Poke_MatchUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        let app = XCUIApplication()
-        app.buttons["More Info"].tap()
-        app.buttons["gamecenter"].tap()
-        app.navigationBars["Best Times"].buttons["PokéMatch"].tap()
-        app.navigationBars["PokéMatch"].buttons["Done"].tap()
-        
-        let highScoresButton = app.buttons["High Scores"]
-        highScoresButton.tap()
-        app.buttons["Best Times"].tap()
-        highScoresButton.tap()
-        app.buttons["Play"].tap()
-        app.buttons["play"].tap()
-        
-        let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"question_yellow").element.tap()
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 1).otherElements.containing(.image, identifier:"question_yellow").element.tap()
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 2).otherElements.containing(.image, identifier:"question_yellow").element.tap()
-        app.buttons["Button"].tap()
-        
-        let musicButton = app.buttons["music"]
-        musicButton.tap()
-        musicButton.tap()
     }
     
 }

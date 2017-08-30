@@ -21,7 +21,7 @@ class Music {
         do {
             bgMusic = try AVAudioPlayer(contentsOf: url)
             bgMusic?.prepareToPlay()
-//            bgMusic?.play()
+            bgMusic?.play()
             bgMusic?.numberOfLoops = -1
         } catch let error as NSError {
             print("audioPlayer error \(error.localizedDescription)")

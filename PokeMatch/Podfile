@@ -14,11 +14,11 @@ pod 'DeviceKit', '~> 1.0'
 target 'PokéMatchTests' do
 inherit! :search_paths
     # Pods for testing
-	end
+end
 
-  target 'PokéMatchUITests' do
-    inherit! :search_paths
+target 'PokéMatchUITests' do
+inherit! :search_paths
     # Pods for testing
-  end
+end
 
 end

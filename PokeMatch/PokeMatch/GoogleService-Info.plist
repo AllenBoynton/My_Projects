@@ -36,9 +36,7 @@
 	<string>1:139325136190:ios:1bfb9f2ceace1412</string>
 	<key>DATABASE_URL</key>
 	<string>https://pokematch-a20e5.firebaseio.com</string>
-	<key>shouldEstablishDirectChannel</key>
-	<string>YES</string>
-	<key>remote-notification</key>
+	<key>REMOTE-NOTIFICATION</key>
 	<string>YES</string>
 </dict>
 </plist>

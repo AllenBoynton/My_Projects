@@ -2,7 +2,7 @@
 //  Poke_MatchTests.swift
 //  PokéMatchTests
 //
-//  Created by Allen Boynton on 7/26/17.
+//  Created by Allen Boynton on 8/30/17.
 //  Copyright © 2017 Allen Boynton. All rights reserved.
 //
 
@@ -23,7 +23,6 @@ class Poke_MatchTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
     }
     
     func testPerformanceExample() {

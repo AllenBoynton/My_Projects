@@ -9,11 +9,12 @@
 
 import UIKit
 import DeviceKit
+import GoogleMobileAds
 
 // Global Identifier
 let cellID = "PokeCell"
 
-class PokeMatchViewController: UIViewController {
+class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     
     var gameController = PokeMemoryGame()
     var notifications = Notifications()
@@ -27,6 +28,9 @@ class PokeMatchViewController: UIViewController {
     // Outlets for views
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var playButton: UIButton!
+    
+    // AdMob banner ad
+    @IBOutlet weak var adBannerView: GADBannerView!
     
     // MARK - Local variables
     
@@ -52,12 +56,27 @@ class PokeMatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        handleAdRequest()
+        
         gameController.delegate = self
         
         // Methods contained to reset game
         if gameController.isPlaying {
             resetGame()
         }
+    }
+    
+    // Ad request
+    func handleAdRequest() {
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        
+        // Ad setup
+        adBannerView.adUnitID = "ca-app-pub-2292175261120907/6252355617"
+        adBannerView.rootViewController = self
+        adBannerView.delegate = self
+        
+        adBannerView.load(request)
     }
     
     // Updates game time on displays

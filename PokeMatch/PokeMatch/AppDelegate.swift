@@ -12,6 +12,7 @@
 import UIKit
 import Firebase
 import UserNotifications
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        // Facebook integration
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
@@ -46,60 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerForRemoteNotifications()
         
-//        // Retrieve the current registration token
-//        let token = Messaging.messaging().fcmToken
-//        print("FCM token: \(token ?? "")")
-//        
-//        // Monitor token generation
-//        func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
-//            print("Firebase registration token: \(fcmToken)")
-//        }
-//        
-//        // Provide your APNs token using the APNSToken property:
-//        func application(application: UIApplication,
-//                         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-//            Messaging.messaging().apnsToken = deviceToken as Data
-//        }
-        
         // Asks permission to show notifications
         func askToShowVisibleNotifications() {
             let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
             UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { ( granted, error) in
-                
+                print(error?.localizedDescription as Any)
             }
         }
         
-//        // Swizzle - Build upon your own notifications
-//        func swizzled_application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//            
-//        }
-//        
-//        func swizzled_userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//            
-//        }
-//        
-//        func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
-//                         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//            // If you are receiving a notification message while your app is in the background,
-//            // this callback will not be fired till the user taps on the notification launching the application.
-//            // TODO: Handle data of notification
-//            
-//            // With swizzling disabled you must let Messaging know about the message, for Analytics
-//            Messaging.messaging().appDidReceiveMessage(userInfo)
-//            
-////            Messaging.messaging().sendMessage(message, to: to, withMessageID: messageId, timeToLive: ttl)
-//            
-//            // Print message ID.
-//            if let messageID = userInfo["JDPYMY5287"] {
-//                print("Message ID: \(messageID)")
-//            }
-//            
-//            // Print full message.
-//            print(userInfo)
-//            
-//            completionHandler(UIBackgroundFetchResult.newData)
-//        }
-//                
         return true
     }
     
@@ -117,12 +75,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
     
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        // Add any custom logic here.
+        return handled
     }
 }
 

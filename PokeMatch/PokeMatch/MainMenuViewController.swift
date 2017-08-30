@@ -8,18 +8,23 @@
 
 import UIKit
 import GameKit
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 // Global GC identifiers
-let timeLeaderboardID = "BEST_TIME" // Time Leaderboard
+let timeLeaderboardID = "com.abtechapps.PokeMatch" // Time Leaderboard
 
-class MainMenuViewController: UIViewController {
+class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // Class delegates
-    let gameController = PokeMemoryGame()
+    var gameController = PokeMemoryGame()
     var music = Music()
     
     @IBOutlet weak var soundButton: UIButton!
-    @IBOutlet weak var gcIcon: UIView!
+    
+    var facebookImage: UIImageView!
+    var facebookName: UILabel!
     
     let localPlayer = GKLocalPlayer.localPlayer()
     
@@ -33,10 +38,15 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gameController.delegate = self as? MemoryGameDelegate
+        handleFacebookImage()
+        handleFacebookName()
+        fetchProfile()
+        
+        facebookLoginButton()
+        facebookLikeButton()
         
         authenticatePlayer()
-        animateGCIcon()
+        
         handleMuteButton()
     }
     
@@ -77,7 +87,7 @@ class MainMenuViewController: UIViewController {
 
     // Report example score after user logs in
     func authenticationDidChange(_ notification: Notification) {
-        saveHighScore(100)
+        saveHighScore(0)
     }
     
     // Authentication notification
@@ -102,18 +112,6 @@ class MainMenuViewController: UIViewController {
         }
     }
 
-    // Animate GC image
-    func animateGCIcon() {
-        UIView.animate(withDuration: 1.5, animations: {
-            self.gcIcon.transform = CGAffineTransform(scaleX: 20, y: 20)
-            self.gcIcon.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        }) { (finished) in
-            UIView.animate(withDuration: 1, animations: {
-                self.gcIcon.transform = CGAffineTransform.identity
-            })
-        }
-    }
-    
     // Checks if music is mute or not
     func handleMuteButton() {
         if mute {
@@ -124,7 +122,7 @@ class MainMenuViewController: UIViewController {
             soundButton.alpha = 0.2
         }
     }
-
+    
     // Music button to turn music on/off
     @IBAction func muteButtonTapped(_ sender: UIButton) {
         if (bgMusic?.isPlaying)! {
@@ -144,4 +142,94 @@ class MainMenuViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController")
         self.show(vc!, sender: self)
     }
+    
+    // Fetch facebook profile
+    func fetchProfile() {
+        if FBSDKAccessToken.current() != nil {
+            //print permissions, such as public_profile
+            print(FBSDKAccessToken.current().permissions)
+            
+            let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, email"])
+            let connection = FBSDKGraphRequestConnection()
+            
+            connection.add(graphRequest, completionHandler: { (connection, result, error) -> Void in
+                
+                let data = result as! [String : AnyObject]
+                
+                self.facebookName.text = data["name"] as? String
+                
+                let FBid = data["id"] as? String
+                
+                let url = NSURL(string: "https://graph.facebook.com/\(FBid!)/picture?type=large&return_ssl_resources=1")
+                self.facebookImage.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
+            })
+            connection.start()
+        }
+        print("Fetched profile")
+    }
+    
+    // Facebook image
+    func handleFacebookImage() {
+        facebookImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
+        facebookImage.center = CGPoint(x: view.center.x, y: 240)
+        
+        facebookImage.image = UIImage(named: "fb_logo")
+        facebookImage.materialDesign = true
+        
+        view.addSubview(facebookImage)
+    }
+    
+    // Facebook name label
+    func handleFacebookName() {
+        facebookName = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        facebookName.center = CGPoint(x: view.center.x, y: 290)
+        
+        facebookName.text = "Not Logged In"
+        facebookName.font = UIFont.init(name: "MarkerFelt-Thin", size: 14)
+        facebookName.textAlignment = NSTextAlignment.center
+        
+        view.addSubview(facebookName)
+    }
+    
+    // Facebook login button
+    func facebookLoginButton() {
+        let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = ["email"]
+        
+        loginButton.center = CGPoint(x: view.center.x, y: 325)
+        loginButton.delegate = self
+        
+        view.addSubview(loginButton)
+    }
+    
+    // Facebook Like button
+    func facebookLikeButton() {
+        let likeButton = FBSDKLikeControl()
+        
+        likeButton.frame.origin.x = likeButton.frame.width * 0.3
+        likeButton.frame.origin.y = self.view.frame.height - likeButton.frame.height * 1.5
+
+        likeButton.objectID = "https://www.facebook.com/PokeMatchMobileApp/"
+        
+        view.addSubview(likeButton)
+    }
+    
+    // Facebook login delegate
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        fetchProfile()
+        print("Facebook login complete")
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        facebookImage.image = UIImage(named: "fb_logo")
+        facebookName.text = "Not Logged In"
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        return true
+    }
 }
+
+
+
+

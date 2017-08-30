@@ -9,33 +9,14 @@
 import UIKit
 import GameKit
 
-class AboutViewController: UIViewController, GKGameCenterControllerDelegate {
+class AboutViewController: UIViewController {
+    
+    let mainMenuVC = MainMenuViewController()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    // Retrieves the GC VC leaderboard
-    func showLeaderboard() {
-        let gameCenterViewController = GKGameCenterViewController()
-        
-        gameCenterViewController.gameCenterDelegate = self
-        gameCenterViewController.viewState = .leaderboards
-        gameCenterViewController.leaderboardIdentifier = timeLeaderboardID
-        
-        // Show leaderboard
-        self.present(gameCenterViewController, animated: true, completion: nil)
-    }
-    
-    // Adds the Done button to the GC view controller
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-    }
-    
-    // Button brings you to GC leaderboard
-    @IBAction func gcLeaderboardBtn(_ sender: UIButton) {
-        showLeaderboard()
+        mainMenuVC.facebookLikeButton()
     }
     
     // Dismiss VC
