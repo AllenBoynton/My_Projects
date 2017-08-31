@@ -11,7 +11,7 @@ import GameKit
 import FBSDKShareKit
 import GoogleMobileAds
 
-class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate, GADBannerViewDelegate {
+class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate, GADBannerViewDelegate, GADInterstitialDelegate {
     
     var mainMenuViewController = MainMenuViewController()
     var pokeMatchViewController = PokeMatchViewController()
@@ -43,8 +43,14 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     // Time passed from PokeMatchVC
     var timePassed: String?
     
+    lazy var mute = true
+    
+    var interstitial: GADInterstitial!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        interstitial = createAndLoadInterstitial()
         
         handleAdRequest()
         animateGCIcon()
@@ -179,6 +185,28 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
     
+    // Create and load an Interstitial Ad
+    func createAndLoadInterstitial() -> GADInterstitial {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+        
+        let request = GADRequest()
+        request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9b"]
+        interstitial.load(request)
+        
+        return interstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
+        
+        if !(bgMusic?.isPlaying)! {
+            // plays music & makes full view
+            bgMusic?.play()
+            print("Audio playing")
+        }
+    }
+    
     @IBAction func showGameCenter(_ sender: UIButton) {
         showLeaderboard()
     }
@@ -186,6 +214,21 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     // Play again game button to main menu
     @IBAction func playAgainButtonPressed(_ sender: UIButton) {
         if timePassed != nil {
+            
+            // Interstitial Ad setup
+            if interstitial.isReady {
+                interstitial.present(fromRootViewController: self)
+                
+                // Pause sound if on
+                if (bgMusic?.isPlaying)! {
+                    // pauses music
+                    bgMusic?.pause()
+                    print("Audio muted")
+                }
+            } else {
+                print("Ad wasn't ready")
+            }
+            
             saveHighScore(convertStringToNumbers(time: timePassed!)!)
             print("GC Time: \(convertStringToNumbers(time: timePassed!)!)")
         } else {
@@ -196,14 +239,13 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
         
         // Return to game screen
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchViewController")
-        self.present(vc!, animated: true)
+        self.show(vc!, sender: self)
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         pokeMatchViewController.setupNewGame()
         
-        let vc = self.storyboard?.instantiateInitialViewController()
-        self.show(vc!, sender: self)
+        dismiss(animated: true, completion: nil)
     }
     
     // Facebook Share button
