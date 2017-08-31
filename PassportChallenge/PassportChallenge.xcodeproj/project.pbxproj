@@ -15,8 +15,6 @@
 		090A231B1EEF5AC0008C3198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090A23191EEF5AC0008C3198 /* LaunchScreen.storyboard */; };
 		090A232B1EEF696D008C3198 /* ProfileDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A232A1EEF696D008C3198 /* ProfileDetailsVC.swift */; };
 		090A232D1EEF8019008C3198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A232C1EEF8019008C3198 /* GoogleService-Info.plist */; };
-		090A232F1EEF8F25008C3198 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090A232E1EEF8F25008C3198 /* AdSupport.framework */; };
-		090A23311EEF904A008C3198 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090A23301EEF904A008C3198 /* iAd.framework */; };
 		090A23351EF0DDAD008C3198 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23341EF0DDAD008C3198 /* ProfileModel.swift */; };
 		090A23371EF0E662008C3198 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23361EF0E662008C3198 /* ProfileViewCell.swift */; };
 		090A23391EF0F0F4008C3198 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A23381EF0F0F4008C3198 /* MaterialView.swift */; };
@@ -35,7 +33,6 @@
 		09A46C4F1EFED85F00E90C22 /* thumbsUp.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09A46C4E1EFED85F00E90C22 /* thumbsUp.gif */; };
 		09A46C511F002C2400E90C22 /* LoginAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46C501F002C2400E90C22 /* LoginAuthVC.swift */; };
 		09A46C531F00455E00E90C22 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46C521F00455E00E90C22 /* SignUpVC.swift */; };
-		09AAF57A1EF35870007B802D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AAF5791EF35870007B802D /* CoreData.framework */; };
 		09AAF5C31EF4AAD9007B802D /* SquaredSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAF5C21EF4AAD9007B802D /* SquaredSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,9 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09AAF57A1EF35870007B802D /* CoreData.framework in Frameworks */,
-				090A23311EEF904A008C3198 /* iAd.framework in Frameworks */,
-				090A232F1EEF8F25008C3198 /* AdSupport.framework in Frameworks */,
 				0548A1557A782D0369476533 /* Pods_PassportChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
