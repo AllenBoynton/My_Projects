@@ -21,7 +21,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     var gameController = PokeMemoryGame()
     var music = Music()
     
-    @IBOutlet weak var soundButton: UIButton!
+    @IBOutlet weak var soundButton: UIButton?
     
     var facebookImage: UIImageView!
     var facebookName: UILabel!
@@ -116,10 +116,10 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     func handleMuteButton() {
         if mute {
             music.startGameMusic()
-            soundButton.alpha = 1.0
+            soundButton?.alpha = 1.0
         } else {
             bgMusic?.pause()
-            soundButton.alpha = 0.2
+            soundButton?.alpha = 0.2
         }
     }
     
