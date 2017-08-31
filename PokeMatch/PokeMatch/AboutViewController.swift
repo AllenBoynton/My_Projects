@@ -7,16 +7,12 @@
 //
 
 import UIKit
-import GameKit
 
 class AboutViewController: UIViewController {
     
-    let mainMenuVC = MainMenuViewController()
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainMenuVC.facebookLikeButton()
     }
     
     // Dismiss VC
