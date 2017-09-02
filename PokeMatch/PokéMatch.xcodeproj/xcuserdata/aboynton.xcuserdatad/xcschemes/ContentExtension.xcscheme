@@ -63,6 +63,16 @@
                ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "099EE7B91F59171200DC5D79"
+               BuildableName = "MainMenuViewControllerTests.xctest"
+               BlueprintName = "MainMenuViewControllerTests"
+               ReferencedContainer = "container:Poke&#x301;Match.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
