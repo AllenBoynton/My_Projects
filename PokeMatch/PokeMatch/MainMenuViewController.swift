@@ -21,7 +21,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     var gameController = PokeMemoryGame()
     var music = Music()
     
-    @IBOutlet weak var soundButton: UIButton?
+    @IBOutlet weak var muteButton: UIButton!
     
     var facebookImage: UIImageView!
     var facebookName: UILabel!
@@ -33,21 +33,16 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     let score = 0
     
-    lazy var mute = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        facebookLoginButton()
+        facebookLikeButton()
         handleFacebookImage()
         handleFacebookName()
         fetchProfile()
         
-        facebookLoginButton()
-        facebookLikeButton()
-        
-        authenticatePlayer()
-        
-        handleMuteButton()
+        authenticatePlayer()        
     }
     
     // Authenticates the user to access to the GC
@@ -111,29 +106,18 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
             })
         }
     }
-
-    // Checks if music is mute or not
-    func handleMuteButton() {
-        if mute {
-            music.startGameMusic()
-            soundButton?.alpha = 1.0
-        } else {
-            bgMusic?.pause()
-            soundButton?.alpha = 0.2
-        }
-    }
     
     // Music button to turn music on/off
     @IBAction func muteButtonTapped(_ sender: UIButton) {
         if (bgMusic?.isPlaying)! {
             // pauses music & makes partial transparent
             bgMusic?.pause()
-            sender.alpha = 0.2
+            muteButton?.alpha = 0.2
             print("Audio muted")
         } else {
             // plays music & makes full view
             bgMusic?.play()
-            sender.alpha = 1.0
+            muteButton?.alpha = 1.0
             print("Audio playing")
         }
     }
@@ -229,7 +213,3 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
         return true
     }
 }
-
-
-
-
