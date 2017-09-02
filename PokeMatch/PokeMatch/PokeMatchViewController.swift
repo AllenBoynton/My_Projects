@@ -32,6 +32,11 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     // AdMob banner ad
     @IBOutlet weak var adBannerView: GADBannerView!
     
+    // Constraint outlets for animation
+    @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var adViewBottomConstraint: NSLayoutConstraint!
+    
     // MARK - Local variables
     
     // Uses DeviceKit to determine device family
@@ -52,31 +57,34 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     lazy var time: Double = 0
     lazy var elapsed: Double = 0
     lazy var display: String = ""
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        resetGame()
         handleAdRequest()
         
         gameController.delegate = self
-        
-        // Methods contained to reset game
-        if gameController.isPlaying {
-            resetGame()
-        }
     }
     
-    // Ad request
+    // AdMob banner ad
     func handleAdRequest() {
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
         
-        // Ad setup
         adBannerView.adUnitID = "ca-app-pub-2292175261120907/6252355617"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
         
         adBannerView.load(request)
+    }
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error.debugDescription)
     }
     
     // Updates game time on displays
@@ -111,8 +119,13 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     
     // Sets up for new game
     func setupNewGame() {
-        let cardsData: [UIImage] = PokeMemoryGame.defaultCardImages
-        gameController.newGame(cardsData)
+        if device.isPhone {
+            let cardsData: [UIImage] = PokeMemoryGame.defaultCardImages
+            gameController.newGame(cardsData)
+        } else if device.isPad {
+            let cardsData: [UIImage] = PokeMemoryGame.defaultCardImagesIpod
+            gameController.newGame(cardsData)
+        }
     }
     
     // Created to reset game. Resets points, time and start button.
@@ -121,6 +134,11 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
         if timer?.isValid == true {
             timer?.invalidate()
         }
+        
+        topViewTopConstraint.constant = 0
+        bottomView.alpha = 0
+        
+        collectionView.isHidden = true
         collectionView.isUserInteractionEnabled = true
         collectionView.reloadData()
         
@@ -161,9 +179,25 @@ extension PokeMatchViewController: MemoryGameDelegate {
     func memoryGameDidEnd(_ game: PokeMemoryGame, elapsedTime: TimeInterval) {
         timer?.invalidate()
         
-        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController") as! HighScoreViewController
-        myVC.timePassed = self.display
-        self.present(myVC, animated: true, completion: nil)
+        let when = DispatchTime.now() + 1.5
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            // Your code with delay
+            let myVC = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController") as! HighScoreViewController
+            myVC.timePassed = self.display
+            self.present(myVC, animated: true)
+        }
+    }
+    
+    // Animate views for ad placement
+    func animateViewsForPlay() {
+        topViewTopConstraint.constant = -68
+        bottomViewBottomConstraint.constant = 0
+        adViewBottomConstraint.constant = -50
+
+        UIView.animate(withDuration: 0.5, animations: {
+            self.bottomView.alpha = 1.0
+            self.view.layoutIfNeeded()
+        })
     }
 }
 
@@ -233,6 +267,9 @@ extension PokeMatchViewController: UICollectionViewDelegateFlowLayout {
         // Begin with new setup
         setupNewGame()
         
+        // Animate views
+        animateViewsForPlay()
+        
         // Shows button at beginning of game
         playButton.isHidden = true
         playButton.isEnabled = false
@@ -244,7 +281,7 @@ extension PokeMatchViewController: UICollectionViewDelegateFlowLayout {
     
     // Back button to bring to main menu
     @IBAction func backButtonTapped(_ sender: Any) {
-        notifications.showNotification(inSeconds: 5, completion: { success in
+        notifications.showNotification(inSeconds: 3, completion: { success in
             if success {
                 print("Successfully scheduled notification")
             } else {
@@ -254,7 +291,7 @@ extension PokeMatchViewController: UICollectionViewDelegateFlowLayout {
         
         timer?.invalidate()
         
-        let myVC = self.storyboard?.instantiateInitialViewController()
-        self.show(myVC!, sender: self)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainMenuViewController")
+        self.show(vc!, sender: self)
     }
 }
