@@ -18,6 +18,7 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     
     var gameController = PokeMemoryGame()
     var notifications = Notifications()
+    var music = Music()
     
     // Collection view to hold all images
     @IBOutlet weak var collectionView: UICollectionView!
@@ -74,6 +75,10 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
         adBannerView.adUnitID = "ca-app-pub-2292175261120907/6252355617"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
+        
+        if (adBannerView.rootViewController?.isBeingDismissed)! {
+            music.handleMuteMusic()
+        }
         
         adBannerView.load(request)
     }
@@ -190,10 +195,24 @@ extension PokeMatchViewController: MemoryGameDelegate {
     
     // Animate views for ad placement
     func animateViewsForPlay() {
-        topViewTopConstraint.constant = -68
+        let groupOfLargeIPadDevices: [Device] = [.iPadPro10Inch, .iPadPro12Inch, .iPadPro12Inch2]
+//        let groupOfIPadDevices: [Device] = [.iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5,
+//                                            .iPadMini, .iPadMini2,.iPadMini3, .iPadMini4, .iPadPro9Inch]
+        print("Device: \(device)")
+        
+        if device.isPhone {
+            topViewTopConstraint.constant = -68
+        } else if device.isOneOf(groupOfLargeIPadDevices) {
+            topViewTopConstraint.constant = -135
+//        } else if device.isOneOf(groupOfIPadDevices) {
+//            topViewTopConstraint.constant = -100
+        } else {
+            topViewTopConstraint.constant = -100
+        }
+        
         bottomViewBottomConstraint.constant = 0
         adViewBottomConstraint.constant = -50
-
+        
         UIView.animate(withDuration: 0.5, animations: {
             self.bottomView.alpha = 1.0
             self.view.layoutIfNeeded()

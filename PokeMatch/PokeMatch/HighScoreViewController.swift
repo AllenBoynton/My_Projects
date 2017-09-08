@@ -13,6 +13,7 @@ import GoogleMobileAds
 
 class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate, GADBannerViewDelegate, GADInterstitialDelegate {
     
+    var music = Music()
     var mainMenuViewController = MainMenuViewController()
     var pokeMatchViewController = PokeMatchViewController()
     
@@ -75,6 +76,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
         let highScoreDefault = UserDefaults.standard
         
         if highScoreDefault.value(forKey: "HighScore") != nil {
+            highScore1 = score
             highScore1 = highScoreDefault.value(forKey: "HighScore") as! NSInteger
             highScore1Lbl.text = "\(intToScoreString(score: highScore1))"
         }
@@ -216,11 +218,8 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     func interstitialWillDismissScreen(_ ad: GADInterstitial) {
         interstitial = createAndLoadInterstitial()
         
-        if !(bgMusic?.isPlaying)! {
-            // plays music & makes full view
-            bgMusic?.play()
-            print("Audio playing")
-        }
+        music.handleMuteMusic()
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -251,12 +250,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
             interstitial.present(fromRootViewController: self)
             print("Ad page attempted")
             
-            // Pause sound if on
-            if (bgMusic?.isPlaying)! {
-                // pauses music
-                bgMusic?.pause()
-                print("Audio muted")
-            }
+            music.handleMuteMusic()
         } else {
             print("Ad wasn't ready")
         }

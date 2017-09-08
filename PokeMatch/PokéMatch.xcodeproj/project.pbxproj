@@ -36,7 +36,6 @@
 		094AEF281ED8FF8F007FDFC9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AEF271ED8FF8F007FDFC9 /* GameKit.framework */; };
 		095081BF1F566F4A001EEA67 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095081BE1F566F4A001EEA67 /* GoogleMobileAds.framework */; };
 		0953F40F1F2945B000BB4426 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090A22DE1EEDF53C008C3198 /* UserNotifications.framework */; };
-		096334AE1F06F27C00B621A9 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096334AD1F06F27C00B621A9 /* DeviceType.swift */; };
 		0990FA4E1F55C85E00E049FA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FA4A1F55C85E00E049FA /* FBSDKCoreKit.framework */; };
 		0990FA4F1F55C85E00E049FA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FA4B1F55C85E00E049FA /* FBSDKLoginKit.framework */; };
 		0990FA501F55C85E00E049FA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FA4C1F55C85E00E049FA /* FBSDKShareKit.framework */; };
@@ -100,7 +99,6 @@
 		094AEF271ED8FF8F007FDFC9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		095081BE1F566F4A001EEA67 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		0953F40A1F2944AC00BB4426 /* PokéMatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PokéMatch.entitlements"; sourceTree = "<group>"; };
-		096334AD1F06F27C00B621A9 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		0990FA4A1F55C85E00E049FA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		0990FA4B1F55C85E00E049FA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0990FA4C1F55C85E00E049FA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		0995BEC21F5719BD0078F0AE /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		0995BEC51F571C790078F0AE /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		0995BECF1F5723F70078F0AE /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
-		099EE7BE1F59171200DC5D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09AB400A1F24476E002207D4 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		09AB400C1F2447A1002207D4 /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		09B3E8EE1F57A81E003E66B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -257,7 +254,6 @@
 		0907CDBC1ED3853C00350677 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				096334AD1F06F27C00B621A9 /* DeviceType.swift */,
 				099274F01EDCA3E9002C465A /* Card.swift */,
 				099274E91EDC918E002C465A /* PokeMemoryGame.swift */,
 				090DE5AD1F39508C00E3F981 /* Notifications.swift */,
@@ -326,7 +322,6 @@
 		099EE7BB1F59171200DC5D79 /* MainMenuViewControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				099EE7BE1F59171200DC5D79 /* Info.plist */,
 			);
 			path = MainMenuViewControllerTests;
 			sourceTree = "<group>";
@@ -521,7 +516,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				090DE5AE1F39508C00E3F981 /* Notifications.swift in Sources */,
-				096334AE1F06F27C00B621A9 /* DeviceType.swift in Sources */,
 				09B3E8F31F58EEA9003E66B3 /* SegueFade.swift in Sources */,
 				094AEF141ED469CF007FDFC9 /* DesignableImageViews.swift in Sources */,
 				099274F11EDCA3E9002C465A /* Card.swift in Sources */,
@@ -673,7 +667,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "PokéMatch.entitlements";
-				DEVELOPMENT_TEAM = 6GTM24L94G;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -685,6 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abtechapps.PokeMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PokéMatch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -698,7 +695,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "PokéMatch.entitlements";
-				DEVELOPMENT_TEAM = 6GTM24L94G;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -710,6 +709,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abtechapps.PokeMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PokéMatch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

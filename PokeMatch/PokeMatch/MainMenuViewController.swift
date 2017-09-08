@@ -14,6 +14,7 @@ import FBSDKShareKit
 
 // Global GC identifiers
 let timeLeaderboardID = "com.abtechapps.PokeMatch" // Time Leaderboard
+var muteButton: UIButton?
 
 class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -112,7 +113,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
         if (bgMusic?.isPlaying)! {
             // pauses music & makes partial transparent
             bgMusic?.pause()
-            muteButton?.alpha = 0.2
+            muteButton?.alpha = 0.4
             print("Audio muted")
         } else {
             // plays music & makes full view
@@ -146,6 +147,14 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
                 let url = NSURL(string: "https://graph.facebook.com/\(FBid!)/picture?type=large&return_ssl_resources=1")
                 self.facebookImage.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
+                
+                let email = data["email"] as? String
+                
+                if email != nil {
+                    print("Email: \(String(describing: email))")
+                } else {
+                    print("Email: Not available")
+                }
             })
             connection.start()
         }
@@ -154,8 +163,8 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // Facebook image
     func handleFacebookImage() {
-        facebookImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
-        facebookImage.center = CGPoint(x: view.center.x, y: 240)
+        facebookImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        facebookImage.center = CGPoint(x: view.center.x, y: view.center.y - 100)
         
         facebookImage.image = UIImage(named: "fb_logo")
         facebookImage.materialDesign = true
@@ -166,10 +175,11 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     // Facebook name label
     func handleFacebookName() {
         facebookName = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
-        facebookName.center = CGPoint(x: view.center.x, y: 290)
+        facebookName.center = CGPoint(x: view.center.x, y: view.center.y - 65)
         
         facebookName.text = "Not Logged In"
-        facebookName.font = UIFont.init(name: "MarkerFelt-Thin", size: 14)
+        facebookName.textAlignment = .center
+        facebookName.font = UIFont.init(name: "MarkerFelt-Thin", size: 13)
         facebookName.textAlignment = NSTextAlignment.center
         
         view.addSubview(facebookName)
@@ -180,7 +190,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
         let loginButton = FBSDKLoginButton()
         loginButton.readPermissions = ["email"]
         
-        loginButton.center = CGPoint(x: view.center.x, y: 325)
+        loginButton.center = CGPoint(x: view.center.x, y: view.center.y - 30)
         loginButton.delegate = self
         
         view.addSubview(loginButton)
