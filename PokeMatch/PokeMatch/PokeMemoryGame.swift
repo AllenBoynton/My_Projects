@@ -17,34 +17,35 @@ class PokeMemoryGame {
     
     // iPhone images
     static var defaultCardImages: [UIImage] = [
-//        UIImage(named: "25")!
-        UIImage(named: "6")!
-//        UIImage(named: "150")!,
-//        UIImage(named: "448")!,
-//        UIImage(named: "94")!,
-//        UIImage(named: "133")!,
-//        UIImage(named: "249")!,
-//        UIImage(named: "257")!,
-//        UIImage(named: "384")!,
-//        UIImage(named: "445")!
+        UIImage(named: "25")!,
+        UIImage(named: "6")!,
+        UIImage(named: "150")!,
+        UIImage(named: "448")!,
+        UIImage(named: "94")!,
+        UIImage(named: "133")!,
+        UIImage(named: "249")!,
+        UIImage(named: "257")!,
+        UIImage(named: "384")!,
+        UIImage(named: "445")!
     ]
 
+    // iPad images
     static var defaultCardImagesIpod: [UIImage] = [
         UIImage(named: "25")!,
         UIImage(named: "6")!,
-//        UIImage(named: "150")!,
-//        UIImage(named: "448")!,
+        UIImage(named: "150")!,
+        UIImage(named: "448")!,
         UIImage(named: "94")!,
         UIImage(named: "133")!,
-//        UIImage(named: "249")!,
-//        UIImage(named: "257")!,
-//        UIImage(named: "384")!,
-//        UIImage(named: "445")!,
+        UIImage(named: "249")!,
+        UIImage(named: "257")!,
+        UIImage(named: "384")!,
+        UIImage(named: "445")!,
         UIImage(named: "26")!,
-        UIImage(named: "93")!
-//        UIImage(named: "259")!,
-//        UIImage(named: "254")!,
-//        UIImage(named: "386")!
+        UIImage(named: "93")!,
+        UIImage(named: "259")!,
+        UIImage(named: "254")!,
+        UIImage(named: "386")!
     ]
     
     var cards: [Card] = [Card]()
