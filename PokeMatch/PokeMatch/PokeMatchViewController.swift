@@ -196,16 +196,15 @@ extension PokeMatchViewController: MemoryGameDelegate {
     // Animate views for ad placement
     func animateViewsForPlay() {
         let groupOfLargeIPadDevices: [Device] = [.iPadPro10Inch, .iPadPro12Inch, .iPadPro12Inch2]
-//        let groupOfIPadDevices: [Device] = [.iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5,
-//                                            .iPadMini, .iPadMini2,.iPadMini3, .iPadMini4, .iPadPro9Inch]
-        print("Device: \(device)")
+        let groupOfIPadDevices: [Device] = [.iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5, .iPadMini, .iPadMini2,.iPadMini3, .iPadMini4, .iPadPro9Inch]
+        print("\(device)")
         
         if device.isPhone {
-            topViewTopConstraint.constant = -68
+            topViewTopConstraint.constant = -72
         } else if device.isOneOf(groupOfLargeIPadDevices) {
             topViewTopConstraint.constant = -135
-//        } else if device.isOneOf(groupOfIPadDevices) {
-//            topViewTopConstraint.constant = -100
+        } else if device.isOneOf(groupOfIPadDevices) {
+            topViewTopConstraint.constant = -100
         } else {
             topViewTopConstraint.constant = -100
         }
