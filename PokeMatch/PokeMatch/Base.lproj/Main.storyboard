@@ -19,7 +19,7 @@
         <!--AboutVC-->
         <scene sceneID="O9T-cG-TP1">
             <objects>
-                <viewController storyboardIdentifier="AboutViewController" title="AboutVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="M7S-Hi-YZD" customClass="AboutViewController" customModule="Poke_Match" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" title="AboutVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="M7S-Hi-YZD" customClass="AboutViewController" customModule="Poke_Match" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n1b-ce-uam"/>
                         <viewControllerLayoutGuide type="bottom" id="0TM-0D-Ix2"/>
@@ -97,7 +97,7 @@
         <!--ScoreVC-->
         <scene sceneID="qpH-b6-geU">
             <objects>
-                <viewController storyboardIdentifier="HighScoreViewController" title="ScoreVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="goU-DA-uO7" customClass="HighScoreViewController" customModule="Poke_Match" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HighScoreViewController" title="ScoreVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="goU-DA-uO7" customClass="HighScoreViewController" customModule="Poke_Match" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CER-zb-aNF"/>
                         <viewControllerLayoutGuide type="bottom" id="YD4-n3-x4C"/>
@@ -347,7 +347,7 @@
         <!--MainMenuViewController-->
         <scene sceneID="MKT-gU-L71">
             <objects>
-                <viewController storyboardIdentifier="MainMenuViewController" title="MainVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="tll-LZ-yxO" userLabel="MainMenuViewController" customClass="MainMenuViewController" customModule="Poke_Match" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuViewController" title="MainVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="tll-LZ-yxO" userLabel="MainMenuViewController" customClass="MainMenuViewController" customModule="Poke_Match" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pl3-SZ-UxZ"/>
                         <viewControllerLayoutGuide type="bottom" id="JGK-WG-w7u"/>
@@ -447,7 +447,7 @@
         <!--PokeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="PokeMatchViewController" title="PokeVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="PokeMatchViewController" customModule="Poke_Match" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PokeMatchViewController" title="PokeVC" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="PokeMatchViewController" customModule="Poke_Match" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -494,7 +494,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="25" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-IU-pFI" userLabel="Poke Image View" customClass="DesignableImageViews" customModule="Poke_Match" customModuleProvider="target">
-                                                    <rect key="frame" x="-0.5" y="-1" width="75" height="90"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="0.98823529409999999" green="0.87450980389999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
@@ -502,12 +502,11 @@
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="3"/>
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" red="0.01230340544" green="0.23481360079999999" blue="0.99301832909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.015686274510000001" green="0.20000000000000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
