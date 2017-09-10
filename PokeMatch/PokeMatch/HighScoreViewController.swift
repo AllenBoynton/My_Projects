@@ -100,7 +100,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
             scoreLabel.text = "\(intToScoreString(score: score))"
             print("Score Displayed")
             
-            if (score < highScore1) {
+            if (score > highScore1) {
                 highScore1 = score
                 highScore1Lbl.text = "\(intToScoreString(score: Int(highScore1)))"
                 
