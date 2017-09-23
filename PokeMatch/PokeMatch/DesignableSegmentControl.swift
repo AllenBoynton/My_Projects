@@ -38,13 +38,13 @@ import UIKit
     override func awakeFromNib() {
         
         // Change font and size within segments
-        let attr = NSDictionary(object: UIFont(name: "HelveticaNeue-Medium", size: 13.0)!, forKey: NSFontAttributeName as NSCopying)
+        let attr = NSDictionary(object: UIFont(name: "HelveticaNeue-Medium", size: 13.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         UISegmentedControl.appearance().setTitleTextAttributes(attr as? [AnyHashable : Any], for: .normal)
         
         // Change color for segment selected text
         let segAttributes: NSDictionary = [
-            NSForegroundColorAttributeName: UIColor.orange,
-            NSFontAttributeName: UIFont(name: "HelveticaNeue-Medium", size: 13.0)!
+            NSAttributedStringKey.foregroundColor: UIColor.orange,
+            NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Medium", size: 13.0)!
         ]
         
         setTitleTextAttributes(segAttributes as [NSObject : AnyObject], for: UIControlState.selected)

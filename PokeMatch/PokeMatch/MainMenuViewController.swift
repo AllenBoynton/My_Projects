@@ -31,6 +31,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     lazy var gcEnabled = Bool() // Check if the user has Game Center enabled
     lazy var gcDefaultLeaderBoard = String() // Check the default
+    let GKPlayerAuthenticationDidChangeNotificationName: String = ""
     
     let score = 0
     
@@ -56,7 +57,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
                 NotificationCenter.default.addObserver(
                     self, selector: #selector(self.authenticationDidChange(_:)),
-                    name: NSNotification.Name(rawValue: GKPlayerAuthenticationDidChangeNotificationName),
+                    name: NSNotification.Name(rawValue: self.GKPlayerAuthenticationDidChangeNotificationName),
                     object: nil)
                 
             } else if self.localPlayer.isAuthenticated {
@@ -82,7 +83,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
 
     // Report example score after user logs in
-    func authenticationDidChange(_ notification: Notification) {
+    @objc func authenticationDidChange(_ notification: Notification) {
         saveHighScore(0)
     }
     
@@ -201,7 +202,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
         let likeButton = FBSDKLikeControl()
         
         likeButton.frame.origin.x = likeButton.frame.width * 0.3
-        likeButton.frame.origin.y = self.view.frame.height - likeButton.frame.height * 1.5
+        likeButton.frame.origin.y = (self.view.frame.height - 8) - likeButton.frame.height * 1.5
 
         likeButton.objectID = "https://www.facebook.com/PokeMatchMobileApp/"
         

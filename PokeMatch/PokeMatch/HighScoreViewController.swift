@@ -14,15 +14,11 @@ import GoogleMobileAds
 class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate, GADBannerViewDelegate, GADInterstitialDelegate {
     
     var music = Music()
-    var mainMenuViewController = MainMenuViewController()
+//    var mainMenuViewController = MainMenuViewController()
     var pokeMatchViewController = PokeMatchViewController()
     
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var highScore1Lbl: UILabel!
-    @IBOutlet weak var highScore2Lbl: UILabel!
-    @IBOutlet weak var highScore3Lbl: UILabel!
-    @IBOutlet weak var highScore4Lbl: UILabel!
-    @IBOutlet weak var highScore5Lbl: UILabel!
+    @IBOutlet weak var highScoreLbl: UILabel!
     
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
@@ -31,11 +27,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     @IBOutlet weak var adBannerView: GADBannerView!
     
     lazy var score = Int()
-    lazy var highScore1 = Int()
-    lazy var highScore2 = Int()
-    lazy var highScore3 = Int()
-    lazy var highScore4 = Int()
-    lazy var highScore5 = Int()
+    lazy var highScore = Int()
     
     lazy var minutes = Int()
     lazy var seconds = Int()
@@ -76,9 +68,9 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
         let highScoreDefault = UserDefaults.standard
         
         if highScoreDefault.value(forKey: "HighScore") != nil {
-            highScore1 = score
-            highScore1 = highScoreDefault.value(forKey: "HighScore") as! NSInteger
-            highScore1Lbl.text = "\(intToScoreString(score: highScore1))"
+            highScore = score
+            highScore = highScoreDefault.value(forKey: "HighScore") as! NSInteger
+            highScoreLbl.text = "\(intToScoreString(score: highScore))"
         }
     }
     
@@ -100,9 +92,9 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
             scoreLabel.text = "\(intToScoreString(score: score))"
             print("Score Displayed")
             
-            if (score > highScore1) {
-                highScore1 = score
-                highScore1Lbl.text = "\(intToScoreString(score: Int(highScore1)))"
+            if (score > highScore) {
+                highScore = score
+                highScoreLbl.text = "\(intToScoreString(score: Int(highScore)))"
                 
                 handleHighScore()
                 print("Best Time Displayed")
@@ -117,7 +109,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     // Handles the saving of high score as cumulative or reset to 0
     func handleHighScore() {
         let highScoreDefault = UserDefaults.standard
-        highScoreDefault.set(highScore1, forKey: "HighScore")
+        highScoreDefault.set(highScore, forKey: "HighScore")
         highScoreDefault.synchronize()
     }
     
@@ -183,7 +175,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
         let shareButton = FBSDKShareButton()
         shareButton.shareContent = content
         
-        shareButton.center = CGPoint(x: view.center.x, y: self.view.frame.height - shareButton.frame.height * 3.0)
+        shareButton.center = CGPoint(x: view.center.x, y: (self.view.frame.height - 40) - shareButton.frame.height * 3.0)
         
         view.addSubview(shareButton)
     }
@@ -245,15 +237,15 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     
     // Play again game button to main menu
     @IBAction func playAgainButtonPressed(_ sender: UIButton) {
-        // Interstitial Ad setup
-        if interstitial.isReady {
-            interstitial.present(fromRootViewController: self)
-            print("Ad page attempted")
-            
-            music.handleMuteMusic()
-        } else {
-            print("Ad wasn't ready")
-        }
+//        // Interstitial Ad setup
+//        if interstitial.isReady {
+//            interstitial.present(fromRootViewController: self)
+//            print("Ad page attempted")
+//            
+//            music.handleMuteMusic()
+//        } else {
+//            print("Ad wasn't ready")
+//        }
 
         if timePassed != nil {
             saveHighScore(convertStringToNumbers(time: timePassed!)!)

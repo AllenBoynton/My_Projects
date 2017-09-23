@@ -35,8 +35,6 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     
     // Constraint outlets for animation
     @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var bottomViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var adViewBottomConstraint: NSLayoutConstraint!
     
     // MARK - Local variables
     
@@ -93,7 +91,7 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     }
     
     // Updates game time on displays
-    func startGameTimer() -> String {
+    @objc func startGameTimer() -> String {
         // Calculate total time since timer started in seconds
         time = gameController.elapsedTime
         
@@ -125,12 +123,9 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     // Sets up for new game
     func setupNewGame() {
         if device.isPhone {
-            let cardsData: [UIImage] = PokeMemoryGame.defaultCardImages
+            let cardsData: [UIImage] = PokeMemoryGame.topCardImages
             gameController.newGame(cardsData)
-        } else if device.isPad {
-            let cardsData: [UIImage] = PokeMemoryGame.defaultCardImagesIpod
-            gameController.newGame(cardsData)
-        }
+        } 
     }
     
     // Created to reset game. Resets points, time and start button.
@@ -195,22 +190,8 @@ extension PokeMatchViewController: MemoryGameDelegate {
     
     // Animate views for ad placement
     func animateViewsForPlay() {
-        let groupOfLargeIPadDevices: [Device] = [.iPadPro10Inch, .iPadPro12Inch, .iPadPro12Inch2]
-        let groupOfIPadDevices: [Device] = [.iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5, .iPadMini, .iPadMini2,.iPadMini3, .iPadMini4, .iPadPro9Inch]
         print("\(device)")
-        
-        if device.isPhone {
-            topViewTopConstraint.constant = -72
-        } else if device.isOneOf(groupOfLargeIPadDevices) {
-            topViewTopConstraint.constant = -135
-        } else if device.isOneOf(groupOfIPadDevices) {
-            topViewTopConstraint.constant = -100
-        } else {
-            topViewTopConstraint.constant = -100
-        }
-        
-        bottomViewBottomConstraint.constant = 0
-        adViewBottomConstraint.constant = -50
+        topViewTopConstraint.constant = -80
         
         UIView.animate(withDuration: 0.5, animations: {
             self.bottomView.alpha = 1.0
@@ -224,13 +205,7 @@ extension PokeMatchViewController: UICollectionViewDataSource {
     
     // Determines which device the user has - determines # of cards
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if device.isPhone { // iPhone (real or simulator)
-            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
-        } else if device.isPad { // iPad (real or simulator)
-            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 30
-        } else {
-            return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
-        }
+        return gameController.numberOfCards > 0 ? gameController.numberOfCards: 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -264,19 +239,11 @@ extension PokeMatchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth: CGFloat!
         let itemHeight: CGFloat!
-        if device.isPhone {
-            itemWidth = collectionView.frame.width / 4.0 - 10.0 // 4 wide
-            itemHeight = collectionView.frame.height / 5.0 - 10.0
-            return CGSize(width: itemWidth, height: itemHeight)
-        } else if device.isPad {//if DeviceType.IS_IPAD {
-            itemWidth = collectionView.frame.width / 5.0 - 20.0 // 5 wide
-            itemHeight = collectionView.frame.height / 6.0 - 10.0
-            return CGSize(width: itemWidth, height: itemHeight)
-        } else {
-            itemWidth = collectionView.frame.width / 4.0 - 10.0 // 4 wide
-            itemHeight = collectionView.frame.height / 5.0 - 10.0
-            return CGSize(width: itemWidth, height: itemHeight)
-        }
+        
+        itemWidth = collectionView.frame.width / 4.0 - 10.0 // 4 wide
+        itemHeight = collectionView.frame.height / 5.0 - 12.0
+        
+        return CGSize(width: itemWidth, height: itemHeight)
     }
     
     // MARK - IBAction functions
