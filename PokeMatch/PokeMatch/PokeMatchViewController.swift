@@ -56,10 +56,14 @@ class PokeMatchViewController: UIViewController, GADBannerViewDelegate {
     lazy var time: Double = 0
     lazy var elapsed: Double = 0
     lazy var display: String = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Reset game screen")
+        resetGame()
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetGame()
         handleAdRequest()
         
         gameController.delegate = self

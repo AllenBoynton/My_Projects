@@ -14,14 +14,16 @@ import GoogleMobileAds
 class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate, GADBannerViewDelegate, GADInterstitialDelegate {
     
     var music = Music()
-//    var mainMenuViewController = MainMenuViewController()
     var pokeMatchViewController = PokeMatchViewController()
+    
+    @IBOutlet weak var gameTimeImage: UIImageView!
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLbl: UILabel!
     
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
+    
     @IBOutlet weak var gcIconView: UIView!
     
     @IBOutlet weak var adBannerView: GADBannerView!
@@ -57,6 +59,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     
     // Shows items depending on best score screen or final score screen
     func showItems() {
+        gameTimeImage.isHidden = false
         playAgainButton.isHidden = false
         menuButton.isHidden = false
     }
@@ -100,6 +103,7 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
                 print("Best Time Displayed")
             }
         } else {
+            gameTimeImage.isHidden = true
             scoreLabel.isHidden = true
             playAgainButton.isHidden = true
             print("timePassed = nil")
@@ -237,15 +241,15 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
     
     // Play again game button to main menu
     @IBAction func playAgainButtonPressed(_ sender: UIButton) {
-//        // Interstitial Ad setup
-//        if interstitial.isReady {
-//            interstitial.present(fromRootViewController: self)
-//            print("Ad page attempted")
-//            
-//            music.handleMuteMusic()
-//        } else {
-//            print("Ad wasn't ready")
-//        }
+        // Interstitial Ad setup
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+            print("Ad page attempted")
+            
+            music.handleMuteMusic()
+        } else {
+            print("Ad wasn't ready")
+        }
 
         if timePassed != nil {
             saveHighScore(convertStringToNumbers(time: timePassed!)!)
@@ -256,7 +260,8 @@ class HighScoreViewController: UIViewController, GKGameCenterControllerDelegate,
                 
         // Return to game screen
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchViewController")
-        self.show(vc!, sender: self)
+        print("Present PokeMatchVC and reset game screen")
+        show(vc!, sender: self)
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {

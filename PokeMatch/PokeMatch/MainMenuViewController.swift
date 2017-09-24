@@ -83,9 +83,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
 
     // Report example score after user logs in
-    @objc func authenticationDidChange(_ notification: Notification) {
-        saveHighScore(0)
-    }
+    @objc func authenticationDidChange(_ notification: Notification) {}
     
     // Authentication notification
     func notificationReceived() {
@@ -111,17 +109,7 @@ class MainMenuViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // Music button to turn music on/off
     @IBAction func muteButtonTapped(_ sender: UIButton) {
-        if (bgMusic?.isPlaying)! {
-            // pauses music & makes partial transparent
-            bgMusic?.pause()
-            muteButton?.alpha = 0.4
-            print("Audio muted")
-        } else {
-            // plays music & makes full view
-            bgMusic?.play()
-            muteButton?.alpha = 1.0
-            print("Audio playing")
-        }
+        music.handleMuteMusic()
     }
 
     @IBAction func bestTimesButtonTapped(_ sender: UIButton) {

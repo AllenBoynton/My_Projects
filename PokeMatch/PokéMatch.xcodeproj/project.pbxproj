@@ -49,7 +49,6 @@
 		09AB400D1F2447A1002207D4 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB400C1F2447A1002207D4 /* DropShadow.swift */; };
 		09B3E8EF1F57A81E003E66B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B3E8EE1F57A81E003E66B3 /* Bolts.framework */; };
 		09B3E8F11F57B799003E66B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09B3E8F01F57B799003E66B3 /* GoogleService-Info.plist */; };
-		09B3E8F31F58EEA9003E66B3 /* SegueFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3E8F21F58EEA9003E66B3 /* SegueFade.swift */; };
 		09CA6EB21F578C7D00003886 /* Pods_Poke_Match.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CA6EB11F578C7D00003886 /* Pods_Poke_Match.framework */; };
 		09E5BB451F76C2B100DA17FB /* Poke_MatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5BB441F76C2B100DA17FB /* Poke_MatchUITests.swift */; };
 		6502FED46C4BDD5937796505 /* Pods_Poke_MatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3537FA40BB948C16F5568A65 /* Pods_Poke_MatchTests.framework */; };
@@ -136,7 +135,6 @@
 		09AB400C1F2447A1002207D4 /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		09B3E8EE1F57A81E003E66B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		09B3E8F01F57B799003E66B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		09B3E8F21F58EEA9003E66B3 /* SegueFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFade.swift; sourceTree = "<group>"; };
 		09CA6EB11F578C7D00003886 /* Pods_Poke_Match.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_Poke_Match.framework; sourceTree = "<group>"; };
 		09E5BB421F76C2B100DA17FB /* PokéMatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PokéMatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E5BB441F76C2B100DA17FB /* Poke_MatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_MatchUITests.swift; sourceTree = "<group>"; };
@@ -399,7 +397,6 @@
 			isa = PBXGroup;
 			children = (
 				090DE5A71F37EB1F00E3F981 /* MemoryGameDelegate.swift */,
-				09B3E8F21F58EEA9003E66B3 /* SegueFade.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -757,7 +754,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				090DE5AE1F39508C00E3F981 /* Notifications.swift in Sources */,
-				09B3E8F31F58EEA9003E66B3 /* SegueFade.swift in Sources */,
 				094AEF141ED469CF007FDFC9 /* DesignableImageViews.swift in Sources */,
 				099274F11EDCA3E9002C465A /* Card.swift in Sources */,
 				094AEF201ED65732007FDFC9 /* DesignableButtons.swift in Sources */,
@@ -903,7 +899,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -955,7 +951,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -991,6 +987,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1020,6 +1017,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "PokéMatch-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

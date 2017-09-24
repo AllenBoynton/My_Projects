@@ -35,18 +35,12 @@ extension Music {
     // Pause sound during ads
     func handleMuteMusic() {
         // Pause sound if on
-        if (bgMusic?.isPlaying)! {
+        if muteButton?.alpha == 1.0 && (bgMusic?.isPlaying)! {
             // pauses music
             bgMusic?.pause()
             muteButton?.alpha = 0.4
             print("Audio muted")
-        }
-//        else if ((bgMusic?.pause()) != nil) {
-//            bgMusic?.pause()
-//            muteButton?.alpha = 0.4
-//            print("Audio muted")
-//        }
-        else {
+        } else {
             bgMusic?.play()
             muteButton?.alpha = 1.0
             print("Audio playing")
