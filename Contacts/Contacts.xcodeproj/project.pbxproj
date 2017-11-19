@@ -13,6 +13,8 @@
 		0991272E1FC0AEB700BF4479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0991272C1FC0AEB700BF4479 /* LaunchScreen.storyboard */; };
 		0991273D1FC0AFFB00BF4479 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0991273C1FC0AFFB00BF4479 /* Default-568h@2x.png */; };
 		0991273F1FC0B6F100BF4479 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991273E1FC0B6F100BF4479 /* Names.swift */; };
+		099127411FC1426500BF4479 /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099127401FC1426400BF4479 /* ContactsTableCell.swift */; };
+		099127431FC142A600BF4479 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099127421FC142A600BF4479 /* BaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0991272F1FC0AEB700BF4479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0991273C1FC0AFFB00BF4479 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0991273E1FC0B6F100BF4479 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
+		099127401FC1426400BF4479 /* ContactsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableCell.swift; sourceTree = "<group>"; };
+		099127421FC142A600BF4479 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				0991273B1FC0AF5500BF4479 /* Storyboard */,
+				099127401FC1426400BF4479 /* ContactsTableCell.swift */,
+				099127421FC142A600BF4479 /* BaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0991273F1FC0B6F100BF4479 /* Names.swift in Sources */,
+				099127411FC1426500BF4479 /* ContactsTableCell.swift in Sources */,
 				099127261FC0AEB700BF4479 /* ViewController.swift in Sources */,
+				099127431FC142A600BF4479 /* BaseCell.swift in Sources */,
 				099127241FC0AEB700BF4479 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

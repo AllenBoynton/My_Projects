@@ -54,7 +54,7 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = "Header"
-        label.backgroundColor = .lightGray
+        label.backgroundColor = .orange
         return label
     }
     
